@@ -46,6 +46,14 @@ export default function Home() {
           ))}
         </ul>
       </section>
+      <section className="card">
+        <h2>{t(lang, 'decks')}</h2>
+        <p className="muted">{t(lang, 'decksText')}</p>
+        <div className="row">
+          <a className="btn" href="/deck/tadqiqot.html" target="_blank" rel="noopener">{t(lang, 'deckResearch')}</a>
+          <a className="btn primary" href="/deck/konsept.html" target="_blank" rel="noopener">{t(lang, 'deckConcept')}</a>
+        </div>
+      </section>
     </>
   )
 }

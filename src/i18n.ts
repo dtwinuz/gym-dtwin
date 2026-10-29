@@ -26,6 +26,10 @@ const dict = {
   empty: { uz: 'Hali ma\'lumot yo\'q — birinchi mashg\'ulotni boshlang', ru: 'Пока нет данных — начните первую тренировку', en: 'No data yet — start your first session' },
   history: { uz: 'Tarix', ru: 'История', en: 'History' },
   goal: { uz: 'Maqsad', ru: 'Цель', en: 'Goal' },
+  decks: { uz: 'Prezentatsiyalar', ru: 'Презентации', en: 'Presentations' },
+  decksText: { uz: 'Bozor tadqiqoti va sayt konsepti, oxirida zalning 3D Digital Twin\'i', ru: 'Исследование рынка и концепт сайта, в конце — 3D цифровой двойник зала', en: 'Market research and the site concept, ending with a 3D digital twin of the gym' },
+  deckResearch: { uz: 'Tadqiqot', ru: 'Исследование', en: 'Research' },
+  deckConcept: { uz: 'Sayt konsepti · 3D twin', ru: 'Концепт сайта · 3D-двойник', en: 'Site concept · 3D twin' },
 } satisfies Record<string, Record<Lang, string>>
 
 export type Key = keyof typeof dict
