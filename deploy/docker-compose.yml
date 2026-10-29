@@ -1,0 +1,16 @@
+services:
+  gym-dtwin:
+    image: caddy:2-alpine
+    container_name: gym-dtwin
+    restart: unless-stopped
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./dist:/srv:ro
+    networks:
+      - edge
+
+# dtwin edge Caddy shu tarmoqda: gym.dtwin.uz -> gym-dtwin:80
+networks:
+  edge:
+    external: true
+    name: dtwin-prod_default
