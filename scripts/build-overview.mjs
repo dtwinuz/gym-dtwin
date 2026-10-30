@@ -28,7 +28,8 @@ const txt = (n, k, h, lead, future) => `  <div class="txt">
     <p class="lead">${lead}</p>
   </div>`
 
-const phone = (inner, style = 'left:180px;top:0') => `<div class="phone" style="${style}"><div class="scr"><div class="sbar"><span>9:41</span><span>●●●</span></div>${inner}</div></div>`
+const COMPOSER = () => `<div class="tg-in"><span class="tg-in-f">${t('Xabar', 'Сообщение', 'Message')}</span><span class="tg-in-m">🎤</span></div>`
+const phone = (inner, style = 'left:180px;top:0') => `<div class="phone" style="${style}"><div class="scr${inner.includes('tg-in') ? ' tg' : ''}"><div class="sbar"><span>9:41</span><span>●●●</span></div>${inner}</div></div>`
 
 function slides() {
   const S = []
@@ -192,8 +193,8 @@ function slides() {
         <div class="msg out">${t("Bugun tizzam og'riyapti, uyqu 5 soat", 'Сегодня болит колено, спал 5 часов', 'My knee hurts today, slept 5 hours')}<small>17:42</small></div>
         <div class="msg in"><span id="co-ans" data-t="${t("Tushundim. Squat o'rniga Leg press, hajmni 20% kamaytiramiz. Yengil ishlaymiz.", 'Понял. Вместо приседа — жим ногами, объём −20%. Работаем легко.', 'Got it. Leg press instead of squat, volume −20%. Easy day.')}"></span><small>17:42</small></div>
         <div class="msg out">${t('Rahmat 💪', 'Спасибо 💪', 'Thanks 💪')}<small>17:43</small></div>
-        <div class="msg in">${t("Ertaga uyqu va tizzani yana so'rayman. Shanba — og'ir kun qaytadi.", 'Завтра снова спрошу про сон и колено. В субботу вернём тяжёлый день.', 'I’ll check sleep and the knee again tomorrow. Heavy day returns on Saturday.')}<small>17:43</small></div>
-      </div>`, 'left:20px;top:0')}
+        <div class="msg in">${t("Ertaga uyqu va tizzani yana so'rayman. Shanba — og'ir kun qaytadi.", 'Завтра снова спрошу про сон и колено. В субботу вернём тяжёлый день.', 'I’ll check sleep and the knee again tomorrow. Heavy day returns on Saturday.')}<small>17:43</small><div class="kb"><span>📋 ${t('Reja', 'План', 'Plan')}</span><span>▶ ${t('Boshlash', 'Начать', 'Start')}</span></div></div>
+      </div>${COMPOSER()}`, 'left:20px;top:0')}
     <div class="ab gc" id="co-plan" style="left:330px;top:170px;width:300px;padding:16px">
       <div class="eb" style="margin-bottom:10px">Legs · ${t('moslandi', 'адаптировано', 'adapted')}</div>
       <div class="co-x"><s class="mute">Back squat 4×6</s><b class="acc">Leg press 3×12</b></div>
@@ -281,7 +282,9 @@ function slides() {
         <div class="msg in">🔔 ${t('Bugun Legs kuni — 18:00. Tayyormisiz?', 'Сегодня день ног — 18:00. Готовы?', 'Leg day today — 18:00. Ready?')}<div class="kb"><span>✓ ${t('Ha', 'Да', 'Yes')}</span><span>⏰ +1 ${t('soat', 'час', 'hr')}</span></div><small>17:00</small></div>
         <div class="msg out">✓ ${t('Ha', 'Да', 'Yes')}<small>17:01</small></div>
         <div class="msg in">🔥 ${t('Aziza bugun 21-kunni yopdi. Siz 18-kundasiz!', 'Азиза закрыла 21-й день. Вы на 18-м!', 'Aziza just closed day 21. You’re on day 18!')}<small>19:12</small></div>
-      </div>`, 'left:0;top:0')}
+        <div class="msg out">💪 ${t('Ertaga quvib yetaman', 'Завтра догоню', 'Catching up tomorrow')}<small>19:13</small></div>
+        <div class="msg in">🏁 ${t("Mashg'ulot yakunlandi: 5 mashq · 18 set · 9,4 t", 'Тренировка завершена: 5 упражнений · 18 подходов · 9,4 т', 'Workout done: 5 exercises · 18 sets · 9.4 t')}<small>19:58</small></div>
+      </div>${COMPOSER()}`, 'left:0;top:0')}
     <div class="ab gc" id="sc-board" style="left:310px;top:120px;width:320px;padding:18px">
       <div class="eb" style="margin-bottom:12px">${t('Challenge · 30 kun', 'Челлендж · 30 дней', 'Challenge · 30 days')}</div>
       ${[['Aziza', 21], [t('Siz', 'Вы', 'You'), 18], ['Bekzod', 15], ['Dilnoza', 12]].map(([a, v], k) => `<div style="display:flex;align-items:center;gap:10px;padding:7px 0;font-size:14px${k === 1 ? ';color:rgb(var(--acc));font-weight:700' : ''}"><span class="mono mute" style="width:14px">${k + 1}</span><span style="width:70px">${a}</span><span style="flex:1;height:8px;border-radius:4px;background:rgb(var(--fg)/.07);overflow:hidden"><span class="sc-b" style="display:block;height:100%;width:${v / 30 * 100}%;background:${k === 1 ? 'rgb(var(--acc))' : 'rgb(var(--fg)/.3)'};border-radius:4px"></span></span><span class="mono" style="font-size:12px">${v}</span></div>`).join('')}
@@ -341,6 +344,11 @@ ${src('base.css')}
 .ov-x{position:fixed;top:calc(16px + env(safe-area-inset-top));right:16px}
 .final .bgv{opacity:.85}.cover .bgv{opacity:.42}
 #dust{position:fixed;inset:0;z-index:0;pointer-events:none}
+/* telegram composer */
+.tg{display:flex;flex-direction:column}
+.tg-in{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:8px;padding:9px 10px 16px;background:#17212b;border-top:1px solid #0b1118}
+.tg-in-f{flex:1;height:34px;border-radius:17px;background:#0e1621;display:flex;align-items:center;padding:0 14px;font-size:12.5px;color:#6c8aa4}
+.tg-in-m{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#2b5278;font-size:15px}
 /* plan */
 .pl-c{transition:border-color .35s,background .35s}.pl-c.on{border-color:rgb(var(--acc)/.6);background:linear-gradient(180deg,rgb(198 244 50/.14),rgb(19 19 23/.85))}
 .pl-i{width:46px;height:46px;flex:none;border-radius:14px;display:grid;place-items:center;font:700 12px var(--mono);background:rgb(var(--fg)/.07);color:rgb(var(--ink2))}
@@ -495,5 +503,6 @@ window.OV_T = {}
 mkdirSync(join(out, 'ru'), { recursive: true })
 mkdirSync(join(out, 'en'), { recursive: true })
 writeFileSync(join(out, 'deck.js'), src('gsap.js') + '\n' + SKY + I18N + src('scenes.js') + '\n;\n' + src('engine.js'))
-for (const l of LANGS) writeFileSync(join(out, l === 'uz' ? 'index.html' : `${l}/index.html`), page(l))
+// uz copy: one apostrophe style (o'z, not o‘z)
+for (const l of LANGS) writeFileSync(join(out, l === 'uz' ? 'index.html' : `${l}/index.html`), l === 'uz' ? page(l).replaceAll('‘', "'") : page(l))
 console.log('overview built', VER)

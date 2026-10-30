@@ -7,9 +7,13 @@ type Three = typeof THREE_NS
 export interface SceneHandle {
   setProgress: (p: number) => void
   setLight: (light: boolean) => void
+  /** Free screen area for the hero barbell, as viewport fractions (0..1). */
+  setSafe: (r: SafeRect) => void
   kick: (v: number) => void
   dispose: () => void
 }
+
+export interface SafeRect { left: number; top: number; right: number; bottom: number }
 
 export interface SceneOpts {
   host: HTMLElement
@@ -204,6 +208,48 @@ export async function mountScene(o: SceneOpts): Promise<SceneHandle> {
   let intensity = 0, phase = 0, bpmShown = 0, bpmAt = 0
   let px = 0, py = 0, tx = 0, ty = 0
   const cur: Frame = { ...WIDE[0] }
+  let safe: SafeRect | null = null
+  let hero: Frame = { ...WIDE[0] }
+  const box = new T.Box3()
+
+  // Fit the hero barbell (its projected bounding box) into the free rect so it never covers copy.
+  const corner = new T.Vector3()
+  function project(f: Frame) {
+    rig.position.set(f.x, f.y, 0); rig.scale.setScalar(f.s)
+    bell.rotation.set(f.rx, f.ry, f.rz)
+    rig.updateMatrixWorld(true)
+    box.setFromObject(bell)
+    let l = 1, r = 0, t = 1, btm = 0
+    for (let k = 0; k < 8; k++) {
+      corner.set(k & 1 ? box.max.x : box.min.x, k & 2 ? box.max.y : box.min.y, k & 4 ? box.max.z : box.min.z).project(camera)
+      const fx = (corner.x + 1) / 2, fy = (1 - corner.y) / 2
+      l = Math.min(l, fx); r = Math.max(r, fx); t = Math.min(t, fy); btm = Math.max(btm, fy)
+    }
+    return { l, r, t, b: btm }
+  }
+  function fitHero() {
+    const f = { ...WIDE[0] }
+    if (portrait) { f.ey = -0.4 + (f.ey + 2) * 0.3 }
+    if (!safe) { hero = f; return }
+    const saved = plates.map(p => [p.mesh.position.x, p.mesh.rotation.x])
+    plates.forEach(p => { p.mesh.position.x = p.x; p.mesh.rotation.x = 0 })
+    camera.updateMatrixWorld()
+    const h = camera.position.z * Math.tan((camera.fov * Math.PI) / 360), w = h * camera.aspect
+    const aw = safe.right - safe.left, ah = safe.bottom - safe.top
+    f.x = ((safe.left + safe.right) - 1) * w
+    f.y = (1 - (safe.top + safe.bottom)) * h
+    for (let it = 0; it < 4; it++) {
+      const q = project(f)
+      // margin covers the idle spin and pointer parallax
+      const k = Math.min(aw * 0.88 / (q.r - q.l), ah * 0.86 / (q.b - q.t))
+      f.s = Math.max(0.15, Math.min(portrait ? 0.9 : 1, f.s * k))
+      const q2 = project(f)
+      f.x += ((safe.left + safe.right) / 2 - (q2.l + q2.r) / 2) * 2 * w
+      f.y -= ((safe.top + safe.bottom) / 2 - (q2.t + q2.b) / 2) * 2 * h
+    }
+    plates.forEach((p, k) => { p.mesh.position.x = saved[k][0]; p.mesh.rotation.x = saved[k][1] })
+    hero = f
+  }
   let intro = o.reduced ? 1 : 0
 
   function applyTheme() {
@@ -221,14 +267,18 @@ export async function mountScene(o: SceneOpts): Promise<SceneHandle> {
     const q = Math.max(0, Math.min(last, p))
     const i = Math.min(last - 1, Math.floor(q))
     const k = smooth(q - i)
-    const a = WIDE[i], b = WIDE[i + 1]
+    const a = i === 0 ? hero : place(WIDE[i]), b = place(WIDE[i + 1])
     for (const key of Object.keys(out) as (keyof Frame)[]) out[key] = lerp(a[key], b[key], k)
-    if (portrait) {
-      out.x *= 0.12
-      out.y = out.y * 0.5 - 3.3
-      out.s *= 0.66
-      out.ey = -0.4 + (out.ey + 2) * 0.3
-    }
+  }
+  const tmp: Frame = { ...WIDE[0] }
+  function place(f: Frame): Frame {
+    if (!portrait) return f
+    Object.assign(tmp, f)
+    tmp.x *= 0.12
+    tmp.y = f.y * 0.5 - 3.3
+    tmp.s *= 0.66
+    tmp.ey = -0.4 + (f.ey + 2) * 0.3
+    return { ...tmp }
   }
 
   function writeEcg(time: number) {
@@ -301,11 +351,12 @@ export async function mountScene(o: SceneOpts): Promise<SceneHandle> {
     if (document.hidden) return
     render(now)
   }
+  fitHero()
   const once = () => render(performance.now())
   if (o.reduced) once()
   else raf = requestAnimationFrame(loop)
 
-  const onResize = () => { resize(); if (o.reduced) once() }
+  const onResize = () => { resize(); fitHero(); if (o.reduced) once() }
   const onMove = (e: PointerEvent) => { tx = (e.clientX / innerWidth - 0.5) * 2; ty = (e.clientY / innerHeight - 0.5) * 2 }
   addEventListener('resize', onResize)
   addEventListener('pointermove', onMove, { passive: true })
@@ -313,6 +364,7 @@ export async function mountScene(o: SceneOpts): Promise<SceneHandle> {
 
   return {
     setProgress(p) { progress = p; if (o.reduced) once() },
+    setSafe(r) { safe = r; fitHero(); if (o.reduced) once() },
     setLight(l) { light = l; applyTheme(); if (o.reduced) once() },
     kick(v) { intensity = Math.min(1, intensity + v) },
     dispose() {

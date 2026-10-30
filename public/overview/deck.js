@@ -349,9 +349,9 @@ window.OV_CHECK = CHECK
       const walk = n => [...n.childNodes].forEach(c => {
         if (c.nodeType === 3) {
           const f = document.createDocumentFragment()
-          c.textContent.split(/(\s+)/).forEach(t => {
+          c.textContent.split(/([ \t\n\r]+)/).forEach(t => {
             if (!t) return
-            if (/^\s+$/.test(t)) { f.append(document.createTextNode(t)); return }
+            if (/^[ \t\n\r]+$/.test(t)) { f.append(document.createTextNode(t)); return }
             const w = document.createElement('span'); w.className = 'w'
             const s = document.createElement('span'); s.textContent = t
             w.append(s); f.append(w)

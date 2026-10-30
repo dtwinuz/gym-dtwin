@@ -105,10 +105,14 @@
 .ld-scroll { position: absolute; left: 50%; bottom: 26px; margin-left: -20px; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--card-b); background: var(--card); color: rgb(var(--ink2)); animation: ld-bob 2s ease-in-out infinite; }
 @keyframes ld-bob { 50% { transform: translateY(6px); } }
 @media (max-width: 899px) {
-  .ld-hero { justify-content: flex-start; padding-top: 5vh; min-height: calc(100svh - 60px); }
-  .ld-stats { grid-template-columns: repeat(2, auto); row-gap: 16px; margin-top: 28px; }
-  .ld-stats div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .ld-hero { justify-content: flex-start; padding-top: 3vh; min-height: calc(100svh - 60px); }
+  .ld-stats { grid-template-columns: repeat(4, auto); row-gap: 14px; margin-top: 24px; }
+  .ld-stats div { padding: 0 12px; }
+  .ld-stats b { font-size: 19px; }
+  .ld-stats span { font-size: 11px; }
+
   .ld-hud { right: auto; left: 16px; bottom: 30px; }
+  .ld.tight .ld-hud { visibility: hidden; }
   .ld-scroll { left: auto; right: 16px; margin: 0; bottom: 30px; }
 }
 @media (max-width: 520px) {
