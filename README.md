@@ -39,7 +39,7 @@ bash deploy/deploy.sh   # build → ssh dtwin → /opt/gym-dtwin (caddy konteyne
 Deploy qo'lda: skript lokal `npm run build` qiladi va `dist/` ni VPS'ga ko'chiradi (GHCR image va Release yo'q). Birinchi argument — ssh host (standart `dtwin`); oldingi versiya VPS'da `dist.prev/` da qoladi. TLS va domen dtwin edge Caddy'da (`gym.dtwin.uz → gym-dtwin:80`). Ishlab turgan versiya: https://gym.dtwin.uz/REVISION.
 
 ## Hissa qo'shish
-Qoidalar `dtwinuz` org bo'yicha umumiy: [CONTRIBUTING](https://github.com/dtwinuz/.github/blob/main/CONTRIBUTING.md), [SECURITY](https://github.com/dtwinuz/.github/blob/main/SECURITY.md), [CODE_OF_CONDUCT](https://github.com/dtwinuz/.github/blob/main/CODE_OF_CONDUCT.md). Review — `@dtwinuz/core` (`.github/CODEOWNERS`).
+Qoidalar `dtwinuz` org bo'yicha umumiy: [CONTRIBUTING](https://github.com/dtwinuz/.github/blob/main/CONTRIBUTING.md), [SECURITY](https://github.com/dtwinuz/.github/blob/main/SECURITY.md), [CODE_OF_CONDUCT](https://github.com/dtwinuz/.github/blob/main/CODE_OF_CONDUCT.md). Reviewer — `@dtwinuz/core` (`.github/CODEOWNERS`; GitHub Free'da private repoda CODEOWNERS review'ni avtomatik so'ramaydi — reviewer'ni PR'ga qo'lda qo'shing).
 
 ## Keyingi qadamlar
 - Backend + akkaunt (qurilmalar orasida sinxron)
