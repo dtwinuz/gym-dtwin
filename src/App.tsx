@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { BarChart3, CalendarDays, Dumbbell, Home as HomeIcon, Timer } from 'lucide-react'
 import { LANGS, t, type Key } from './i18n'
 import { update, useStore } from './store'
@@ -8,14 +8,17 @@ import Exercises from './pages/Exercises'
 import Workout from './pages/Workout'
 import Progress from './pages/Progress'
 
+const Landing = lazy(() => import('./landing/Landing'))
+
 const ROUTES = [
-  { path: '/', key: 'home', icon: HomeIcon, page: Home },
+  { path: '/home', key: 'home', icon: HomeIcon, page: Home },
   { path: '/plan', key: 'plan', icon: CalendarDays, page: Plan },
   { path: '/workout', key: 'workout', icon: Timer, page: Workout },
   { path: '/exercises', key: 'exercises', icon: Dumbbell, page: Exercises },
   { path: '/progress', key: 'progress', icon: BarChart3, page: Progress },
 ] satisfies { path: string; key: Key; icon: unknown; page: unknown }[]
 
+// '' and '#/' open the landing page; the app lives under '#/home', '#/plan', ...
 const currentPath = () => location.hash.slice(1) || '/'
 
 export default function App() {
@@ -31,13 +34,21 @@ export default function App() {
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
 
+  if (path === '/') {
+    return (
+      <Suspense fallback={<div className="landing-boot" />}>
+        <Landing />
+      </Suspense>
+    )
+  }
+
   const route = ROUTES.find(r => r.path === path) ?? ROUTES[0]
   const Page = route.page
 
   return (
     <div className="app">
       <header className="topbar">
-        <a href="#/" className="brand"><Dumbbell size={20} /><b>gym<span>.dtwin</span></b></a>
+        <a href="#/" className="brand" title="gym.dtwin"><Dumbbell size={20} /><b>gym<span>.dtwin</span></b></a>
         <nav className="topnav">
           {ROUTES.map(r => (
             <a key={r.path} href={`#${r.path}`} className={r === route ? 'on' : ''}>{t(lang, r.key)}</a>
