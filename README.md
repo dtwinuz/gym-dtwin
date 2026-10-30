@@ -14,7 +14,7 @@ Struktura g'oyasi [openGym](https://github.com/DuarteSantos8/openGym) dan olinga
 
 ## Sahifalar
 - `/` — landing (3D shtanga + puls chizig'i, uz/ru/en, yorug'/qorong'i); ilova `#/home`, `#/plan`, `#/workout`, `#/exercises`, `#/progress`
-- `/overview/` (+ `ru/`, `en/`) — Stories uslubidagi tanishuv; manba `scripts/build-overview.mjs`, qayta yig'ish: `node scripts/build-overview.mjs`
+- `/overview/` (+ `ru/`, `en/`) — Stories uslubidagi tanishuv; manba `scripts/build-overview.mjs` + `scripts/overview/` (engine, scenes, css, gsap), natija `public/overview/`. Qayta yig'ish qo'lda: `node scripts/build-overview.mjs` (`npm run build` uni chaqirmaydi)
 - `/deck/tadqiqot.html`, `/deck/konsept.html` — prezentatsiyalar
 
 ## Stek
@@ -24,13 +24,22 @@ Vite + React 19 + TypeScript, lucide-react, three.js (faqat landing, lazy). Rout
 ```bash
 npm install
 npm run dev
+npm run build     # tsc -b && vite build → dist/
+npm run lint      # oxlint
+npm run preview   # dist/ ni lokal ko'rsatish
 ```
+
+## CI
+GitHub Actions workflow yo'q (build/lint PR'da avtomatik yurmaydi). Faqat Dependabot — npm, oylik (`.github/dependabot.yml`).
 
 ## Deploy
 ```bash
 bash deploy/deploy.sh   # build → ssh dtwin → /opt/gym-dtwin (caddy konteyner, dtwin-prod_default)
 ```
-TLS va domen dtwin edge Caddy'da (`gym.dtwin.uz → gym-dtwin:80`).
+Deploy qo'lda: skript lokal `npm run build` qiladi va `dist/` ni VPS'ga ko'chiradi (GHCR image va Release yo'q). Birinchi argument — ssh host (standart `dtwin`); oldingi versiya VPS'da `dist.prev/` da qoladi. TLS va domen dtwin edge Caddy'da (`gym.dtwin.uz → gym-dtwin:80`). Ishlab turgan versiya: https://gym.dtwin.uz/REVISION.
+
+## Hissa qo'shish
+Qoidalar `dtwinuz` org bo'yicha umumiy: [CONTRIBUTING](https://github.com/dtwinuz/.github/blob/main/CONTRIBUTING.md), [SECURITY](https://github.com/dtwinuz/.github/blob/main/SECURITY.md), [CODE_OF_CONDUCT](https://github.com/dtwinuz/.github/blob/main/CODE_OF_CONDUCT.md). Review — `@dtwinuz/core` (`.github/CODEOWNERS`).
 
 ## Keyingi qadamlar
 - Backend + akkaunt (qurilmalar orasida sinxron)
