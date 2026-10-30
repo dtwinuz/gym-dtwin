@@ -291,7 +291,7 @@ b,strong{color:var(--ink);font-weight:650}
   <aside class="notes"><p data-s="0">Mahsulot ikki tomonlama.</p><p data-s="1">Chapda a'zo, o'ngda zal.</p><p data-s="2">O'rtada eng qimmatli aktiv — mashg'ulot jurnali: kim, qachon, qaysi jihozda nima qildi.</p><p data-s="3">Pastda integratsiyalar: to'lov, Telegram, soatlar, 1Fit va sensorlar.</p></aside>
 </section>
 
-<section class="slide" data-title="Mashg'ulot ekrani" data-steps="3">
+<section class="slide" data-title="Mashg'ulot ekrani" data-steps="3" data-short="1">
   <div class="kicker">03 · A'zo · Prototipda bor</div>
   <h2>Set yozish — <span class="g">bitta bosish</span>, rekord esa darhol</h2>
   <div class="row mt" style="gap:56px;align-items:flex-start">
@@ -688,6 +688,8 @@ const TRACKS=['tech','biz','short'], TN={tech:'Texnik (to\'liq)',biz:'Biznes',sh
 let track=Q.get('track')||'tech'; if(!TRACKS.includes(track))track='tech';
 const inTrack=s=>track==='tech'?true:track==='biz'?s.dataset.track!=='tech':s.dataset.short==='1';
 let list=all.filter(inTrack), cur=0, step=0, t0=Date.now(), auto=null;
+function renum(){let k=0;list.forEach(s=>{const el=s.querySelector('.kicker'),fc=el&&el.firstChild;if(!fc||fc.nodeType!==3)return;if(el.dataset.k0===undefined)el.dataset.k0=fc.nodeValue;const m=el.dataset.k0.match(/^\d\d( · [\s\S]*)$/);if(m)fc.nodeValue=String(++k).padStart(2,'0')+m[1]})}
+renum();
 window.FX=window.FX||{};
 function fit(){root.style.setProperty('--k',Math.min(innerWidth/1600,innerHeight/900))}
 addEventListener('resize',fit);fit();
@@ -742,7 +744,7 @@ function overview(){const m=modal('m-ov','<div class="ovgrid">'+list.map((s,i)=>
   if(m)m.querySelectorAll('[data-i]').forEach(d=>d.onclick=()=>{m.classList.remove('on');show(+d.dataset.i,0,INSTANT)})}
 const lg=document.createElement('div');lg.className='legend';lg.innerHTML='<b>Ranglar</b><br><i style="background:var(--ok)"></i>ishlaydi / dalil bor<br><i style="background:var(--bad)"></i>xavf / ishlamaydi<br><i style="background:var(--warn)"></i>taxmin / hisob<br><i style="background:var(--lock)"></i>keyingi bosqich<br><i style="background:var(--a2)"></i>bizning taklif';document.body.appendChild(lg);
 function help(){modal('m-help','<h2 style="font-size:28px;color:#fff">Boshqaruv</h2><p>← → / bo\'shliq — qadam · N — ma\'ruzachi matni · S — ssenariy · B — yo\'l (texnik/biznes/10 daqiqa) · O — slaydlar · L — ranglar · K — kontrast · P — avto · T — mavzu · F — to\'liq ekran · ? — yordam</p><p>URL: #slayd.qadam · ?track=tech|biz|short · ?theme=dark|light · ?shot</p>')}
-function setTrack(t){track=t;const s=list[cur];list=all.filter(inTrack);all.forEach(x=>x.classList.remove('on'));let i=list.indexOf(s);if(i<0)i=0;cur=i;list[i].classList.remove('on');show(i,0,true);hud()}
+function setTrack(t){track=t;const s=list[cur];list=all.filter(inTrack);renum();all.forEach(x=>x.classList.remove('on'));let i=list.indexOf(s);if(i<0)i=0;cur=i;list[i].classList.remove('on');show(i,0,true);hud()}
 addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;const k=e.key.toLowerCase();
   if(['arrowright','pagedown',' ','enter'].includes(e.key.toLowerCase())){e.preventDefault();next()}
   else if(['arrowleft','pageup','backspace'].includes(k)){e.preventDefault();prev()}
