@@ -12,8 +12,13 @@ Struktura g'oyasi [openGym](https://github.com/DuarteSantos8/openGym) dan olinga
 - **Progress** — 12 haftalik faollik xaritasi, rekordlar (Epley 1RM), tana vazni grafigi
 - uz / ru / en, ma'lumot brauzerda (`localStorage`), backend yo'q
 
+## Sahifalar
+- `/` — landing (3D shtanga + puls chizig'i, uz/ru/en, yorug'/qorong'i); ilova `#/home`, `#/plan`, `#/workout`, `#/exercises`, `#/progress`
+- `/overview/` (+ `ru/`, `en/`) — Stories uslubidagi tanishuv; manba `scripts/build-overview.mjs`, qayta yig'ish: `node scripts/build-overview.mjs`
+- `/deck/tadqiqot.html`, `/deck/konsept.html` — prezentatsiyalar
+
 ## Stek
-Vite + React 19 + TypeScript, lucide-react. Router — hash (`#/plan`).
+Vite + React 19 + TypeScript, lucide-react, three.js (faqat landing, lazy). Router — hash (`#/plan`).
 
 ## Ishga tushirish
 ```bash
