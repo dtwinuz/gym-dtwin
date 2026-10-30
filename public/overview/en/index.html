@@ -220,6 +220,11 @@ svg.ab{left:0;top:0}
 .ov-x{position:fixed;top:calc(16px + env(safe-area-inset-top));right:16px}
 .final .bgv{opacity:.85}.cover .bgv{opacity:.42}
 #dust{position:fixed;inset:0;z-index:0;pointer-events:none}
+/* telegram composer */
+.tg{display:flex;flex-direction:column}
+.tg-in{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:8px;padding:9px 10px 16px;background:#17212b;border-top:1px solid #0b1118}
+.tg-in-f{flex:1;height:34px;border-radius:17px;background:#0e1621;display:flex;align-items:center;padding:0 14px;font-size:12.5px;color:#6c8aa4}
+.tg-in-m{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#2b5278;font-size:15px}
 /* plan */
 .pl-c{transition:border-color .35s,background .35s}.pl-c.on{border-color:rgb(var(--acc)/.6);background:linear-gradient(180deg,rgb(198 244 50/.14),rgb(19 19 23/.85))}
 .pl-i{width:46px;height:46px;flex:none;border-radius:14px;display:grid;place-items:center;font:700 12px var(--mono);background:rgb(var(--fg)/.07);color:rgb(var(--ink2))}
@@ -469,13 +474,13 @@ svg.ab{left:0;top:0}
     <p class="lead">Pain, fatigue or poor sleep — the AI <b>rewrites</b> today’s plan.</p>
   </div>
   <div class="vis"><div class="vbox">
-    <div class="phone" style="left:20px;top:0"><div class="scr"><div class="sbar"><span>9:41</span><span>●●●</span></div><div class="tg-h"><div class="tg-av"><b></b></div><div><div class="tg-n">gym.dtwin AI</div><div class="tg-s">coach</div></div></div>
+    <div class="phone" style="left:20px;top:0"><div class="scr tg"><div class="sbar"><span>9:41</span><span>●●●</span></div><div class="tg-h"><div class="tg-av"><b></b></div><div><div class="tg-n">gym.dtwin AI</div><div class="tg-s">coach</div></div></div>
       <div class="tg-body">
         <div class="msg out">My knee hurts today, slept 5 hours<small>17:42</small></div>
         <div class="msg in"><span id="co-ans" data-t="Got it. Leg press instead of squat, volume −20%. Easy day."></span><small>17:42</small></div>
         <div class="msg out">Thanks 💪<small>17:43</small></div>
-        <div class="msg in">I’ll check sleep and the knee again tomorrow. Heavy day returns on Saturday.<small>17:43</small></div>
-      </div></div></div>
+        <div class="msg in">I’ll check sleep and the knee again tomorrow. Heavy day returns on Saturday.<small>17:43</small><div class="kb"><span>📋 Plan</span><span>▶ Start</span></div></div>
+      </div><div class="tg-in"><span class="tg-in-f">Message</span><span class="tg-in-m">🎤</span></div></div></div>
     <div class="ab gc" id="co-plan" style="left:330px;top:170px;width:300px;padding:16px">
       <div class="eb" style="margin-bottom:10px">Legs · adapted</div>
       <div class="co-x"><s class="mute">Back squat 4×6</s><b class="acc">Leg press 3×12</b></div>
@@ -572,12 +577,14 @@ svg.ab{left:0;top:0}
     <p class="lead">The Telegram bot pings you on time; a 30-day challenge with friends keeps you going.</p>
   </div>
   <div class="vis"><div class="vbox">
-    <div class="phone" style="left:0;top:0"><div class="scr"><div class="sbar"><span>9:41</span><span>●●●</span></div><div class="tg-h"><div class="tg-av"><b></b></div><div><div class="tg-n">gym.dtwin</div><div class="tg-s">bot</div></div></div>
+    <div class="phone" style="left:0;top:0"><div class="scr tg"><div class="sbar"><span>9:41</span><span>●●●</span></div><div class="tg-h"><div class="tg-av"><b></b></div><div><div class="tg-n">gym.dtwin</div><div class="tg-s">bot</div></div></div>
       <div class="tg-body">
         <div class="msg in">🔔 Leg day today — 18:00. Ready?<div class="kb"><span>✓ Yes</span><span>⏰ +1 hr</span></div><small>17:00</small></div>
         <div class="msg out">✓ Yes<small>17:01</small></div>
         <div class="msg in">🔥 Aziza just closed day 21. You’re on day 18!<small>19:12</small></div>
-      </div></div></div>
+        <div class="msg out">💪 Catching up tomorrow<small>19:13</small></div>
+        <div class="msg in">🏁 Workout done: 5 exercises · 18 sets · 9.4 t<small>19:58</small></div>
+      </div><div class="tg-in"><span class="tg-in-f">Message</span><span class="tg-in-m">🎤</span></div></div></div>
     <div class="ab gc" id="sc-board" style="left:310px;top:120px;width:320px;padding:18px">
       <div class="eb" style="margin-bottom:12px">Challenge · 30 days</div>
       <div style="display:flex;align-items:center;gap:10px;padding:7px 0;font-size:14px"><span class="mono mute" style="width:14px">1</span><span style="width:70px">Aziza</span><span style="flex:1;height:8px;border-radius:4px;background:rgb(var(--fg)/.07);overflow:hidden"><span class="sc-b" style="display:block;height:100%;width:70%;background:rgb(var(--fg)/.3);border-radius:4px"></span></span><span class="mono" style="font-size:12px">21</span></div><div style="display:flex;align-items:center;gap:10px;padding:7px 0;font-size:14px;color:rgb(var(--acc));font-weight:700"><span class="mono mute" style="width:14px">2</span><span style="width:70px">You</span><span style="flex:1;height:8px;border-radius:4px;background:rgb(var(--fg)/.07);overflow:hidden"><span class="sc-b" style="display:block;height:100%;width:60%;background:rgb(var(--acc));border-radius:4px"></span></span><span class="mono" style="font-size:12px">18</span></div><div style="display:flex;align-items:center;gap:10px;padding:7px 0;font-size:14px"><span class="mono mute" style="width:14px">3</span><span style="width:70px">Bekzod</span><span style="flex:1;height:8px;border-radius:4px;background:rgb(var(--fg)/.07);overflow:hidden"><span class="sc-b" style="display:block;height:100%;width:50%;background:rgb(var(--fg)/.3);border-radius:4px"></span></span><span class="mono" style="font-size:12px">15</span></div><div style="display:flex;align-items:center;gap:10px;padding:7px 0;font-size:14px"><span class="mono mute" style="width:14px">4</span><span style="width:70px">Dilnoza</span><span style="flex:1;height:8px;border-radius:4px;background:rgb(var(--fg)/.07);overflow:hidden"><span class="sc-b" style="display:block;height:100%;width:40%;background:rgb(var(--fg)/.3);border-radius:4px"></span></span><span class="mono" style="font-size:12px">12</span></div>
@@ -625,6 +632,6 @@ svg.ab{left:0;top:0}
 
 <div class="ov" id="ov"><div class="ctl ov-x"><button id="ovx">Close ✕</button></div><h3>gym.dtwin · all sections</h3><div class="ov-g"></div></div>
 
-<script src="/overview/deck.js?v=mvuomepk"></script>
+<script src="/overview/deck.js?v=mvupwr6u"></script>
 </body>
 </html>

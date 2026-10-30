@@ -383,6 +383,41 @@ export default function Landing() {
     return () => { removeEventListener('scroll', onScroll); cancelAnimationFrame(raf) }
   }, [])
 
+  // free area next to / under the hero copy, so the barbell never covers text
+  const measure = () => {
+    const hero = root.current?.querySelector<HTMLElement>('.ld-hero')
+    const copy = root.current?.querySelector<HTMLElement>('.ld-hero-copy')
+    const stats = root.current?.querySelector<HTMLElement>('.ld-stats')
+    const hud = root.current?.querySelector<HTMLElement>('.ld-hud')
+    if (!hero || !copy || !stats || !hud || !handle.current) return
+    const W = innerWidth, Hh = innerHeight, y = scrollY
+    const top = (r: DOMRect) => r.top + y, bottom = (r: DOMRect) => r.bottom + y
+    const portrait = Hh > W * 1.05
+    root.current?.classList.remove('tight')
+    const hudTop = top(hud.getBoundingClientRect())
+    if (portrait) {
+      const t0 = (bottom(stats.getBoundingClientRect()) + 18) / Hh
+      const b0 = Math.min(0.97, (hudTop - 10) / Hh)
+      // little room above the pulse chip: drop the chip and give the barbell the bottom of the screen
+      const tight = b0 - t0 < 0.15
+      root.current?.classList.toggle('tight', tight)
+      handle.current.setSafe({ left: 0.03, right: 0.97, top: t0, bottom: tight ? Math.max(t0 + 0.12, 0.985) : b0 })
+    } else {
+      const c = copy.getBoundingClientRect()
+      handle.current.setSafe({ left: (c.right + 40) / W, right: 0.98, top: 100 / Hh, bottom: Math.min(0.95, (hudTop - 12) / Hh) })
+    }
+  }
+  const measureRef = useRef(measure)
+  useEffect(() => { measureRef.current = measure })
+  useEffect(() => {
+    const ro = new ResizeObserver(() => measureRef.current())
+    const copy = root.current?.querySelector('.ld-hero')
+    if (copy) ro.observe(copy)
+    document.fonts?.ready.then(() => measureRef.current())
+    measureRef.current()
+    return () => ro.disconnect()
+  }, [lang])
+
   // lazy 3D scene
   useEffect(() => {
     let disposed = false
@@ -400,6 +435,7 @@ export default function Landing() {
         })
         if (disposed) { h.dispose(); return }
         handle.current = h
+        measure()
         requestAnimationFrame(() => setReady(true))
       } catch {
         if (!disposed) setFallback(true)

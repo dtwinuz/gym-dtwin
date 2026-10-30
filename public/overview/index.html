@@ -220,6 +220,11 @@ svg.ab{left:0;top:0}
 .ov-x{position:fixed;top:calc(16px + env(safe-area-inset-top));right:16px}
 .final .bgv{opacity:.85}.cover .bgv{opacity:.42}
 #dust{position:fixed;inset:0;z-index:0;pointer-events:none}
+/* telegram composer */
+.tg{display:flex;flex-direction:column}
+.tg-in{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;gap:8px;padding:9px 10px 16px;background:#17212b;border-top:1px solid #0b1118}
+.tg-in-f{flex:1;height:34px;border-radius:17px;background:#0e1621;display:flex;align-items:center;padding:0 14px;font-size:12.5px;color:#6c8aa4}
+.tg-in-m{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#2b5278;font-size:15px}
 /* plan */
 .pl-c{transition:border-color .35s,background .35s}.pl-c.on{border-color:rgb(var(--acc)/.6);background:linear-gradient(180deg,rgb(198 244 50/.14),rgb(19 19 23/.85))}
 .pl-i{width:46px;height:46px;flex:none;border-radius:14px;display:grid;place-items:center;font:700 12px var(--mono);background:rgb(var(--fg)/.07);color:rgb(var(--ink2))}
@@ -311,7 +316,7 @@ svg.ab{left:0;top:0}
   </div></div>
 </section>
 
-<section class="sl flip" data-id="today" data-hold="3.5" data-title="Bugungi mashg‘ulot bir qarashda">
+<section class="sl flip" data-id="today" data-hold="3.5" data-title="Bugungi mashg'ulot bir qarashda">
   <div class="txt">
     <div class="kick">02 · Bosh sahifa</div>
     <h2 class="h">Bugungi reja&nbsp;— <em>birinchi ekranda.</em></h2>
@@ -353,7 +358,7 @@ svg.ab{left:0;top:0}
   </div></div>
 </section>
 
-<section class="sl flip" data-id="rest" data-hold="3.5" data-title="90 soniya dam — taymer o‘zi">
+<section class="sl flip" data-id="rest" data-hold="3.5" data-title="90 soniya dam — taymer o'zi">
   <div class="txt">
     <div class="kick">04 · Dam olish</div>
     <h2 class="h">Dam olish taymeri <em>o'zi</em> boshlanadi.</h2>
@@ -458,24 +463,24 @@ svg.ab{left:0;top:0}
         <div class="lg-h show">Bugungi mashg'ulot: Push</div><div class="lg-h">Тренировка на сегодня: Push</div><div class="lg-h">Today's session: Push</div>
       </div>
     </div>
-    <div class="ab gc ln-t" style="left:40px;top:240px;width:560px;height:68px;padding:0 18px;display:flex;align-items:center;gap:14px;border-radius:16px"><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><b style="font-size:15px;flex:1">Akkaunt shart emas</b><span class="mono mute" style="font-size:11.5px">parol, SMS, pochta yo‘q</span></div><div class="ab gc ln-t" style="left:40px;top:320px;width:560px;height:68px;padding:0 18px;display:flex;align-items:center;gap:14px;border-radius:16px"><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><b style="font-size:15px;flex:1">Brauzerda saqlanadi</b><span class="mono mute" style="font-size:11.5px">localStorage · offline</span></div><div class="ab gc ln-t" style="left:40px;top:400px;width:560px;height:68px;padding:0 18px;display:flex;align-items:center;gap:14px;border-radius:16px"><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><b style="font-size:15px;flex:1">Bepul</b><span class="mono mute" style="font-size:11.5px">obuna yo‘q</span></div>
+    <div class="ab gc ln-t" style="left:40px;top:240px;width:560px;height:68px;padding:0 18px;display:flex;align-items:center;gap:14px;border-radius:16px"><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><b style="font-size:15px;flex:1">Akkaunt shart emas</b><span class="mono mute" style="font-size:11.5px">parol, SMS, pochta yo'q</span></div><div class="ab gc ln-t" style="left:40px;top:320px;width:560px;height:68px;padding:0 18px;display:flex;align-items:center;gap:14px;border-radius:16px"><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><b style="font-size:15px;flex:1">Brauzerda saqlanadi</b><span class="mono mute" style="font-size:11.5px">localStorage · offline</span></div><div class="ab gc ln-t" style="left:40px;top:400px;width:560px;height:68px;padding:0 18px;display:flex;align-items:center;gap:14px;border-radius:16px"><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><b style="font-size:15px;flex:1">Bepul</b><span class="mono mute" style="font-size:11.5px">obuna yo'q</span></div>
   </div></div>
 </section>
 
 <section class="sl flip" data-id="coach" data-hold="3.5" data-title="AI murabbiy rejani moslaydi">
   <div class="txt">
     <div class="kick">10 · AI murabbiy<span class="soon">Tez kunda</span></div>
-    <h2 class="h">Murabbiy&nbsp;— <em>cho‘ntagingizda.</em></h2>
+    <h2 class="h">Murabbiy&nbsp;— <em>cho'ntagingizda.</em></h2>
     <p class="lead">Og'riq, charchoq yoki uyqu yetishmasa — AI bugungi rejani <b>o'zi o'zgartiradi</b>.</p>
   </div>
   <div class="vis"><div class="vbox">
-    <div class="phone" style="left:20px;top:0"><div class="scr"><div class="sbar"><span>9:41</span><span>●●●</span></div><div class="tg-h"><div class="tg-av"><b></b></div><div><div class="tg-n">gym.dtwin AI</div><div class="tg-s">murabbiy</div></div></div>
+    <div class="phone" style="left:20px;top:0"><div class="scr tg"><div class="sbar"><span>9:41</span><span>●●●</span></div><div class="tg-h"><div class="tg-av"><b></b></div><div><div class="tg-n">gym.dtwin AI</div><div class="tg-s">murabbiy</div></div></div>
       <div class="tg-body">
         <div class="msg out">Bugun tizzam og'riyapti, uyqu 5 soat<small>17:42</small></div>
         <div class="msg in"><span id="co-ans" data-t="Tushundim. Squat o'rniga Leg press, hajmni 20% kamaytiramiz. Yengil ishlaymiz."></span><small>17:42</small></div>
         <div class="msg out">Rahmat 💪<small>17:43</small></div>
-        <div class="msg in">Ertaga uyqu va tizzani yana so'rayman. Shanba — og'ir kun qaytadi.<small>17:43</small></div>
-      </div></div></div>
+        <div class="msg in">Ertaga uyqu va tizzani yana so'rayman. Shanba — og'ir kun qaytadi.<small>17:43</small><div class="kb"><span>📋 Reja</span><span>▶ Boshlash</span></div></div>
+      </div><div class="tg-in"><span class="tg-in-f">Xabar</span><span class="tg-in-m">🎤</span></div></div></div>
     <div class="ab gc" id="co-plan" style="left:330px;top:170px;width:300px;padding:16px">
       <div class="eb" style="margin-bottom:10px">Legs · moslandi</div>
       <div class="co-x"><s class="mute">Back squat 4×6</s><b class="acc">Leg press 3×12</b></div>
@@ -507,7 +512,7 @@ svg.ab{left:0;top:0}
 <section class="sl flip" data-id="food" data-hold="3.5" data-title="Ovqat va makrolar">
   <div class="txt">
     <div class="kick">12 · Ovqat va makrolar<span class="soon">Tez kunda</span></div>
-    <h2 class="h">Oqsil yetdimi&nbsp;— <em>ko‘rinadi.</em></h2>
+    <h2 class="h">Oqsil yetdimi&nbsp;— <em>ko'rinadi.</em></h2>
     <p class="lead">Oqsil, uglevod, yog' va kaloriya. Bazada palov ham, tvorog ham bor.</p>
   </div>
   <div class="vis"><div class="vbox">
@@ -572,12 +577,14 @@ svg.ab{left:0;top:0}
     <p class="lead">Telegram bot vaqtida eslatadi, do'stlar bilan 30 kunlik challenge reytingi.</p>
   </div>
   <div class="vis"><div class="vbox">
-    <div class="phone" style="left:0;top:0"><div class="scr"><div class="sbar"><span>9:41</span><span>●●●</span></div><div class="tg-h"><div class="tg-av"><b></b></div><div><div class="tg-n">gym.dtwin</div><div class="tg-s">bot</div></div></div>
+    <div class="phone" style="left:0;top:0"><div class="scr tg"><div class="sbar"><span>9:41</span><span>●●●</span></div><div class="tg-h"><div class="tg-av"><b></b></div><div><div class="tg-n">gym.dtwin</div><div class="tg-s">bot</div></div></div>
       <div class="tg-body">
         <div class="msg in">🔔 Bugun Legs kuni — 18:00. Tayyormisiz?<div class="kb"><span>✓ Ha</span><span>⏰ +1 soat</span></div><small>17:00</small></div>
         <div class="msg out">✓ Ha<small>17:01</small></div>
         <div class="msg in">🔥 Aziza bugun 21-kunni yopdi. Siz 18-kundasiz!<small>19:12</small></div>
-      </div></div></div>
+        <div class="msg out">💪 Ertaga quvib yetaman<small>19:13</small></div>
+        <div class="msg in">🏁 Mashg'ulot yakunlandi: 5 mashq · 18 set · 9,4 t<small>19:58</small></div>
+      </div><div class="tg-in"><span class="tg-in-f">Xabar</span><span class="tg-in-m">🎤</span></div></div></div>
     <div class="ab gc" id="sc-board" style="left:310px;top:120px;width:320px;padding:18px">
       <div class="eb" style="margin-bottom:12px">Challenge · 30 kun</div>
       <div style="display:flex;align-items:center;gap:10px;padding:7px 0;font-size:14px"><span class="mono mute" style="width:14px">1</span><span style="width:70px">Aziza</span><span style="flex:1;height:8px;border-radius:4px;background:rgb(var(--fg)/.07);overflow:hidden"><span class="sc-b" style="display:block;height:100%;width:70%;background:rgb(var(--fg)/.3);border-radius:4px"></span></span><span class="mono" style="font-size:12px">21</span></div><div style="display:flex;align-items:center;gap:10px;padding:7px 0;font-size:14px;color:rgb(var(--acc));font-weight:700"><span class="mono mute" style="width:14px">2</span><span style="width:70px">Siz</span><span style="flex:1;height:8px;border-radius:4px;background:rgb(var(--fg)/.07);overflow:hidden"><span class="sc-b" style="display:block;height:100%;width:60%;background:rgb(var(--acc));border-radius:4px"></span></span><span class="mono" style="font-size:12px">18</span></div><div style="display:flex;align-items:center;gap:10px;padding:7px 0;font-size:14px"><span class="mono mute" style="width:14px">3</span><span style="width:70px">Bekzod</span><span style="flex:1;height:8px;border-radius:4px;background:rgb(var(--fg)/.07);overflow:hidden"><span class="sc-b" style="display:block;height:100%;width:50%;background:rgb(var(--fg)/.3);border-radius:4px"></span></span><span class="mono" style="font-size:12px">15</span></div><div style="display:flex;align-items:center;gap:10px;padding:7px 0;font-size:14px"><span class="mono mute" style="width:14px">4</span><span style="width:70px">Dilnoza</span><span style="flex:1;height:8px;border-radius:4px;background:rgb(var(--fg)/.07);overflow:hidden"><span class="sc-b" style="display:block;height:100%;width:40%;background:rgb(var(--fg)/.3);border-radius:4px"></span></span><span class="mono" style="font-size:12px">12</span></div>
@@ -586,10 +593,10 @@ svg.ab{left:0;top:0}
   </div></div>
 </section>
 
-<section class="sl flip" data-id="dtwin" data-hold="3.5" data-title="dtwin bilan bog‘lanish">
+<section class="sl flip" data-id="dtwin" data-hold="3.5" data-title="dtwin bilan bog'lanish">
   <div class="txt">
     <div class="kick">16 · dtwin oilasi<span class="soon">Tez kunda</span></div>
-    <h2 class="h">Mashg‘ulot&nbsp;— <em>hayot rejangizda.</em></h2>
+    <h2 class="h">Mashg'ulot&nbsp;— <em>hayot rejangizda.</em></h2>
     <p class="lead">gym.dtwin dtwin.uz bilan ulanadi: mashg'ulot kun rejangizga tushadi, bitta akkaunt — hamma qurilmada.</p>
   </div>
   <div class="vis"><div class="vbox">
@@ -625,6 +632,6 @@ svg.ab{left:0;top:0}
 
 <div class="ov" id="ov"><div class="ctl ov-x"><button id="ovx">Yopish ✕</button></div><h3>gym.dtwin · barcha bo'limlar</h3><div class="ov-g"></div></div>
 
-<script src="/overview/deck.js?v=mvuomepk"></script>
+<script src="/overview/deck.js?v=mvupwr6u"></script>
 </body>
 </html>
