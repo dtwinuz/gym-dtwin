@@ -408,7 +408,7 @@ export default function Landing() {
     }
   }
   const measureRef = useRef(measure)
-  measureRef.current = measure
+  useEffect(() => { measureRef.current = measure })
   useEffect(() => {
     const ro = new ResizeObserver(() => measureRef.current())
     const copy = root.current?.querySelector('.ld-hero')
