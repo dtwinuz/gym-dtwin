@@ -11,6 +11,10 @@
 	header @assets Cache-Control "public, max-age=31536000, immutable"
 	@page not path /assets/*
 	header @page Cache-Control "no-cache"
+	redir /overview /overview/ 308
+	redir /overview/ru /overview/ru/ 308
+	redir /overview/en /overview/en/ 308
+	# /overview/ katalog indeksi, qolgan hamma yo'l (/, /app) — SPA
 	try_files {path} {path}/index.html /index.html
 	file_server
 }
