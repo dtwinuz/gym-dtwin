@@ -30,7 +30,7 @@ npm run preview   # dist/ ni lokal ko'rsatish
 ```
 
 ## CI
-GitHub Actions workflow yo'q (build/lint PR'da avtomatik yurmaydi). Faqat Dependabot — npm, oylik (`.github/dependabot.yml`).
+`.github/workflows/ci.yml`: har PR va `main`ga push'da `npm ci`, `npm run lint`, `npm run build` (Node 24; faqat `*.md` o'zgarsa ishlamaydi). Merge'ni bloklamaydi — natijani PR'da tekshiring. Dependabot oylik: npm va GitHub Actions, 7 kunlik cooldown bilan (`.github/dependabot.yml`).
 
 ## Deploy
 ```bash
