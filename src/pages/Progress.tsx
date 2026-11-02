@@ -1,8 +1,11 @@
 import { useMemo, useState } from 'react'
+import { Download } from 'lucide-react'
 import { t } from '../i18n'
+import { shareCard } from '../app/share'
+import { toast } from '../app/toast'
 import { updateProfile, useProfile } from '../app/store'
 import { fmtDate, fmtNum } from '../app/format'
-import { bestE1rm, exerciseHistory, isoDate } from '../core/history'
+import { bestE1rm, exerciseHistory, isoDate, sortByStart } from '../core/history'
 import { exerciseById, exerciseName } from '../catalogue'
 
 const WEEKS = 12
@@ -38,7 +41,8 @@ function WeightChart({ points, goal }: { points: { date: string; w: number }[]; 
 }
 
 export default function Progress() {
-  const { settings: { lang, unit, oneRmFormula }, workouts, bodyweight, targetW } = useProfile()
+  const { settings, workouts, bodyweight, targetW } = useProfile()
+  const { lang, unit, oneRmFormula } = settings
   const [kg, setKg] = useState('')
 
   const records = useMemo(() => {
@@ -67,6 +71,28 @@ export default function Progress() {
         <h2>{t(lang, 'activity')}</h2>
         <Heatmap dates={new Set(workouts.map(w => w.date))} />
       </section>
+
+      {workouts.length > 0 && (
+        <section className="card recent">
+          <h2>{t(lang, 'recentSessions')}</h2>
+          <ul className="recent-list">
+            {sortByStart(workouts).reverse().slice(0, 5).map(w => (
+              <li key={w.id}>
+                <div className="recent-head">
+                  <b>{w.name}</b>
+                  <span className="muted">{fmtDate(w.date, lang, { day: 'numeric', month: 'short' })} · {fmtNum(w.vol, lang, 0)} {unit}</span>
+                  <button
+                    type="button" className="icon-btn" aria-label={t(lang, 'shareImage')}
+                    onClick={async () => { if ((await shareCard(w, settings)) === 'saved') toast(t(lang, 'cardSaved')) }}
+                  ><Download size={16} /></button>
+                </div>
+                {w.note && <p className="recent-note">{w.note}</p>}
+                {w.entries.filter(e => e.note).map(e => <p key={e.exId} className="muted">{exerciseName(exerciseById(e.exId), lang)}: {e.note}</p>)}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section className="card">
         <h2>{t(lang, 'records')}</h2>

@@ -15,6 +15,7 @@ export const DEFAULT_PAIRS = 6
 export const BAR_DEFAULTS: Record<string, Record<Unit, number>> = {
   barbell: { kg: 20, lb: 45 },
   'e-z curl bar': { kg: 10, lb: 25 },
+  'ez bar': { kg: 10, lb: 25 },
   smith: { kg: 9, lb: 20 },
   'trap bar': { kg: 25, lb: 55 },
 }

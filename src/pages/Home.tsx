@@ -156,6 +156,16 @@ export default function Home() {
       )}
       {heatTips && isHeatSeason(now) && <Tip icon={<Sun size={18} />} text={L('heatTip')} />}
 
+      {p.active && (
+        <section className="card continue-card">
+          <div>
+            <p className="muted">{L('continueWorkout')}</p>
+            <h2>{p.active.name}</h2>
+          </div>
+          <a className="btn primary" href="#/workout"><Play size={18} />{L('resume')}</a>
+        </section>
+      )}
+
       {p.routines.length === 0 ? (
         <section className="card today-empty">
           <h1>{L('homeEmptyTitle')}</h1>

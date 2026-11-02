@@ -418,3 +418,14 @@ describe('dates', () => {
     expect(weekdayName(1, 'ru')).toBe('понедельник')
   })
 })
+
+describe('starter programs per-side slots', () => {
+  it('count reps as the total of both sides, so targets are even', async () => {
+    const { programs } = (await import('../../content/programs.json')).default as unknown as {
+      programs: { routines: { ex: { exId: string; side?: boolean; mode?: string; reps: number }[] }[] }[]
+    }
+    for (const p of programs) for (const r of p.routines) for (const s of r.ex) {
+      if (s.side && (s.mode ?? 'reps') === 'reps') expect(s.reps % 2, s.exId).toBe(0)
+    }
+  })
+})
