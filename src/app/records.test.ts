@@ -178,3 +178,10 @@ describe('repeat', () => {
     expect(s.entries[0].sets[0].done).toBe(false)
   })
 })
+
+describe('cleanEntries with distance', () => {
+  it('keeps a set that only has a distance', () => {
+    const out = cleanEntries([{ exId: 'Running_Treadmill', sets: [{ km: 5, min: 0, done: false }] }])
+    expect(out[0].sets[0].km).toBe(5)
+  })
+})

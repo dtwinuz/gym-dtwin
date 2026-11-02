@@ -125,7 +125,7 @@ export function patchRow(row: SetRow, patch: Pick<SetRow, 'w' | 'r' | 'sec' | 'm
   return { ...next, sides: { L, R } }
 }
 
-const hasWork = (s: SetRow) => (s.r ?? 0) > 0 || (s.sec ?? 0) > 0 || (s.min ?? 0) > 0
+const hasWork = (s: SetRow) => (s.r ?? 0) > 0 || (s.sec ?? 0) > 0 || (s.min ?? 0) > 0 || (s.km ?? 0) > 0
 
 /** What an edit form saves: rows with something in them, all of them done. */
 export function cleanEntries(entries: Entry[]): Entry[] {

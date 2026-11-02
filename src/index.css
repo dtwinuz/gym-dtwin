@@ -720,3 +720,10 @@ body.no-scroll { overflow: hidden; }
   .page { max-width: none; padding: 0; }
   .print-block { break-inside: avoid; }
 }
+
+@media (max-width: 760px) {
+  body:has(.logger) [data-dtwin-support],
+  body:has(.sheet-backdrop) [data-dtwin-support] { display: none; }
+}
+
+.logger input::placeholder { font-size: 12px; }

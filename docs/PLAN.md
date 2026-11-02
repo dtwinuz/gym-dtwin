@@ -38,4 +38,6 @@ uz va ru tarjimalarini o'zimiz yozamiz.
 | W7 | Data: JSON backup/restore, CSV export, Strong/Hevy/FitNotes CSV import | Ko'chish |
 | W8 | Backend: akkaunt (dtwin SSO yoki passkey), `GET/PUT /api/data` rev + 409 + merge, media upload | Qurilmalar sinxroni |
 
+Holat (2026-11-02): W1-W7 prodda (#12, #74-#79), W8 PR bosqichida.
+
 Har to'lqin: alohida PR (squash), `npm test && npm run build` yashil, deploy userga.

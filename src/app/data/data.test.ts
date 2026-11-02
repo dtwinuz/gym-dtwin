@@ -340,12 +340,12 @@ describe('csv export', () => {
 
   it('sets.csv has the agreed columns, one row per set and drop', () => {
     const text = setsCsv(p)
-    expect(text.startsWith('﻿date,start_time,workout,exercise_id,exercise_name,set_number,set_type,weight,unit,reps,seconds,minutes,speed,incline,rir,rpe,note\r\n')).toBe(true)
+    expect(text.startsWith('﻿date,start_time,workout,exercise_id,exercise_name,set_number,set_type,weight,unit,reps,seconds,minutes,speed,incline,km,rir,rpe,note\r\n')).toBe(true)
     const rows = parseCsv(text)
     expect(rows).toHaveLength(5)
-    expect(rows[1]).toEqual(['2026-01-05', '09:07', 'A', 'Plank', 'Plank', '1', 'normal', '', '', '', '30', '', '', '', '', '', 'Top | Mid'])
+    expect(rows[1]).toEqual(['2026-01-05', '09:07', 'A', 'Plank', 'Plank', '1', 'normal', '', '', '', '30', '', '', '', '', '', '', 'Top | Mid'])
     expect(rows[2].slice(4, 10)).toEqual(['\'=Evil, "move"', '1', 'warmup', '100', 'lb', '5'])
-    expect(rows[3][15]).toBe('9')
+    expect(rows[3][16]).toBe('9')
     expect(rows[4].slice(5, 10)).toEqual(['2', 'drop', '150', 'lb', '4'])
   })
   it('body.csv joins weights and measurements in the current scale', () => {

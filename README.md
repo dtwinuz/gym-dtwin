@@ -4,13 +4,15 @@ Mashg'ulot kundaligi MVP — https://gym.dtwin.uz
 
 Struktura g'oyasi [openGym](https://github.com/DuarteSantos8/openGym) dan olingan (reja → mashg'ulot → progress), kod esa o'zimizniki (openGym AGPL-3.0, uning kodi va media'si ko'chirilmagan).
 
-## Imkoniyatlar (MVP)
-- **Bosh sahifa** — bugungi mashg'ulot (reja aylanishi), haftalik statistika, tarix
-- **Reja** — 8 ta starter reja (PPL, Upper/Lower, Full Body, 5×5, trenajyor, uy, dumba, Ramazon), routine muharriri, hafta va rotatsiya jadvali
-- **Mashg'ulot** — set/rep/kg kiritish, oxirgi vazn oldindan to'ldiriladi, 90 s dam olish taymeri, PR belgisi
-- **Mashqlar** — 876 mashqli kutubxona (free-exercise-db), 187 tasi uz/ru nom va ko'rsatma bilan; sinonim va xatoga chidamli qidiruv (jim, stanovaya, turnik ...), filtrlar (guruh, jihoz, tur, daraja, "menda bor jihoz"), tana xaritasi (MuscleMap) bilan mushak tanlash, sevimlilar, o'z mashqlarim
-- **Progress** — 12 haftalik faollik xaritasi, rekordlar (Epley 1RM), tana vazni grafigi
-- uz / ru / en, ma'lumot brauzerda (`localStorage`), backend yo'q
+## Imkoniyatlar
+- **Mashqlar** - 876 mashqli kutubxona (free-exercise-db), 187 tasi uz/ru nom va ko'rsatma bilan; sinonim va xatoga chidamli qidiruv, filtrlar, jihozlar profili, tana xaritasi (MuscleMap), sevimlilar, o'z mashqlarim
+- **Reja** - hafta va rotatsiya jadvali, routine editor (superset, slot sozlamalari, progression), 8 ta starter reja, onboarding, reja fayli, chop etish, Ramazon va issiq kunlar rejimi
+- **Mashg'ulot** - reps/time/cardio setlari, rest timer, warm-up, drop, rest-pause, pyramid, per-side, RIR/RPE, disk kalkulyatori, swap va zaxira, klaviatura, yakuniy hisobot, keyingi safar retsepti, rasm ulashish
+- **Progress** - statistika, 12 oylik heatmap, mushak xaritasi 3 rejimda, 1RM grafigi, structural balance, tarixni tahrirlash, tana vazni va o'lchamlar, progress foto (faqat qurilmada)
+- **Ma'lumot** - JSON backup va restore, CSV eksport, Strong/Hevy/FitNotes/umumiy CSV import
+- uz / ru / en, tema va accent, qidiruvli sozlamalar; ma'lumot brauzerda (local-first), akkaunt shart emas. Sinxron (W8) dtwin bilan kelishuvdan keyin yoqiladi
+
+Reja va holat: [docs/PLAN.md](docs/PLAN.md), [gym-dtwin project](https://github.com/orgs/dtwinuz/projects/10).
 
 ## Sahifalar
 - `/` — landing (3D shtanga + puls chizig'i, uz/ru/en, yorug'/qorong'i); ilova `#/home`, `#/plan`, `#/workout`, `#/exercises`, `#/progress`
@@ -51,6 +53,4 @@ Deploy qo'lda: skript lokal `npm run build` qiladi va `dist/` ni VPS'ga ko'chira
 Qoidalar `dtwinuz` org bo'yicha umumiy: [CONTRIBUTING](https://github.com/dtwinuz/.github/blob/main/CONTRIBUTING.md), [SECURITY](https://github.com/dtwinuz/.github/blob/main/SECURITY.md), [CODE_OF_CONDUCT](https://github.com/dtwinuz/.github/blob/main/CODE_OF_CONDUCT.md). Reviewer — `@dtwinuz/core` (`.github/CODEOWNERS`; GitHub Free'da private repoda CODEOWNERS review'ni avtomatik so'ramaydi — reviewer'ni PR'ga qo'lda qo'shing).
 
 ## Keyingi qadamlar
-- Backend + akkaunt (qurilmalar orasida sinxron)
-- Progressiya qoidalari (linear, double progression), deload
-- Import/eksport (CSV, JSON)
+Sinxron va dtwin SSO (W8), PWA va offline, mobil ilova, AI coach, MCP - [project](https://github.com/orgs/dtwinuz/projects/10).

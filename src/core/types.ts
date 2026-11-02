@@ -64,6 +64,7 @@ export interface SetRow {
   min?: number
   speed?: number
   incline?: number
+  km?: number
   done: boolean
   warmup?: boolean
   failure?: boolean
