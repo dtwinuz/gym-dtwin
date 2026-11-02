@@ -4,7 +4,7 @@ import { t } from '../i18n'
 import { updateProfile, useProfile } from '../app/store'
 import { customToCatalogue } from '../app/custom'
 import type { CustomExercise } from '../core/types'
-import { allExercises, exerciseName, imageUrl, setCustomExercises, type CatalogueExercise } from '../catalogue'
+import { CATALOGUE, allExercises, exerciseName, hasOtherGroup, imageUrl, inGroup, setCustomExercises, type CatalogueExercise } from '../catalogue'
 import { buildIndex, search } from '../catalogue/search'
 import {
   CATEGORIES, CATEGORY_NAME, EQUIPMENT, EQUIPMENT_NAME, GROUPS, GROUP_NAME, LEVELS, LEVEL_NAME, MUSCLE_NAME, label,
@@ -59,6 +59,7 @@ export default function Exercises() {
     setCustomExercises(customEx.map(customToCatalogue))
     return buildIndex(allExercises())
   }, [customEx])
+  const showOther = useMemo(() => hasOtherGroup([...CATALOGUE, ...customEx.map(customToCatalogue)]), [customEx])
 
   const fav = useMemo(() => new Set(favEx), [favEx])
   const used = useMemo(() => new Set(workouts.flatMap(w => w.entries.map(e => e.exId))), [workouts])
@@ -66,7 +67,7 @@ export default function Exercises() {
   const list = useMemo(() => {
     const gearSet = onlyGear && gear ? new Set(gear) : null
     return search(docs, dq, { fav, used }).filter(e =>
-      (!group || (group === 'fav' ? fav.has(e.id) : group === 'mine' ? e.custom : e.g === group)) &&
+      (!group || (group === 'fav' ? fav.has(e.id) : group === 'mine' ? e.custom : inGroup(e, group))) &&
       (!muscle || e.p.includes(muscle) || e.s.includes(muscle)) &&
       (!eq || e.eq === eq) && (!cat || e.c === cat) && (!lvl || e.l === lvl) &&
       (!gearSet || gearSet.has(e.eq)))
@@ -122,6 +123,8 @@ export default function Exercises() {
         {GROUPS.map(g => (
           <button key={g} className={g === group ? 'on' : ''} onClick={() => setGroup(g)}>{GROUP_NAME[g][lang]}</button>
         ))}
+        <button className={group === 'cardio' ? 'on' : ''} onClick={() => setGroup('cardio')}>{CATEGORY_NAME.cardio[lang]}</button>
+        {showOther && <button className={group === 'other' ? 'on' : ''} onClick={() => setGroup('other')}>{GROUP_NAME.other[lang]}</button>}
         {customEx.length > 0 && <button className={group === 'mine' ? 'on' : ''} onClick={() => setGroup('mine')}>{t(lang, 'mine')}</button>}
         <button className={showMap ? 'on' : ''} onClick={() => setShowMap(v => !v)}>{t(lang, 'muscleMap')}</button>
       </div>

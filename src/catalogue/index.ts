@@ -78,3 +78,12 @@ export function similarExercises(id: string, limit = 6) {
     .sort((a, b) => Number(!!b.uz) - Number(!!a.uz) || (a.m === 'c' ? -1 : 0) - (b.m === 'c' ? -1 : 0))
     .slice(0, limit)
 }
+
+/** Chip filter: a body group, cardio by category, or the non-cardio rest of "other". */
+export function inGroup(e: CatalogueExercise, group: string) {
+  if (group === 'cardio') return e.c === 'cardio'
+  if (group === 'other') return e.g === 'other' && e.c !== 'cardio'
+  return e.g === group
+}
+
+export const hasOtherGroup = (list: CatalogueExercise[]) => list.some(e => inGroup(e, 'other'))
