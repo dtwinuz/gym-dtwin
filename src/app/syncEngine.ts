@@ -20,11 +20,12 @@ export interface SyncMeta {
   lastSyncAt: Ms | null
   owner: string | null
   paused: boolean
+  telegram?: boolean | null
 }
 
 export const emptyMeta = (): SyncMeta => ({ rev: 0, dirty: false, lastSyncAt: null, owner: null, paused: false })
 
-export interface SyncState { status: SyncStatus; dirty: boolean; lastSyncAt: Ms | null }
+export interface SyncState { status: SyncStatus; dirty: boolean; lastSyncAt: Ms | null; telegram: boolean | null }
 
 export interface SyncDeps {
   fetch: typeof fetch
@@ -52,7 +53,7 @@ class Stop extends Error {
 /** A failure worth retrying by itself later. */
 class Later extends Error {}
 
-interface Remote { rev: number; profile: Profile | null; owner?: string }
+interface Remote { rev: number; profile: Profile | null; owner?: string; telegram?: unknown }
 
 export function createSyncEngine(d: SyncDeps) {
   const now = d.now ?? Date.now
@@ -63,7 +64,7 @@ export function createSyncEngine(d: SyncDeps) {
 
   let meta = d.loadMeta()
   let status: SyncStatus = 'guest'
-  let snapshot: SyncState = { status, dirty: meta.dirty, lastSyncAt: meta.lastSyncAt }
+  let snapshot: SyncState = { status, dirty: meta.dirty, lastSyncAt: meta.lastSyncAt, telegram: meta.telegram ?? null }
   let live = false
   let holdPut = false
   let current: Promise<void> | null = null
@@ -73,7 +74,7 @@ export function createSyncEngine(d: SyncDeps) {
   const listeners = new Set<() => void>()
 
   function publish() {
-    snapshot = { status, dirty: meta.dirty, lastSyncAt: meta.lastSyncAt }
+    snapshot = { status, dirty: meta.dirty, lastSyncAt: meta.lastSyncAt, telegram: meta.telegram ?? null }
     listeners.forEach(l => l())
   }
 
@@ -126,16 +127,17 @@ export function createSyncEngine(d: SyncDeps) {
   }
 
   async function readRemote(res: Response): Promise<Remote> {
-    const body = await res.json() as { rev?: unknown; profile?: unknown; owner?: unknown }
+    const body = await res.json() as { rev?: unknown; profile?: unknown; owner?: unknown; telegram?: unknown }
     const profile = body.profile == null ? null : readProfile(body.profile)
     if ((body.profile != null && !profile) || typeof body.rev !== 'number') throw new Later('shape')
-    return { rev: body.rev, profile, owner: typeof body.owner === 'string' ? body.owner : undefined }
+    return { rev: body.rev, profile, owner: typeof body.owner === 'string' ? body.owner : undefined, telegram: body.telegram }
   }
 
-  function checkOwner(owner: string | undefined) {
+  function checkOwner(owner: string | undefined, telegram?: unknown) {
     if (!owner) return
     if (meta.owner && meta.owner !== owner) throw new Stop('mismatch')
     if (meta.owner !== owner) setMeta({ owner })
+    if (typeof telegram === 'boolean' && meta.telegram !== telegram) setMeta({ telegram })
   }
 
   function synced(rev: number, seen: Profile) {
@@ -158,13 +160,13 @@ export function createSyncEngine(d: SyncDeps) {
       if (!remote) {
         const res = await call('GET')
         if (res.status === 404) {
-          const { owner } = await res.json().catch(() => ({})) as { owner?: string }
-          checkOwner(owner)
+          const { owner, telegram } = await res.json().catch(() => ({})) as { owner?: string; telegram?: unknown }
+          checkOwner(owner, telegram)
           if (meta.rev > 0) serverWiped()
           remote = { rev: 0, profile: null }
         } else if (res.ok) {
           remote = await readRemote(res)
-          checkOwner(remote.owner)
+          checkOwner(remote.owner, remote.telegram)
         } else {
           await pace(res)
           continue
@@ -186,7 +188,8 @@ export function createSyncEngine(d: SyncDeps) {
 
       const res = await call('PUT', { kind: PROFILE_KIND, baseRev: remote.rev, profile: merged })
       if (res.ok) {
-        const body = await res.json() as { rev: number }
+        const body = await res.json() as { rev: number; owner?: string; telegram?: unknown }
+        checkOwner(body.owner, body.telegram)
         synced(body.rev, seen)
         return
       }
@@ -293,7 +296,7 @@ export function createSyncEngine(d: SyncDeps) {
 
     /** The user chose to bring this device's data into the account it is signed in to. */
     acceptAccount(): Promise<void> {
-      setMeta({ owner: null, rev: 0 })
+      setMeta({ owner: null, rev: 0, telegram: null })
       return run()
     },
   }
