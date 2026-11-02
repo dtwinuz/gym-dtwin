@@ -1,3 +1,5 @@
+import type { Key } from './i18n'
+
 export type Muscle = 'chest' | 'back' | 'legs' | 'shoulders' | 'arms' | 'core'
 export type Equipment = 'barbell' | 'dumbbell' | 'machine' | 'cable' | 'bodyweight'
 
@@ -22,7 +24,7 @@ export interface PlanDay {
 export interface Plan {
   id: string
   name: string
-  note: string
+  note: Key
   days: PlanDay[]
 }
 
@@ -68,7 +70,7 @@ const it = (exId: string, sets: number, reps: number): PlanItem => ({ exId, sets
 
 export const PLANS: Plan[] = [
   {
-    id: 'ppl', name: 'Push / Pull / Legs', note: '3 kunlik aylanish, o\'rta daraja',
+    id: 'ppl', name: 'Push / Pull / Legs', note: 'planNotePpl',
     days: [
       { name: 'Push', items: [it('bench', 4, 6), it('ohp', 3, 8), it('incline-db', 3, 10), it('lateral', 3, 15), it('pushdown', 3, 12)] },
       { name: 'Pull', items: [it('deadlift', 3, 5), it('pullup', 4, 8), it('row', 3, 8), it('face-pull', 3, 15), it('curl', 3, 10)] },
@@ -76,7 +78,7 @@ export const PLANS: Plan[] = [
     ],
   },
   {
-    id: 'upper-lower', name: 'Upper / Lower', note: 'Haftada 4 kun',
+    id: 'upper-lower', name: 'Upper / Lower', note: 'planNoteUl',
     days: [
       { name: 'Upper A', items: [it('bench', 4, 6), it('row', 4, 8), it('ohp', 3, 8), it('lat', 3, 10), it('hammer', 3, 12)] },
       { name: 'Lower A', items: [it('squat', 4, 6), it('rdl', 3, 8), it('lunge', 3, 10), it('calf', 4, 15), it('plank', 3, 45)] },
@@ -85,14 +87,14 @@ export const PLANS: Plan[] = [
     ],
   },
   {
-    id: 'full-body', name: 'Full Body', note: 'Boshlovchilar uchun, haftada 3 kun',
+    id: 'full-body', name: 'Full Body', note: 'planNoteFb',
     days: [
       { name: 'Full A', items: [it('squat', 3, 8), it('bench', 3, 8), it('row', 3, 8), it('plank', 3, 30)] },
       { name: 'Full B', items: [it('deadlift', 3, 5), it('ohp', 3, 8), it('lat', 3, 10), it('cable-crunch', 3, 15)] },
     ],
   },
   {
-    id: '5x5', name: 'Kuch 5×5', note: 'Har mashg\'ulotda vaznni +2.5 kg',
+    id: '5x5', name: '5×5', note: 'planNote5x5',
     days: [
       { name: 'A', items: [it('squat', 5, 5), it('bench', 5, 5), it('row', 5, 5)] },
       { name: 'B', items: [it('squat', 5, 5), it('ohp', 5, 5), it('deadlift', 1, 5)] },

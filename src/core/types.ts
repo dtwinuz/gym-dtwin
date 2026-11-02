@@ -160,6 +160,7 @@ export interface CustomExercise {
   primary: string[]
   secondary: string[]
   category: string
+  updatedAt?: Ms
 }
 
 export type WorkoutView = 'cards' | 'list'
@@ -189,6 +190,10 @@ export interface Settings {
   oneRmFormula: OneRmFormula
   volumeWarmups: boolean
   showWeightCard: boolean
+  /** When the safety notice was acknowledged; null = not yet. */
+  safetyAck: Ms | null
+  /** At least one health question was answered "yes". */
+  safetyFlag: boolean
 }
 
 export type OneRmFormula = 'epley' | 'brzycki' | 'lombardi' | 'oconner' | 'mayhew' | 'wathan' | 'lander'
@@ -213,6 +218,10 @@ export interface Profile {
   exWeights: Record<string, { w: number; date: ISODate }>
   exNotes: Record<string, string>
   favEx: string[]
+  /** Equipment the user has; null = everything. */
+  gear: string[] | null
+  /** Starter template in use until routines replace it. */
+  planId?: string
   /** Bar weight per exercise; 0 = no bar. */
   barWeights: Record<string, number>
   /** Owned plate pairs per size, per unit. */
