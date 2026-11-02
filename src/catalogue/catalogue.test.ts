@@ -1,11 +1,12 @@
 /// <reference types="node" />
 import { describe, expect, it } from 'vitest'
-import { existsSync } from 'node:fs'
-import { CATALOGUE, exerciseName, exerciseSteps, similarExercises } from './index'
+import { existsSync, readFileSync } from 'node:fs'
+import { CATALOGUE, exerciseById, exerciseName, exerciseSteps, isExdb, similarExercises, type CatalogueExercise } from './index'
 import { buildIndex, distance, normalize, search } from './search'
-import { MUSCLE_REGIONS } from './BodyMap'
+import { MUSCLE_REGIONS, exerciseLevels } from './BodyMap'
 import { MUSCLE_NAME, EQUIPMENT_NAME, GROUP_NAME, CATEGORY_NAME } from './labels'
 import body from './data/body.json'
+import base from './data/exercises.json'
 
 const docs = buildIndex(CATALOGUE)
 const top = (q: string, n = 5) => search(docs, q).slice(0, n).map(e => e.id)
@@ -112,5 +113,74 @@ describe('search', () => {
     const t0 = performance.now()
     for (const q of ['bench', 'stanovaya', 'gantel', 'sqaut', 'жим']) search(docs, q)
     expect((performance.now() - t0) / 5).toBeLessThan(30)
+  })
+})
+
+describe('exercises-dataset text', () => {
+  const added = CATALOGUE.filter(e => isExdb(e.id))
+  const baseDocs = buildIndex(base as CatalogueExercise[])
+
+  it('adds the deduplicated text-only entries', () => {
+    expect(added.length).toBeGreaterThanOrEqual(900)
+    expect(CATALOGUE.length).toBeGreaterThanOrEqual(1800)
+    expect(added.filter(e => e.uz && e.ru).length).toBeGreaterThanOrEqual(150)
+    for (const e of added) {
+      expect(e.i, e.id).toBe(0)
+      expect(e.uz ?? '', e.id).not.toMatch(/[Ѐ-ӿ]/)
+    }
+  })
+
+  it('carries no media, media ids or links', () => {
+    for (const f of ['exdb.json', 'exdb.steps.en.json', 'exdb.steps.ru.json']) {
+      const text = readFileSync(`src/catalogue/data/${f}`, 'utf8').toLowerCase()
+      for (const bad of ['gymvisual', 'gym visual', '.gif', 'videos/', 'images/', 'media_id', 'gif_url', 'attribution', 'http']) {
+        expect(text.includes(bad), `${f}: ${bad}`).toBe(false)
+      }
+    }
+  })
+
+  it('does not repeat a free-exercise-db name', () => {
+    const names = new Set(base.map(e => normalize(e.n)))
+    for (const e of added) expect(names.has(normalize(e.n)), e.n).toBe(false)
+  })
+
+  it('handles entries without muscles', () => {
+    const bare = added.find(e => e.p.length === 0)!
+    expect(bare).toBeDefined()
+    expect(bare.g).toBe('other')
+    expect(exerciseLevels([], [])).toEqual({})
+    expect(() => exerciseLevels(bare.p, bare.s)).not.toThrow()
+    expect(similarExercises(bare.id)).toEqual([])
+    expect(exerciseById(bare.id)).toBe(bare)
+  })
+
+  it('uses Russian steps where present and English for Uzbek', async () => {
+    const id = added.find(e => e.uz)!.id
+    expect((await exerciseSteps(id, 'ru')).lang).toBe('ru')
+    const uz = await exerciseSteps(id, 'uz')
+    expect(uz.lang).toBe('en')
+    expect(uz.steps.length).toBeGreaterThan(0)
+  })
+
+  it('keeps the top results of common queries', () => {
+    for (const q of ['bench', 'squat', 'jim', 'присед', 'tortish', 'stanovaya', 'turnik', 'deadlift', 'gantel']) {
+      const after = top(q, 5)
+      for (const id of search(baseDocs, q).slice(0, 3).map(e => e.id)) expect(after, q).toContain(id)
+    }
+    for (const q of ['bench', 'squat', 'jim', 'присед', 'tortish']) {
+      const before = search(baseDocs, q).slice(0, 5).map(e => e.id)
+      expect(top(q, 5), q).toEqual(before)
+    }
+  })
+
+  it('keeps the canonical bench press first for the Russian query', () => {
+    expect(top('жим лёжа')[0]).toBe('Barbell_Bench_Press_-_Medium_Grip')
+  })
+
+  it('finds the new entries by their uz and ru names', () => {
+    expect(search(docs, 'Pendlay').some(e => e.id === 'exdb_3017')).toBe(true)
+    expect(search(docs, 'тяга пендлея')[0]?.id).toBe('exdb_3017')
+    expect(search(docs, 'girya siltash')[0]?.id).toBe('exdb_0549')
+    expect(search(docs, 'cardio').some(e => isExdb(e.id) && e.g === 'other')).toBe(true)
   })
 })

@@ -5,7 +5,7 @@ Mashg'ulot kundaligi MVP — https://gym.dtwin.uz
 Struktura g'oyasi [openGym](https://github.com/DuarteSantos8/openGym) dan olingan (reja → mashg'ulot → progress), kod esa o'zimizniki (openGym AGPL-3.0, uning kodi va media'si ko'chirilmagan).
 
 ## Imkoniyatlar
-- **Mashqlar** - 876 mashqli kutubxona (free-exercise-db), 187 tasi uz/ru nom va ko'rsatma bilan; sinonim va xatoga chidamli qidiruv, filtrlar, jihozlar profili, tana xaritasi (MuscleMap), sevimlilar, o'z mashqlarim
+- **Mashqlar** - 1816 mashqli kutubxona (free-exercise-db 876 + exercises-dataset matni 940, rasmsiz), 341 tasi uz/ru nomli; sinonim va xatoga chidamli qidiruv, filtrlar, jihozlar profili, tana xaritasi (MuscleMap), sevimlilar, o'z mashqlarim
 - **Reja** - hafta va rotatsiya jadvali, routine editor (superset, slot sozlamalari, progression), 8 ta starter reja, onboarding, reja fayli, chop etish, Ramazon va issiq kunlar rejimi
 - **Mashg'ulot** - reps/time/cardio setlari, rest timer, warm-up, drop, rest-pause, pyramid, per-side, RIR/RPE, disk kalkulyatori, swap va zaxira, klaviatura, yakuniy hisobot, keyingi safar retsepti, rasm ulashish
 - **Progress** - statistika, 12 oylik heatmap, mushak xaritasi 3 rejimda, 1RM grafigi, structural balance, tarixni tahrirlash, tana vazni va o'lchamlar, progress foto (faqat qurilmada)
@@ -25,8 +25,9 @@ Generatsiya qilinadi, qo'lda tahrir qilinmaydi (`src/catalogue/data/`):
 node scripts/build-catalogue.mjs <free-exercise-db checkout>   # exercises.json + steps.{en,uz,ru}.json
 python -I scripts/build-images.py <free-exercise-db checkout> public/ex   # 480px webp
 node scripts/build-musclemap.mjs <MuscleMap checkout>          # body.json
+node scripts/build-exdb.mjs [exercises.json]                   # exdb.json + exdb.steps.{en,ru}.json (pinned SHA dan yuklaydi)
 ```
-uz/ru nom, ko'rsatma va sinonimlar — o'zimiz yozgan `content/exercises-i18n.json`. Manbalar va litsenziyalar: [NOTICE](NOTICE) (free-exercise-db — Unlicense, MuscleMap — MIT). openGym katalogi, tarjimalari va Gym Visual media ishlatilmaydi.
+uz/ru nom, ko'rsatma va sinonimlar — o'zimiz yozgan `content/exercises-i18n.json` va `content/exdb-i18n.json`. Manbalar va litsenziyalar: [NOTICE](NOTICE) (free-exercise-db — Unlicense, MuscleMap — MIT, exercises-dataset — MIT, faqat matn). openGym katalogi, tarjimalari va Gym Visual media ishlatilmaydi.
 
 ## Stek
 Vite + React 19 + TypeScript, lucide-react, three.js (faqat landing, lazy). Router — hash (`#/plan`).
