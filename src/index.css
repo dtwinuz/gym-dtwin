@@ -721,6 +721,12 @@ body.no-scroll { overflow: hidden; }
   .print-block { break-inside: avoid; }
 }
 
+.sync-banner { padding: 6px 16px; text-align: center; font-size: 13px; background: color-mix(in srgb, var(--danger) 14%, var(--surface)); border-bottom: 1px solid var(--border); }
+.sync-facts { margin: 0 0 8px; font-size: 13px; }
+.reminder-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin: 8px 0; }
+.reminder-grid label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.reminder-switch { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 8px 0; font-size: 14px; }
+
 @media (max-width: 760px) {
   body:has(.logger) [data-dtwin-support],
   body:has(.sheet-backdrop) [data-dtwin-support] { display: none; }

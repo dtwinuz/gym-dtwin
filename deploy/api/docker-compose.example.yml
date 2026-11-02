@@ -1,0 +1,32 @@
+# Example only: nothing deploys this yet. See docs/W8-SYNC.md for the steps that come first.
+# Real values go in a .env file on the host that is never committed.
+services:
+  gym-dtwin-api:
+    build: ../../server
+    container_name: gym-dtwin-api
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      - PORT
+      - DB_PATH
+      - TRUST_PROXY
+      - DTWIN_VERIFY_MODE
+      - DTWIN_INTROSPECT_URL
+      - DTWIN_SERVICE_TOKEN
+      - DTWIN_REQUIRED_SCOPE
+      - DTWIN_CLIENT_ID
+    volumes:
+      - ./data:/data
+    networks:
+      - edge
+
+networks:
+  edge:
+    external: true
+    name: dtwin-prod_default

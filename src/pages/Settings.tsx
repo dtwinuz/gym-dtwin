@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react'
+import { lazy, Suspense, useState, type ReactNode } from 'react'
 import { Search, X } from 'lucide-react'
 import { LANGS, t, type Key, type Lang } from '../i18n'
 import { FORMULAS, e1rm } from '../core/onerm'
@@ -15,6 +15,9 @@ import { BarWeights, OwnedPlates } from './PlatesSettings'
 import Backup from './data/Backup'
 import ExportCsv from './data/ExportCsv'
 import ImportCsv from './data/ImportCsv'
+
+const Account = import.meta.env.VITE_SYNC_ENABLED === 'true' ? lazy(() => import('./settings/Account')) : null
+const Reminders = import.meta.env.VITE_SYNC_ENABLED === 'true' ? lazy(() => import('./settings/Reminders')) : null
 
 const LANG_NAME: Record<Lang, string> = { uz: 'O\'zbekcha', ru: 'Русский', en: 'English' }
 
@@ -127,8 +130,12 @@ export default function Settings() {
     ['language', [
       { key: 'language', control: <Seg label={L('language')} value={lang} onPick={l => updateSettings({ lang: l })} options={LANGS.map(l => [l, LANG_NAME[l]])} /> },
     ]],
+    ...(Account && Reminders ? [
+      ['secAccount', [{ key: 'accountRow', wide: true, control: <Suspense fallback={null}><Account /></Suspense> }]],
+      ['secReminders', [{ key: 'reminderRow', wide: true, hint: L('reminderHint'), control: <Suspense fallback={null}><Reminders /></Suspense> }]],
+    ] satisfies [Key, Item[]][] : []),
     ['secData', [
-      { key: 'dataBackup', wide: true, hint: `${L('dataLocal')} ${L('dataNoPhotos')}`, control: <Backup /> },
+      { key: 'dataBackup', wide: true, hint: `${L(Account ? 'dataLocalSync' : 'dataLocal')} ${L('dataNoPhotos')}`, control: <Backup /> },
       { key: 'dataExport', wide: true, hint: L('dataExportHint'), control: <ExportCsv /> },
       { key: 'dataImport', wide: true, hint: L('dataImportHint'), control: <ImportCsv /> },
     ]],

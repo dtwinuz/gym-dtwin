@@ -96,6 +96,15 @@ function cleanSettings(p: Profile, raw: Record<string, unknown>): Settings {
   return out as unknown as Settings
 }
 
+/** A profile from outside the app (file or server), or null when its shape is not usable. */
+export function readProfile(raw: unknown): Profile | null {
+  if (!isObj(raw) || !okProfile(raw)) return null
+  const present = Object.entries(raw).filter(([, v]) => v != null)
+  const profile = normalizeProfile(Object.fromEntries(present) as Partial<Profile>)
+  profile.settings = cleanSettings(profile, raw.settings as Record<string, unknown>)
+  return profile
+}
+
 /** Read an untrusted backup. Failure changes nothing and says why. */
 export function parseBackup(text: string): ParsedBackup {
   let raw: unknown
@@ -106,10 +115,8 @@ export function parseBackup(text: string): ParsedBackup {
   }
   if (!isObj(raw) || raw.kind !== BACKUP_KIND) return { ok: false, error: 'kind' }
   if (raw.v !== 1) return { ok: false, error: 'version' }
-  if (!isObj(raw.profile) || !okProfile(raw.profile)) return { ok: false, error: 'shape' }
-  const present = Object.entries(raw.profile).filter(([, v]) => v != null)
-  const profile = normalizeProfile(Object.fromEntries(present) as Partial<Profile>)
-  profile.settings = cleanSettings(profile, raw.profile.settings as Record<string, unknown>)
+  const profile = readProfile(raw.profile)
+  if (!profile) return { ok: false, error: 'shape' }
   return typeof raw.exportedAt === 'string' ? { ok: true, profile, exportedAt: raw.exportedAt } : { ok: true, profile }
 }
 
