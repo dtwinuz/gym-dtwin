@@ -1,5 +1,5 @@
 import type { ISODate, Unit } from '../../core/types'
-import { csvRows, type Tick } from './csv'
+import { csvRows, detectDelimiter, parseCsv, type Tick } from './csv'
 
 export type Format = 'strong' | 'hevy' | 'fitnotes' | 'generic'
 export type SetKind = 'normal' | 'warmup' | 'failure' | 'drop'
@@ -45,12 +45,14 @@ type Field =
 
 const WEIGHT_KG = ['weightkg', 'weightkgs']
 const WEIGHT_LB = ['weightlb', 'weightlbs']
+/** A workout timer left running for days says nothing about the workout. */
+const MAX_LENGTH_SEC = 12 * 3600
 
 const COLUMNS: Record<Format, Partial<Record<Field, string[]>>> = {
   strong: {
     date: ['date'], workout: ['workoutname'], duration: ['duration', 'workoutduration'], exercise: ['exercisename'], order: ['setorder'],
-    weight: ['weight'], weightKg: WEIGHT_KG, weightLb: WEIGHT_LB, unit: ['weightunit'], reps: ['reps'],
-    distance: ['distance'], distanceUnit: ['distanceunit'], sec: ['seconds'], note: ['notes'], workoutNote: ['workoutnotes'], rpe: ['rpe'],
+    weight: ['weight'], weightKg: [...WEIGHT_KG, 'kg', 'kgs'], weightLb: [...WEIGHT_LB, 'lb', 'lbs'], unit: ['weightunit'], reps: ['reps'],
+    distance: ['distance'], distanceKm: ['km'], distanceMi: ['mi'], distanceUnit: ['distanceunit'], sec: ['seconds'], note: ['notes'], workoutNote: ['workoutnotes'], rpe: ['rpe'],
   },
   hevy: {
     date: ['starttime'], end: ['endtime'], workout: ['title'], workoutNote: ['description'], exercise: ['exercisetitle'],
@@ -192,7 +194,7 @@ const unitOf = (text: string): Unit | undefined => {
 const KM_PER = { km: 1, m: 0.001, mi: 1.609344, ft: 0.0003048, yd: 0.0009144 }
 
 function toKm(n: number, unit: string): number | undefined {
-  const s = unit.trim().toLowerCase()
+  const s = unit.trim().toLowerCase().replace(/\.$/, '')
   if (/^(km|kms|kilomet\w*|км)$/.test(s)) return n * KM_PER.km
   if (/^(m|met\w*|м)$/.test(s)) return n * KM_PER.m
   if (/^(mi|mile|miles)$/.test(s)) return n * KM_PER.mi
@@ -253,6 +255,7 @@ function readRow(format: Format, get: (f: Field) => string, dayFirst: boolean): 
     const endMs = new Date(`${end.date}T${end.time}`).getTime()
     if (endMs > startMs) length = (endMs - startMs) / 1000
   }
+  if (length != null && length > MAX_LENGTH_SEC) length = undefined
   if (length != null) row.length = length
   if (get('workout')) row.workout = get('workout')
   if (get('workoutNote')) row.workoutNote = get('workoutNote')
@@ -273,8 +276,9 @@ function readRow(format: Format, get: (f: Field) => string, dayFirst: boolean): 
 
 /** Read a whole file; null when its headers are not a workout log we know. */
 export async function parseImport(text: string, tick: Tick = async () => {}): Promise<ParsedFile | null> {
+  const delim = detectDelimiter(text)
   const table: string[][] = []
-  for (const row of csvRows(text)) {
+  for (const row of csvRows(text, delim)) {
     table.push(row)
     if (table.length % 500 === 0) await tick(table.length)
   }
@@ -282,6 +286,11 @@ export async function parseImport(text: string, tick: Tick = async () => {}): Pr
   const header = table.shift()
   const format = header && detectFormat(header)
   if (!header || !format) return null
+  if (header.length > 1) {
+    for (let i = 0; i < table.length; i++) {
+      if (table[i].length === 1 && table[i][0].includes(delim)) table[i] = parseCsv(table[i][0], delim)[0] ?? table[i]
+    }
+  }
 
   const keys = header.map(headerKey)
   const col = new Map<Field, number>()
@@ -289,12 +298,14 @@ export async function parseImport(text: string, tick: Tick = async () => {}): Pr
     const name = names.find(n => keys.includes(n))
     if (name) col.set(field, keys.indexOf(name))
   }
+  const noteCol = col.get('note')
+  const lastNote = noteCol != null && noteCol === header.length - 1
   const dateCol = col.get('date') ?? 0
   const dayFirst = slashIsDayFirst(table.map(r => r[dateCol] ?? ''))
 
   const out: ParsedFile = { format, rows: [], bad: 0, skipped: 0, needsUnit: false }
   for (let i = 0; i < table.length; i++) {
-    const cells = table[i]
+    const cells = lastNote && table[i].length > header.length ? [...table[i].slice(0, noteCol), table[i].slice(noteCol).join(delim)] : table[i]
     const get = (f: Field) => {
       const c = col.get(f)
       return c == null ? '' : (cells[c] ?? '').trim()

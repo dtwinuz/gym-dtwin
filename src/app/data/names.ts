@@ -43,27 +43,43 @@ export function cleanName(raw: string): CleanName {
 }
 
 const ALIASES_RAW: Record<string, string[]> = {
-  'Barbell_Bench_Press_-_Medium_Grip': ['Bench Press (Barbell)', 'Bench Press', 'Flat Bench Press'],
-  'Barbell_Incline_Bench_Press_-_Medium_Grip': ['Incline Bench Press (Barbell)', 'Incline Bench Press'],
-  Decline_Barbell_Bench_Press: ['Decline Bench Press (Barbell)'],
-  Dumbbell_Bench_Press: ['Bench Press (Dumbbell)'],
-  Incline_Dumbbell_Press: ['Incline Bench Press (Dumbbell)', 'Incline Press (Dumbbell)'],
+  'Barbell_Bench_Press_-_Medium_Grip': ['Bench Press (Barbell)', 'Bench Press', 'Flat Bench Press', 'Flat Barbell Bench Press'],
+  'Barbell_Incline_Bench_Press_-_Medium_Grip': ['Incline Bench Press (Barbell)', 'Incline Bench Press', 'Incline Barbell Bench Press'],
+  Decline_Barbell_Bench_Press: ['Decline Bench Press (Barbell)', 'Decline Barbell Bench Press'],
+  Dumbbell_Bench_Press: ['Bench Press (Dumbbell)', 'Flat Dumbbell Bench Press'],
+  Incline_Dumbbell_Press: ['Incline Bench Press (Dumbbell)', 'Incline Press (Dumbbell)', 'Incline Dumbbell Bench Press'],
   Barbell_Squat: ['Squat (Barbell)', 'Squat', 'Back Squat', 'Back Squat (Barbell)'],
+  Bodyweight_Squat: ['Squat (Bodyweight)', 'Air Squat', 'Bodyweight Squat'],
   Front_Barbell_Squat: ['Front Squat (Barbell)', 'Front Squat'],
   Barbell_Deadlift: ['Deadlift (Barbell)', 'Deadlift', 'Conventional Deadlift'],
   Romanian_Deadlift: ['Romanian Deadlift (Barbell)', 'Romanian Deadlift', 'RDL'],
-  Standing_Military_Press: ['Overhead Press (Barbell)', 'Overhead Press', 'Shoulder Press (Barbell)', 'Military Press', 'OHP'],
+  Standing_Military_Press: [
+    'Overhead Press (Barbell)', 'Overhead Press', 'Shoulder Press (Barbell)', 'Military Press', 'OHP', 'Strict Military Press (Barbell)', 'Barbell Overhead Press',
+  ],
   Dumbbell_Shoulder_Press: ['Overhead Press (Dumbbell)', 'Shoulder Press (Dumbbell)', 'Seated Shoulder Press (Dumbbell)'],
+  Leverage_Shoulder_Press: ['Seated Shoulder Press (Machine)', 'Shoulder Press (Machine Plates)'],
+  Leverage_Chest_Press: ['Iso-Lateral Chest Press (Machine)'],
+  Leverage_Iso_Row: ['Iso-Lateral Row (Machine)', 'Iso-Lateral Low Row'],
   Bent_Over_Barbell_Row: ['Bent Over Row (Barbell)', 'Barbell Row', 'Row (Barbell)'],
   'One-Arm_Dumbbell_Row': ['Bent Over One Arm Row (Dumbbell)', 'Dumbbell Row', 'Row (Dumbbell)'],
   'Wide-Grip_Lat_Pulldown': ['Lat Pulldown (Cable)', 'Lat Pulldown (Machine)', 'Lat Pulldown'],
-  Seated_Cable_Rows: ['Seated Row (Cable)', 'Seated Row (Machine)', 'Seated Cable Row', 'Seated Row'],
+  Seated_Cable_Rows: [
+    'Seated Row (Cable)', 'Seated Row (Machine)', 'Seated Cable Row', 'Seated Row', 'Seated Cable Row - V Grip (Cable)', 'Seated Cable Row - Bar Grip',
+    'Seated Cable Row - Bar Wide Grip',
+  ],
   Pullups: ['Pull Up', 'Pull Up (Bodyweight)', 'Pull-Up', 'Pull Ups', 'Pullup'],
   'Chin-Up': ['Chin Up', 'Chin Up (Bodyweight)', 'Chin Ups'],
   Pushups: ['Push Up', 'Push Up (Bodyweight)', 'Push-Up', 'Push Ups', 'Pushup'],
   Barbell_Curl: ['Bicep Curl (Barbell)', 'Biceps Curl (Barbell)', 'Curl (Barbell)'],
-  Dumbbell_Bicep_Curl: ['Bicep Curl (Dumbbell)', 'Biceps Curl (Dumbbell)', 'Curl (Dumbbell)'],
-  Hammer_Curls: ['Hammer Curl (Dumbbell)', 'Hammer Curl'],
+  Dumbbell_Bicep_Curl: ['Bicep Curl (Dumbbell)', 'Biceps Curl (Dumbbell)', 'Curl (Dumbbell)', 'Dumbbell Curl'],
+  Hammer_Curls: ['Hammer Curl (Dumbbell)', 'Hammer Curl', 'Dumbbell Hammer Curl'],
+  Incline_Dumbbell_Curl: ['Seated Incline Curl (Dumbbell)', 'Seated Incline Dumbbell Curl'],
+  Preacher_Curl: ['Preacher Curl (Barbell)'],
+  Machine_Bicep_Curl: ['Seated Machine Curl'],
+  exdb_0060: ['Skullcrusher (Barbell)'],
+  Butterfly: ['Pec Deck (Machine)', 'Chest Fly (Machine)', 'Seated Machine Fly', 'Machine Chest Fly'],
+  exdb_0192: ['Single Arm Lateral Raise (Cable)'],
+  Farmers_Walk: ["Farmer's Carry", 'Farmer Carry', 'Farmers Carry'],
   Triceps_Pushdown: ['Triceps Pushdown (Cable)', 'Triceps Pushdown', 'Tricep Pushdown'],
   'Triceps_Pushdown_-_Rope_Attachment': ['Triceps Rope Pushdown', 'Triceps Pushdown (Rope)'],
   Side_Lateral_Raise: ['Lateral Raise (Dumbbell)', 'Lateral Raise', 'Side Lateral Raise (Dumbbell)'],
@@ -135,6 +151,7 @@ export function matcher(customEx: CustomExercise[]) {
     const base: Pick<NameMatch, 'name' | 'equipment'> = clean.equipment ? { name, equipment: clean.equipment } : { name }
     const known = exact.get(normalize(name)) ?? NAME_ALIASES.get(normalize(name)) ?? exact.get(normalize(clean.query))
     if (known) return { ...base, exId: known, confidence: 'high' }
+    if (!tokens(clean.query).some(t => /[a-z]/.test(t))) return { ...base, confidence: 'none' }
     const hit = best(search(docs, clean.query), clean.query) ?? best(search(docs, clean.base), clean.query)
     if (!hit) return { ...base, confidence: 'none' }
     return { ...base, exId: hit.e.id, confidence: hit.s >= SURE ? 'high' : 'low' }

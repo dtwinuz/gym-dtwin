@@ -49,11 +49,13 @@ const addNote = (old: string | undefined, text: string | undefined) => {
 }
 
 const r2 = (v: number) => Math.round(v * 100) / 100
+/** A weighted lunge or carry over a distance, with no time: a strength set, the distance goes to the note. */
+const isLoadedDistance = (r: ImportRow) => r.w != null && !r.sec && (r.km != null || r.distance != null)
 const kmOf = (r: ImportRow, fileUnit: Unit) => r.km ?? (r.distance != null ? (fileUnit === 'lb' ? r.distance * MI_TO_KM : r.distance) : undefined)
 
 function toSet(r: ImportRow, w: number | undefined, km: number | undefined, cardio: boolean): SetRow {
   const row: SetRow = { done: true }
-  if (km != null || (cardio && r.sec != null && r.r == null)) {
+  if ((km != null && !isLoadedDistance(r)) || (cardio && r.sec != null && r.r == null)) {
     row.min = r2((r.sec ?? 0) / 60)
     if (km != null) row.km = r2(km)
     if (km != null && r.sec) row.speed = r2(km / (r.sec / 3600))
@@ -91,7 +93,7 @@ export function buildImport(file: ParsedFile, p: Profile, opts: BuildOptions): B
     if (list) list.push(r)
     else groups.set(key, [r])
     names.add(r.exercise)
-    if (r.km != null || r.distance != null) distanced.add(r.exercise)
+    if ((r.km != null || r.distance != null) && !isLoadedDistance(r)) distanced.add(r.exercise)
   }
 
   const equipment = new Map(matches.map(m => [m.name, m.equipment]))
