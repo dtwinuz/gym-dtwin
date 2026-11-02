@@ -541,8 +541,8 @@
             {
               "exId": "Split_Squat_with_Dumbbells",
               "sets": 3,
-              "reps": 10,
-              "repsMin": 8,
+              "reps": 20,
+              "repsMin": 16,
               "weight": 0,
               "side": true,
               "restSec": 90
@@ -729,8 +729,8 @@
             {
               "exId": "Dumbbell_Lunges",
               "sets": 2,
-              "reps": 10,
-              "repsMin": 8,
+              "reps": 20,
+              "repsMin": 16,
               "weight": 0,
               "side": true,
               "restSec": 90
@@ -756,8 +756,8 @@
             {
               "exId": "Dead_Bug",
               "sets": 2,
-              "reps": 10,
-              "repsMin": 8,
+              "reps": 20,
+              "repsMin": 16,
               "weight": 0,
               "bodyweight": true,
               "side": true,
@@ -1310,8 +1310,8 @@
             {
               "exId": "Split_Squat_with_Dumbbells",
               "sets": 3,
-              "reps": 10,
-              "repsMin": 8,
+              "reps": 20,
+              "repsMin": 16,
               "weight": 0,
               "side": true,
               "subs": [
@@ -1322,8 +1322,8 @@
             {
               "exId": "One-Arm_Dumbbell_Row",
               "sets": 3,
-              "reps": 12,
-              "repsMin": 8,
+              "reps": 24,
+              "repsMin": 16,
               "weight": 0,
               "side": true,
               "restSec": 60
@@ -1357,8 +1357,8 @@
             {
               "exId": "Dead_Bug",
               "sets": 3,
-              "reps": 10,
-              "repsMin": 8,
+              "reps": 20,
+              "repsMin": 16,
               "weight": 0,
               "bodyweight": true,
               "side": true,
@@ -1379,8 +1379,8 @@
             {
               "exId": "Dumbbell_Step_Ups",
               "sets": 3,
-              "reps": 12,
-              "repsMin": 8,
+              "reps": 24,
+              "repsMin": 16,
               "weight": 0,
               "side": true,
               "subs": [
@@ -1391,8 +1391,8 @@
             {
               "exId": "Single_Leg_Glute_Bridge",
               "sets": 3,
-              "reps": 15,
-              "repsMin": 10,
+              "reps": 30,
+              "repsMin": 20,
               "weight": 0,
               "bodyweight": true,
               "side": true,
@@ -1529,8 +1529,8 @@
             {
               "exId": "Glute_Kickback",
               "sets": 3,
-              "reps": 15,
-              "repsMin": 12,
+              "reps": 30,
+              "repsMin": 24,
               "weight": 0,
               "bodyweight": true,
               "side": true,
@@ -1658,8 +1658,8 @@
             {
               "exId": "Split_Squat_with_Dumbbells",
               "sets": 3,
-              "reps": 10,
-              "repsMin": 8,
+              "reps": 20,
+              "repsMin": 16,
               "weight": 0,
               "side": true,
               "subs": [
@@ -1731,8 +1731,8 @@
             {
               "exId": "One-Arm_Dumbbell_Row",
               "sets": 3,
-              "reps": 12,
-              "repsMin": 10,
+              "reps": 24,
+              "repsMin": 20,
               "weight": 0,
               "side": true,
               "restSec": 60
@@ -1759,8 +1759,8 @@
             {
               "exId": "Dead_Bug",
               "sets": 3,
-              "reps": 10,
-              "repsMin": 8,
+              "reps": 20,
+              "repsMin": 16,
               "weight": 0,
               "bodyweight": true,
               "side": true,
@@ -1918,8 +1918,8 @@
             {
               "exId": "Dead_Bug",
               "sets": 2,
-              "reps": 10,
-              "repsMin": 8,
+              "reps": 20,
+              "repsMin": 16,
               "weight": 0,
               "bodyweight": true,
               "side": true,
@@ -1960,8 +1960,8 @@
             {
               "exId": "One-Arm_Dumbbell_Row",
               "sets": 2,
-              "reps": 10,
-              "repsMin": 8,
+              "reps": 20,
+              "repsMin": 16,
               "weight": 0,
               "side": true,
               "restSec": 60

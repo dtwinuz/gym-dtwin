@@ -143,6 +143,7 @@ export default function SlotSheet({ slot, onSave, onClose }: Props) {
 
       <div className="checks">
         <Check label={L('perSide')} checked={!!d.side} onChange={v => patch({ side: v || undefined })} />
+          {d.side && <p className="muted">{L('sideHint')}</p>}
         <Check label={L('restOff')} checked={!!d.restOff} onChange={v => patch({ restOff: v || undefined })} />
       </div>
 
