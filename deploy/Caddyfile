@@ -17,7 +17,12 @@
 	redir /overview/en /overview/en/ 308
 	# /overview/ katalog indeksi, qolgan hamma yo'l (/, /app) — SPA.
 	# /assets, /ex, /icons'da yo'q fayl 404 bo'ladi: aks holda service worker index.html'ni JS yoki rasm deb keshlaydi.
-	@spa not path /assets/* /ex/* /icons/*
-	try_files @spa {path} {path}/index.html /index.html
-	file_server
+	@static path /assets/* /ex/* /icons/*
+	handle @static {
+		file_server
+	}
+	handle {
+		try_files {path} {path}/index.html /index.html
+		file_server
+	}
 }
