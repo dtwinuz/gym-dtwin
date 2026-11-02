@@ -246,6 +246,7 @@ export const dict = {
   seconds: { uz: 'Soniya', ru: 'Секунды', en: 'Seconds' },
   minutes: { uz: 'Daqiqa', ru: 'Минуты', en: 'Minutes' },
   speed: { uz: 'Tezlik', ru: 'Скорость', en: 'Speed' },
+  distanceKm: { uz: 'Masofa, km', ru: 'Дистанция, км', en: 'Distance, km' },
   incline: { uz: 'Qiyalik', ru: 'Наклон', en: 'Incline' },
   weightLabel: { uz: 'Vazn', ru: 'Вес', en: 'Weight' },
   incStep: { uz: 'Vazn qadami', ru: 'Шаг веса', en: 'Weight step' },

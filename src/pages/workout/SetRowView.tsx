@@ -140,6 +140,7 @@ export default function SetRowView({ p, s, ei, si, row, mode, slot, label, isNex
             <NumInput value={row.min} label={L('minutes')} placeholder={L('minShort')} onChange={min => patch({ min })} />
             <NumInput value={row.speed} label={L('speed')} placeholder={L('speed')} onChange={speed => patch({ speed })} />
             <NumInput value={row.incline} label={L('incline')} placeholder={L('incline')} onChange={incline => patch({ incline })} />
+            <NumInput value={row.km} label={L('distanceKm')} placeholder="km" onChange={km => patch({ km })} />
             <button type="button" className="check" aria-pressed={row.done} aria-label={L('done')} onClick={() => tick()}><Check size={18} /></button>
           </>
         ) : mode === 'time' ? (

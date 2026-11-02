@@ -47,7 +47,7 @@ const listOf = (v: unknown, ok: (x: Record<string, unknown>) => boolean) => Arra
 const optList = (v: unknown, ok: (x: Record<string, unknown>) => boolean) => v == null || listOf(v, ok)
 const optObj = (v: unknown) => v == null || isObj(v)
 
-const okSet = (s: Record<string, unknown>) => ['w', 'r', 'sec', 'min', 'speed', 'incline', 'rir', 'rpe'].every(k => optNum(s[k]))
+const okSet = (s: Record<string, unknown>) => ['w', 'r', 'sec', 'min', 'speed', 'incline', 'km', 'rir', 'rpe'].every(k => optNum(s[k]))
 const okEntry = (e: Record<string, unknown>) => isStr(e.exId) && listOf(e.sets, okSet)
 const okSlot = (s: Record<string, unknown>) => isStr(s.exId) && isNum(s.sets) && isNum(s.reps) && isNum(s.weight)
 const okRoutine = (r: Record<string, unknown>) => isStr(r.id) && isStr(r.name) && listOf(r.ex, okSlot)

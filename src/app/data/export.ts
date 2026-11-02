@@ -7,7 +7,7 @@ import { writeCsv, type Cell } from './csv'
 
 const SET_HEAD = [
   'date', 'start_time', 'workout', 'exercise_id', 'exercise_name', 'set_number', 'set_type', 'weight', 'unit',
-  'reps', 'seconds', 'minutes', 'speed', 'incline', 'rir', 'rpe', 'note',
+  'reps', 'seconds', 'minutes', 'speed', 'incline', 'km', 'rir', 'rpe', 'note',
 ]
 
 const setType = (s: SetRow) => (s.warmup ? 'warmup' : s.rp ? 'restpause' : s.failure ? 'failure' : 'normal')
@@ -31,8 +31,8 @@ function workoutRows(w: Workout, unit: string, custom: Map<string, string>): Cel
       if (!s.done) continue
       n++
       const notes = n === 1 ? [ei === 0 ? w.note : undefined, e.note].filter(Boolean).join(' | ') : ''
-      rows.push([...head, e.exId, name, n, setType(s), s.w, s.w == null ? '' : unit, s.r, s.sec, s.min, s.speed, s.incline, s.rir, s.rpe, notes])
-      for (const d of s.drops ?? []) rows.push([...head, e.exId, name, n, 'drop', d.w, unit, d.r, '', '', '', '', '', '', ''])
+      rows.push([...head, e.exId, name, n, setType(s), s.w, s.w == null ? '' : unit, s.r, s.sec, s.min, s.speed, s.incline, s.km, s.rir, s.rpe, notes])
+      for (const d of s.drops ?? []) rows.push([...head, e.exId, name, n, 'drop', d.w, unit, d.r, '', '', '', '', '', '', '', ''])
     }
   })
   return rows

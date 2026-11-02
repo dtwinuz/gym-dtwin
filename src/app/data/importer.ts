@@ -55,6 +55,7 @@ function toSet(r: ImportRow, w: number | undefined, km: number | undefined, card
   const row: SetRow = { done: true }
   if (km != null || (cardio && r.sec != null && r.r == null)) {
     row.min = r2((r.sec ?? 0) / 60)
+    if (km != null) row.km = r2(km)
     if (km != null && r.sec) row.speed = r2(km / (r.sec / 3600))
   } else if (r.r != null || r.sec == null) {
     if (w != null) row.w = w
