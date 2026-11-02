@@ -63,7 +63,7 @@ export async function exerciseSteps(id: string, lang: Lang): Promise<{ lang: Lan
 /** Exercises that train the same primary muscle, compound first. */
 export function similarExercises(id: string, limit = 6) {
   const e = exerciseById(id)
-  if (!e) return []
+  if (!e?.p[0]) return []
   return allExercises()
     .filter(x => x.id !== id && x.p[0] === e.p[0] && x.c === e.c)
     .sort((a, b) => Number(!!b.uz) - Number(!!a.uz) || (a.m === 'c' ? -1 : 0) - (b.m === 'c' ? -1 : 0))

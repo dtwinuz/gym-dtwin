@@ -12,14 +12,14 @@ type Calc = Pick<Settings, 'oneRmFormula' | 'volumeWarmups'>
 const sameIds = (a: string[] = [], b: string[] = []) => a.length === b.length && a.every(x => b.includes(x))
 
 /**
- * Volume and records of every workout that starts at `from` or later, judged
- * against everything before it. Workouts that come out the same keep their identity.
+ * Volume and records of every workout that starts at `from` or later (and before
+ * `until`), judged against everything before it. Workouts that come out the same keep their identity.
  */
-export function recomputeRecords(workouts: Workout[], calc: Calc, from: Ms = -Infinity, now: Ms = Date.now()): Workout[] {
+export function recomputeRecords(workouts: Workout[], calc: Calc, from: Ms = -Infinity, now: Ms = Date.now(), until: Ms = Infinity): Workout[] {
   const sorted = sortByStart(workouts)
   const fixed = new Map<string, Workout>()
   for (const w of sorted) {
-    if (w.start < from) continue
+    if (w.start < from || w.start >= until) continue
     const prior = sorted.filter(x => x.start < w.start)
     const { prs, e1prs } = detectRecords(w.entries, prior, calc.oneRmFormula)
     const vol = sessionVolume(w.entries, calc.volumeWarmups)
@@ -29,7 +29,7 @@ export function recomputeRecords(workouts: Workout[], calc: Calc, from: Ms = -In
 }
 
 /** "Last good weight" per exercise, read again from what the history now says. */
-function refreshExWeights(p: Profile, ids: Iterable<string>): Profile {
+export function refreshExWeights(p: Profile, ids: Iterable<string>): Profile {
   const out = { ...p.exWeights }
   const sorted = sortByStart(p.workouts).filter(w => !w.noProg)
   for (const id of new Set(ids)) {

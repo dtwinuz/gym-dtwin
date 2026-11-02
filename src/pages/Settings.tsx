@@ -12,6 +12,9 @@ import { toast } from '../app/toast'
 import { fmtNum } from '../app/format'
 import SafetyNotice from '../app/SafetyNotice'
 import { BarWeights, OwnedPlates } from './PlatesSettings'
+import Backup from './data/Backup'
+import ExportCsv from './data/ExportCsv'
+import ImportCsv from './data/ImportCsv'
 
 const LANG_NAME: Record<Lang, string> = { uz: 'O\'zbekcha', ru: 'Русский', en: 'English' }
 
@@ -125,7 +128,9 @@ export default function Settings() {
       { key: 'language', control: <Seg label={L('language')} value={lang} onPick={l => updateSettings({ lang: l })} options={LANGS.map(l => [l, LANG_NAME[l]])} /> },
     ]],
     ['secData', [
-      { key: 'dataLocal', wide: true, control: <p className="muted">{L('dataSoon')}</p> },
+      { key: 'dataBackup', wide: true, hint: `${L('dataLocal')} ${L('dataNoPhotos')}`, control: <Backup /> },
+      { key: 'dataExport', wide: true, hint: L('dataExportHint'), control: <ExportCsv /> },
+      { key: 'dataImport', wide: true, hint: L('dataImportHint'), control: <ImportCsv /> },
     ]],
     ['secSafety', [
       { key: 'safetyOpen', control: <button type="button" className="btn" onClick={() => setSafety(true)}>{L('safetyTitle')}</button> },

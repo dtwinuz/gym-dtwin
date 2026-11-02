@@ -8,13 +8,15 @@ export const LEGACY_KEY = 'gym-dtwin:v1'
 
 type KV = Pick<Storage, 'getItem' | 'setItem'>
 
-function storage(): KV | null {
+export function browserStorage(): Storage | null {
   try {
     return typeof localStorage === 'undefined' ? null : localStorage
   } catch {
     return null
   }
 }
+
+const storage = (): KV | null => browserStorage()
 
 /** v2 if present, else a one-time migration of v1, else a fresh profile. Never throws. */
 export function loadProfile(kv: KV | null, now: Ms = Date.now()): Profile {
@@ -52,6 +54,19 @@ export function updateProfile(fn: (p: Profile) => Profile) {
   profile = { ...next, updatedAt: Math.max(Date.now(), profile.updatedAt + 1) }
   save(storage(), profile)
   listeners.forEach(l => l())
+}
+
+/** Swap in a whole profile only if it can be stored; false = nothing changed. */
+export function commitProfile(p: Profile): boolean {
+  const next = { ...p, updatedAt: Math.max(Date.now(), profile.updatedAt + 1) }
+  try {
+    storage()?.setItem(KEY, JSON.stringify(next))
+  } catch {
+    return false
+  }
+  profile = next
+  listeners.forEach(l => l())
+  return true
 }
 
 export function replaceProfile(p: Profile) {

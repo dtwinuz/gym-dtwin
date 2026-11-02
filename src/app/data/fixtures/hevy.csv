@@ -1,0 +1,8 @@
+"title","start_time","end_time","description","exercise_title","superset_id","exercise_notes","set_index","set_type","weight_kg","reps","distance_km","duration_seconds","rpe"
+"Upper A","2 Nov 2026, 09:30","2 Nov 2026, 10:40","Morning session","Bench Press (Barbell)",,"Elbows in",0,"warmup",40,10,,,
+"Upper A","2 Nov 2026, 09:30","2 Nov 2026, 10:40","Morning session","Bench Press (Barbell)",,"Elbows in",1,"normal",80,8,,,8.5
+"Upper A","2 Nov 2026, 09:30","2 Nov 2026, 10:40","Morning session","Bench Press (Barbell)",,"Elbows in",2,"failure",80,6,,,10
+"Upper A","2 Nov 2026, 09:30","2 Nov 2026, 10:40","Morning session","Lat Pulldown (Cable)",0,,0,"normal",60,10,,,
+"Upper A","2 Nov 2026, 09:30","2 Nov 2026, 10:40","Morning session","Lat Pulldown (Cable)",0,,1,"dropset",40,12,,,
+"Upper A","2 Nov 2026, 09:30","2 Nov 2026, 10:40","Morning session","Plank",,,0,"normal",,,,75,
+"Run","31 Oct 2026, 07:00","31 Oct 2026, 07:30",,"Treadmill Running",,,0,"normal",,,5,1800,
