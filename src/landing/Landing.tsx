@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import { EXERCISES, PLANS, exerciseById } from '../data'
 import { LANGS, type Lang } from '../i18n'
-import { update, useStore } from '../store'
+import { updateSettings, useProfile } from '../app/store'
 import { L, MUSCLE_T } from './text'
 import type { SceneHandle } from './scene'
 import './Landing.css'
@@ -329,7 +329,7 @@ function StaticBell() {
 }
 
 export default function Landing() {
-  const { lang, workouts } = useStore()
+  const { settings: { lang }, workouts } = useProfile()
   const [theme, setTheme] = useState<Theme>(readTheme)
   const [ready, setReady] = useState(false)
   const [fallback, setFallback] = useState(false)
@@ -444,7 +444,7 @@ export default function Landing() {
     return () => { disposed = true; clearTimeout(t); handle.current?.dispose(); handle.current = null }
   }, [])
 
-  const setLang = (l: Lang) => update(s => ({ ...s, lang: l }))
+  const setLang = (l: Lang) => updateSettings({ lang: l })
   const hasData = workouts.length > 0
   const ov = lang === 'uz' ? '/overview/' : `/overview/${lang}/`
 

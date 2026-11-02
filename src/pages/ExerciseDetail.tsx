@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Pencil, Star, X } from 'lucide-react'
 import { t } from '../i18n'
-import { e1rm, update, useStore, type CustomEx } from '../store'
+import { updateProfile, useProfile } from '../app/store'
+import Sheet from '../app/Sheet'
+import { fmtNum } from '../app/format'
+import { e1rm } from '../core/onerm'
+import { formatWeight } from '../core/units'
+import type { CustomExercise } from '../core/types'
 import { exerciseById, exerciseName, exerciseSteps, imageUrl, similarExercises } from '../catalogue'
 import { CATEGORY_NAME, EQUIPMENT_NAME, LEVEL_NAME, MUSCLE_NAME, label } from '../catalogue/labels'
 import BodyMap, { exerciseLevels } from '../catalogue/BodyMap'
@@ -12,11 +17,12 @@ interface Props {
   id: string
   onClose: () => void
   onOpen: (id: string) => void
-  onEdit: (c: CustomEx) => void
+  onEdit: (c: CustomExercise) => void
+  url?: string
 }
 
-export default function ExerciseDetail({ id, onClose, onOpen, onEdit }: Props) {
-  const { lang, favEx, workouts, figure, customEx } = useStore()
+export default function ExerciseDetail({ id, onClose, onOpen, onEdit, url }: Props) {
+  const { settings: { lang, body: figure, unit, oneRmFormula, wdec }, favEx, workouts, customEx } = useProfile()
   const e = exerciseById(id)
   const [steps, setSteps] = useState<{ lang: Lang; steps: string[] } | null>(null)
   const [frame, setFrame] = useState(0)
@@ -34,32 +40,22 @@ export default function ExerciseDetail({ id, onClose, onOpen, onEdit }: Props) {
     return () => clearInterval(timer)
   }, [e])
 
-  useEffect(() => {
-    const onKey = (ev: KeyboardEvent) => { if (ev.key === 'Escape') onClose() }
-    window.addEventListener('keydown', onKey)
-    document.body.classList.add('no-scroll')
-    return () => {
-      window.removeEventListener('keydown', onKey)
-      document.body.classList.remove('no-scroll')
-    }
-  }, [onClose])
-
   if (!e) return null
   const fav = favEx.includes(id)
-  const sets = workouts.flatMap(w => w.sets.filter(s => s.exId === id).map(s => ({ ...s, date: w.date })))
-  const best = sets.reduce<(typeof sets)[number] | null>((b, s) => (!b || e1rm(s.kg, s.reps) > e1rm(b.kg, b.reps) ? s : b), null)
-  const sessions = new Set(sets.map(s => s.date)).size
+  const est = (s: { w?: number; r?: number; rir?: number }) => e1rm(s.w ?? 0, s.r ?? 0, oneRmFormula, s.rir)
+  const sets = workouts.flatMap(w => w.entries.filter(x => x.exId === id).flatMap(x => x.sets.filter(s => s.done && !s.warmup && (s.r ?? 0) > 0)))
+  const best = sets.reduce<(typeof sets)[number] | null>((b, s) => (!b || est(s) > est(b) ? s : b), null)
+  const sessions = workouts.filter(w => w.entries.some(x => x.exId === id)).length
   const custom = customEx.find(c => c.id === id)
 
   return (
-    <div className="sheet-backdrop" onClick={onClose}>
-      <section className="sheet" role="dialog" aria-modal="true" aria-label={exerciseName(e, lang)} onClick={ev => ev.stopPropagation()}>
+    <Sheet onClose={onClose} label={exerciseName(e, lang)} url={url}>
         <header className="sheet-head">
           <h2>{exerciseName(e, lang)}</h2>
-          {custom && <button className="icon-btn" onClick={() => onEdit(custom)} aria-label={t(lang, 'save')}><Pencil size={18} /></button>}
+          {custom && <button className="icon-btn" onClick={() => onEdit(custom)} aria-label={t(lang, 'edit')}><Pencil size={18} /></button>}
           <button
             className={`icon-btn star${fav ? ' on' : ''}`} aria-pressed={fav} aria-label={t(lang, 'favorites')}
-            onClick={() => update(s => ({ ...s, favEx: fav ? s.favEx.filter(x => x !== id) : [...s.favEx, id] }))}
+            onClick={() => updateProfile(p => ({ ...p, favEx: fav ? p.favEx.filter(x => x !== id) : [...p.favEx, id] }))}
           >
             <Star size={18} />
           </button>
@@ -103,8 +99,8 @@ export default function ExerciseDetail({ id, onClose, onOpen, onEdit }: Props) {
         <h3 className="sec">{t(lang, 'myHistory')}</h3>
         {best ? (
           <div className="stats">
-            <div className="card stat"><b>{best.kg} × {best.reps}</b><span>{t(lang, 'bestSet')}</span></div>
-            <div className="card stat"><b>{Math.round(e1rm(best.kg, best.reps))} kg</b><span>{t(lang, 'e1rm')}</span></div>
+            <div className="card stat"><b>{formatWeight(best.w ?? 0, wdec)} {unit} × {best.r}</b><span>{t(lang, 'bestSet')}</span></div>
+            <div className="card stat"><b>{fmtNum(est(best), lang)} {unit}</b><span>{t(lang, 'e1rm')}</span></div>
             <div className="card stat"><b>{sessions}</b><span>{t(lang, 'sessions')}</span></div>
           </div>
         ) : <p className="muted">{t(lang, 'noHistory')}</p>}
@@ -123,7 +119,6 @@ export default function ExerciseDetail({ id, onClose, onOpen, onEdit }: Props) {
           </>
         )}
         {e.i > 0 && <p className="muted credit">{t(lang, 'photoCredit')}</p>}
-      </section>
-    </div>
+    </Sheet>
   )
 }

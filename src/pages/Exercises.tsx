@@ -1,7 +1,9 @@
-import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
+import { useDeferredValue, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Plus, Search, SlidersHorizontal, Star, X } from 'lucide-react'
 import { t } from '../i18n'
-import { update, useStore, type CustomEx } from '../store'
+import { updateProfile, useProfile } from '../app/store'
+import { customToCatalogue } from '../app/custom'
+import type { CustomExercise } from '../core/types'
 import { allExercises, exerciseName, imageUrl, setCustomExercises, type CatalogueExercise } from '../catalogue'
 import { buildIndex, search } from '../catalogue/search'
 import {
@@ -18,9 +20,10 @@ const idFromHash = () => {
   const m = location.hash.match(/^#\/exercises\/(.+)$/)
   return m ? decodeURIComponent(m[1]) : null
 }
+const exUrl = (id: string) => `#/exercises/${encodeURIComponent(id)}`
 
 export default function Exercises() {
-  const { lang, favEx, customEx, gear, figure, workouts } = useStore()
+  const { settings: { lang, body: figure }, favEx, customEx, gear, workouts } = useProfile()
   const [q, setQ] = useState('')
   const dq = useDeferredValue(q)
   const [group, setGroup] = useState<string | null>(null)
@@ -34,22 +37,30 @@ export default function Exercises() {
   const [mapSide, setMapSide] = useState<'front' | 'back'>('front')
   const [limit, setLimit] = useState(PAGE)
   const [openId, setOpenId] = useState(idFromHash)
-  const [editing, setEditing] = useState<CustomEx | 'new' | null>(null)
+  const [editing, setEditing] = useState<CustomExercise | 'new' | null>(null)
   const more = useRef<HTMLDivElement>(null)
 
+  useLayoutEffect(() => {
+    if (idFromHash()) history.replaceState(history.state, '', '#/exercises')
+  }, [])
+
   useEffect(() => {
-    const on = () => setOpenId(idFromHash())
+    const on = () => {
+      const id = idFromHash()
+      if (id) history.replaceState(history.state, '', '#/exercises')
+      setOpenId(id)
+    }
     window.addEventListener('hashchange', on)
     return () => window.removeEventListener('hashchange', on)
   }, [])
 
   const docs = useMemo(() => {
-    setCustomExercises(customEx as CatalogueExercise[])
+    setCustomExercises(customEx.map(customToCatalogue))
     return buildIndex(allExercises())
   }, [customEx])
 
   const fav = useMemo(() => new Set(favEx), [favEx])
-  const used = useMemo(() => new Set(workouts.flatMap(w => w.sets.map(s => s.exId))), [workouts])
+  const used = useMemo(() => new Set(workouts.flatMap(w => w.entries.map(e => e.exId))), [workouts])
 
   const list = useMemo(() => {
     const gearSet = onlyGear && gear ? new Set(gear) : null
@@ -71,19 +82,19 @@ export default function Exercises() {
   }, [list.length, limit])
 
   const toggleFav = (id: string) =>
-    update(s => ({ ...s, favEx: s.favEx.includes(id) ? s.favEx.filter(x => x !== id) : [...s.favEx, id] }))
+    updateProfile(p => ({ ...p, favEx: p.favEx.includes(id) ? p.favEx.filter(x => x !== id) : [...p.favEx, id] }))
 
   const toggleGear = (g: string) =>
-    update(s => {
-      const cur = new Set<string>(s.gear ?? EQUIPMENT)
+    updateProfile(p => {
+      const cur = new Set<string>(p.gear ?? EQUIPMENT)
       if (cur.has(g)) cur.delete(g)
       else cur.add(g)
-      return { ...s, gear: [...cur] }
+      return { ...p, gear: [...cur] }
     })
 
   const pickMuscle = (m: string) => setMuscle(cur => (cur === m ? null : m))
   const filtersOn = !!(eq || cat || lvl || onlyGear || muscle)
-  const open = (id: string) => { location.hash = `#/exercises/${encodeURIComponent(id)}` }
+  const open = (id: string) => setOpenId(id)
 
   return (
     <>
@@ -146,8 +157,8 @@ export default function Exercises() {
               ))}
             </div>
             <div className="row">
-              <button className="btn" onClick={() => update(s => ({ ...s, gear: HOME_GEAR }))}>{t(lang, 'gearHome')}</button>
-              <button className="btn" onClick={() => update(s => ({ ...s, gear: null }))}>{t(lang, 'gearGym')}</button>
+              <button className="btn" onClick={() => updateProfile(p => ({ ...p, gear: HOME_GEAR }))}>{t(lang, 'gearHome')}</button>
+              <button className="btn" onClick={() => updateProfile(p => ({ ...p, gear: null }))}>{t(lang, 'gearGym')}</button>
             </div>
           </details>
           {filtersOn && (
@@ -205,12 +216,13 @@ export default function Exercises() {
       {openId && (
         <ExerciseDetail
           id={openId}
-          onClose={() => { location.hash = '#/exercises' }}
+          url={exUrl(openId)}
+          onClose={() => setOpenId(null)}
           onOpen={open}
           onEdit={c => setEditing(c)}
         />
       )}
-      {editing && <CustomExerciseForm initial={editing === 'new' ? null : editing} onClose={() => setEditing(null)} />}
+      {editing && <CustomExerciseForm initial={editing === 'new' ? null : editing} onClose={() => setEditing(null)} onDeleted={() => setOpenId(null)} />}
     </>
   )
 }

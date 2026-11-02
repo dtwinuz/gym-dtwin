@@ -1,16 +1,21 @@
 import { Flame, Trophy, Weight } from 'lucide-react'
-import { exerciseById, planById } from '../data'
 import { t } from '../i18n'
-import { nextDay, useStore } from '../store'
+import { useProfile } from '../app/store'
+import { starterDay, starterExName, starterPlan } from '../app/starter'
+import { fmtDate, fmtNum } from '../app/format'
+import { addDays, isoDate, setsDone, sortByStart } from '../core/history'
 
 export default function Home() {
-  const { lang, planId, workouts } = useStore()
-  const plan = planById(planId)
-  const day = nextDay(planId, workouts.filter(w => w.planId === planId).length)
+  const p = useProfile()
+  const { lang, unit } = p.settings
+  const { workouts } = p
+  const plan = starterPlan(p)
+  const day = starterDay(p)
 
-  const weekAgo = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10)
+  const weekAgo = addDays(isoDate(new Date()), -7)
   const thisWeek = workouts.filter(w => w.date >= weekAgo).length
-  const volume = workouts.reduce((sum, w) => sum + w.sets.reduce((a, s) => a + s.kg * s.reps, 0), 0)
+  const volume = workouts.reduce((sum, w) => sum + w.vol, 0)
+  const recent = sortByStart(workouts).slice(-5).reverse()
 
   return (
     <>
@@ -20,7 +25,7 @@ export default function Home() {
         <ul className="list">
           {day.items.map(i => (
             <li key={i.exId}>
-              <span>{exerciseById(i.exId)?.name}</span>
+              <span>{starterExName(i.exId, lang)}</span>
               <span className="muted">{i.sets} × {i.reps}</span>
             </li>
           ))}
@@ -31,17 +36,17 @@ export default function Home() {
       <section className="stats">
         <div className="card stat"><Flame size={18} /><b>{thisWeek}</b><span>{t(lang, 'thisWeek')}</span></div>
         <div className="card stat"><Trophy size={18} /><b>{workouts.length}</b><span>{t(lang, 'total')}</span></div>
-        <div className="card stat"><Weight size={18} /><b>{Math.round(volume / 1000)} t</b><span>{t(lang, 'volume')}</span></div>
+        <div className="card stat"><Weight size={18} /><b>{fmtNum(volume / 1000, lang)} {unit === 'kg' ? 't' : 'k lb'}</b><span>{t(lang, 'volume')}</span></div>
       </section>
 
       <section className="card">
         <h2>{t(lang, 'history')}</h2>
         {workouts.length === 0 && <p className="muted">{t(lang, 'empty')}</p>}
         <ul className="list">
-          {workouts.slice(-5).reverse().map(w => (
+          {recent.map(w => (
             <li key={w.id}>
-              <span>{w.dayName}</span>
-              <span className="muted">{w.date} · {w.sets.length} set</span>
+              <span>{w.name}</span>
+              <span className="muted">{fmtDate(w.date, lang)} · {setsDone(w.entries)} {t(lang, 'setsShort')}</span>
             </li>
           ))}
         </ul>
@@ -49,8 +54,8 @@ export default function Home() {
       <section className="card">
         <h2>{t(lang, 'decks')}</h2>
         <p className="muted">{t(lang, 'decksText')}</p>
-        <div className="row">
-          <a className="btn" href={lang === 'uz' ? '/overview/' : `/overview/${lang}/`}>Overview</a>
+        <div className="row wrap">
+          <a className="btn" href={lang === 'uz' ? '/overview/' : `/overview/${lang}/`}>{t(lang, 'overviewLink')}</a>
           <a className="btn" href="/deck/tadqiqot.html" target="_blank" rel="noopener">{t(lang, 'deckResearch')}</a>
           <a className="btn primary" href="/deck/konsept.html" target="_blank" rel="noopener">{t(lang, 'deckConcept')}</a>
         </div>
