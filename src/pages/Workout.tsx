@@ -1,33 +1,61 @@
 import { useEffect, useState } from 'react'
-import { Check, Trophy } from 'lucide-react'
+import { Check } from 'lucide-react'
 import { t } from '../i18n'
+import { fmtDate } from '../app/format'
+import { hashQuery } from '../app/nav'
+import { plannedOn } from '../app/plan'
+import { useCustomExercises } from '../app/routineMap'
 import { upsert, useProfile } from '../app/store'
-import { legacyExId } from '../app/legacy'
-import { lastWorkSet, starterDay, starterExName, starterPlan } from '../app/starter'
-import { bestE1rm, detectRecords, exerciseHistory, isoDate, workoutVolume } from '../core/history'
-import { e1rm } from '../core/onerm'
-import type { Entry } from '../core/types'
+import { exerciseById, exerciseName } from '../catalogue'
+import { detectRecords, isoDate, parseIso, workoutVolume } from '../core/history'
+import { modeOf } from '../core/progression'
+import type { Entry, Mode, Routine, SetRow, Slot, Workout as W } from '../core/types'
 
 interface Row {
-  exId: string
+  key: number
   w: number
-  r: number
+  /** Reps, seconds or minutes, by the slot's mode. */
+  v: number
   done: boolean
 }
+
+interface Item {
+  key: number
+  slot: Slot
+  routineId: string
+  mode: Mode
+}
+
+function lastWorkSet(workouts: W[], exId: string): SetRow | undefined {
+  const sorted = [...workouts].sort((a, b) => b.start - a.start)
+  for (const w of sorted) {
+    const s = w.entries.find(x => x.exId === exId)?.sets.filter(x => x.done && !x.warmup).at(-1)
+    if (s) return s
+  }
+}
+
+const target = (s: Slot, mode: Mode) => (mode === 'time' ? s.sec ?? 30 : mode === 'cardio' ? s.min ?? 10 : s.reps)
 
 export default function Workout() {
   const p = useProfile()
   const { lang, unit, restSec, oneRmFormula } = p.settings
   const { workouts } = p
-  const plan = starterPlan(p)
-  const day = starterDay(p)
+  useCustomExercises(p.customEx)
+  const today = isoDate(new Date())
+  const [query] = useState(hashQuery)
+  const requested = (query.get('routine') ?? '').split(',').filter(Boolean)
+  const asked = query.get('date') ?? ''
+  const date = /^\d{4}-\d{2}-\d{2}$/.test(asked) && asked <= today && !Number.isNaN(parseIso(asked).getTime()) ? asked : today
+  const ids = requested.length ? requested : plannedOn(p, today, today)
+  const routines = ids.map(id => p.routines.find(r => r.id === id)).filter((r): r is Routine => !!r)
+  const items: Item[] = routines.flatMap(r => r.ex.map(slot => ({ slot, routineId: r.id, mode: modeOf(slot) }))).map((x, key) => ({ ...x, key }))
+  const name = routines.map(r => r.name).join(' + ')
   const [start] = useState(() => Date.now())
 
   const [rows, setRows] = useState<Row[]>(() =>
-    day.items.flatMap(i => {
-      const exId = legacyExId(i.exId)
-      const prev = lastWorkSet(workouts, exId)
-      return Array.from({ length: i.sets }, () => ({ exId, w: prev?.w ?? (unit === 'kg' ? 20 : 45), r: i.reps, done: false }))
+    items.flatMap(i => {
+      const prev = lastWorkSet(workouts, i.slot.exId)
+      return Array.from({ length: i.mode === 'cardio' ? 1 : i.slot.sets }, () => ({ key: i.key, w: prev?.w ?? i.slot.weight, v: target(i.slot, i.mode), done: false }))
     }))
   const [restLeft, setRestLeft] = useState(0)
 
@@ -37,28 +65,43 @@ export default function Workout() {
     return () => clearTimeout(id)
   }, [restLeft])
 
-  const set = (idx: number, patch: Partial<Row>) =>
-    setRows(rs => rs.map((r, i) => (i === idx ? { ...r, ...patch } : r)))
+  if (!items.length) {
+    return (
+      <>
+        <h1>{t(lang, 'workout')}</h1>
+        <div className="card empty">
+          <p>{t(lang, 'workoutNone')}</p>
+          <p className="muted">{t(lang, 'pickRoutine')}</p>
+          <div className="row center"><a className="btn primary" href="#/plan/routines">{t(lang, 'plan')}</a></div>
+        </div>
+      </>
+    )
+  }
 
-  const toggle = (idx: number) => {
+  const set = (idx: number, patch: Partial<Row>) => setRows(rs => rs.map((r, i) => (i === idx ? { ...r, ...patch } : r)))
+
+  const toggle = (idx: number, item: Item) => {
     const done = !rows[idx].done
     set(idx, { done })
-    if (done) setRestLeft(restSec)
+    if (done && !item.slot.restOff) setRestLeft(item.slot.restSec ?? restSec)
   }
 
   const finish = () => {
     const entries: Entry[] = []
-    for (const r of rows) {
-      if (!r.done) continue
-      let e = entries.find(x => x.exId === r.exId)
-      if (!e) entries.push((e = { exId: r.exId, sets: [] }))
-      e.sets.push({ w: r.w, r: r.r, done: true })
+    for (const i of items) {
+      const sets: SetRow[] = rows.filter(r => r.key === i.key && r.done).map(r => {
+        if (i.mode === 'time') return { w: r.w, sec: r.v, done: true }
+        if (i.mode === 'cardio') return { min: r.v, done: true }
+        return { w: r.w, r: r.v, done: true }
+      })
+      if (sets.length) entries.push({ exId: i.slot.exId, sets, target: i.slot, routineId: i.routineId, sg: i.slot.sg })
     }
     if (entries.length === 0) return
     const { prs, e1prs } = detectRecords(entries, workouts, oneRmFormula)
     const end = Date.now()
+    const when = date === today ? start : parseIso(date).getTime() + 12 * 3600 * 1000
     upsert('workouts', {
-      id: crypto.randomUUID(), date: isoDate(new Date(start)), start, end, routineIds: [plan.id], name: day.name,
+      id: crypto.randomUUID(), date, start: when, end: date === today ? end : when, routineIds: routines.map(r => r.id), name,
       entries, prs, e1prs, vol: workoutVolume(entries), updatedAt: end,
     })
     location.hash = '#/progress'
@@ -66,34 +109,34 @@ export default function Workout() {
 
   return (
     <>
-      <h1>{t(lang, 'workout')}: {day.name}</h1>
-      <p className="muted">{plan.name}</p>
+      <h1>{t(lang, 'workout')}: {name}</h1>
+      {date !== today && <p className="muted">{t(lang, 'pastDate')}: {fmtDate(date, lang)}</p>}
 
-      {day.items.map(item => {
-        const exId = legacyExId(item.exId)
-        const best = bestE1rm(exerciseHistory(workouts, exId), oneRmFormula)
-        return (
-          <section key={item.exId} className="card">
-            <h2>{starterExName(item.exId, lang)}</h2>
-            {rows.map((r, idx) => {
-              if (r.exId !== exId) return null
-              const isPr = r.done && best > 0 && e1rm(r.w, r.r, oneRmFormula) > best
-              return (
-                <div key={idx} className={`set ${r.done ? 'done' : ''}`}>
-                  <input type="number" inputMode="decimal" value={r.w} onChange={e => set(idx, { w: Number(e.target.value) })} aria-label={unit} />
-                  <span>{unit} ×</span>
-                  <input type="number" inputMode="numeric" value={r.r} onChange={e => set(idx, { r: Number(e.target.value) })} aria-label="reps" />
-                  {isPr && <Trophy size={16} className="pr" />}
-                  <button className="check" onClick={() => toggle(idx)} aria-label={t(lang, 'done')} aria-pressed={r.done}><Check size={18} /></button>
-                </div>
-              )
-            })}
-          </section>
-        )
-      })}
+      {items.map(item => (
+        <section key={item.key} className="card">
+          <h2>{exerciseName(exerciseById(item.slot.exId), lang)}</h2>
+          {rows.map((r, idx) => {
+            if (r.key !== item.key) return null
+            const valueLabel = t(lang, item.mode === 'time' ? 'secShort' : item.mode === 'cardio' ? 'minShort' : 'modeReps')
+            return (
+              <div key={idx} className={`set ${r.done ? 'done' : ''}`}>
+                {item.mode !== 'cardio' && (
+                  <>
+                    <input type="number" inputMode="decimal" value={r.w} onChange={e => set(idx, { w: Number(e.target.value) })} aria-label={unit} />
+                    <span>{unit} ×</span>
+                  </>
+                )}
+                <input type="number" inputMode="numeric" value={r.v} onChange={e => set(idx, { v: Number(e.target.value) })} aria-label={valueLabel} />
+                {item.mode !== 'reps' && <span>{valueLabel}</span>}
+                <button className="check" onClick={() => toggle(idx, item)} aria-label={t(lang, 'done')} aria-pressed={r.done}><Check size={18} /></button>
+              </div>
+            )
+          })}
+        </section>
+      ))}
 
       <div className="sticky-bar">
-        <span className="muted">{restLeft > 0 ? `${t(lang, 'rest')}: ${restLeft}s` : `${rows.filter(r => r.done).length}/${rows.length}`}</span>
+        <span className="muted">{restLeft > 0 ? `${t(lang, 'rest')}: ${restLeft}${t(lang, 'secShort')}` : `${rows.filter(r => r.done).length}/${rows.length}`}</span>
         <button className="btn primary" onClick={finish}>{t(lang, 'finish')}</button>
       </div>
     </>

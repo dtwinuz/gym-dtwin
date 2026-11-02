@@ -6,7 +6,7 @@ Struktura g'oyasi [openGym](https://github.com/DuarteSantos8/openGym) dan olinga
 
 ## Imkoniyatlar (MVP)
 - **Bosh sahifa** — bugungi mashg'ulot (reja aylanishi), haftalik statistika, tarix
-- **Reja** — 4 ta starter reja: PPL, Upper/Lower, Full Body, 5×5
+- **Reja** — 8 ta starter reja (PPL, Upper/Lower, Full Body, 5×5, trenajyor, uy, dumba, Ramazon), routine muharriri, hafta va rotatsiya jadvali
 - **Mashg'ulot** — set/rep/kg kiritish, oxirgi vazn oldindan to'ldiriladi, 90 s dam olish taymeri, PR belgisi
 - **Mashqlar** — 876 mashqli kutubxona (free-exercise-db), 187 tasi uz/ru nom va ko'rsatma bilan; sinonim va xatoga chidamli qidiruv (jim, stanovaya, turnik ...), filtrlar (guruh, jihoz, tur, daraja, "menda bor jihoz"), tana xaritasi (MuscleMap) bilan mushak tanlash, sevimlilar, o'z mashqlarim
 - **Progress** — 12 haftalik faollik xaritasi, rekordlar (Epley 1RM), tana vazni grafigi

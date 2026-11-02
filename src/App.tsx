@@ -1,7 +1,7 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { BarChart3, CalendarDays, Dumbbell, Home as HomeIcon, Settings as SettingsIcon, Timer } from 'lucide-react'
 import { LANGS, t, type Key } from './i18n'
-import { updateSettings, useSettings } from './app/store'
+import { updateProfile, updateSettings, useProfile } from './app/store'
 import { useApplyTheme } from './app/theme'
 import Toaster from './app/Toaster'
 import SafetyNotice from './app/SafetyNotice'
@@ -13,6 +13,7 @@ const Workout = lazy(() => import('./pages/Workout'))
 const Progress = lazy(() => import('./pages/Progress'))
 const Exercises = lazy(() => import('./pages/Exercises'))
 const Settings = lazy(() => import('./pages/Settings'))
+const Onboarding = lazy(() => import('./pages/Onboarding'))
 
 const ROUTES = [
   { path: '/home', key: 'home', icon: HomeIcon, page: Home },
@@ -23,11 +24,11 @@ const ROUTES = [
 ] satisfies { path: string; key: Key; icon: unknown; page: unknown }[]
 
 // '' and '#/' open the landing page; the app lives under '#/home', '#/plan', ...
-const currentPath = () => location.hash.slice(1) || '/'
+const currentPath = () => (location.hash.slice(1) || '/').split('?')[0]
 const under = (path: string, base: string) => path === base || path.startsWith(`${base}/`)
 
 export default function App() {
-  const settings = useSettings()
+  const { settings, routines, onboardedAt } = useProfile()
   const { lang } = settings
   const [path, setPath] = useState(currentPath)
   const [safetyLater, setSafetyLater] = useState(false)
@@ -57,7 +58,9 @@ export default function App() {
   const isSettings = under(path, '/settings')
   const route = isSettings ? null : ROUTES.find(r => under(path, r.path)) ?? ROUTES[0]
   const Page = route ? route.page : Settings
-  const showSafety = settings.safetyAck == null && !safetyLater && path.split('/').length <= 2
+  const topLevel = path.split('/').length <= 2
+  const showSafety = settings.safetyAck == null && !safetyLater && topLevel
+  const showOnboarding = !showSafety && topLevel && routines.length === 0 && onboardedAt == null && (path === '/home' || path === '/plan')
 
   return (
     <div className="app">
@@ -93,6 +96,11 @@ export default function App() {
       </nav>
       <Toaster />
       {showSafety && <SafetyNotice onClose={() => setSafetyLater(true)} />}
+      {showOnboarding && (
+        <Suspense fallback={null}>
+          <Onboarding onClose={() => updateProfile(p => ({ ...p, onboardedAt: p.onboardedAt ?? Date.now() }))} />
+        </Suspense>
+      )}
     </div>
   )
 }

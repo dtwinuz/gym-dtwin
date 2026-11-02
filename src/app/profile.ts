@@ -38,6 +38,8 @@ export function defaultSettings(lang: Lang = detectLang()): Settings {
     showWeightCard: true,
     safetyAck: null,
     safetyFlag: false,
+    ramadanMode: false,
+    heatTips: false,
   }
 }
 
