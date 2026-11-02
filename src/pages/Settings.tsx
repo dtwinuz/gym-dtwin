@@ -24,7 +24,7 @@ function Seg<T extends string | number>({ value, options, onPick, label }: { val
   )
 }
 
-function Toggle({ k, label }: { k: 'sound' | 'vibrate' | 'keepAwake'; label: string }) {
+function Toggle({ k, label }: { k: 'sound' | 'vibrate' | 'keepAwake' | 'ramadanMode' | 'heatTips'; label: string }) {
   const s = useSettings()
   return <input type="checkbox" className="switch" checked={s[k]} onChange={e => updateSettings({ [k]: e.target.checked } as Partial<S>)} aria-label={label} />
 }
@@ -89,6 +89,10 @@ export default function Settings() {
     ]],
     ['secCalendar', [
       { key: 'weekStart', control: <Seg<0 | 1> label={L('weekStart')} value={s.weekStart} onPick={weekStart => updateSettings({ weekStart })} options={[[1, L('monday')], [0, L('sunday')]]} /> },
+    ]],
+    ['secLocal', [
+      { key: 'ramadanMode', hint: L('ramadanHint'), control: <Toggle k="ramadanMode" label={L('ramadanMode')} /> },
+      { key: 'heatTips', hint: L('heatHint'), control: <Toggle k="heatTips" label={L('heatTips')} /> },
     ]],
     ['secCalc', [
       {

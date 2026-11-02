@@ -194,6 +194,10 @@ export interface Settings {
   safetyAck: Ms | null
   /** At least one health question was answered "yes". */
   safetyFlag: boolean
+  /** Ramadan tips on Home. */
+  ramadanMode: boolean
+  /** Summer heat tips on Home. */
+  heatTips: boolean
 }
 
 export type OneRmFormula = 'epley' | 'brzycki' | 'lombardi' | 'oconner' | 'mayhew' | 'wathan' | 'lander'
@@ -222,6 +226,8 @@ export interface Profile {
   gear: string[] | null
   /** Starter template in use until routines replace it. */
   planId?: string
+  /** First-run questions answered or skipped. */
+  onboardedAt?: Ms
   /** Bar weight per exercise; 0 = no bar. */
   barWeights: Record<string, number>
   /** Owned plate pairs per size, per unit. */

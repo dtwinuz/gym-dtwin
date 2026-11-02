@@ -1,0 +1,2002 @@
+{
+  "programs": [
+    {
+      "id": "ppl",
+      "days": 6,
+      "level": "intermediate",
+      "goal": "hypertrophy",
+      "place": "gym",
+      "name": {
+        "uz": "Itarish / Tortish / Oyoq",
+        "ru": "Жим / Тяга / Ноги",
+        "en": "Push / Pull / Legs"
+      },
+      "desc": {
+        "uz": "Kamida yarim yil muntazam shug'ullangan, haftada 6 kun zalga bora oladiganlar uchun. Har bir mushak guruhi haftada ikki marta ishlaydi: itarish, tortish va oyoq kunlari ikki marta takrorlanadi. Asosiy shtanga mashqlarida har muvaffaqiyatli mashg'ulotdan keyin vazn qo'shiladi, yordamchi mashqlarda esa avval takrorlar diapazon yuqorisiga chiqariladi, keyin vazn oshadi.",
+        "ru": "Для тех, кто уже тренируется хотя бы полгода и может ходить в зал 6 дней в неделю. Каждая группа мышц работает дважды в неделю: дни жима, тяги и ног повторяются два раза. В базовых упражнениях со штангой вес растёт после каждой успешной тренировки, в подсобных сначала добираются повторы до верха диапазона, затем добавляется вес.",
+        "en": "For lifters with at least six months of steady training who can get to the gym six days a week. Each muscle group is hit twice a week as the push, pull and legs days repeat. Main barbell lifts add weight after every successful session; accessories first climb to the top of the rep range, then go up in weight."
+      },
+      "schedule": "week",
+      "week": {
+        "1": [
+          "push"
+        ],
+        "2": [
+          "pull"
+        ],
+        "3": [
+          "legs"
+        ],
+        "4": [
+          "push"
+        ],
+        "5": [
+          "pull"
+        ],
+        "6": [
+          "legs"
+        ]
+      },
+      "routines": [
+        {
+          "id": "push",
+          "name": {
+            "uz": "Itarish",
+            "ru": "Жимовые",
+            "en": "Push"
+          },
+          "glyph": "P",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Barbell_Bench_Press_-_Medium_Grip",
+              "sets": 4,
+              "reps": 6,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 3,
+              "subs": [
+                "Dumbbell_Bench_Press"
+              ],
+              "restSec": 180
+            },
+            {
+              "exId": "Dumbbell_Shoulder_Press",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "subs": [
+                "Machine_Shoulder_Military_Press"
+              ],
+              "restSec": 120
+            },
+            {
+              "exId": "Incline_Dumbbell_Press",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "restSec": 90
+            },
+            {
+              "exId": "Cable_Crossover",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "subs": [
+                "Dumbbell_Flyes",
+                "Butterfly"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Side_Lateral_Raise",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "sg": "a",
+              "restSec": 60
+            },
+            {
+              "exId": "Triceps_Pushdown_-_Rope_Attachment",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "sg": "a",
+              "subs": [
+                "Standing_Dumbbell_Triceps_Extension"
+              ],
+              "restSec": 60
+            }
+          ]
+        },
+        {
+          "id": "pull",
+          "name": {
+            "uz": "Tortish",
+            "ru": "Тяговые",
+            "en": "Pull"
+          },
+          "glyph": "T",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Barbell_Deadlift",
+              "sets": 3,
+              "reps": 5,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 3,
+              "subs": [
+                "Trap_Bar_Deadlift"
+              ],
+              "restSec": 180
+            },
+            {
+              "exId": "Wide-Grip_Lat_Pulldown",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "subs": [
+                "Pullups",
+                "Band_Assisted_Pull-Up"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Seated_Cable_Rows",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "subs": [
+                "One-Arm_Dumbbell_Row",
+                "Leverage_Iso_Row"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Face_Pull",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "subs": [
+                "Reverse_Flyes"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Barbell_Curl",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "restSec": 60
+            },
+            {
+              "exId": "Hammer_Curls",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "restSec": 60
+            }
+          ]
+        },
+        {
+          "id": "legs",
+          "name": {
+            "uz": "Oyoqlar",
+            "ru": "Ноги",
+            "en": "Legs"
+          },
+          "glyph": "O",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Barbell_Squat",
+              "sets": 4,
+              "reps": 6,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 3,
+              "subs": [
+                "Smith_Machine_Squat"
+              ],
+              "restSec": 180
+            },
+            {
+              "exId": "Romanian_Deadlift",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "warmups": 1,
+              "restSec": 120
+            },
+            {
+              "exId": "Leg_Press",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Hack_Squat",
+                "Goblet_Squat"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Lying_Leg_Curls",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Seated_Leg_Curl"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Standing_Calf_Raises",
+              "sets": 4,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "subs": [
+                "Calf_Press_On_The_Leg_Press_Machine"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Plank",
+              "mode": "time",
+              "sets": 3,
+              "reps": 0,
+              "sec": 45,
+              "weight": 0,
+              "prog": "time",
+              "restSec": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "upper-lower",
+      "days": 4,
+      "level": "intermediate",
+      "goal": "strength",
+      "place": "gym",
+      "name": {
+        "uz": "Yuqori / Pastki tana",
+        "ru": "Верх / Низ",
+        "en": "Upper / Lower"
+      },
+      "desc": {
+        "uz": "Haftada 4 kun: ikki kun yuqori tana, ikki kun oyoqlar. Kuch va mushak massasini birga oshirmoqchi bo'lgan, asosiy mashqlarni biladigan sportchilar uchun. Asosiy mashqlarda vazn har muvaffaqiyatli mashg'ulotdan keyin oshadi, ketma-ket uch marta bajarilmasa vazn biroz kamaytiriladi; yordamchi mashqlar takror diapazoni bo'yicha o'sadi.",
+        "ru": "Четыре дня в неделю: два дня на верх тела и два на ноги. Для тех, кто знает базовые упражнения и хочет одновременно растить силу и массу. В базовых движениях вес растёт после каждой успешной тренировки, а после трёх неудач подряд немного снижается; подсобные упражнения прогрессируют по диапазону повторов.",
+        "en": "Four days a week: two upper-body days and two lower-body days. For lifters who know the main lifts and want strength and size together. Main lifts go up after every successful session and back off a little after three misses in a row; accessories progress through a rep range."
+      },
+      "schedule": "week",
+      "week": {
+        "1": [
+          "upper-a"
+        ],
+        "2": [
+          "lower-a"
+        ],
+        "4": [
+          "upper-b"
+        ],
+        "5": [
+          "lower-b"
+        ]
+      },
+      "routines": [
+        {
+          "id": "upper-a",
+          "name": {
+            "uz": "Yuqori A",
+            "ru": "Верх A",
+            "en": "Upper A"
+          },
+          "glyph": "U1",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Barbell_Bench_Press_-_Medium_Grip",
+              "sets": 4,
+              "reps": 6,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 3,
+              "restSec": 180
+            },
+            {
+              "exId": "Bent_Over_Barbell_Row",
+              "sets": 4,
+              "reps": 8,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 2,
+              "subs": [
+                "T-Bar_Row_with_Handle"
+              ],
+              "restSec": 150
+            },
+            {
+              "exId": "Dumbbell_Shoulder_Press",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "restSec": 90
+            },
+            {
+              "exId": "Wide-Grip_Lat_Pulldown",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "subs": [
+                "Pullups"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "EZ-Bar_Curl",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "sg": "a",
+              "restSec": 60
+            },
+            {
+              "exId": "EZ-Bar_Skullcrusher",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "sg": "a",
+              "restSec": 60
+            }
+          ]
+        },
+        {
+          "id": "lower-a",
+          "name": {
+            "uz": "Pastki A",
+            "ru": "Низ A",
+            "en": "Lower A"
+          },
+          "glyph": "L1",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Barbell_Squat",
+              "sets": 4,
+              "reps": 6,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 3,
+              "restSec": 180
+            },
+            {
+              "exId": "Romanian_Deadlift",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "warmups": 1,
+              "restSec": 120
+            },
+            {
+              "exId": "Lying_Leg_Curls",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Seated_Leg_Curl"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Standing_Calf_Raises",
+              "sets": 4,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "subs": [
+                "Seated_Calf_Raise"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Hanging_Leg_Raise",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "bodyweight": true,
+              "subs": [
+                "Reverse_Crunch"
+              ],
+              "restSec": 60
+            }
+          ]
+        },
+        {
+          "id": "upper-b",
+          "name": {
+            "uz": "Yuqori B",
+            "ru": "Верх B",
+            "en": "Upper B"
+          },
+          "glyph": "U2",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Standing_Military_Press",
+              "sets": 4,
+              "reps": 6,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 2,
+              "restSec": 180
+            },
+            {
+              "exId": "Pullups",
+              "sets": 4,
+              "reps": 8,
+              "repsMin": 5,
+              "weight": 0,
+              "bodyweight": true,
+              "subs": [
+                "Band_Assisted_Pull-Up",
+                "Wide-Grip_Lat_Pulldown"
+              ],
+              "restSec": 120
+            },
+            {
+              "exId": "Incline_Dumbbell_Press",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "restSec": 90
+            },
+            {
+              "exId": "Seated_Cable_Rows",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "One-Arm_Dumbbell_Row"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Side_Lateral_Raise",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "sg": "b",
+              "restSec": 60
+            },
+            {
+              "exId": "Face_Pull",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "sg": "b",
+              "subs": [
+                "Reverse_Flyes"
+              ],
+              "restSec": 60
+            }
+          ]
+        },
+        {
+          "id": "lower-b",
+          "name": {
+            "uz": "Pastki B",
+            "ru": "Низ B",
+            "en": "Lower B"
+          },
+          "glyph": "L2",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Barbell_Deadlift",
+              "sets": 3,
+              "reps": 5,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 3,
+              "restSec": 180
+            },
+            {
+              "exId": "Leg_Press",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Hack_Squat"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Split_Squat_with_Dumbbells",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "side": true,
+              "restSec": 90
+            },
+            {
+              "exId": "Seated_Leg_Curl",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Lying_Leg_Curls"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Seated_Calf_Raise",
+              "sets": 4,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "subs": [
+                "Standing_Calf_Raises"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Plank",
+              "mode": "time",
+              "sets": 3,
+              "reps": 0,
+              "sec": 45,
+              "weight": 0,
+              "prog": "time",
+              "restSec": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-body",
+      "days": 3,
+      "level": "beginner",
+      "goal": "general",
+      "place": "gym",
+      "name": {
+        "uz": "Butun tana A/B",
+        "ru": "Всё тело A/B",
+        "en": "Full Body A/B"
+      },
+      "desc": {
+        "uz": "Zalga endi kela boshlaganlar uchun haftada 3 kunlik reja: A va B mashg'ulotlari navbatma-navbat almashadi, oralarida kamida bir kun dam. Har mashg'ulotda butun tana ishlaydi, mashqlar soni kam, texnikani o'rganishga vaqt qoladi. Asosiy mashqda vazn har muvaffaqiyatli mashg'ulotdan keyin oshadi, qolganlarida avval takrorlar ko'payadi.",
+        "ru": "План на 3 дня в неделю для тех, кто только начинает ходить в зал: тренировки A и B чередуются, между ними минимум день отдыха. Каждый раз работает всё тело, упражнений немного, есть время освоить технику. В основном упражнении вес растёт после каждой успешной тренировки, в остальных сначала растут повторы.",
+        "en": "A three-day plan for gym newcomers: workouts A and B alternate with at least one rest day in between. Every session trains the whole body with few exercises, leaving time to learn technique. The main lift adds weight after each successful session; the rest add reps first."
+      },
+      "schedule": "rotation",
+      "rotation": [
+        "a",
+        "rest",
+        "b",
+        "rest",
+        "a",
+        "rest",
+        "rest",
+        "b",
+        "rest",
+        "a",
+        "rest",
+        "b",
+        "rest",
+        "rest"
+      ],
+      "routines": [
+        {
+          "id": "a",
+          "name": {
+            "uz": "Mashg'ulot A",
+            "ru": "Тренировка A",
+            "en": "Workout A"
+          },
+          "glyph": "A",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Barbell_Squat",
+              "sets": 3,
+              "reps": 8,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 2,
+              "subs": [
+                "Goblet_Squat",
+                "Leg_Press"
+              ],
+              "restSec": 150
+            },
+            {
+              "exId": "Dumbbell_Bench_Press",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "subs": [
+                "Machine_Bench_Press"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Seated_Cable_Rows",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "subs": [
+                "One-Arm_Dumbbell_Row"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Lying_Leg_Curls",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Seated_Leg_Curl"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Plank",
+              "mode": "time",
+              "sets": 3,
+              "reps": 0,
+              "sec": 30,
+              "weight": 0,
+              "prog": "time",
+              "restSec": 60
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "name": {
+            "uz": "Mashg'ulot B",
+            "ru": "Тренировка B",
+            "en": "Workout B"
+          },
+          "glyph": "B",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Romanian_Deadlift",
+              "sets": 3,
+              "reps": 8,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 2,
+              "subs": [
+                "Stiff-Legged_Dumbbell_Deadlift"
+              ],
+              "restSec": 150
+            },
+            {
+              "exId": "Dumbbell_Shoulder_Press",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "restSec": 90
+            },
+            {
+              "exId": "Wide-Grip_Lat_Pulldown",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "subs": [
+                "Band_Assisted_Pull-Up"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Dumbbell_Lunges",
+              "sets": 2,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "side": true,
+              "restSec": 90
+            },
+            {
+              "exId": "Dumbbell_Bicep_Curl",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "sg": "a",
+              "restSec": 60
+            },
+            {
+              "exId": "Triceps_Pushdown",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "sg": "a",
+              "restSec": 60
+            },
+            {
+              "exId": "Dead_Bug",
+              "sets": 2,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "bodyweight": true,
+              "side": true,
+              "restSec": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "five-by-five",
+      "days": 3,
+      "level": "beginner",
+      "goal": "strength",
+      "place": "gym",
+      "name": {
+        "uz": "5x5 kuch",
+        "ru": "Сила 5x5",
+        "en": "Strength 5x5"
+      },
+      "desc": {
+        "uz": "Kuchni oshirish uchun klassik shtanga rejasi: haftada 3 kun, A va B navbat bilan, o'tirib-turish har mashg'ulotda. Barcha 5 ta yondashuvda 5 tadan takror bajarilsa, keyingi safar vazn oshadi. Bir vaznda ketma-ket uch marta bajarilmasa, vazn taxminan 10% kamaytiriladi va qaytadan oshiriladi.",
+        "ru": "Классическая программа со штангой для роста силы: 3 дня в неделю, A и B по очереди, приседания на каждой тренировке. Если все 5 подходов по 5 повторов выполнены, в следующий раз вес растёт. После трёх неудач подряд на одном весе он снижается примерно на 10%, и прогресс начинается заново.",
+        "en": "A classic barbell plan for building strength: three days a week alternating A and B, with squats every session. Make all five sets of five and the weight goes up next time. Miss at the same weight three sessions in a row and it drops by about 10% so you can build back up."
+      },
+      "schedule": "rotation",
+      "rotation": [
+        "a",
+        "rest",
+        "b",
+        "rest",
+        "a",
+        "rest",
+        "rest",
+        "b",
+        "rest",
+        "a",
+        "rest",
+        "b",
+        "rest",
+        "rest"
+      ],
+      "routines": [
+        {
+          "id": "a",
+          "name": {
+            "uz": "Mashg'ulot A",
+            "ru": "Тренировка A",
+            "en": "Workout A"
+          },
+          "glyph": "A",
+          "prog": "linear",
+          "ex": [
+            {
+              "exId": "Barbell_Squat",
+              "sets": 5,
+              "reps": 5,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 3,
+              "restSec": 180
+            },
+            {
+              "exId": "Barbell_Bench_Press_-_Medium_Grip",
+              "sets": 5,
+              "reps": 5,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 3,
+              "restSec": 180
+            },
+            {
+              "exId": "Bent_Over_Barbell_Row",
+              "sets": 5,
+              "reps": 5,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 2,
+              "restSec": 150
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "name": {
+            "uz": "Mashg'ulot B",
+            "ru": "Тренировка B",
+            "en": "Workout B"
+          },
+          "glyph": "B",
+          "prog": "linear",
+          "ex": [
+            {
+              "exId": "Barbell_Squat",
+              "sets": 5,
+              "reps": 5,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 3,
+              "restSec": 180
+            },
+            {
+              "exId": "Standing_Military_Press",
+              "sets": 5,
+              "reps": 5,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 2,
+              "restSec": 180
+            },
+            {
+              "exId": "Barbell_Deadlift",
+              "sets": 1,
+              "reps": 5,
+              "weight": 0,
+              "prog": "linear",
+              "warmups": 3,
+              "restSec": 180
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner-machines",
+      "days": 3,
+      "level": "beginner",
+      "goal": "general",
+      "place": "gym",
+      "name": {
+        "uz": "Boshlovchi: trenajyorlar",
+        "ru": "Новичок: тренажёры",
+        "en": "Beginner Machines"
+      },
+      "desc": {
+        "uz": "Zalga birinchi marta kelganlar uchun haftada 3 kunlik reja (masalan, dushanba, chorshanba, juma). Mashqlar asosan trenajyor va bloklarda, shuning uchun harakatni o'rganish oson. Diapazon yuqorisidagi takrorlarni barcha yondashuvlarda bajarganingizda vaznni bir pog'ona oshiring; trenajyor band bo'lsa, zaxira mashqdan foydalaning.",
+        "ru": "План на 3 дня в неделю (например, понедельник, среда, пятница) для тех, кто пришёл в зал впервые. Упражнения в основном на тренажёрах и блоках, поэтому движения проще освоить. Когда во всех подходах сделаны верхние повторы диапазона, добавьте одну ступень веса; если тренажёр занят, берите запасное упражнение.",
+        "en": "A three-day plan (for example Monday, Wednesday, Friday) for your first weeks in the gym. Most exercises use machines and cables, so the movements are easy to learn. Once every set hits the top of the rep range, add one weight step; if a machine is taken, use the backup exercise."
+      },
+      "schedule": "week",
+      "week": {
+        "1": [
+          "m1"
+        ],
+        "3": [
+          "m2"
+        ],
+        "5": [
+          "m3"
+        ]
+      },
+      "routines": [
+        {
+          "id": "m1",
+          "name": {
+            "uz": "Trenajyor 1",
+            "ru": "Тренажёры 1",
+            "en": "Machines 1"
+          },
+          "glyph": "M1",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Leg_Press",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "warmups": 1,
+              "subs": [
+                "Smith_Machine_Squat",
+                "Goblet_Squat"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Machine_Bench_Press",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "warmups": 1,
+              "subs": [
+                "Leverage_Chest_Press",
+                "Dumbbell_Bench_Press"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Wide-Grip_Lat_Pulldown",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Close-Grip_Front_Lat_Pulldown"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Seated_Leg_Curl",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Lying_Leg_Curls"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Machine_Shoulder_Military_Press",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Dumbbell_Shoulder_Press"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Ab_Crunch_Machine",
+              "sets": 2,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "subs": [
+                "Crunches"
+              ],
+              "restSec": 45
+            },
+            {
+              "exId": "Walking_Treadmill",
+              "mode": "cardio",
+              "sets": 1,
+              "reps": 0,
+              "min": 10,
+              "weight": 0,
+              "prog": "off",
+              "restOff": true
+            }
+          ]
+        },
+        {
+          "id": "m2",
+          "name": {
+            "uz": "Trenajyor 2",
+            "ru": "Тренажёры 2",
+            "en": "Machines 2"
+          },
+          "glyph": "M2",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Smith_Machine_Squat",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "warmups": 1,
+              "subs": [
+                "Leg_Press"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Leverage_Iso_Row",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Seated_Cable_Rows"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Cable_Chest_Press",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Butterfly"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Leg_Extensions",
+              "sets": 2,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "restSec": 60
+            },
+            {
+              "exId": "Standing_Biceps_Cable_Curl",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "sg": "a",
+              "restSec": 60
+            },
+            {
+              "exId": "Triceps_Pushdown",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "sg": "a",
+              "restSec": 60
+            },
+            {
+              "exId": "Elliptical_Trainer",
+              "mode": "cardio",
+              "sets": 1,
+              "reps": 0,
+              "min": 10,
+              "weight": 0,
+              "prog": "off",
+              "restOff": true
+            }
+          ]
+        },
+        {
+          "id": "m3",
+          "name": {
+            "uz": "Trenajyor 3",
+            "ru": "Тренажёры 3",
+            "en": "Machines 3"
+          },
+          "glyph": "M3",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Leg_Press",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "warmups": 1,
+              "subs": [
+                "Hack_Squat"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Leverage_High_Row",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Wide-Grip_Lat_Pulldown"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Butterfly",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Cable_Crossover"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Lying_Leg_Curls",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Seated_Leg_Curl"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Reverse_Machine_Flyes",
+              "sets": 2,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "subs": [
+                "Face_Pull"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Machine_Preacher_Curls",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "sg": "b",
+              "restSec": 60
+            },
+            {
+              "exId": "Machine_Triceps_Extension",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "sg": "b",
+              "restSec": 60
+            },
+            {
+              "exId": "Plank",
+              "mode": "time",
+              "sets": 2,
+              "reps": 0,
+              "sec": 30,
+              "weight": 0,
+              "prog": "time",
+              "restSec": 60
+            },
+            {
+              "exId": "Bicycling_Stationary",
+              "mode": "cardio",
+              "sets": 1,
+              "reps": 0,
+              "min": 10,
+              "weight": 0,
+              "prog": "off",
+              "restOff": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home-dumbbells",
+      "days": 3,
+      "level": "beginner",
+      "goal": "general",
+      "place": "home",
+      "name": {
+        "uz": "Uyda: gantel va rezina",
+        "ru": "Дома: гантели и резина",
+        "en": "Home: Dumbbells & Band"
+      },
+      "desc": {
+        "uz": "Zalga borish imkoni bo'lmaganlar uchun uyda haftada 3 kun: faqat bir juft gantel, rezina lenta va o'z vazningiz kerak. Har kun butun tanani turli burchaklardan ishlaydi. Takrorlar diapazon yuqorisiga yetganda og'irroq gantel oling; o'z vazni bilan bajariladigan mashqlarda esa takror va yondashuv qo'shiladi.",
+        "ru": "Три дня в неделю дома для тех, кому неудобно ходить в зал: нужны только пара гантелей, резиновая лента и собственный вес. Каждый день прорабатывает всё тело под разными углами. Когда повторы дошли до верха диапазона, берите гантели тяжелее; в упражнениях с собственным весом добавляются повторы и подходы.",
+        "en": "Three home days a week for when the gym is out of reach: you need one pair of dumbbells, a resistance band and your bodyweight. Each day trains the whole body from a different angle. When reps hit the top of the range, move to heavier dumbbells; bodyweight moves add reps and then sets."
+      },
+      "schedule": "week",
+      "week": {
+        "1": [
+          "h1"
+        ],
+        "3": [
+          "h2"
+        ],
+        "5": [
+          "h3"
+        ]
+      },
+      "routines": [
+        {
+          "id": "h1",
+          "name": {
+            "uz": "Uy 1",
+            "ru": "Дом 1",
+            "en": "Home 1"
+          },
+          "glyph": "H1",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Dumbbell_Squat",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 10,
+              "weight": 0,
+              "warmups": 1,
+              "restSec": 90
+            },
+            {
+              "exId": "Pushups",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 8,
+              "weight": 0,
+              "bodyweight": true,
+              "subs": [
+                "Incline_Push-Up"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Bent_Over_Two-Dumbbell_Row",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "restSec": 90
+            },
+            {
+              "exId": "Dumbbell_Shoulder_Press",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "restSec": 90
+            },
+            {
+              "exId": "Band_Pull_Apart",
+              "sets": 2,
+              "reps": 20,
+              "repsMin": 15,
+              "weight": 0,
+              "restSec": 45
+            },
+            {
+              "exId": "Plank",
+              "mode": "time",
+              "sets": 3,
+              "reps": 0,
+              "sec": 30,
+              "weight": 0,
+              "prog": "time",
+              "restSec": 60
+            }
+          ]
+        },
+        {
+          "id": "h2",
+          "name": {
+            "uz": "Uy 2",
+            "ru": "Дом 2",
+            "en": "Home 2"
+          },
+          "glyph": "H2",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Stiff-Legged_Dumbbell_Deadlift",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "warmups": 1,
+              "restSec": 90
+            },
+            {
+              "exId": "Split_Squat_with_Dumbbells",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "side": true,
+              "subs": [
+                "Dumbbell_Rear_Lunge"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "One-Arm_Dumbbell_Row",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "side": true,
+              "restSec": 60
+            },
+            {
+              "exId": "Side_Lateral_Raise",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "restSec": 60
+            },
+            {
+              "exId": "Hammer_Curls",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "sg": "a",
+              "restSec": 60
+            },
+            {
+              "exId": "Standing_Dumbbell_Triceps_Extension",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "sg": "a",
+              "restSec": 60
+            },
+            {
+              "exId": "Dead_Bug",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "bodyweight": true,
+              "side": true,
+              "restSec": 45
+            }
+          ]
+        },
+        {
+          "id": "h3",
+          "name": {
+            "uz": "Uy 3",
+            "ru": "Дом 3",
+            "en": "Home 3"
+          },
+          "glyph": "H3",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Dumbbell_Step_Ups",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "side": true,
+              "subs": [
+                "Dumbbell_Lunges"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Single_Leg_Glute_Bridge",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 10,
+              "weight": 0,
+              "bodyweight": true,
+              "side": true,
+              "restSec": 60
+            },
+            {
+              "exId": "Push-Ups_With_Feet_Elevated",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 6,
+              "weight": 0,
+              "bodyweight": true,
+              "subs": [
+                "Pushups"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Arnold_Dumbbell_Press",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "restSec": 90
+            },
+            {
+              "exId": "Dumbbell_Bicep_Curl",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "sg": "b",
+              "restSec": 60
+            },
+            {
+              "exId": "Bench_Dips",
+              "sets": 2,
+              "reps": 15,
+              "repsMin": 8,
+              "weight": 0,
+              "bodyweight": true,
+              "sg": "b",
+              "restSec": 60
+            },
+            {
+              "exId": "Reverse_Crunch",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 10,
+              "weight": 0,
+              "bodyweight": true,
+              "restSec": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "glute-legs",
+      "days": 4,
+      "level": "beginner",
+      "goal": "hypertrophy",
+      "place": "gym",
+      "name": {
+        "uz": "Dumba va oyoqlar",
+        "ru": "Ягодицы и ноги",
+        "en": "Glutes & Legs"
+      },
+      "desc": {
+        "uz": "Dumba va oyoqlarni asosiy maqsad qilganlar uchun haftada 4 kun: ikkita og'ir pastki tana kuni va ikkita yengil yuqori tana kuni. Hajmning katta qismi dumba ko'prigi, o'tirib-turish va ruminiya tortishiga to'g'ri keladi. Barcha yondashuvlarda diapazon yuqorisidagi takrorlar bajarilgach vazn oshiriladi.",
+        "ru": "Четыре дня в неделю для тех, у кого главная цель — ягодицы и ноги: два тяжёлых дня на низ тела и два лёгких на верх. Основной объём приходится на ягодичный мост, приседания и румынскую тягу. Вес растёт, когда во всех подходах выполнен верх диапазона повторов.",
+        "en": "Four days a week for anyone whose main goal is glutes and legs: two heavy lower-body days and two light upper-body days. Most of the volume goes to hip thrusts, squats and Romanian deadlifts. Weight goes up once every set reaches the top of the rep range."
+      },
+      "schedule": "week",
+      "week": {
+        "1": [
+          "glute-a"
+        ],
+        "2": [
+          "upper-a"
+        ],
+        "4": [
+          "glute-b"
+        ],
+        "5": [
+          "upper-b"
+        ]
+      },
+      "routines": [
+        {
+          "id": "glute-a",
+          "name": {
+            "uz": "Dumba A",
+            "ru": "Ягодицы A",
+            "en": "Glutes A"
+          },
+          "glyph": "G1",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Barbell_Hip_Thrust",
+              "sets": 4,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "warmups": 2,
+              "subs": [
+                "Barbell_Glute_Bridge"
+              ],
+              "restSec": 120
+            },
+            {
+              "exId": "Smith_Machine_Squat",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "warmups": 2,
+              "subs": [
+                "Barbell_Squat",
+                "Leg_Press"
+              ],
+              "restSec": 120
+            },
+            {
+              "exId": "Romanian_Deadlift",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "warmups": 1,
+              "restSec": 120
+            },
+            {
+              "exId": "Glute_Kickback",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "bodyweight": true,
+              "side": true,
+              "restSec": 45
+            },
+            {
+              "exId": "Thigh_Abductor",
+              "sets": 3,
+              "reps": 20,
+              "repsMin": 15,
+              "weight": 0,
+              "subs": [
+                "Monster_Walk"
+              ],
+              "restSec": 45
+            },
+            {
+              "exId": "Seated_Calf_Raise",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "subs": [
+                "Standing_Calf_Raises"
+              ],
+              "restSec": 45
+            }
+          ]
+        },
+        {
+          "id": "upper-a",
+          "name": {
+            "uz": "Yuqori A (yengil)",
+            "ru": "Верх A (лёгкий)",
+            "en": "Upper A (light)"
+          },
+          "glyph": "U1",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Wide-Grip_Lat_Pulldown",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Band_Assisted_Pull-Up"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Dumbbell_Shoulder_Press",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Machine_Shoulder_Military_Press"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Seated_Cable_Rows",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "One-Arm_Dumbbell_Row"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Side_Lateral_Raise",
+              "sets": 2,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "sg": "a",
+              "restSec": 60
+            },
+            {
+              "exId": "Triceps_Pushdown_-_Rope_Attachment",
+              "sets": 2,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "sg": "a",
+              "restSec": 60
+            },
+            {
+              "exId": "Plank",
+              "mode": "time",
+              "sets": 3,
+              "reps": 0,
+              "sec": 30,
+              "weight": 0,
+              "prog": "time",
+              "restSec": 60
+            }
+          ]
+        },
+        {
+          "id": "glute-b",
+          "name": {
+            "uz": "Dumba B",
+            "ru": "Ягодицы B",
+            "en": "Glutes B"
+          },
+          "glyph": "G2",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Barbell_Glute_Bridge",
+              "sets": 4,
+              "reps": 12,
+              "repsMin": 8,
+              "weight": 0,
+              "warmups": 2,
+              "subs": [
+                "Barbell_Hip_Thrust"
+              ],
+              "restSec": 120
+            },
+            {
+              "exId": "Split_Squat_with_Dumbbells",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "side": true,
+              "subs": [
+                "Dumbbell_Rear_Lunge"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Plie_Dumbbell_Squat",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "restSec": 90
+            },
+            {
+              "exId": "Seated_Leg_Curl",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Lying_Leg_Curls"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Hyperextensions_Back_Extensions",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "restSec": 60
+            },
+            {
+              "exId": "Thigh_Abductor",
+              "sets": 2,
+              "reps": 20,
+              "repsMin": 15,
+              "weight": 0,
+              "subs": [
+                "Monster_Walk"
+              ],
+              "restSec": 45
+            }
+          ]
+        },
+        {
+          "id": "upper-b",
+          "name": {
+            "uz": "Yuqori B (yengil)",
+            "ru": "Верх B (лёгкий)",
+            "en": "Upper B (light)"
+          },
+          "glyph": "U2",
+          "prog": "double",
+          "ex": [
+            {
+              "exId": "Incline_Dumbbell_Press",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Machine_Bench_Press"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "One-Arm_Dumbbell_Row",
+              "sets": 3,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "side": true,
+              "restSec": 60
+            },
+            {
+              "exId": "Face_Pull",
+              "sets": 3,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "subs": [
+                "Reverse_Flyes"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Dumbbell_Bicep_Curl",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "restSec": 60
+            },
+            {
+              "exId": "Dead_Bug",
+              "sets": 3,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "bodyweight": true,
+              "side": true,
+              "restSec": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ramadan-light",
+      "days": 3,
+      "level": "beginner",
+      "goal": "general",
+      "place": "gym",
+      "name": {
+        "uz": "Ramazon: yengil reja",
+        "ru": "Рамадан: лёгкий план",
+        "en": "Ramadan Light"
+      },
+      "desc": {
+        "uz": "Ramazon oyida iftordan keyin shug'ullanish uchun haftada 3 ta qisqa mashg'ulot (taxminan 40 daqiqa). Hajm kamaytirilgan: har mashqda 2 ta yondashuv, maqsad - shaklni saqlash, rekord emas. Vaznlar avtomatik oshirilmaydi; o'zingizni yaxshi his qilsangiz qo'lda qo'shing, mashg'ulot davomida va undan keyin suv iching.",
+        "ru": "Три короткие тренировки в неделю (около 40 минут) для занятий после ифтара в Рамадан. Объём снижен: по 2 подхода на упражнение, цель — сохранить форму, а не ставить рекорды. Вес автоматически не растёт; если самочувствие хорошее, добавляйте вручную, и не забывайте пить воду во время и после тренировки.",
+        "en": "Three short sessions a week (about 40 minutes) for training after iftar during Ramadan. Volume is reduced to two sets per exercise: the aim is to keep your shape, not chase records. Weights do not go up automatically; add some by hand when you feel good, and drink water during and after the session."
+      },
+      "schedule": "week",
+      "week": {
+        "1": [
+          "r1"
+        ],
+        "3": [
+          "r2"
+        ],
+        "5": [
+          "r3"
+        ]
+      },
+      "routines": [
+        {
+          "id": "r1",
+          "name": {
+            "uz": "Yengil 1",
+            "ru": "Лёгкая 1",
+            "en": "Light 1"
+          },
+          "glyph": "R1",
+          "prog": "off",
+          "ex": [
+            {
+              "exId": "Leg_Press",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "warmups": 1,
+              "subs": [
+                "Goblet_Squat"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Machine_Bench_Press",
+              "sets": 2,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "subs": [
+                "Dumbbell_Bench_Press"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Seated_Cable_Rows",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "One-Arm_Dumbbell_Row"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Side_Lateral_Raise",
+              "sets": 2,
+              "reps": 15,
+              "repsMin": 12,
+              "weight": 0,
+              "restSec": 60
+            },
+            {
+              "exId": "Plank",
+              "mode": "time",
+              "sets": 2,
+              "reps": 0,
+              "sec": 30,
+              "weight": 0,
+              "prog": "off",
+              "restSec": 60
+            }
+          ]
+        },
+        {
+          "id": "r2",
+          "name": {
+            "uz": "Yengil 2",
+            "ru": "Лёгкая 2",
+            "en": "Light 2"
+          },
+          "glyph": "R2",
+          "prog": "off",
+          "ex": [
+            {
+              "exId": "Goblet_Squat",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "warmups": 1,
+              "subs": [
+                "Dumbbell_Squat"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Wide-Grip_Lat_Pulldown",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Band_Assisted_Pull-Up"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Dumbbell_Shoulder_Press",
+              "sets": 2,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "restSec": 90
+            },
+            {
+              "exId": "Lying_Leg_Curls",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "subs": [
+                "Seated_Leg_Curl"
+              ],
+              "restSec": 60
+            },
+            {
+              "exId": "Dead_Bug",
+              "sets": 2,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "bodyweight": true,
+              "side": true,
+              "restSec": 45
+            }
+          ]
+        },
+        {
+          "id": "r3",
+          "name": {
+            "uz": "Yengil 3",
+            "ru": "Лёгкая 3",
+            "en": "Light 3"
+          },
+          "glyph": "R3",
+          "prog": "off",
+          "ex": [
+            {
+              "exId": "Smith_Machine_Squat",
+              "sets": 2,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "warmups": 1,
+              "subs": [
+                "Leg_Press"
+              ],
+              "restSec": 90
+            },
+            {
+              "exId": "Incline_Dumbbell_Press",
+              "sets": 2,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "restSec": 90
+            },
+            {
+              "exId": "One-Arm_Dumbbell_Row",
+              "sets": 2,
+              "reps": 10,
+              "repsMin": 8,
+              "weight": 0,
+              "side": true,
+              "restSec": 60
+            },
+            {
+              "exId": "Dumbbell_Bicep_Curl",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "sg": "a",
+              "restSec": 60
+            },
+            {
+              "exId": "Triceps_Pushdown",
+              "sets": 2,
+              "reps": 12,
+              "repsMin": 10,
+              "weight": 0,
+              "sg": "a",
+              "restSec": 60
+            },
+            {
+              "exId": "Walking_Treadmill",
+              "mode": "cardio",
+              "sets": 1,
+              "reps": 0,
+              "min": 10,
+              "weight": 0,
+              "prog": "off",
+              "restOff": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
