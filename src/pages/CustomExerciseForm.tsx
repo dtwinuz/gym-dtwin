@@ -61,7 +61,8 @@ export default function CustomExerciseForm({ initial, onClose, onDeleted }: Prop
         <input className="input" value={x.name} onChange={e => setX({ ...x, name: e.target.value })} required autoFocus maxLength={80} />
       </label>
       <label>{t(lang, 'primaryOne')}
-        <select className="input" value={primary} onChange={e => setX({ ...x, primary: [e.target.value], secondary: x.secondary.filter(m => m !== e.target.value) })}>
+        <select className="input" value={primary ?? ''} onChange={e => setX({ ...x, primary: [e.target.value], secondary: x.secondary.filter(m => m !== e.target.value) })}>
+          {!primary && <option value="">{GROUP_NAME.other[lang]}</option>}
           {Object.keys(MUSCLE_NAME).map(m => <option key={m} value={m}>{MUSCLE_NAME[m][lang]}</option>)}
         </select>
       </label>

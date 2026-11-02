@@ -702,6 +702,16 @@ body.no-scroll { overflow: hidden; }
   .muscle-map { height: 280px; }
 }
 
+.data-ctl .row { margin: 4px 0; }
+.data-err { color: var(--danger); font-size: 13px; margin: 6px 0 0; }
+.sheet.import-sheet { max-width: 620px; display: flex; flex-direction: column; gap: 12px; }
+.sheet.import-sheet h3 { font-size: 15px; margin: 4px 0; }
+.sheet.import-sheet .sheet-head h2 { font-size: 18px; }
+.sheet.import-sheet .seg { align-self: flex-start; }
+.review-list { list-style: none; padding: 0; margin: 8px 0 0; }
+.review-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 0; border-top: 1px solid var(--border); }
+.review-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1 1 180px; overflow-wrap: anywhere; font-size: 14px; }
+
 @media print {
   :root, :root[data-theme] { --bg: #fff; --surface: #fff; --surface-2: #fff; --border: #999; --text: #000; --muted: #333; color-scheme: light; }
   body { background: #fff; color: #000; }
