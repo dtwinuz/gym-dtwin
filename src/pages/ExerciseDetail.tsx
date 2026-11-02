@@ -7,9 +7,10 @@ import { fmtNum } from '../app/format'
 import { e1rm } from '../core/onerm'
 import { formatWeight } from '../core/units'
 import type { CustomExercise } from '../core/types'
-import { exerciseById, exerciseName, exerciseSteps, imageUrl, similarExercises } from '../catalogue'
+import { exerciseById, exerciseName, exerciseSteps, imageUrl, isExdb, similarExercises } from '../catalogue'
 import { CATEGORY_NAME, EQUIPMENT_NAME, LEVEL_NAME, MUSCLE_NAME, label } from '../catalogue/labels'
 import BodyMap, { exerciseLevels } from '../catalogue/BodyMap'
+import EquipIcon from '../catalogue/EquipIcon'
 import { Thumb } from './Exercises'
 import type { Lang } from '../i18n'
 
@@ -72,7 +73,10 @@ export default function ExerciseDetail({ id, onClose, onOpen, onEdit, url }: Pro
                 ))}
               </div>
             ) : (
-              <div className="photo"><Thumb e={e} /></div>
+              <div className="photo ph" role="img" aria-label={label(EQUIPMENT_NAME, e.eq, lang)}>
+                <EquipIcon e={e} size={56} />
+                <span>{label(EQUIPMENT_NAME, e.eq, lang)}</span>
+              </div>
             )}
             <div className="tags">
               <span className="badge">{label(EQUIPMENT_NAME, e.eq, lang)}</span>
@@ -119,6 +123,7 @@ export default function ExerciseDetail({ id, onClose, onOpen, onEdit, url }: Pro
           </>
         )}
         {e.i > 0 && <p className="muted credit">{t(lang, 'photoCredit')}</p>}
+        {isExdb(e.id) && <p className="muted credit">{t(lang, 'textCredit')}</p>}
     </Sheet>
   )
 }

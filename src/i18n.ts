@@ -73,6 +73,7 @@ export const dict = {
   cancel: { uz: 'Bekor qilish', ru: 'Отмена', en: 'Cancel' },
   customTag: { uz: 'o\'zimniki', ru: 'своё', en: 'custom' },
   photoCredit: { uz: 'Rasmlar: free-exercise-db (public domain)', ru: 'Фото: free-exercise-db (public domain)', en: 'Photos: free-exercise-db (public domain)' },
+  textCredit: { uz: 'Mashq matni: exercises-dataset (MIT), rasmsiz', ru: 'Текст упражнения: exercises-dataset (MIT), без изображений', en: 'Exercise text: exercises-dataset (MIT), no images' },
   settings: { uz: 'Sozlamalar', ru: 'Настройки', en: 'Settings' },
   searchSettings: { uz: 'Sozlamalarni qidirish', ru: 'Поиск настроек', en: 'Search settings' },
   noSettings: { uz: 'Bunday sozlama yo\'q', ru: 'Такой настройки нет', en: 'No such setting' },

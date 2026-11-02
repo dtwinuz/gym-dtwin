@@ -10,6 +10,7 @@ import {
   CATEGORIES, CATEGORY_NAME, EQUIPMENT, EQUIPMENT_NAME, GROUPS, GROUP_NAME, LEVELS, LEVEL_NAME, MUSCLE_NAME, label,
 } from '../catalogue/labels'
 import BodyMap from '../catalogue/BodyMap'
+import EquipIcon from '../catalogue/EquipIcon'
 import ExerciseDetail from './ExerciseDetail'
 import CustomExerciseForm from './CustomExerciseForm'
 
@@ -228,7 +229,7 @@ export default function Exercises() {
 }
 
 export function Thumb({ e }: { e: CatalogueExercise }) {
-  if (!e.i) return <span className={`thumb ph g-${e.g}`}>{(e.n[0] ?? '?').toUpperCase()}</span>
+  if (!e.i) return <span className={`thumb ph g-${e.g}`}><EquipIcon e={e} /></span>
   return (
     <span className="thumb">
       <img src={imageUrl(e.id, 0)} alt="" loading="lazy" decoding="async" width={64} height={64} />

@@ -1,5 +1,5 @@
 import type { CatalogueExercise } from './index'
-import { EQUIPMENT_NAME, GROUP_NAME, MUSCLE_NAME } from './labels'
+import { CATEGORY_NAME, EQUIPMENT_NAME, GROUP_NAME, MUSCLE_NAME } from './labels'
 
 const CYR: Record<string, string> = {
   а: 'a', б: 'b', в: 'v', г: 'g', д: 'd', е: 'e', ё: 'e', ж: 'zh', з: 'z', и: 'i', й: 'y', к: 'k', л: 'l', м: 'm',
@@ -67,7 +67,8 @@ export function buildIndex(list: CatalogueExercise[]): Doc[] {
   return list.map(e => {
     const parts = [e.n, e.uz ?? '', e.ru ?? '', ...(e.a ?? []), e.eq, e.g, ...e.p,
       ...Object.values(EQUIPMENT_NAME[e.eq] ?? {}), ...Object.values(GROUP_NAME[e.g] ?? {}),
-      ...e.p.flatMap(m => Object.values(MUSCLE_NAME[m] ?? {}))]
+      ...e.p.flatMap(m => Object.values(MUSCLE_NAME[m] ?? {})),
+      ...(e.c && e.c !== 'strength' ? [e.c, ...Object.values(CATEGORY_NAME[e.c] ?? {})] : [])]
     const toks = [...new Set(parts.flatMap(tokens))]
     const names = [e.n, e.uz, e.ru].filter(Boolean).map(s => normalize(s!))
     const alias = (e.a ?? []).map(normalize)
@@ -121,20 +122,27 @@ export function search(docs: Doc[], query: string, hints: RankHints = {}): Catal
     return docs.map(d => d.e).sort((a, b) => rank(b) - rank(a))
   }
   const phrase = q.join(' ')
+  const memo = q.map(() => new Map<string, number>())
+  const score = (i: number, t: string) => {
+    let s = memo[i].get(t)
+    if (s === undefined) {
+      const qt = q[i]
+      s = tokenScore(qt, t)
+      for (const v of SYN.get(qt) ?? []) s = Math.max(s, tokenScore(v, t) * 0.9)
+      memo[i].set(t, s)
+    }
+    return s
+  }
   const scored: { e: CatalogueExercise; s: number }[] = []
   for (const d of docs) {
     let total = 0
     let ok = true
-    for (const qt of q) {
-      const variants = [qt, ...(SYN.get(qt) ?? [])]
+    for (let i = 0; i < q.length; i++) {
       let best = 0
-      for (const v of variants) {
-        const w = v === qt ? 1 : 0.9
-        for (const t of d.toks) {
-          const s = tokenScore(v, t) * w
-          if (s > best) best = s
-          if (best >= 3) break
-        }
+      for (const t of d.toks) {
+        const s = score(i, t)
+        if (s > best) best = s
+        if (best >= 3) break
       }
       if (best === 0) { ok = false; break }
       total += best
@@ -146,6 +154,7 @@ export function search(docs: Doc[], query: string, hints: RankHints = {}): Catal
     if (hints.fav?.has(d.e.id)) total += 2
     if (hints.used?.has(d.e.id)) total += 1.5
     if (d.e.uz) total += 0.6
+    if (d.e.i || d.e.custom) total += 0.7
     const hit = d.names.filter(n => n.includes(phrase))
     total -= (hit.length ? Math.min(...hit.map(n => n.length)) : d.e.n.length) * 0.02
     scored.push({ e: d.e, s: total })

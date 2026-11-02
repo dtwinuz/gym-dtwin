@@ -1,0 +1,772 @@
+{
+ "1160": {
+  "n": "Burpee",
+  "uz": "Berpi",
+  "ru": "Бёрпи"
+ },
+ "1273": {
+  "n": "Clap Push Up",
+  "uz": "Chapak chalib otjimaniye",
+  "ru": "Отжимания с хлопком"
+ },
+ "1308": {
+  "n": "Smith Wide Grip Bench Press",
+  "uz": "Smit trenajyorida keng ushlab jim yotib",
+  "ru": "Жим лёжа широким хватом в Смите"
+ },
+ "1311": {
+  "n": "Wide Hand Push Up",
+  "uz": "Keng qo'llar bilan otjimaniye",
+  "ru": "Отжимания широким упором"
+ },
+ "1323": {
+  "n": "Cable Rope Seated Row",
+  "uz": "O'tirib arqon bilan blok tortish",
+  "ru": "Тяга нижнего блока с канатом сидя"
+ },
+ "1324": {
+  "n": "Cable Upper Row",
+  "uz": "Blokni yuqoriga tortish (yuz tomon)",
+  "ru": "Тяга блока к верху груди"
+ },
+ "1327": {
+  "n": "Close Grip Chin-up",
+  "uz": "Tor teskari ushlab tortilish",
+  "ru": "Подтягивания узким обратным хватом"
+ },
+ "1350": {
+  "n": "Lever Seated Row",
+  "uz": "Trenajyorda o'tirib tortish",
+  "ru": "Горизонтальная тяга в тренажёре"
+ },
+ "1360": {
+  "n": "Smith One Arm Row",
+  "uz": "Smit trenajyorida bir qo'l bilan tortish",
+  "ru": "Тяга одной рукой в Смите"
+ },
+ "1375": {
+  "n": "Cable Standing Calf Raise",
+  "uz": "Blokda tik turib boldir ko'tarish",
+  "ru": "Подъём на носки на блоке стоя"
+ },
+ "1379": {
+  "n": "Dumbbell Seated Calf Raise",
+  "uz": "O'tirib gantel bilan boldir ko'tarish",
+  "ru": "Подъём на носки сидя с гантелями"
+ },
+ "1410": {
+  "n": "Barbell Lateral Lunge",
+  "uz": "Shtanga bilan yonga hamla",
+  "ru": "Боковые выпады со штангой"
+ },
+ "1429": {
+  "n": "Wide Grip Pull-up",
+  "uz": "Keng ushlab turnikda tortilish",
+  "ru": "Подтягивания широким хватом"
+ },
+ "1435": {
+  "n": "Barbell Low Bar Squat",
+  "uz": "Shtanga bilan o'tirib-turish (past grif)",
+  "ru": "Приседания со штангой (низкий гриф)"
+ },
+ "1436": {
+  "n": "Barbell High Bar Squat",
+  "uz": "Shtanga bilan o'tirib-turish (baland grif)",
+  "ru": "Приседания со штангой (высокий гриф)"
+ },
+ "1451": {
+  "n": "Lever Seated Dip",
+  "uz": "Trenajyorda o'tirib triseps otjimaniye",
+  "ru": "Отжимания в тренажёре сидя"
+ },
+ "1452": {
+  "n": "Lever Seated Crunch",
+  "uz": "Trenajyorda o'tirib skruchivaniye",
+  "ru": "Скручивания в тренажёре сидя"
+ },
+ "1457": {
+  "n": "Barbell Standing Wide Military Press",
+  "uz": "Tik turib shtanga bilan armiya jimi (keng ushlash)",
+  "ru": "Армейский жим штанги стоя широким хватом"
+ },
+ "1458": {
+  "n": "Ez Barbell Seated Curls",
+  "uz": "O'tirib EZ-grif bilan bisepsga bukish",
+  "ru": "Подъём EZ-грифа на бицепс сидя"
+ },
+ "1459": {
+  "n": "Dumbbell Romanian Deadlift",
+  "uz": "Gantel bilan rumincha stanovaya tyaga",
+  "ru": "Румынская тяга с гантелями"
+ },
+ "1460": {
+  "n": "Walking Lunge",
+  "uz": "Yurib hamla qilish",
+  "ru": "Выпады в ходьбе"
+ },
+ "1489": {
+  "n": "Sissy Squat",
+  "uz": "Sissi o'tirib-turish",
+  "ru": "Сисси-приседания"
+ },
+ "1630": {
+  "n": "Cable Close Grip Curl",
+  "uz": "Blokda tor ushlab bisepsga bukish",
+  "ru": "Сгибания на блоке узким хватом"
+ },
+ "1631": {
+  "n": "Cable Concentration Curl",
+  "uz": "Blokda konsentratsiyalangan bukish",
+  "ru": "Концентрированное сгибание на блоке"
+ },
+ "1632": {
+  "n": "Cable Drag Curl",
+  "uz": "Blokda drag-bukish",
+  "ru": "Драг-сгибания на блоке"
+ },
+ "1641": {
+  "n": "Cable Seated Curl",
+  "uz": "O'tirib blokda bisepsga bukish",
+  "ru": "Сгибания рук на блоке сидя"
+ },
+ "1678": {
+  "n": "Dumbbell Seated Hammer Curl",
+  "uz": "O'tirib bolg'a bukish",
+  "ru": "Молотки сидя"
+ },
+ "1700": {
+  "n": "Dumbbell Push Press",
+  "uz": "Gantel bilan itarib jim (push press)",
+  "ru": "Жимовой швунг с гантелями"
+ },
+ "1723": {
+  "n": "Cable One Arm Tricep Pushdown",
+  "uz": "Bir qo'l bilan blokda triseps bosish",
+  "ru": "Разгибание руки на блоке одной рукой"
+ },
+ "1749": {
+  "n": "Ez Bar Standing French Press",
+  "uz": "Tik turib EZ-grif bilan fransuz jimi",
+  "ru": "Французский жим EZ-грифа стоя"
+ },
+ "1756": {
+  "n": "Barbell Single Leg Deadlift",
+  "uz": "Shtanga bilan bir oyoqda stanovaya tyaga",
+  "ru": "Становая тяга со штангой на одной ноге"
+ },
+ "1757": {
+  "n": "Dumbbell Single Leg Deadlift",
+  "uz": "Gantel bilan bir oyoqda stanovaya tyaga",
+  "ru": "Становая тяга с гантелями на одной ноге"
+ },
+ "1760": {
+  "n": "Dumbbell Goblet Squat",
+  "uz": "Gantel bilan goblet o'tirib-turish",
+  "ru": "Гоблет-приседания с гантелью"
+ },
+ "2144": {
+  "n": "Cable Seated Chest Press",
+  "uz": "O'tirib blokda ko'krakdan jim",
+  "ru": "Жим от груди на блоке сидя"
+ },
+ "2188": {
+  "n": "Dumbbell Seated Triceps Extension",
+  "uz": "O'tirib gantel bilan boshdan triseps yozish",
+  "ru": "Разгибание руки с гантелью из-за головы сидя"
+ },
+ "2287": {
+  "n": "Lever Alternate Leg Press",
+  "uz": "Trenajyorda navbat bilan oyoq jimi",
+  "ru": "Попеременный жим ногами в тренажёре"
+ },
+ "2292": {
+  "n": "Dumbbell Rear Delt Raise",
+  "uz": "Gantel bilan orqa delta uchun ko'tarish",
+  "ru": "Подъём гантелей на заднюю дельту"
+ },
+ "2335": {
+  "n": "Lever Seated Calf Press",
+  "uz": "Trenajyorda o'tirib boldir itarish",
+  "ru": "Жим носками сидя в тренажёре"
+ },
+ "2796": {
+  "n": "Dumbbell Step-up Lunge",
+  "uz": "Gantel bilan platformaga chiqib hamla",
+  "ru": "Зашагивание с выпадом с гантелями"
+ },
+ "2812": {
+  "n": "Dumbbell Step-up Split Squat",
+  "uz": "Gantel bilan platformada bolgarcha o'tirib-turish",
+  "ru": "Сплит-приседания с гантелями с платформы"
+ },
+ "3017": {
+  "n": "Barbell Pendlay Row",
+  "uz": "Pendlay tortishi (shtanga)",
+  "ru": "Тяга Пендлея"
+ },
+ "3142": {
+  "n": "Smith Sumo Squat",
+  "uz": "Smit trenajyorida sumo o'tirib-turish",
+  "ru": "Сумо-приседания в Смите"
+ },
+ "3281": {
+  "n": "Smith Full Squat",
+  "uz": "Smit trenajyorida chuqur o'tirib-turish",
+  "ru": "Глубокие приседания в Смите"
+ },
+ "3305": {
+  "n": "Barbell Thruster",
+  "uz": "Shtanga bilan traster",
+  "ru": "Трастер со штангой"
+ },
+ "3563": {
+  "n": "Cable One Arm Pulldown",
+  "uz": "Bir qo'l bilan yuqori blokni tortish",
+  "ru": "Тяга верхнего блока одной рукой"
+ },
+ "3635": {
+  "n": "Dumbbell Contralateral Forward Lunge",
+  "uz": "Gantel bilan oldinga hamla (qarama-qarshi qo'l)",
+  "ru": "Выпады вперёд с гантелью в противоположной руке"
+ },
+ "3888": {
+  "n": "Dumbbell One Arm Snatch",
+  "uz": "Gantelni bir qo'l bilan tepaga siltash (snatch)",
+  "ru": "Рывок гантели одной рукой"
+ },
+ "0017": {
+  "n": "Assisted Pull-up",
+  "uz": "Gravitron: yordam bilan tortilish",
+  "ru": "Подтягивания в гравитроне"
+ },
+ "0039": {
+  "n": "Barbell Front Chest Squat",
+  "uz": "Shtangani ko'krakda ushlab o'tirib-turish",
+  "ru": "Приседания со штангой на груди"
+ },
+ "0041": {
+  "n": "Barbell Front Raise",
+  "uz": "Shtangani oldinga ko'tarish",
+  "ru": "Подъём штанги перед собой"
+ },
+ "0049": {
+  "n": "Barbell Incline Row",
+  "uz": "Qiya skameykada yotib shtanga tortish",
+  "ru": "Тяга штанги лёжа на наклонной скамье"
+ },
+ "0052": {
+  "n": "Barbell Jm Bench Press",
+  "uz": "Shtanga bilan JM jimi",
+  "ru": "JM-жим со штангой"
+ },
+ "0057": {
+  "n": "Barbell Lying Extension",
+  "uz": "Yotib shtanga bilan triseps yozish",
+  "ru": "Разгибание рук со штангой лёжа"
+ },
+ "0061": {
+  "n": "Barbell Lying Triceps Extension",
+  "uz": "Yotib shtanga bilan fransuz jimi",
+  "ru": "Французский жим со штангой лёжа"
+ },
+ "0073": {
+  "n": "Barbell Pullover",
+  "uz": "Shtanga bilan pulover",
+  "ru": "Пуловер со штангой"
+ },
+ "0075": {
+  "n": "Barbell Rear Delt Raise",
+  "uz": "Shtanga bilan orqa delta uchun ko'tarish",
+  "ru": "Подъём штанги на заднюю дельту"
+ },
+ "0078": {
+  "n": "Barbell Rear Lunge",
+  "uz": "Shtanga bilan orqaga hamla",
+  "ru": "Обратные выпады со штангой"
+ },
+ "0082": {
+  "n": "Barbell Reverse Wrist Curl",
+  "uz": "Shtanga bilan bilakni teskari bukish",
+  "ru": "Обратные сгибания запястий со штангой"
+ },
+ "0084": {
+  "n": "Barbell Rollerout",
+  "uz": "Shtangani dumalatish (press)",
+  "ru": "Выкатывание штанги на пресс"
+ },
+ "0091": {
+  "n": "Barbell Seated Overhead Press",
+  "uz": "O'tirib shtangani tepaga jim",
+  "ru": "Жим штанги над головой сидя"
+ },
+ "0092": {
+  "n": "Barbell Seated Overhead Triceps Extension",
+  "uz": "O'tirib shtanga bilan boshdan triseps yozish",
+  "ru": "Разгибание рук со штангой из-за головы сидя"
+ },
+ "0099": {
+  "n": "Barbell Single Leg Split Squat",
+  "uz": "Shtanga bilan bolgarcha o'tirib-turish",
+  "ru": "Болгарские выпады со штангой"
+ },
+ "0116": {
+  "n": "Barbell Straight Leg Deadlift",
+  "uz": "Shtanga bilan to'g'ri oyoqda stanovaya tyaga",
+  "ru": "Становая тяга со штангой на прямых ногах"
+ },
+ "0122": {
+  "n": "Barbell Wide Bench Press",
+  "uz": "Shtanga bilan keng ushlashda jim yotib",
+  "ru": "Жим штанги лёжа широким хватом"
+ },
+ "0123": {
+  "n": "Barbell Wide-grip Upright Row",
+  "uz": "Shtangani keng ushlab iyakka tortish",
+  "ru": "Тяга штанги к подбородку широким хватом"
+ },
+ "0124": {
+  "n": "Barbell Wide Squat",
+  "uz": "Shtanga bilan keng o'tirib-turish",
+  "ru": "Приседания со штангой широкой постановкой"
+ },
+ "0126": {
+  "n": "Barbell Wrist Curl",
+  "uz": "Shtanga bilan bilak bukish",
+  "ru": "Сгибания запястий со штангой"
+ },
+ "0148": {
+  "n": "Cable Alternate Shoulder Press",
+  "uz": "Blokda navbat bilan yelka jimi",
+  "ru": "Попеременный жим на плечи на блоках"
+ },
+ "0151": {
+  "n": "Cable Bench Press",
+  "uz": "Blokda skameykada jim",
+  "ru": "Жим лёжа на блоках"
+ },
+ "0158": {
+  "n": "Cable Decline Fly",
+  "uz": "Teskari qiya skameykada blokdan razvodka",
+  "ru": "Разводка на блоках на скамье головой вниз"
+ },
+ "0169": {
+  "n": "Cable Incline Bench Press",
+  "uz": "Qiya skameykada blokdan jim",
+  "ru": "Жим на блоках на наклонной скамье"
+ },
+ "0175": {
+  "n": "Cable Kneeling Crunch",
+  "uz": "Blokda tizzalab skruchivaniye",
+  "ru": "Скручивания на блоке на коленях"
+ },
+ "0178": {
+  "n": "Cable Lateral Raise",
+  "uz": "Blokda qo'lni yonga ko'tarish",
+  "ru": "Мах в сторону на блоке"
+ },
+ "0179": {
+  "n": "Cable Low Fly",
+  "uz": "Pastki blokdan qo'llarni birlashtirish",
+  "ru": "Сведение рук с нижних блоков"
+ },
+ "0180": {
+  "n": "Cable Low Seated Row",
+  "uz": "O'tirib pastki blokni tortish",
+  "ru": "Тяга нижнего блока сидя"
+ },
+ "0188": {
+  "n": "Cable Middle Fly",
+  "uz": "Krossoverda o'rta balandlikda birlashtirish",
+  "ru": "Сведение рук в кроссовере на средней высоте"
+ },
+ "0190": {
+  "n": "Cable One Arm Curl",
+  "uz": "Bir qo'l bilan blokda bukish",
+  "ru": "Сгибание руки на блоке одной рукой"
+ },
+ "0198": {
+  "n": "Cable Pulldown",
+  "uz": "Yuqori blokni tortish",
+  "ru": "Тяга верхнего блока"
+ },
+ "0201": {
+  "n": "Cable Pushdown",
+  "uz": "Blokda triseps uchun pastga bosish",
+  "ru": "Разгибание рук на блоке (трицепс)"
+ },
+ "0205": {
+  "n": "Cable Rear Pulldown",
+  "uz": "Yuqori blokni boshning orqasiga tortish",
+  "ru": "Тяга верхнего блока за голову"
+ },
+ "0207": {
+  "n": "Cable Reverse-grip Pushdown",
+  "uz": "Blokda teskari ushlab triseps bosish",
+  "ru": "Разгибание рук на блоке обратным хватом"
+ },
+ "0215": {
+  "n": "Cable Seated Rear Lateral Raise",
+  "uz": "O'tirib blokda orqa delta uchun ko'tarish",
+  "ru": "Махи на заднюю дельту на блоках сидя"
+ },
+ "0218": {
+  "n": "Cable Seated Wide-grip Row",
+  "uz": "O'tirib keng ushlab blok tortish",
+  "ru": "Тяга блока сидя широким хватом"
+ },
+ "0222": {
+  "n": "Cable Side Bend",
+  "uz": "Blokda yonga engashish",
+  "ru": "Наклоны в сторону на блоке"
+ },
+ "0223": {
+  "n": "Cable Side Crunch",
+  "uz": "Blokda yonlama skruchivaniye",
+  "ru": "Боковые скручивания на блоке"
+ },
+ "0226": {
+  "n": "Cable Standing Crunch",
+  "uz": "Tik turib blokda skruchivaniye",
+  "ru": "Скручивания на блоке стоя"
+ },
+ "0227": {
+  "n": "Cable Standing Fly",
+  "uz": "Tik turib blokda qo'llarni birlashtirish",
+  "ru": "Сведение рук на блоках стоя"
+ },
+ "0228": {
+  "n": "Cable Standing Hip Extension",
+  "uz": "Blokda oyoqni orqaga uzatish",
+  "ru": "Отведение ноги назад на блоке"
+ },
+ "0235": {
+  "n": "Cable Standing Shoulder External Rotation",
+  "uz": "Blokda yelkani tashqariga burish (tik turib)",
+  "ru": "Наружная ротация плеча на блоке стоя"
+ },
+ "0243": {
+  "n": "Cable Twist",
+  "uz": "Blokda gavdani burish",
+  "ru": "Скручивания корпуса на блоке"
+ },
+ "0251": {
+  "n": "Chest Dip",
+  "uz": "Brusyada ko'krak uchun otjimaniye",
+  "ru": "Отжимания на брусьях на грудь"
+ },
+ "0259": {
+  "n": "Close-grip Push-up",
+  "uz": "Tor qo'llar bilan otjimaniye",
+  "ru": "Отжимания узким упором"
+ },
+ "0282": {
+  "n": "Decline Sit-up",
+  "uz": "Teskari qiya skameykada ko'tarilish (press)",
+  "ru": "Подъём корпуса на наклонной скамье"
+ },
+ "0283": {
+  "n": "Diamond Push-up",
+  "uz": "Olmos otjimaniye (tor qo'llar)",
+  "ru": "Алмазные отжимания"
+ },
+ "0292": {
+  "n": "Dumbbell One Arm Bent-over Row",
+  "uz": "Engashib bir qo'l bilan gantel tortish",
+  "ru": "Тяга гантели одной рукой в наклоне"
+ },
+ "0293": {
+  "n": "Dumbbell Bent over Row",
+  "uz": "Engashib gantellarni belga tortish",
+  "ru": "Тяга гантелей в наклоне"
+ },
+ "0300": {
+  "n": "Dumbbell Deadlift",
+  "uz": "Gantel bilan stanovaya tyaga",
+  "ru": "Становая тяга с гантелями"
+ },
+ "0324": {
+  "n": "Dumbbell Incline Palm-in Press",
+  "uz": "Qiya skameykada gantel jimi (kaftlar ichkariga)",
+  "ru": "Жим гантелей на наклонной скамье нейтральным хватом"
+ },
+ "0329": {
+  "n": "Dumbbell Incline Shrug",
+  "uz": "Qiya skameykada gantel bilan shrag",
+  "ru": "Шраги с гантелями на наклонной скамье"
+ },
+ "0330": {
+  "n": "Dumbbell Incline Triceps Extension",
+  "uz": "Qiya skameykada gantel bilan triseps yozish",
+  "ru": "Разгибание рук с гантелями на наклонной скамье"
+ },
+ "0333": {
+  "n": "Dumbbell Kickback",
+  "uz": "Gantel bilan triseps kikbek",
+  "ru": "Разгибание руки с гантелью в наклоне (кикбэк)"
+ },
+ "0334": {
+  "n": "Dumbbell Lateral Raise",
+  "uz": "Gantellarni yonga ko'tarish",
+  "ru": "Махи гантелями в стороны"
+ },
+ "0354": {
+  "n": "Dumbbell One Arm Kickback",
+  "uz": "Bir qo'l bilan gantel kikbek",
+  "ru": "Кикбэк одной рукой с гантелью"
+ },
+ "0355": {
+  "n": "Dumbbell One Arm Lateral Raise",
+  "uz": "Bir qo'l bilan gantelni yonga ko'tarish",
+  "ru": "Мах гантелью в сторону одной рукой"
+ },
+ "0364": {
+  "n": "Dumbbell One Arm Wrist Curl",
+  "uz": "Bir qo'l bilan gantel bilak bukish",
+  "ru": "Сгибание запястья с гантелью одной рукой"
+ },
+ "0372": {
+  "n": "Dumbbell Preacher Curl",
+  "uz": "Skott o'rindig'ida gantel bilan bukish",
+  "ru": "Сгибания с гантелью на скамье Скотта"
+ },
+ "0375": {
+  "n": "Dumbbell Pullover",
+  "uz": "Gantel bilan pulover",
+  "ru": "Пуловер с гантелью"
+ },
+ "0378": {
+  "n": "Dumbbell Rear Fly",
+  "uz": "Gantel bilan orqa delta razvodkasi",
+  "ru": "Разводка гантелей на заднюю дельту"
+ },
+ "0380": {
+  "n": "Dumbbell Rear Lateral Raise",
+  "uz": "Engashib gantellarni yonga ko'tarish",
+  "ru": "Махи гантелями в наклоне"
+ },
+ "0385": {
+  "n": "Dumbbell Reverse Wrist Curl",
+  "uz": "Gantel bilan bilakni teskari bukish",
+  "ru": "Обратные сгибания запястий с гантелями"
+ },
+ "0392": {
+  "n": "Dumbbell Seated Front Raise",
+  "uz": "O'tirib gantellarni oldinga ko'tarish",
+  "ru": "Подъём гантелей перед собой сидя"
+ },
+ "0394": {
+  "n": "Dumbbell Seated Kickback",
+  "uz": "O'tirib gantel bilan triseps kikbek",
+  "ru": "Кикбэк с гантелями сидя"
+ },
+ "0396": {
+  "n": "Dumbbell Seated Lateral Raise",
+  "uz": "O'tirib gantellarni yonga ko'tarish",
+  "ru": "Махи гантелями в стороны сидя"
+ },
+ "0402": {
+  "n": "Dumbbell Seated Preacher Curl",
+  "uz": "O'tirib Skott o'rindig'ida gantel bukish",
+  "ru": "Сгибания с гантелью на скамье Скотта сидя"
+ },
+ "0405": {
+  "n": "Dumbbell Seated Shoulder Press",
+  "uz": "O'tirib gantel bilan yelka jimi",
+  "ru": "Жим гантелей сидя на плечи"
+ },
+ "0409": {
+  "n": "Dumbbell Single Leg Calf Raise",
+  "uz": "Gantel bilan bir oyoqda boldir ko'tarish",
+  "ru": "Подъём на носок одной ноги с гантелью"
+ },
+ "0410": {
+  "n": "Dumbbell Single Leg Split Squat",
+  "uz": "Gantel bilan bolgarcha o'tirib-turish",
+  "ru": "Болгарские выпады с гантелями"
+ },
+ "0411": {
+  "n": "Dumbbell Single Leg Squat",
+  "uz": "Gantel bilan bir oyoqda o'tirib-turish",
+  "ru": "Приседания на одной ноге с гантелями"
+ },
+ "0416": {
+  "n": "Dumbbell Standing Biceps Curl",
+  "uz": "Tik turib gantel bilan bisepsga bukish",
+  "ru": "Сгибания рук с гантелями стоя"
+ },
+ "0420": {
+  "n": "Dumbbell Standing Kickback",
+  "uz": "Tik turib gantel bilan triseps kikbek",
+  "ru": "Кикбэк с гантелями стоя"
+ },
+ "0426": {
+  "n": "Dumbbell Standing Overhead Press",
+  "uz": "Tik turib gantellarni tepaga jim",
+  "ru": "Жим гантелей над головой стоя"
+ },
+ "0432": {
+  "n": "Dumbbell Stiff Leg Deadlift",
+  "uz": "Gantel bilan to'g'ri oyoqda stanovaya tyaga",
+  "ru": "Становая тяга с гантелями на прямых ногах"
+ },
+ "0434": {
+  "n": "Dumbbell Straight Leg Deadlift",
+  "uz": "Gantel bilan to'g'ri oyoqlarda tortish",
+  "ru": "Тяга с гантелями на прямых ногах"
+ },
+ "0437": {
+  "n": "Dumbbell Upright Row",
+  "uz": "Gantellarni iyakka tortish",
+  "ru": "Тяга гантелей к подбородку"
+ },
+ "0451": {
+  "n": "Ez Barbell Reverse Grip Curl",
+  "uz": "EZ-grifni teskari ushlab bukish",
+  "ru": "Подъём EZ-грифа обратным хватом"
+ },
+ "0475": {
+  "n": "Hanging Straight Leg Raise",
+  "uz": "Turnikda osilib to'g'ri oyoq ko'tarish",
+  "ru": "Подъём прямых ног в висе"
+ },
+ "0489": {
+  "n": "Hyperextension",
+  "uz": "Giperekstenziya",
+  "ru": "Гиперэкстензия"
+ },
+ "0514": {
+  "n": "Jump Squat",
+  "uz": "Sakrab o'tirib-turish",
+  "ru": "Приседания с выпрыгиванием"
+ },
+ "0533": {
+  "n": "Kettlebell Front Squat",
+  "uz": "Girya bilan old o'tirib-turish",
+  "ru": "Фронтальные приседания с гирями"
+ },
+ "0549": {
+  "n": "Kettlebell Swing",
+  "uz": "Girya siltash (svin)",
+  "ru": "Махи гирей"
+ },
+ "0572": {
+  "n": "Lever Assisted Chin-up",
+  "uz": "Trenajyor yordamida teskari ushlab tortilish",
+  "ru": "Подтягивания обратным хватом в гравитроне"
+ },
+ "0573": {
+  "n": "Lever Back Extension",
+  "uz": "Trenajyorda belni yozish",
+  "ru": "Разгибание спины в тренажёре"
+ },
+ "0579": {
+  "n": "Lever Front Pulldown",
+  "uz": "Trenajyorda yuqoridan ko'krakka tortish",
+  "ru": "Вертикальная тяга в тренажёре"
+ },
+ "0582": {
+  "n": "Lever Kneeling Leg Curl",
+  "uz": "Trenajyorda tizzalab oyoq bukish",
+  "ru": "Сгибание ноги в тренажёре стоя на колене"
+ },
+ "0584": {
+  "n": "Lever Lateral Raise",
+  "uz": "Trenajyorda qo'llarni yonga ko'tarish",
+  "ru": "Махи в стороны в тренажёре"
+ },
+ "0587": {
+  "n": "Lever Military Press",
+  "uz": "Trenajyorda armiya jimi",
+  "ru": "Армейский жим в тренажёре"
+ },
+ "0588": {
+  "n": "Lever Narrow Grip Seated Row",
+  "uz": "Trenajyorda tor ushlab o'tirib tortish",
+  "ru": "Тяга сидя узким хватом в тренажёре"
+ },
+ "0596": {
+  "n": "Lever Seated Fly",
+  "uz": "Trenajyorda qo'llarni birlashtirish (batterflay)",
+  "ru": "Сведение рук в тренажёре сидя"
+ },
+ "0597": {
+  "n": "Lever Seated Hip Abduction",
+  "uz": "Trenajyorda oyoqlarni yonga ochish",
+  "ru": "Разведение ног в тренажёре сидя"
+ },
+ "0598": {
+  "n": "Lever Seated Hip Adduction",
+  "uz": "Trenajyorda oyoqlarni birlashtirish",
+  "ru": "Сведение ног в тренажёре сидя"
+ },
+ "0602": {
+  "n": "Lever Seated Reverse Fly",
+  "uz": "Trenajyorda orqa delta uchun razvodka",
+  "ru": "Обратная бабочка в тренажёре"
+ },
+ "0606": {
+  "n": "Lever T Bar Row",
+  "uz": "T-grif tortish (trenajyor)",
+  "ru": "Тяга Т-грифа в тренажёре"
+ },
+ "0673": {
+  "n": "Reverse Grip Machine Lat Pulldown",
+  "uz": "Trenajyorda teskari ushlab yuqoridan tortish",
+  "ru": "Тяга сверху обратным хватом в тренажёре"
+ },
+ "0674": {
+  "n": "Reverse Grip Pull-up",
+  "uz": "Teskari ushlab turnikda tortilish",
+  "ru": "Подтягивания обратным хватом"
+ },
+ "0738": {
+  "n": "Sled 45° Calf Press",
+  "uz": "45° platformada boldir itarish",
+  "ru": "Икры в тренажёре для жима ногами 45°"
+ },
+ "0739": {
+  "n": "Sled 45° Leg Press",
+  "uz": "45° platformada oyoq bilan jim",
+  "ru": "Жим ногами под углом 45°"
+ },
+ "0747": {
+  "n": "Smith Behind Neck Press",
+  "uz": "Smit trenajyorida boshning orqasidan jim",
+  "ru": "Жим из-за головы в Смите"
+ },
+ "0752": {
+  "n": "Smith Deadlift",
+  "uz": "Smit trenajyorida stanovaya tyaga",
+  "ru": "Становая тяга в тренажёре Смита"
+ },
+ "0765": {
+  "n": "Smith Seated Shoulder Press",
+  "uz": "Smit trenajyorida o'tirib yelka jimi",
+  "ru": "Жим сидя в Смите на плечи"
+ },
+ "0770": {
+  "n": "Smith Squat",
+  "uz": "Smit trenajyorida o'tirib-turish",
+  "ru": "Приседания в тренажёре Смита"
+ },
+ "0774": {
+  "n": "Smith Standing Military Press",
+  "uz": "Smit trenajyorida tik turib armiya jimi",
+  "ru": "Армейский жим стоя в Смите"
+ },
+ "0814": {
+  "n": "Triceps Dip",
+  "uz": "Brusyada triseps uchun otjimaniye",
+  "ru": "Отжимания на брусьях на трицепс"
+ },
+ "0860": {
+  "n": "Cable Kickback",
+  "uz": "Blokda triseps kikbek",
+  "ru": "Кикбэк на блоке"
+ },
+ "0868": {
+  "n": "Cable Curl",
+  "uz": "Blokda bisepsga bukish",
+  "ru": "Сгибания рук на блоке"
+ }
+}
