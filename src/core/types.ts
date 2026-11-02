@@ -226,6 +226,21 @@ export interface Settings {
   weightGoal: 'lose' | 'gain' | 'hold'
 }
 
+/** Reminder and diary choices. The server acts on them only once dtwin provides a channel. */
+export interface NotifyPrefs {
+  enabled: boolean
+  /** HH:MM local to `tz`. */
+  time: string
+  /** Date.getDay values. */
+  days: number[]
+  quietFrom: string
+  quietTo: string
+  /** IANA name. */
+  tz: string
+  /** Consent to send a short summary of finished sessions to the dtwin diary. */
+  diary: boolean
+}
+
 export type OneRmFormula = 'epley' | 'brzycki' | 'lombardi' | 'oconner' | 'mayhew' | 'wathan' | 'lander'
 
 export interface Profile {
@@ -260,5 +275,8 @@ export interface Profile {
   plates: Partial<Record<Unit, Record<number, number>>>
   /** Deletion tombstones for sync: list → id → time. */
   deleted: Record<string, Record<string, Ms>>
+  notify?: NotifyPrefs
+  /** Sync only: last change per field path, see src/app/sync.ts. */
+  stamps?: Record<string, Ms>
   updatedAt: Ms
 }

@@ -14,6 +14,7 @@ const Progress = lazy(() => import('./pages/Progress'))
 const Exercises = lazy(() => import('./pages/Exercises'))
 const Settings = lazy(() => import('./pages/Settings'))
 const Onboarding = lazy(() => import('./pages/Onboarding'))
+const SyncBanner = import.meta.env.VITE_SYNC_ENABLED === 'true' ? lazy(() => import('./app/SyncBanner')) : null
 
 const ROUTES = [
   { path: '/home', key: 'home', icon: HomeIcon, page: Home },
@@ -85,6 +86,7 @@ export default function App() {
           </a>
         </div>
       </header>
+      {SyncBanner && <Suspense fallback={null}><SyncBanner /></Suspense>}
       <main className="page"><Suspense fallback={null}><Page /></Suspense></main>
       <nav className="tabbar" aria-label="gym.dtwin">
         {ROUTES.map(r => (
