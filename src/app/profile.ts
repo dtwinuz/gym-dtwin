@@ -40,6 +40,7 @@ export function defaultSettings(lang: Lang = detectLang()): Settings {
     safetyFlag: false,
     ramadanMode: false,
     heatTips: false,
+    weightGoal: 'hold',
   }
 }
 
@@ -81,6 +82,18 @@ export interface ListItems {
   customEx: CustomExercise
 }
 export type ListKey = keyof ListItems
+
+export function markDeleted(p: Profile, list: string, id: string, now: Ms = Date.now()): Profile {
+  return { ...p, deleted: { ...p.deleted, [list]: { ...p.deleted[list], [id]: now } } }
+}
+
+export function liftTombstone(p: Profile, list: string, id: string): Profile {
+  const tomb = p.deleted[list]
+  if (!tomb || !(id in tomb)) return p
+  const rest = { ...tomb }
+  delete rest[id]
+  return { ...p, deleted: { ...p.deleted, [list]: rest } }
+}
 
 /** Insert or replace by id, stamp the item and lift any tombstone it had. */
 export function upsertItem<K extends ListKey>(p: Profile, list: K, item: ListItems[K], now: Ms = Date.now()): Profile {

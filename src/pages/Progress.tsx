@@ -1,120 +1,43 @@
-import { useMemo, useState } from 'react'
-import { Download } from 'lucide-react'
-import { t } from '../i18n'
-import { shareCard } from '../app/share'
-import { toast } from '../app/toast'
-import { updateProfile, useProfile } from '../app/store'
-import { fmtDate, fmtNum } from '../app/format'
-import { bestE1rm, exerciseHistory, isoDate, sortByStart } from '../core/history'
-import { exerciseById, exerciseName } from '../catalogue'
+import { useEffect } from 'react'
+import { t, type Key } from '../i18n'
+import { useCustomExercises } from '../app/routineMap'
+import { useProfile } from '../app/store'
+import Body from './progress/Body'
+import History from './progress/History'
+import Muscles from './progress/Muscles'
+import Stats from './progress/Stats'
+import Strength from './progress/Strength'
 
-const WEEKS = 12
-
-function Heatmap({ dates }: { dates: Set<string> }) {
-  const start = new Date()
-  start.setDate(start.getDate() - (WEEKS * 7 - 1))
-  const cells = Array.from({ length: WEEKS * 7 }, (_, i) => {
-    const d = new Date(start)
-    d.setDate(start.getDate() + i)
-    return isoDate(d)
-  })
-  return (
-    <div className="heatmap">
-      {cells.map(d => <span key={d} title={d} className={dates.has(d) ? 'on' : ''} />)}
-    </div>
-  )
-}
-
-function WeightChart({ points, goal }: { points: { date: string; w: number }[]; goal: number | null }) {
-  if (points.length < 2) return null
-  const values = [...points.map(p => p.w), ...(goal == null ? [] : [goal])]
-  const min = Math.min(...values) - 1
-  const max = Math.max(...values) + 1
-  const x = (i: number) => (i / (points.length - 1)) * 300
-  const y = (w: number) => 100 - ((w - min) / (max - min)) * 100
-  return (
-    <svg viewBox="0 0 300 100" className="chart" preserveAspectRatio="none">
-      {goal != null && <line x1="0" x2="300" y1={y(goal)} y2={y(goal)} className="goal" />}
-      <polyline points={points.map((p, i) => `${x(i)},${y(p.w)}`).join(' ')} />
-    </svg>
-  )
-}
+const TABS: { slug: string; key: Key }[] = [
+  { slug: '', key: 'tabStats' },
+  { slug: 'muscles', key: 'tabMuscles' },
+  { slug: 'strength', key: 'tabStrength' },
+  { slug: 'history', key: 'history' },
+  { slug: 'body', key: 'tabBody' },
+]
 
 export default function Progress() {
-  const { settings, workouts, bodyweight, targetW } = useProfile()
-  const { lang, unit, oneRmFormula } = settings
-  const [kg, setKg] = useState('')
+  const p = useProfile()
+  const { lang } = p.settings
+  useCustomExercises(p.customEx)
+  const asked = location.hash.slice(1).split('?')[0].split('/')[2] ?? ''
+  const tab = TABS.some(x => x.slug === asked) ? asked : ''
 
-  const records = useMemo(() => {
-    const ids = [...new Set(workouts.flatMap(w => w.entries.map(e => e.exId)))]
-    return ids
-      .map(id => ({ id, best: bestE1rm(exerciseHistory(workouts, id), oneRmFormula) }))
-      .filter(r => r.best > 0)
-      .sort((a, b) => b.best - a.best)
-  }, [workouts, oneRmFormula])
-
-  const weights = useMemo(() => [...bodyweight].sort((a, b) => a.t - b.t), [bodyweight])
-
-  const addWeight = () => {
-    const v = Number(kg)
-    if (!v) return
-    const date = isoDate(new Date())
-    updateProfile(p => ({ ...p, bodyweight: [...p.bodyweight.filter(b => b.date !== date), { date, w: v, t: Date.now() }] }))
-    setKg('')
-  }
+  useEffect(() => { window.scrollTo(0, 0) }, [tab])
 
   return (
     <>
       <h1>{t(lang, 'progress')}</h1>
-
-      <section className="card">
-        <h2>{t(lang, 'activity')}</h2>
-        <Heatmap dates={new Set(workouts.map(w => w.date))} />
-      </section>
-
-      {workouts.length > 0 && (
-        <section className="card recent">
-          <h2>{t(lang, 'recentSessions')}</h2>
-          <ul className="recent-list">
-            {sortByStart(workouts).reverse().slice(0, 5).map(w => (
-              <li key={w.id}>
-                <div className="recent-head">
-                  <b>{w.name}</b>
-                  <span className="muted">{fmtDate(w.date, lang, { day: 'numeric', month: 'short' })} · {fmtNum(w.vol, lang, 0)} {unit}</span>
-                  <button
-                    type="button" className="icon-btn" aria-label={t(lang, 'shareImage')}
-                    onClick={async () => { if ((await shareCard(w, settings)) === 'saved') toast(t(lang, 'cardSaved')) }}
-                  ><Download size={16} /></button>
-                </div>
-                {w.note && <p className="recent-note">{w.note}</p>}
-                {w.entries.filter(e => e.note).map(e => <p key={e.exId} className="muted">{exerciseName(exerciseById(e.exId), lang)}: {e.note}</p>)}
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      <section className="card">
-        <h2>{t(lang, 'records')}</h2>
-        {records.length === 0 && <p className="muted">{t(lang, 'empty')}</p>}
-        <ul className="list">
-          {records.map(r => (
-            <li key={r.id}><span>{exerciseName(exerciseById(r.id), lang)}</span><b>{fmtNum(r.best, lang, 0)} {unit}</b></li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="card">
-        <h2>{t(lang, 'bodyWeight')} {targetW != null && <span className="muted">· {t(lang, 'goal')} {fmtNum(targetW, lang)} {unit}</span>}</h2>
-        <WeightChart points={weights} goal={targetW} />
-        <div className="row">
-          <input className="input" type="number" inputMode="decimal" placeholder={unit} value={kg} onChange={e => setKg(e.target.value)} aria-label={t(lang, 'bodyWeight')} />
-          <button className="btn" onClick={addWeight}>{t(lang, 'add')}</button>
-        </div>
-        <ul className="list">
-          {weights.slice(-5).reverse().map(b => <li key={b.date}><span>{fmtDate(b.date, lang)}</span><b>{fmtNum(b.w, lang)} {unit}</b></li>)}
-        </ul>
-      </section>
+      <nav className="tabs tabs-scroll" aria-label={t(lang, 'progress')}>
+        {TABS.map(x => (
+          <a key={x.slug} href={x.slug ? `#/progress/${x.slug}` : '#/progress'} className={x.slug === tab ? 'on' : ''} aria-current={x.slug === tab ? 'page' : undefined}>{t(lang, x.key)}</a>
+        ))}
+      </nav>
+      {tab === '' && <Stats p={p} />}
+      {tab === 'muscles' && <Muscles p={p} />}
+      {tab === 'strength' && <Strength p={p} />}
+      {tab === 'history' && <History p={p} />}
+      {tab === 'body' && <Body p={p} />}
     </>
   )
 }

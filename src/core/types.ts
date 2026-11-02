@@ -222,6 +222,7 @@ export interface Settings {
   ramadanMode: boolean
   /** Summer heat tips on Home. */
   heatTips: boolean
+  weightGoal: 'lose' | 'gain' | 'hold'
 }
 
 export type OneRmFormula = 'epley' | 'brzycki' | 'lombardi' | 'oconner' | 'mayhew' | 'wathan' | 'lander'

@@ -1,7 +1,7 @@
 import { addDays, isoDate, weekKey } from '../core/history'
 import { REST, nextPlannedDay, rotationState, routinesForDay, workoutsOn } from '../core/schedule'
 import type { ISODate, Ms, Profile, Routine } from '../core/types'
-import { deleteItem } from './profile'
+import { deleteItem, liftTombstone } from './profile'
 
 export const newId = (): string => crypto.randomUUID()
 
@@ -163,7 +163,7 @@ export function mergeSchedule(p: Profile, inc: IncomingSchedule, now: Ms): Profi
 }
 
 export function addWeighIn(p: Profile, w: number, date: ISODate, now: Ms = Date.now()): Profile {
-  return { ...p, bodyweight: [...p.bodyweight.filter(b => b.date !== date), { date, w, t: now }] }
+  return liftTombstone({ ...p, bodyweight: [...p.bodyweight.filter(b => b.date !== date), { date, w, t: now }] }, 'bodyweight', date)
 }
 
 export function weightTrend(p: Profile): { last: number; date: ISODate; delta: number | null } | null {
