@@ -29,6 +29,7 @@ const handler = createHandler({
   store,
   verifier: cachedVerifier(buildVerifier()),
   trustProxy: process.env.TRUST_PROXY === '1',
+  serviceToken: process.env.DTWIN_SERVICE_TOKEN ?? '',
 })
 
 const server = createServer((req, res) => void handler(req, res))

@@ -310,3 +310,46 @@ describe('other routes and failures', () => {
     expect(text).toContain('"status":200')
   })
 })
+
+describe('DELETE /internal/users/:sub', () => {
+  const SERVICE = 'service-secret'
+  const del = (sub, opts = {}) => call('DELETE', { token: SERVICE, path: `/internal/users/${sub}`, ...opts })
+
+  it('is absent without a configured service token', async () => {
+    await start()
+    expect((await del('user-a')).status).toBe(404)
+  })
+
+  it('deletes the data, is idempotent and forgets cached tokens', async () => {
+    const forgotten = []
+    await start({ serviceToken: SERVICE, verifier: { ...fakeVerifier, forget: id => forgotten.push(id) } })
+    expect((await put(0)).status).toBe(200)
+    expect((await put(0, profile(), { token: 'tok-b' })).status).toBe(200)
+    expect((await del('user-a')).status).toBe(204)
+    expect((await del('user-a')).status).toBe(204)
+    expect((await call('GET')).status).toBe(404)
+    expect((await call('GET', { token: 'tok-b' })).status).toBe(200)
+    expect(forgotten).toEqual(['user-a', 'user-a'])
+    expect(logs.join('\n')).not.toContain(SERVICE)
+    expect(logs.join('\n')).not.toContain('user-a')
+  })
+
+  it('rejects a wrong token, a user token, a forwarded call and other methods', async () => {
+    await start({ serviceToken: SERVICE })
+    expect((await put(0)).status).toBe(200)
+    expect((await del('user-a', { token: 'nope' })).status).toBe(401)
+    expect((await del('user-a', { token: 'tok-a' })).status).toBe(401)
+    expect((await del('user-a', { token: null })).status).toBe(401)
+    expect((await del('user-a', { headers: { 'X-Forwarded-For': '1.2.3.4' } })).status).toBe(404)
+    expect((await call('GET', { token: SERVICE, path: '/internal/users/user-a' })).status).toBe(405)
+    expect((await del('%E0%A4%A')).status).toBe(400)
+    expect((await call('GET')).status).toBe(200)
+  })
+
+  it('decodes the subject', async () => {
+    await start({ serviceToken: SERVICE, verifier: { async verify() { return { userId: 'tg:42' } } } })
+    expect((await put(0)).status).toBe(200)
+    expect((await del(encodeURIComponent('tg:42'))).status).toBe(204)
+    expect((await call('GET')).status).toBe(404)
+  })
+})

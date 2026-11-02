@@ -2,8 +2,9 @@ import { createHash } from 'node:crypto'
 
 /**
  * @typedef {{ userId: string }} Identity
- * @typedef {{ verify(token: string): Promise<Identity | null> }} Verifier
+ * @typedef {{ verify(token: string): Promise<Identity | null>, forget?(userId: string): void }} Verifier
  *   null = the token is not valid; a throw = the check itself failed (answered as 503).
+ *   forget drops cached answers for a deleted account.
  */
 
 const TIMEOUT_MS = 5000
@@ -33,6 +34,9 @@ export function cachedVerifier(inner, { ttlMs = 300_000, negativeTtlMs = 30_000,
       cache.set(key, { identity, until: now() + (identity ? ttlMs : negativeTtlMs) })
       return identity
     },
+    forget(userId) {
+      for (const [key, hit] of cache) if (hit.identity?.userId === userId) cache.delete(key)
+    },
   }
 }
 
@@ -53,10 +57,11 @@ export function introspectionVerifier({ url, serviceToken, scope, clientId, fetc
       })
       if (!res.ok) throw new Error(`introspection ${res.status}`)
       const body = /** @type {{ active?: boolean, sub?: unknown, scope?: unknown, client_id?: unknown }} */ (await res.json())
-      if (body.active !== true || typeof body.sub !== 'string' || !body.sub) return null
+      const sub = typeof body.sub === 'number' ? String(body.sub) : body.sub
+      if (body.active !== true || typeof sub !== 'string' || !sub) return null
       if (body.client_id !== clientId) return null
       if (!String(body.scope ?? '').split(' ').includes(scope)) return null
-      return { userId: body.sub }
+      return { userId: sub }
     },
   }
 }

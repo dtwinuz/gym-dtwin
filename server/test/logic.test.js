@@ -183,3 +183,21 @@ describe('userinfoVerifier', () => {
     await expect(make(vi.fn(async () => new Response('', { status: 500 }))).verify('t')).rejects.toThrow()
   })
 })
+
+describe('cachedVerifier.forget', () => {
+  it('drops cached answers for one user only', async () => {
+    let calls = 0
+    const v = cachedVerifier({ async verify(t) { calls++; return { userId: t.split(':')[0] } } })
+    await v.verify('a:1'); await v.verify('b:1'); await v.verify('a:1')
+    expect(calls).toBe(2)
+    v.forget('a')
+    await v.verify('a:1'); await v.verify('b:1')
+    expect(calls).toBe(3)
+  })
+
+  it('accepts a numeric sub from introspection', async () => {
+    const fetch = async () => new Response(JSON.stringify({ active: true, sub: 42, scope: 'gym', client_id: 'gym-dtwin' }))
+    const v = introspectionVerifier({ url: 'x', serviceToken: 's', scope: 'gym', clientId: 'gym-dtwin', fetch })
+    expect(await v.verify('t')).toEqual({ userId: '42' })
+  })
+})

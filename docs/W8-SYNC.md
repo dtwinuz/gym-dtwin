@@ -39,6 +39,7 @@ sequenceDiagram
 | `GET /api/data` | `200 {kind, rev, updatedAt, owner, profile}`, hujjat yo'q bo'lsa `404 {error, owner}` |
 | `PUT /api/data` `{kind:"gym-dtwin-profile", baseRev, profile}` | `200 {rev, updatedAt, owner}`, eskirgan `baseRev`: `409 {rev, profile}`, hujjat o'chirilgan: `409 {rev:0, profile:null}` |
 | `DELETE /api/data` | `204`, qatorni butunlay o'chiradi |
+| `DELETE /internal/users/{sub}` | `204`, idempotent. dtwin akkaunt o'chirilganda servis tokeni bilan chaqiradi. Faqat docker tarmog'i ichida: edge faqat `/api/*` ni uzatadi, `X-Forwarded-For` li so'rov `404` oladi, servis tokeni sozlanmagan bo'lsa ham `404`. Token keshidagi shu foydalanuvchi javoblari ham o'chiriladi. |
 
 Boshqa kodlar: `400` shakl, `401` token, `413` 5 MB dan katta, `415` JSON emas, `429` limit (`Retry-After`), `503` dtwin javob bermadi (klient chiqib ketmaydi). `owner` foydalanuvchi id'sining qisqa hash'i: bitta qurilma boshqa akkauntga kirganda ma'lumot aralashib ketmasligi uchun klient shuni solishtiradi.
 

@@ -1,4 +1,4 @@
-import { createHash } from 'node:crypto'
+import { createHash, timingSafeEqual } from 'node:crypto'
 import { PROFILE_KIND, readPut } from './validate.js'
 
 export const MAX_BODY = 5 * 1024 * 1024
@@ -85,10 +85,11 @@ const docBody = (/** @type {{ rev: number, doc: string, updatedAt: number }} */ 
  *   badAuthPermits?: number,
  *   windowMs?: number,
  *   trustProxy?: boolean,
+ *   serviceToken?: string,
  * }} options
  * @returns {(req: Req, res: Res) => Promise<void>}
  */
-export function createHandler({ store, verifier, log = jsonLog, now = Date.now, maxBody = MAX_BODY, userPermits = 120, badAuthPermits = 30, windowMs = 60_000, trustProxy = false }) {
+export function createHandler({ store, verifier, log = jsonLog, now = Date.now, maxBody = MAX_BODY, userPermits = 120, badAuthPermits = 30, windowMs = 60_000, trustProxy = false, serviceToken = '' }) {
   const users = limiter(userPermits, windowMs, now)
   const badAuth = limiter(badAuthPermits, windowMs, now)
 
@@ -125,9 +126,40 @@ export function createHandler({ store, verifier, log = jsonLog, now = Date.now, 
     return send(res, 409, result.current ? docBody(result.current, owner) : JSON.stringify({ kind: PROFILE_KIND, rev: 0, profile: null, owner }))
   }
 
+  const serviceDigest = serviceToken ? createHash('sha256').update(serviceToken).digest() : null
+  const isService = (/** @type {string | null} */ token) =>
+    !!serviceDigest && !!token && timingSafeEqual(createHash('sha256').update(token).digest(), serviceDigest)
+
+  /**
+   * dtwin calls this when an account is deleted. It is reachable only inside the docker
+   * network: the edge forwards /api/* alone, and a forwarded request is refused anyway.
+   * @param {Req} req @param {Res} res @param {string} encoded @param {(user: string) => void} seen
+   */
+  function deleteUser(req, res, encoded, seen) {
+    if (!serviceDigest || req.headers['x-forwarded-for']) return fail(res, 404, 'not_found')
+    if (req.method !== 'DELETE') return fail(res, 405, 'method_not_allowed', { Allow: 'DELETE' })
+    if (!isService(bearer(req))) {
+      const wait = badAuth.take(clientIp(req))
+      return wait ? fail(res, 429, 'rate_limited', { 'Retry-After': String(wait) }) : fail(res, 401, 'unauthorized', { 'WWW-Authenticate': 'Bearer' })
+    }
+    let userId
+    try {
+      userId = decodeURIComponent(encoded)
+    } catch {
+      return fail(res, 400, 'bad_user')
+    }
+    if (!userId || userId.length > 200) return fail(res, 400, 'bad_user')
+    seen(ownerOf(userId))
+    store.remove(userId)
+    verifier.forget?.(userId)
+    return send(res, 204, null)
+  }
+
   /** @param {Req} req @param {Res} res @param {(user: string) => void} seen */
   async function route(req, res, seen) {
     const path = (req.url ?? '/').split('?')[0]
+    const internal = /^\/internal\/users\/([^/]+)$/.exec(path)
+    if (internal) return deleteUser(req, res, internal[1], seen)
     if (path === '/api/health') {
       if (req.method !== 'GET') return fail(res, 405, 'method_not_allowed', { Allow: 'GET' })
       return store.healthy() ? send(res, 200, '{"ok":true}') : fail(res, 503, 'unavailable')
@@ -169,6 +201,6 @@ export function createHandler({ store, verifier, log = jsonLog, now = Date.now, 
       if (!res.headersSent) fail(res, 500, 'internal')
       else res.destroy()
     }
-    log({ level: 'info', msg: 'request', method: req.method, path: (req.url ?? '').split('?')[0], status: res.statusCode, ms: now() - started, user })
+    log({ level: 'info', msg: 'request', method: req.method, path: (req.url ?? '').split('?')[0].replace(/^\/internal\/users\/.*/, '/internal/users/:sub'), status: res.statusCode, ms: now() - started, user })
   }
 }
