@@ -449,6 +449,7 @@ ${slides()}
 <div class="ov" id="ov"><div class="ctl ov-x"><button id="ovx">${t('Yopish ✕', 'Закрыть ✕', 'Close ✕')}</button></div><h3>gym.dtwin · ${t("barcha bo'limlar", 'все разделы', 'all sections')}</h3><div class="ov-g"></div></div>
 
 <script src="/overview/deck.js?v=${VER}"></script>
+<script src="https://dtwin.uz/support/widget.js" data-project="gym" defer></script>
 </body>
 </html>
 `
