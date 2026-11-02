@@ -96,6 +96,7 @@ export default function Settings() {
       { key: 'keepAwake', control: <Toggle k="keepAwake" label={L('keepAwake')} /> },
       { key: 'collapseCompleted', control: <Toggle k="collapseCompleted" label={L('collapseCompleted')} /> },
       { key: 'volumeWarmups', control: <Toggle k="volumeWarmups" label={L('volumeWarmups')} /> },
+      { key: 'weightGoal', control: <Seg label={L('weightGoal')} value={s.weightGoal} onPick={weightGoal => updateSettings({ weightGoal })} options={[['lose', L('goalLose')], ['hold', L('goalHold')], ['gain', L('goalGain')]]} /> },
     ]],
     ['secPlates', [
       { key: 'ownedPlates', wide: true, control: <OwnedPlates /> },
