@@ -8,7 +8,7 @@ Struktura g'oyasi [openGym](https://github.com/DuarteSantos8/openGym) dan olinga
 - **Bosh sahifa** — bugungi mashg'ulot (reja aylanishi), haftalik statistika, tarix
 - **Reja** — 4 ta starter reja: PPL, Upper/Lower, Full Body, 5×5
 - **Mashg'ulot** — set/rep/kg kiritish, oxirgi vazn oldindan to'ldiriladi, 90 s dam olish taymeri, PR belgisi
-- **Mashqlar** — 29 ta mashq, mushak bo'yicha filtr, qidiruv, eng yaxshi taxminiy 1RM
+- **Mashqlar** — 876 mashqli kutubxona (free-exercise-db), 187 tasi uz/ru nom va ko'rsatma bilan; sinonim va xatoga chidamli qidiruv (jim, stanovaya, turnik ...), filtrlar (guruh, jihoz, tur, daraja, "menda bor jihoz"), tana xaritasi (MuscleMap) bilan mushak tanlash, sevimlilar, o'z mashqlarim
 - **Progress** — 12 haftalik faollik xaritasi, rekordlar (Epley 1RM), tana vazni grafigi
 - uz / ru / en, ma'lumot brauzerda (`localStorage`), backend yo'q
 
@@ -16,6 +16,15 @@ Struktura g'oyasi [openGym](https://github.com/DuarteSantos8/openGym) dan olinga
 - `/` — landing (3D shtanga + puls chizig'i, uz/ru/en, yorug'/qorong'i); ilova `#/home`, `#/plan`, `#/workout`, `#/exercises`, `#/progress`
 - `/overview/` (+ `ru/`, `en/`) — Stories uslubidagi tanishuv; manba `scripts/build-overview.mjs` + `scripts/overview/` (engine, scenes, css, gsap), natija `public/overview/`. Qayta yig'ish qo'lda: `node scripts/build-overview.mjs` (`npm run build` uni chaqirmaydi)
 - `/deck/tadqiqot.html`, `/deck/konsept.html` — prezentatsiyalar
+
+## Katalog ma'lumotlari
+Generatsiya qilinadi, qo'lda tahrir qilinmaydi (`src/catalogue/data/`):
+```bash
+node scripts/build-catalogue.mjs <free-exercise-db checkout>   # exercises.json + steps.{en,uz,ru}.json
+python -I scripts/build-images.py <free-exercise-db checkout> public/ex   # 480px webp
+node scripts/build-musclemap.mjs <MuscleMap checkout>          # body.json
+```
+uz/ru nom, ko'rsatma va sinonimlar — o'zimiz yozgan `content/exercises-i18n.json`. Manbalar va litsenziyalar: [NOTICE](NOTICE) (free-exercise-db — Unlicense, MuscleMap — MIT). openGym katalogi, tarjimalari va Gym Visual media ishlatilmaydi.
 
 ## Stek
 Vite + React 19 + TypeScript, lucide-react, three.js (faqat landing, lazy). Router — hash (`#/plan`).
@@ -43,6 +52,5 @@ Qoidalar `dtwinuz` org bo'yicha umumiy: [CONTRIBUTING](https://github.com/dtwinu
 
 ## Keyingi qadamlar
 - Backend + akkaunt (qurilmalar orasida sinxron)
-- Mashq animatsiyalari / tana xaritasi
 - Progressiya qoidalari (linear, double progression), deload
 - Import/eksport (CSV, JSON)

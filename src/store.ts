@@ -27,11 +27,28 @@ export interface State {
   workouts: Workout[]
   bodyWeight: BodyWeight[]
   goalKg: number
+  favEx: string[]
+  customEx: CustomEx[]
+  /** Equipment the user has; null = everything. */
+  gear: string[] | null
+  figure: 'male' | 'female'
+}
+
+export interface CustomEx {
+  id: string
+  n: string
+  g: string
+  eq: string
+  p: string[]
+  s: string[]
+  c: string
 }
 
 const KEY = 'gym-dtwin:v1'
 
-const initial: State = { lang: 'uz', planId: 'ppl', workouts: [], bodyWeight: [], goalKg: 75 }
+const initial: State = {
+  lang: 'uz', planId: 'ppl', workouts: [], bodyWeight: [], goalKg: 75, favEx: [], customEx: [], gear: null, figure: 'male',
+}
 
 function load(): State {
   try {

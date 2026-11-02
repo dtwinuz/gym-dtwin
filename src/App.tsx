@@ -4,11 +4,11 @@ import { LANGS, t, type Key } from './i18n'
 import { update, useStore } from './store'
 import Home from './pages/Home'
 import Plan from './pages/Plan'
-import Exercises from './pages/Exercises'
 import Workout from './pages/Workout'
 import Progress from './pages/Progress'
 
 const Landing = lazy(() => import('./landing/Landing'))
+const Exercises = lazy(() => import('./pages/Exercises'))
 
 const ROUTES = [
   { path: '/home', key: 'home', icon: HomeIcon, page: Home },
@@ -27,8 +27,11 @@ export default function App() {
 
   useEffect(() => {
     const onHash = () => {
-      setPath(currentPath())
-      window.scrollTo(0, 0)
+      const next = currentPath()
+      setPath(prev => {
+        if (prev.split('/')[1] !== next.split('/')[1]) window.scrollTo(0, 0)
+        return next
+      })
     }
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
@@ -42,7 +45,7 @@ export default function App() {
     )
   }
 
-  const route = ROUTES.find(r => r.path === path) ?? ROUTES[0]
+  const route = ROUTES.find(r => path === r.path || path.startsWith(`${r.path}/`)) ?? ROUTES[0]
   const Page = route.page
 
   return (
@@ -60,7 +63,7 @@ export default function App() {
           ))}
         </div>
       </header>
-      <main className="page"><Page /></main>
+      <main className="page"><Suspense fallback={null}><Page /></Suspense></main>
       <nav className="tabbar">
         {ROUTES.map(r => (
           <a key={r.path} href={`#${r.path}`} className={r === route ? 'on' : ''}>

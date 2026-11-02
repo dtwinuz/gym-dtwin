@@ -1,0 +1,5172 @@
+{
+ "Barbell_Bench_Press_-_Medium_Grip": {
+  "uz": {
+   "n": "Shtanga bilan jim yotib (o'rta ushlash)",
+   "s": [
+    "Gorizontal skameykaga yoting, oyoqlarni polga mahkam tiring.",
+    "Shtangani yelkadan sal kengroq, o'rta ushlashda oling va to'g'ri qo'llarda ko'kragingiz ustida ushlang.",
+    "Nafas olib, shtangani nazorat bilan ko'krakning o'rtasiga tushiring.",
+    "Nafas chiqarib, ko'krak kuchi bilan shtangani boshlang'ich holatga qaytaring; kuraklarni jipslashtirilgan holda saqlang."
+   ]
+  },
+  "ru": {
+   "n": "Жим штанги лёжа (средний хват)",
+   "s": [
+    "Лягте на горизонтальную скамью, ступни плотно упираются в пол.",
+    "Возьмите штангу средним хватом и снимите её со стоек, удерживая на прямых руках над грудью.",
+    "На вдохе подконтрольно опустите штангу на середину груди.",
+    "На выдохе выжмите штангу вверх, сохраняя лопатки сведёнными."
+   ]
+  },
+  "a": [
+   "жим лёжа",
+   "zhim lezha",
+   "jim",
+   "bench",
+   "bench press",
+   "жим"
+  ]
+ },
+ "Barbell_Incline_Bench_Press_-_Medium_Grip": {
+  "uz": {
+   "n": "Qiya skameykada shtanga bilan jim (o'rta ushlash)",
+   "s": [
+    "Qiya skameykaga yoting va shtangani o'rta ushlashda oling.",
+    "Shtangani tayanchdan olib, to'g'ri qo'llarda yuqori ko'krak ustida ushlang.",
+    "Nafas olib, shtangani sekin ko'krakning yuqori qismiga tushiring.",
+    "Nafas chiqarib, ko'krak mushaklari bilan yuqoriga itaring; tirsaklarni keskin qulflamang."
+   ]
+  },
+  "ru": {
+   "n": "Жим штанги на наклонной скамье (средний хват)",
+   "s": [
+    "Лягте на наклонную скамью и возьмите штангу средним хватом.",
+    "Снимите штангу и удерживайте её на прямых руках над верхом груди.",
+    "На вдохе медленно опустите штангу к верхней части груди.",
+    "На выдохе выжмите штангу вверх усилием грудных мышц, не ударяя локти в замок."
+   ]
+  },
+  "a": [
+   "жим наклонный",
+   "zhim naklonniy",
+   "наклонка",
+   "naklonka",
+   "incline bench",
+   "qiya jim"
+  ]
+ },
+ "Decline_Barbell_Bench_Press": {
+  "uz": {
+   "n": "Teskari qiya skameykada shtanga bilan jim",
+   "s": [
+    "Oyoqlarni teskari qiya skameyka uchidagi tayanchga mahkamlab, sekin yoting.",
+    "Shtangani o'rta ushlashda oling va to'g'ri qo'llarda ushlang; uni olishda sherik yordamidan foydalaning.",
+    "Nafas olib, shtangani ko'krakning pastki qismiga sekin tushiring.",
+    "Nafas chiqarib, shtangani yuqoriga itarib qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Жим штанги лёжа головой вниз",
+   "s": [
+    "Зафиксируйте ноги на конце скамьи с отрицательным наклоном и медленно лягте.",
+    "Возьмите штангу средним хватом и удерживайте на прямых руках; снимать её лучше со страхующим.",
+    "На вдохе плавно опустите штангу к низу груди.",
+    "На выдохе выжмите штангу в исходное положение."
+   ]
+  },
+  "a": [
+   "жим вниз головой",
+   "zhim vniz golovoy",
+   "decline bench",
+   "decline",
+   "obratniy naklon"
+  ]
+ },
+ "Close-Grip_Barbell_Bench_Press": {
+  "uz": {
+   "n": "Shtanga bilan tor ushlashda jim yotib",
+   "s": [
+    "Skameykaga yoting va shtangani yelka kengligida, tor ushlashda oling.",
+    "Shtangani tayanchdan olib, to'g'ri qo'llarda ko'krak ustida ushlang.",
+    "Nafas olib, tirsaklarni tanaga yaqin tutgan holda shtangani ko'krak o'rtasiga tushiring.",
+    "Nafas chiqarib, triseps kuchi bilan shtangani yuqoriga itaring."
+   ]
+  },
+  "ru": {
+   "n": "Жим штанги лёжа узким хватом",
+   "s": [
+    "Лягте на скамью и возьмите штангу хватом на ширине плеч.",
+    "Снимите штангу и удерживайте её на прямых руках над грудью.",
+    "На вдохе опустите штангу к середине груди, держа локти близко к корпусу.",
+    "На выдохе выжмите штангу вверх за счёт трицепса."
+   ]
+  },
+  "a": [
+   "узкий жим",
+   "uzkiy zhim",
+   "жим узким",
+   "close grip bench",
+   "tor jim",
+   "cgbp"
+  ]
+ },
+ "Wide-Grip_Barbell_Bench_Press": {
+  "uz": {
+   "n": "Shtanga bilan keng ushlashda jim yotib",
+   "s": [
+    "Skameykaga yoting, oyoqlarni polga mahkam qo'ying.",
+    "Shtangani yelkadan kengroq, kaftlar oldinga qaragan holda oling va to'g'ri qo'llarda ushlang.",
+    "Nafas olib, shtangani sekin ko'krak o'rtasiga tushiring.",
+    "Nafas chiqarib, shtangani yuqoriga itaring; harakatni nazoratda saqlang."
+   ]
+  },
+  "ru": {
+   "n": "Жим штанги лёжа широким хватом",
+   "s": [
+    "Лягте на скамью, ступни твёрдо стоят на полу.",
+    "Возьмите штангу широким прямым хватом и удерживайте на прямых руках.",
+    "На вдохе медленно опустите штангу к середине груди.",
+    "На выдохе выжмите её вверх, контролируя движение."
+   ]
+  },
+  "a": [
+   "широкий жим",
+   "shirokiy zhim",
+   "wide bench",
+   "keng jim",
+   "жим широким"
+  ]
+ },
+ "Dumbbell_Bench_Press": {
+  "uz": {
+   "n": "Gantel bilan jim yotib",
+   "s": [
+    "Gantellarni son ustiga qo'yib skameykaga o'tiring va yotib ularni ko'krak yoniga ko'taring.",
+    "Kaftlarni oldinga burang; yelka va bilak to'g'ri burchak hosil qilsin.",
+    "Nafas chiqarib, gantellarni ko'krak ustida yuqoriga itaring.",
+    "Nafas olib, gantellarni nazorat bilan ko'krak yoniga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Жим гантелей лёжа",
+   "s": [
+    "Сядьте на скамью с гантелями на бёдрах, лягте и поднимите их к груди.",
+    "Разверните ладони вперёд, плечо и предплечье образуют прямой угол.",
+    "На выдохе выжмите гантели вверх над грудью.",
+    "На вдохе подконтрольно опустите их обратно к груди."
+   ]
+  },
+  "a": [
+   "жим гантелей",
+   "zhim ganteley",
+   "gantel jim",
+   "db bench",
+   "dumbbell press"
+  ]
+ },
+ "Incline_Dumbbell_Press": {
+  "uz": {
+   "n": "Qiya skameykada gantel bilan jim",
+   "s": [
+    "Qiya skameykaga gantellar bilan yoting va ularni yelka kengligida ko'taring.",
+    "Kaftlarni oldinga burang; gantellarni doim nazoratda tuting.",
+    "Nafas chiqarib, gantellarni yuqori ko'krak ustida yuqoriga itaring.",
+    "Nafas olib, ularni sekin yelka sathiga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Жим гантелей на наклонной скамье",
+   "s": [
+    "Лягте на наклонную скамью с гантелями и поднимите их на ширину плеч.",
+    "Разверните ладони вперёд и держите гантели под полным контролем.",
+    "На выдохе выжмите гантели вверх над верхом груди.",
+    "На вдохе медленно опустите их к уровню плеч."
+   ]
+  },
+  "a": [
+   "жим гантелей наклонный",
+   "zhim ganteley naklonniy",
+   "incline db press",
+   "qiya gantel jim",
+   "наклонка гантели"
+  ]
+ },
+ "Decline_Dumbbell_Bench_Press": {
+  "uz": {
+   "n": "Teskari qiya skameykada gantel bilan jim",
+   "s": [
+    "Oyoqlarni teskari qiya skameykaga mahkamlab, gantellar bilan yoting.",
+    "Gantellarni yelka kengligida ko'tarib, kaftlarni oldinga burang.",
+    "Gantellarni ko'krak yoniga sekin tushiring, keyin yuqoriga itaring.",
+    "Butun harakat davomida gantellarni nazoratda saqlang."
+   ]
+  },
+  "ru": {
+   "n": "Жим гантелей лёжа головой вниз",
+   "s": [
+    "Зафиксируйте ноги на скамье с отрицательным наклоном и лягте с гантелями.",
+    "Поднимите гантели на ширину плеч, ладони развёрнуты вперёд.",
+    "Медленно опустите гантели к бокам груди, затем выжмите вверх.",
+    "Контролируйте гантели на протяжении всего движения."
+   ]
+  },
+  "a": [
+   "жим гантелей вниз головой",
+   "decline db press",
+   "teskari gantel jim",
+   "decline dumbbell"
+  ]
+ },
+ "Dumbbell_Flyes": {
+  "uz": {
+   "n": "Gantel bilan razvodka yotib",
+   "s": [
+    "Skameykaga yoting va gantellarni kaftlar bir-biriga qaragan holda ko'krak ustida ushlang.",
+    "Tirsaklarni biroz bukilgan holda saqlab, qo'llarni yon tomonga keng yoying.",
+    "Ko'krakda cho'zilish sezilganda to'xtang.",
+    "Ko'krak mushaklarini qisib, gantellarni yoy bo'ylab yuqoriga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Разводка гантелей лёжа",
+   "s": [
+    "Лягте на скамью и удерживайте гантели над грудью, ладони смотрят друг на друга.",
+    "Сохраняя небольшой сгиб в локтях, разведите руки в стороны по дуге.",
+    "Остановитесь, когда почувствуете растяжение в груди.",
+    "Сведите гантели обратно по той же дуге, напрягая грудные мышцы."
+   ]
+  },
+  "a": [
+   "разводка",
+   "razvodka",
+   "разводка гантелей",
+   "flyes",
+   "fly",
+   "razvodka gantel"
+  ]
+ },
+ "Incline_Dumbbell_Flyes": {
+  "uz": {
+   "n": "Qiya skameykada gantel bilan razvodka",
+   "s": [
+    "Skameykani kichik qiyalikka qo'ying va gantellar bilan yoting.",
+    "Qo'llarni ustingizda biroz bukilgan tirsaklar bilan cho'zing.",
+    "Nafas olib, qo'llarni yon tomonga sekin tushiring, ko'krakda cho'zilish sezilguncha.",
+    "Nafas chiqarib, gantellarni yoy bo'ylab yuqoriga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Разводка гантелей на наклонной скамье",
+   "s": [
+    "Установите скамью под небольшим наклоном и лягте с гантелями.",
+    "Выпрямите руки над собой с лёгким сгибом в локтях.",
+    "На вдохе медленно разведите руки в стороны до растяжения груди.",
+    "На выдохе верните гантели вверх по дуге."
+   ]
+  },
+  "a": [
+   "разводка наклонная",
+   "razvodka naklonnaya",
+   "incline fly",
+   "qiya razvodka"
+  ]
+ },
+ "Cable_Crossover": {
+  "uz": {
+   "n": "Krossoverda qo'llarni birlashtirish (yuqori bloklar)",
+   "s": [
+    "Bloklarni yuqori holatga o'rnating va dastaklarni har ikki qo'lda ushlang.",
+    "Bir qadam oldinga chiqing va tanani biroz oldinga egang.",
+    "Tirsaklarni biroz bukilgan holda saqlab, qo'llarni yoy bo'ylab oldinda birlashtiring.",
+    "Ko'krakni qisib, qo'llarni sekin yon tomonga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Сведение рук в кроссовере",
+   "s": [
+    "Установите блоки в верхнее положение и возьмите рукояти.",
+    "Сделайте шаг вперёд и слегка наклоните корпус.",
+    "С небольшим сгибом в локтях сведите руки по дуге перед собой.",
+    "Напрягите грудь и плавно разведите руки обратно."
+   ]
+  },
+  "a": [
+   "кроссовер",
+   "krossover",
+   "сведение рук",
+   "svedenie ruk",
+   "crossover",
+   "cable fly"
+  ]
+ },
+ "Low_Cable_Crossover": {
+  "uz": {
+   "n": "Krossoverda pastki bloklardan qo'llarni birlashtirish",
+   "s": [
+    "Bloklarni pastki holatga o'rnating va dastaklarni ushlang.",
+    "Oldinga qadam qo'yib, trosslarni taranglashtiring; qo'llar pastda, kaftlar oldinga qaragan.",
+    "Tirsaklarni biroz bukib, qo'llarni yuqoriga va o'rtaga, ko'krak oldida birlashtiring.",
+    "Qo'llarni nazorat bilan pastga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Сведение рук в кроссовере снизу",
+   "s": [
+    "Установите блоки в нижнее положение и возьмите рукояти.",
+    "Шагните вперёд, создавая натяжение; руки внизу, ладони вперёд.",
+    "Слегка согнув руки, сведите их вверх перед грудью.",
+    "Подконтрольно верните руки вниз."
+   ]
+  },
+  "a": [
+   "кроссовер снизу",
+   "krossover snizu",
+   "low cable fly",
+   "pastki krossover"
+  ]
+ },
+ "Butterfly": {
+  "uz": {
+   "n": "Trenajyorda qo'llarni birlashtirish (batterflay)",
+   "s": [
+    "Trenajyorga o'tirib, orqani yostiqqa jips qo'ying; yelkalar pol bilan parallel bo'lsin.",
+    "Dastaklarni ushlab, ularni sekin oldinda birlashtiring.",
+    "Nafas chiqarib, ko'krakni bir lahza qisib turing.",
+    "Nafas olib, dastaklarni sekin boshlang'ich holatga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Сведение рук в тренажёре (бабочка)",
+   "s": [
+    "Сядьте в тренажёр, спина прижата к спинке, плечи параллельны полу.",
+    "Возьмитесь за рукояти и медленно сведите их перед собой.",
+    "На выдохе задержите сокращение груди на секунду.",
+    "На вдохе плавно разведите руки до растяжения груди."
+   ]
+  },
+  "a": [
+   "бабочка",
+   "babochka",
+   "пек дек",
+   "pec deck",
+   "batterflay",
+   "butterfly"
+  ]
+ },
+ "Machine_Bench_Press": {
+  "uz": {
+   "n": "Trenajyorda ko'krakdan jim",
+   "s": [
+    "Trenajyorga o'tiring va og'irlikni tanlang.",
+    "Dastaklarni kaftlar pastga qaragan holda ushlang; yelkalar pol bilan parallel.",
+    "Nafas chiqarib, dastaklarni oldinga itaring.",
+    "Nafas olib, dastaklarni sekin qaytaring, og'irlikni to'xtatgichga urmang."
+   ]
+  },
+  "ru": {
+   "n": "Жим от груди в тренажёре",
+   "s": [
+    "Сядьте в тренажёр и выберите вес.",
+    "Возьмите рукояти прямым хватом, плечи параллельны полу.",
+    "На выдохе выжмите рукояти вперёд.",
+    "На вдохе медленно верните их назад, не бросая вес."
+   ]
+  },
+  "a": [
+   "жим в тренажёре",
+   "zhim v trenazhere",
+   "chest press",
+   "trenajyor jim"
+  ]
+ },
+ "Leverage_Chest_Press": {
+  "uz": {
+   "n": "Richagli trenajyorda ko'krakdan jim",
+   "s": [
+    "Og'irlikni yuklang va o'rindiqni bo'yingizga moslang; dastaklar ko'krakning o'rta-past qismida bo'lsin.",
+    "Ko'krakni ko'tarib, kuraklarni orqaga yig'ing.",
+    "Tirsaklarni to'g'rilab, dastaklarni oldinga itaring.",
+    "Dastaklarni sekin qaytaring, mushaklardagi taranglikni yo'qotmang."
+   ]
+  },
+  "ru": {
+   "n": "Жим от груди в рычажном тренажёре",
+   "s": [
+    "Навесьте вес и отрегулируйте сиденье: рукояти на уровне середины или низа груди.",
+    "Грудь вверх, лопатки сведены.",
+    "Выжмите рукояти вперёд, разгибая локти.",
+    "Плавно верните рукояти, сохраняя натяжение в мышцах."
+   ]
+  },
+  "a": [
+   "рычажный жим",
+   "rychazhniy zhim",
+   "hammer press",
+   "lever chest press"
+  ]
+ },
+ "Smith_Machine_Bench_Press": {
+  "uz": {
+   "n": "Smit trenajyorida jim yotib",
+   "s": [
+    "Smit trenajyori ostiga gorizontal skameyka qo'ying va grifni qulay balandlikka sozlang.",
+    "Yotib, grifni yelkadan kengroq ushlang va qulfdan chiqaring.",
+    "Nafas olib, grifni sekin ko'krak o'rtasiga tushiring.",
+    "Nafas chiqarib, grifni yuqoriga itaring."
+   ]
+  },
+  "ru": {
+   "n": "Жим лёжа в тренажёре Смита",
+   "s": [
+    "Поставьте горизонтальную скамью в тренажёр Смита и выставьте гриф на удобной высоте.",
+    "Лягте, возьмите гриф хватом шире плеч и снимите его с упоров.",
+    "На вдохе медленно опустите гриф к середине груди.",
+    "На выдохе выжмите гриф вверх."
+   ]
+  },
+  "a": [
+   "смит",
+   "smit",
+   "жим в смите",
+   "zhim v smite",
+   "smith bench"
+  ]
+ },
+ "Smith_Machine_Incline_Bench_Press": {
+  "uz": {
+   "n": "Smit trenajyorida qiya skameykada jim",
+   "s": [
+    "Smit ostiga qiya skameyka qo'ying; yuqori ko'krak grif bilan bir chiziqda bo'lsin.",
+    "Grifni yelkadan kengroq ushlab qulfdan chiqaring.",
+    "Nafas olib, grifni sekin ko'krakning yuqori qismiga tushiring.",
+    "Nafas chiqarib, grifni yuqoriga itaring."
+   ]
+  },
+  "ru": {
+   "n": "Жим на наклонной скамье в Смите",
+   "s": [
+    "Поставьте наклонную скамью в Смита так, чтобы верх груди был под грифом.",
+    "Возьмите гриф хватом шире плеч и снимите с упоров.",
+    "На вдохе опустите гриф к верхней части груди.",
+    "На выдохе выжмите его вверх."
+   ]
+  },
+  "a": [
+   "смит наклонный",
+   "smit naklonniy",
+   "incline smith",
+   "qiya smit"
+  ]
+ },
+ "Pushups": {
+  "uz": {
+   "n": "Poldan otjimaniye",
+   "s": [
+    "Polga yuzingiz bilan, qo'llarni yelkadan kengroq qo'yib, to'g'ri qo'llarda tananing ustini ushlang.",
+    "Tanani boshdan tovongacha to'g'ri chiziqda saqlang.",
+    "Nafas olib, ko'krak polga deyarli tekkuncha pastga tushing.",
+    "Nafas chiqarib, ko'krakni qisib, yuqoriga ko'tariling."
+   ]
+  },
+  "ru": {
+   "n": "Отжимания от пола",
+   "s": [
+    "Примите упор лёжа, руки чуть шире плеч.",
+    "Держите тело прямой линией от головы до пяток.",
+    "На вдохе опуститесь, пока грудь почти не коснётся пола.",
+    "На выдохе отожмитесь вверх, напрягая грудь."
+   ]
+  },
+  "a": [
+   "отжимания",
+   "otzhimaniya",
+   "otjimaniye",
+   "otjimaniya",
+   "push up",
+   "pushup"
+  ]
+ },
+ "Push-Up_Wide": {
+  "uz": {
+   "n": "Keng qo'yilgan qo'llar bilan otjimaniye",
+   "s": [
+    "Qo'llarni keng qo'yib, planka holatiga turing; tana to'g'ri.",
+    "Tos pastga osilib qolmasin.",
+    "Nafas olib, tirsaklarni bukib ko'krakni polga tushiring.",
+    "Nafas chiqarib, ko'krak mushaklari bilan yuqoriga itaring."
+   ]
+  },
+  "ru": {
+   "n": "Отжимания широким хватом",
+   "s": [
+    "Примите упор лёжа с широко расставленными руками, тело прямое.",
+    "Не допускайте провисания таза.",
+    "На вдохе согните локти и опустите грудь к полу.",
+    "На выдохе выжмите себя вверх усилием грудных."
+   ]
+  },
+  "a": [
+   "широкие отжимания",
+   "shirokie otzhimaniya",
+   "keng otjimaniye",
+   "wide push up"
+  ]
+ },
+ "Push-Ups_With_Feet_Elevated": {
+  "uz": {
+   "n": "Oyoqlar ko'tarilgan holda otjimaniye",
+   "s": [
+    "Qo'llarni polga, oyoq uchlarini skameykaga qo'ying.",
+    "Tanani to'g'ri chiziqda tuting; tayanch qanchalik baland bo'lsa, mashq shunchalik og'ir.",
+    "Nafas olib, ko'krak polga yaqinlashguncha tushing.",
+    "Nafas chiqarib, ko'krakni qisib yuqoriga ko'tariling."
+   ]
+  },
+  "ru": {
+   "n": "Отжимания с ногами на возвышении",
+   "s": [
+    "Руки на полу, носки на скамье.",
+    "Тело держите прямым; чем выше опора, тем тяжелее упражнение.",
+    "На вдохе опуститесь, пока грудь почти не коснётся пола.",
+    "На выдохе отожмитесь, напрягая грудь."
+   ]
+  },
+  "a": [
+   "отжимания ноги на скамье",
+   "otzhimaniya nogi na skamye",
+   "decline push up",
+   "oyoq baland otjimaniye"
+  ]
+ },
+ "Incline_Push-Up": {
+  "uz": {
+   "n": "Skameykaga tayanib otjimaniye",
+   "s": [
+    "Skameyka yoki mustahkam tayanch oldida turing va qo'llarni uning chetiga yelkadan biroz kengroq qo'ying.",
+    "Oyoqlarni orqaga qo'yib, tanani to'g'ri tuting.",
+    "Qo'llarni bukib, ko'krakni tayanch chetiga tushiring.",
+    "Qo'llarni to'g'rilab, yuqoriga itaring."
+   ]
+  },
+  "ru": {
+   "n": "Отжимания от скамьи",
+   "s": [
+    "Встаньте лицом к скамье или устойчивой опоре и поставьте руки на её край чуть шире плеч.",
+    "Отставьте ноги назад, тело прямое.",
+    "Согните руки и опустите грудь к краю опоры.",
+    "Разогните руки, выжимая себя вверх."
+   ]
+  },
+  "a": [
+   "отжимания от скамьи",
+   "otzhimaniya ot skamyi",
+   "incline push up",
+   "skameyka otjimaniye"
+  ]
+ },
+ "Dips_-_Chest_Version": {
+  "uz": {
+   "n": "Brusyada otjimaniye (ko'krak uchun)",
+   "s": [
+    "Brusyada to'g'ri qo'llarda tanani ushlab turing.",
+    "Tanani taxminan 30 darajaga oldinga egib, tirsaklarni biroz yonga chiqaring.",
+    "Nafas olib, ko'krakda yengil cho'zilish sezilguncha sekin pastga tushing.",
+    "Nafas chiqarib, ko'krak kuchi bilan yuqoriga ko'tariling va tepada uni qisib turing."
+   ]
+  },
+  "ru": {
+   "n": "Отжимания на брусьях (на грудь)",
+   "s": [
+    "Займите упор на брусьях на прямых руках.",
+    "Наклоните корпус вперёд примерно на 30 градусов, локти слегка в стороны.",
+    "На вдохе медленно опуститесь до лёгкого растяжения груди.",
+    "На выдохе поднимитесь усилием грудных, напрягая их вверху."
+   ]
+  },
+  "a": [
+   "брусья",
+   "brusya",
+   "brusiya",
+   "отжимания на брусьях",
+   "dips",
+   "dip"
+  ]
+ },
+ "Dips_-_Triceps_Version": {
+  "uz": {
+   "n": "Brusyada otjimaniye (triseps uchun)",
+   "s": [
+    "Brusyada deyarli to'g'ri qo'llarda turing.",
+    "Tanani tik, tirsaklarni tanaga yaqin saqlang.",
+    "Nafas olib, yelka va bilak to'g'ri burchak hosil qilguncha sekin tushing.",
+    "Nafas chiqarib, triseps kuchi bilan yuqoriga ko'tariling."
+   ]
+  },
+  "ru": {
+   "n": "Отжимания на брусьях (на трицепс)",
+   "s": [
+    "Займите упор на брусьях на почти прямых руках.",
+    "Корпус вертикально, локти прижаты к телу.",
+    "На вдохе медленно опуститесь до прямого угла в локтях.",
+    "На выдохе поднимитесь вверх усилием трицепса."
+   ]
+  },
+  "a": [
+   "брусья трицепс",
+   "brusya triceps",
+   "triceps dips",
+   "brusya triseps"
+  ]
+ },
+ "Parallel_Bar_Dip": {
+  "uz": {
+   "n": "Parallel brusyada otjimaniye",
+   "s": [
+    "Brusyalar orasida turib, qo'llarni ularga qo'ying va kichik sakrash bilan to'g'ri qo'llarga ko'tariling.",
+    "Tirsaklarni bukib, ular 90 darajadan sal pastga tushguncha tanani tushiring.",
+    "Silkinmang, butun harakat davomida qaddni to'g'ri saqlang.",
+    "Tirsaklarni to'g'rilab, yuqoriga qayting."
+   ]
+  },
+  "ru": {
+   "n": "Отжимания на параллельных брусьях",
+   "s": [
+    "Встаньте между брусьями, возьмитесь за них и небольшим прыжком выйдите в упор на прямых руках.",
+    "Согните локти и опуститесь чуть ниже прямого угла.",
+    "Не раскачивайтесь, держите осанку на протяжении всего движения.",
+    "Разогните локти и вернитесь вверх."
+   ]
+  },
+  "a": [
+   "брусья",
+   "brusya",
+   "dips",
+   "parallel bars",
+   "otjimaniye brusya"
+  ]
+ },
+ "Bench_Dips": {
+  "uz": {
+   "n": "Skameykadan orqaga tayanib otjimaniye",
+   "s": [
+    "Skameykaga orqa o'girib, uning chetidan yelka kengligida ushlang; oyoqlarni oldinga cho'zing.",
+    "Nafas olib, tirsaklarni bukib tanani sekin pastga tushiring.",
+    "Tirsaklar to'g'ri burchakdan sal kamroq bo'lganda to'xtang.",
+    "Nafas chiqarib, triseps bilan qo'llarni to'g'rilab yuqoriga ko'tariling."
+   ]
+  },
+  "ru": {
+   "n": "Обратные отжимания от скамьи",
+   "s": [
+    "Встаньте спиной к скамье, возьмитесь за её край на ширине плеч, ноги вытяните вперёд.",
+    "На вдохе медленно опуститесь, сгибая локти.",
+    "Остановитесь, когда угол в локтях станет чуть меньше прямого.",
+    "На выдохе разогните руки усилием трицепса."
+   ]
+  },
+  "a": [
+   "обратные отжимания",
+   "obratnye otzhimaniya",
+   "bench dips",
+   "skameyka otjimaniye",
+   "teskari otjimaniye"
+  ]
+ },
+ "Straight-Arm_Dumbbell_Pullover": {
+  "uz": {
+   "n": "To'g'ri qo'llar bilan gantel pulover",
+   "s": [
+    "Skameykaga ko'ndalang yoting: faqat yelkalar skameykada, tos pastda, oyoqlar polga tiralgan.",
+    "Gantelni ikki qo'lda to'g'ri qo'llarda ko'krak ustida ushlang.",
+    "Nafas olib, qo'llarni bukmasdan gantelni bosh orqasiga sekin tushiring.",
+    "Nafas chiqarib, gantelni yoy bo'ylab ko'krak ustiga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Пуловер с гантелью на прямых руках",
+   "s": [
+    "Лягте поперёк скамьи: на ней только лопатки, таз ниже, ступни на полу.",
+    "Удерживайте гантель обеими руками на прямых руках над грудью.",
+    "На вдохе медленно опустите гантель за голову, не сгибая рук.",
+    "На выдохе верните её по дуге над грудью."
+   ]
+  },
+  "a": [
+   "пуловер",
+   "pulover",
+   "pullover",
+   "gantel pulover"
+  ]
+ },
+ "Bent-Arm_Dumbbell_Pullover": {
+  "uz": {
+   "n": "Bukilgan qo'llar bilan gantel pulover",
+   "s": [
+    "Skameykaga ko'ndalang yoting: yelkalar skameykada, tos pastda, oyoqlar polda.",
+    "Gantelni ikki qo'lda, tirsaklar biroz bukilgan holda ko'krak ustida ushlang.",
+    "Nafas olib, tirsaklar burchagini saqlab, gantelni bosh orqasiga tushiring.",
+    "Nafas chiqarib, gantelni ko'krak ustiga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Пуловер с гантелью на согнутых руках",
+   "s": [
+    "Лягте поперёк скамьи: лопатки на скамье, таз ниже, ступни на полу.",
+    "Удерживайте гантель обеими руками над грудью со сгибом в локтях.",
+    "На вдохе опустите гантель за голову, сохраняя угол в локтях.",
+    "На выдохе верните гантель над грудью."
+   ]
+  },
+  "a": [
+   "пуловер",
+   "pulover",
+   "bent arm pullover",
+   "pullover"
+  ]
+ },
+ "Cable_Chest_Press": {
+  "uz": {
+   "n": "Blokda o'tirib ko'krakdan jim",
+   "s": [
+    "O'rindiqqa o'tirib dastaklarni ushlang; tirsaklar taxminan to'g'ri burchakda, ko'krak tik.",
+    "Kuraklarni orqaga yig'ilgan holda saqlang.",
+    "Tirsaklarni to'g'rilab, dastaklarni oldinga itaring.",
+    "Trosslardagi taranglikni saqlagan holda sekin qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Жим от груди на блоке",
+   "s": [
+    "Сядьте и возьмите рукояти; локти согнуты примерно под прямым углом, грудь вверх.",
+    "Держите лопатки сведёнными.",
+    "Разгибая локти, выжмите рукояти вперёд.",
+    "Плавно верните рукояти, сохраняя натяжение тросов."
+   ]
+  },
+  "a": [
+   "жим на блоке",
+   "zhim na bloke",
+   "cable press",
+   "blok jim"
+  ]
+ },
+ "Incline_Cable_Flye": {
+  "uz": {
+   "n": "Qiya skameykada blokdan razvodka",
+   "s": [
+    "Bloklarni pastki holatga o'rnating va ular orasiga qiya skameyka qo'ying.",
+    "Dastaklar bilan yotib, qo'llarni yuz oldida birlashtiring.",
+    "Tirsaklarni biroz bukib, qo'llarni yon tomonga yoying, ko'krakda cho'zilish sezilguncha.",
+    "Ko'krakni qisib, qo'llarni yuqoriga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Разводка на блоках на наклонной скамье",
+   "s": [
+    "Установите блоки внизу и поставьте между ними наклонную скамью.",
+    "Лягте с рукоятями и сведите руки перед лицом.",
+    "С лёгким сгибом в локтях разведите руки до растяжения груди.",
+    "Напрягите грудь и сведите руки обратно."
+   ]
+  },
+  "a": [
+   "разводка на блоке",
+   "razvodka na bloke",
+   "incline cable fly",
+   "qiya blok razvodka"
+  ]
+ },
+ "Flat_Bench_Cable_Flyes": {
+  "uz": {
+   "n": "Gorizontal skameykada blokdan razvodka",
+   "s": [
+    "Skameykani ikki pastki blok orasiga qo'ying, ko'krak bloklar bilan bir chiziqda bo'lsin.",
+    "Yotib, dastaklarni oling va qo'llarni yon tomonga, tirsaklarni biroz bukib cho'zing.",
+    "Ko'krak kuchi bilan qo'llarni yoy bo'ylab ustingizda birlashtiring.",
+    "Tirsak burchagini o'zgartirmay, sekin qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Разводка на блоках лёжа на горизонтальной скамье",
+   "s": [
+    "Поставьте скамью между нижними блоками так, чтобы грудь была на их уровне.",
+    "Лягте, возьмите рукояти и разведите руки в стороны с лёгким сгибом в локтях.",
+    "Усилием груди сведите руки по дуге над собой.",
+    "Медленно верните руки, не меняя угол в локтях."
+   ]
+  },
+  "a": [
+   "разводка на блоке лёжа",
+   "razvodka na bloke",
+   "cable fly",
+   "blok razvodka"
+  ]
+ },
+ "Pullups": {
+  "uz": {
+   "n": "Turnikda tortilish",
+   "s": [
+    "Turnikni kaftlar oldinga qaragan holda tanlangan kenglikda ushlang.",
+    "Ko'krakni oldinga chiqarib, tanani biroz orqaga egang.",
+    "Nafas chiqarib, kuraklarni pastga tortib, iyagingiz turnikdan oshguncha tortiling.",
+    "Nafas olib, nazorat bilan to'liq to'g'ri qo'llarga tushing."
+   ]
+  },
+  "ru": {
+   "n": "Подтягивания",
+   "s": [
+    "Возьмитесь за перекладину прямым хватом нужной ширины.",
+    "Выведите грудь вперёд и слегка отклоните корпус назад.",
+    "На выдохе, сводя лопатки вниз, подтянитесь до уровня подбородка над перекладиной.",
+    "На вдохе подконтрольно опуститесь на прямые руки."
+   ]
+  },
+  "a": [
+   "подтягивания",
+   "podtyagivaniya",
+   "турник",
+   "turnik",
+   "pull up",
+   "tortilish"
+  ]
+ },
+ "Chin-Up": {
+  "uz": {
+   "n": "Teskari ushlashda turnikda tortilish",
+   "s": [
+    "Turnikni kaftlar o'zingizga qaragan holda, yelkadan torroq ushlang.",
+    "Tanani imkon qadar tik, ko'krakni oldinga chiqarib tuting.",
+    "Nafas chiqarib, boshingiz turnikdan oshguncha tortiling.",
+    "Nafas olib, sekin to'liq pastga tushing."
+   ]
+  },
+  "ru": {
+   "n": "Подтягивания обратным хватом",
+   "s": [
+    "Возьмитесь за перекладину обратным хватом уже ширины плеч.",
+    "Держите корпус как можно ровнее, грудь вперёд.",
+    "На выдохе подтянитесь, пока голова не окажется над перекладиной.",
+    "На вдохе медленно опуститесь вниз."
+   ]
+  },
+  "a": [
+   "обратный хват",
+   "obratniy hvat",
+   "chin up",
+   "chinup",
+   "teskari turnik"
+  ]
+ },
+ "Weighted_Pull_Ups": {
+  "uz": {
+   "n": "Og'irlik bilan turnikda tortilish",
+   "s": [
+    "Og'irlikni maxsus kamarga osib, beliga mahkamlang.",
+    "Turnikni yelka kengligida, kaftlar oldinga qaragan holda ushlang; ko'krakni chiqaring.",
+    "Nafas chiqarib, boshingiz turnikdan oshguncha tortiling.",
+    "Nafas olib, silkinmasdan sekin pastga tushing."
+   ]
+  },
+  "ru": {
+   "n": "Подтягивания с отягощением",
+   "s": [
+    "Повесьте вес на пояс для отягощений и закрепите его на талии.",
+    "Возьмитесь за перекладину прямым хватом на ширине плеч, грудь вперёд.",
+    "На выдохе подтянитесь, пока голова не окажется над перекладиной.",
+    "На вдохе медленно опуститесь без рывков."
+   ]
+  },
+  "a": [
+   "подтягивания с весом",
+   "podtyagivaniya s vesom",
+   "weighted pull up",
+   "og'irlik turnik"
+  ]
+ },
+ "Band_Assisted_Pull-Up": {
+  "uz": {
+   "n": "Rezina yordamida turnikda tortilish",
+   "s": [
+    "Rezina lentani turnikka bog'lang va bukilgan tizzangizni uning halqasiga qo'ying.",
+    "Turnikni o'rta yoki keng ushlashda oling.",
+    "Tirsaklarni yonga tortib, iyagingiz turnikdan oshguncha tortiling.",
+    "Silkinmasdan sekin pastga tushing."
+   ]
+  },
+  "ru": {
+   "n": "Подтягивания с резиной",
+   "s": [
+    "Закрепите резиновую петлю на перекладине и поставьте в неё согнутое колено.",
+    "Возьмитесь за перекладину средним или широким хватом.",
+    "Тяните локти к бокам и подтянитесь подбородком над перекладиной.",
+    "Плавно опуститесь без рывков."
+   ]
+  },
+  "a": [
+   "подтягивания с резинкой",
+   "podtyagivaniya s rezinkoy",
+   "rezina turnik",
+   "assisted pull up"
+  ]
+ },
+ "Wide-Grip_Lat_Pulldown": {
+  "uz": {
+   "n": "Yuqori blokni keng ushlashda ko'krakka tortish",
+   "s": [
+    "Trenajyorga o'tirib, tizza tayanchini bo'yingizga moslang.",
+    "Grifni yelkadan kengroq, kaftlar oldinga qaragan holda ushlang; tanani biroz orqaga egang.",
+    "Nafas chiqarib, kuraklarni yig'ib grifni ko'krakning yuqori qismiga torting.",
+    "Nafas olib, grifni sekin yuqoriga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга верхнего блока широким хватом",
+   "s": [
+    "Сядьте в тренажёр и отрегулируйте упор для коленей.",
+    "Возьмите гриф широким прямым хватом и слегка отклонитесь назад.",
+    "На выдохе, сводя лопатки, потяните гриф к верху груди.",
+    "На вдохе медленно верните гриф вверх."
+   ]
+  },
+  "a": [
+   "верхний блок",
+   "verhniy blok",
+   "тяга верхнего блока",
+   "lat pulldown",
+   "pulldown",
+   "blok tortish"
+  ]
+ },
+ "Close-Grip_Front_Lat_Pulldown": {
+  "uz": {
+   "n": "Yuqori blokni tor ushlashda ko'krakka tortish",
+   "s": [
+    "Trenajyorga o'tirib, tizza tayanchini sozlang.",
+    "Grifni yelkadan torroq, kaftlar oldinga qaragan holda ushlang; ko'krakni chiqaring.",
+    "Nafas chiqarib, kuraklarni yig'ib grifni ko'krakka torting.",
+    "Nafas olib, grifni nazorat bilan yuqoriga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга верхнего блока узким хватом к груди",
+   "s": [
+    "Сядьте в тренажёр и настройте упор для коленей.",
+    "Возьмите гриф прямым хватом уже ширины плеч, грудь вперёд.",
+    "На выдохе, сводя лопатки, потяните гриф к груди.",
+    "На вдохе подконтрольно верните гриф вверх."
+   ]
+  },
+  "a": [
+   "верхний блок узким",
+   "verhniy blok uzkim",
+   "close grip pulldown",
+   "tor blok tortish"
+  ]
+ },
+ "V-Bar_Pulldown": {
+  "uz": {
+   "n": "Yuqori blokni V-dasta bilan tortish",
+   "s": [
+    "Yuqori blokka V-dasta o'rnating va tizza tayanchini sozlang.",
+    "Dastani kaftlar bir-biriga qaragan holda ushlang, tanani biroz orqaga egang.",
+    "Kuraklarni yig'ib, dastani ko'krakka torting.",
+    "Dastani sekin yuqoriga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга верхнего блока V-рукоятью",
+   "s": [
+    "Закрепите V-рукоять на верхнем блоке и настройте упор для коленей.",
+    "Возьмите рукоять нейтральным хватом и слегка отклонитесь назад.",
+    "Сводя лопатки, потяните рукоять к груди.",
+    "Медленно верните рукоять вверх."
+   ]
+  },
+  "a": [
+   "тяга v-рукояти",
+   "v ruchka",
+   "v bar pulldown",
+   "v dasta"
+  ]
+ },
+ "Underhand_Cable_Pulldowns": {
+  "uz": {
+   "n": "Yuqori blokni teskari ushlashda tortish",
+   "s": [
+    "Trenajyorga o'tirib, tizza tayanchini sozlang.",
+    "Grifni kaftlar o'zingizga qaragan holda, yelkadan torroq ushlang.",
+    "Tanani biroz orqaga egib, grifni ko'krakning pastki qismiga torting.",
+    "Grifni nazorat bilan yuqoriga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга верхнего блока обратным хватом",
+   "s": [
+    "Сядьте в тренажёр и настройте упор для коленей.",
+    "Возьмите гриф обратным хватом уже ширины плеч.",
+    "Слегка отклонившись назад, потяните гриф к низу груди.",
+    "Подконтрольно верните гриф вверх."
+   ]
+  },
+  "a": [
+   "верхний блок обратным",
+   "verhniy blok obratnym",
+   "reverse grip pulldown",
+   "teskari blok"
+  ]
+ },
+ "One_Arm_Lat_Pulldown": {
+  "uz": {
+   "n": "Bir qo'l bilan yuqori blokni tortish",
+   "s": [
+    "Og'irlikni tanlang va tizza tayanchini sozlang.",
+    "Dastakni bir qo'l bilan kaft oldinga qaragan holda ushlang.",
+    "Tirsakni yon tomonga tortib, dastakni pastga torting va bir lahza to'xtang.",
+    "Taranglikni yo'qotmay, dastakni sekin qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга верхнего блока одной рукой",
+   "s": [
+    "Выберите вес и настройте упор для коленей.",
+    "Возьмите рукоять одной рукой прямым хватом.",
+    "Тяните локоть к боку, опуская рукоять, и задержитесь внизу.",
+    "Плавно верните рукоять, не теряя натяжения."
+   ]
+  },
+  "a": [
+   "тяга одной рукой",
+   "tyaga odnoy rukoy",
+   "single arm pulldown",
+   "bir qo'l blok"
+  ]
+ },
+ "Straight-Arm_Pulldown": {
+  "uz": {
+   "n": "To'g'ri qo'llar bilan yuqori blokni pastga tortish",
+   "s": [
+    "Yuqori blokdagi keng grifni yelkadan kengroq ushlab, bir-ikki qadam orqaga chiqing.",
+    "Tanani biroz oldinga egib, qo'llarni deyarli to'g'ri holda oldinga cho'zing.",
+    "Qo'llarni bukmasdan, keng mushak kuchi bilan grifni sonlarga tushiring.",
+    "Grifni sekin boshlang'ich holatga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Пуловер на верхнем блоке прямыми руками",
+   "s": [
+    "Возьмите широкий гриф верхнего блока хватом шире плеч и отойдите на шаг-два назад.",
+    "Слегка наклоните корпус, руки почти прямые перед собой.",
+    "Не сгибая рук, усилием широчайших опустите гриф к бёдрам.",
+    "Медленно верните гриф в исходное положение."
+   ]
+  },
+  "a": [
+   "пуловер на блоке",
+   "pulover na bloke",
+   "straight arm pulldown",
+   "blok pulover"
+  ]
+ },
+ "Seated_Cable_Rows": {
+  "uz": {
+   "n": "Pastki blokni o'tirib belga tortish",
+   "s": [
+    "Trenajyorga o'tirib, oyoqlarni tayanchga qo'ying; tizzalar biroz bukilgan.",
+    "V-dastani ushlab, orqa to'g'ri, ko'krak oldinga chiqqan holda tik o'tiring.",
+    "Nafas chiqarib, tanani qimirlatmay dastani qoringa torting va kuraklarni yig'ing.",
+    "Nafas olib, dastani sekin oldinga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга нижнего блока сидя",
+   "s": [
+    "Сядьте в тренажёр, стопы на упоре, колени слегка согнуты.",
+    "Возьмите V-рукоять и сядьте ровно, спина прямая, грудь вперёд.",
+    "На выдохе, не раскачивая корпус, потяните рукоять к животу, сводя лопатки.",
+    "На вдохе плавно верните рукоять вперёд."
+   ]
+  },
+  "a": [
+   "тяга нижнего блока",
+   "tyaga nizhnego bloka",
+   "горизонтальная тяга",
+   "cable row",
+   "seated row",
+   "pastki blok"
+  ]
+ },
+ "Bent_Over_Barbell_Row": {
+  "uz": {
+   "n": "Engashib shtangani belga tortish",
+   "s": [
+    "Shtangani kaftlar pastga qaragan holda ushlang, tizzalarni biroz buking.",
+    "Orqani to'g'ri saqlab, tanani deyarli pol bilan parallel bo'lguncha oldinga egang.",
+    "Nafas chiqarib, tirsaklarni tanaga yaqin tutib, shtangani qoringa torting.",
+    "Nafas olib, shtangani sekin pastga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга штанги в наклоне",
+   "s": [
+    "Возьмите штангу прямым хватом, слегка согните колени.",
+    "С прямой спиной наклоните корпус почти параллельно полу.",
+    "На выдохе потяните штангу к животу, держа локти близко к телу.",
+    "На вдохе медленно опустите штангу."
+   ]
+  },
+  "a": [
+   "тяга в наклоне",
+   "tyaga v naklone",
+   "тяга штанги",
+   "barbell row",
+   "bent over row",
+   "engashib tortish"
+  ]
+ },
+ "Reverse_Grip_Bent-Over_Rows": {
+  "uz": {
+   "n": "Engashib shtangani teskari ushlashda tortish",
+   "s": [
+    "Shtangani kaftlar yuqoriga qaragan holda ushlab, tik turing.",
+    "Tizzalarni biroz bukib, orqani to'g'ri saqlab tanani oldinga egang.",
+    "Nafas chiqarib, tirsaklarni tanaga yaqin tutib, shtangani qoringa torting.",
+    "Nafas olib, shtangani nazorat bilan tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга штанги в наклоне обратным хватом",
+   "s": [
+    "Встаньте прямо, держа штангу обратным хватом.",
+    "Слегка согните колени и с прямой спиной наклоните корпус.",
+    "На выдохе потяните штангу к животу, локти вдоль тела.",
+    "На вдохе подконтрольно опустите штангу."
+   ]
+  },
+  "a": [
+   "тяга обратным хватом",
+   "tyaga obratnym hvatom",
+   "reverse row",
+   "yates row"
+  ]
+ },
+ "One-Arm_Dumbbell_Row": {
+  "uz": {
+   "n": "Bir qo'l bilan gantelni belga tortish",
+   "s": [
+    "Bir tizza va bir qo'lni skameykaga qo'yib, tanani pol bilan parallel qiling.",
+    "Bo'sh qo'lda gantelni ushlang; belni to'g'ri saqlang.",
+    "Nafas chiqarib, tirsakni tanaga yaqin tutib, gantelni beliga torting.",
+    "Nafas olib, gantelni sekin tushiring va tomonni almashtiring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга гантели одной рукой в наклоне",
+   "s": [
+    "Обопритесь коленом и рукой на скамью, корпус параллельно полу.",
+    "Свободной рукой возьмите гантель, поясница прямая.",
+    "На выдохе потяните гантель к поясу, держа локоть у корпуса.",
+    "На вдохе медленно опустите гантель; затем смените сторону."
+   ]
+  },
+  "a": [
+   "тяга гантели",
+   "tyaga ganteli",
+   "db row",
+   "dumbbell row",
+   "gantel tortish"
+  ]
+ },
+ "Bent_Over_Two-Dumbbell_Row": {
+  "uz": {
+   "n": "Engashib ikki gantelni belga tortish",
+   "s": [
+    "Ikkala qo'lda gantel ushlab, tizzalarni biroz buking.",
+    "Orqani to'g'ri saqlab, tanani deyarli pol bilan parallel egang.",
+    "Nafas chiqarib, tirsaklarni tanaga yaqin tutib, gantellarni beliga torting.",
+    "Nafas olib, gantellarni sekin tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга двух гантелей в наклоне",
+   "s": [
+    "Возьмите по гантели в каждую руку и слегка согните колени.",
+    "С прямой спиной наклоните корпус почти параллельно полу.",
+    "На выдохе потяните гантели к поясу, локти вдоль тела.",
+    "На вдохе медленно опустите их."
+   ]
+  },
+  "a": [
+   "тяга гантелей в наклоне",
+   "tyaga ganteley v naklone",
+   "db bent over row",
+   "ikki gantel tortish"
+  ]
+ },
+ "T-Bar_Row_with_Handle": {
+  "uz": {
+   "n": "T-grifni dasta bilan tortish",
+   "s": [
+    "Grif uchini burchakka yoki landmine'ga qo'yib, ikkinchi uchiga og'irlik yuklang.",
+    "Grif ustida turib, dastani o'rnating; keng turib, tosni orqaga, ko'krakni yuqoriga tuting.",
+    "Kuraklarni yig'ib, og'irlikni qoringa torting; silkitmang.",
+    "Og'irlikni nazorat bilan pastga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга Т-грифа с рукоятью",
+   "s": [
+    "Уприте конец грифа в угол или станок и навесьте вес на другой конец.",
+    "Встаньте над грифом, закрепите рукоять; стойка широкая, таз назад, грудь вверх.",
+    "Сводя лопатки, потяните вес к животу без рывков.",
+    "Подконтрольно опустите вес."
+   ]
+  },
+  "a": [
+   "т-гриф",
+   "t-grif",
+   "тяга т-грифа",
+   "t bar row",
+   "tbar"
+  ]
+ },
+ "Lying_T-Bar_Row": {
+  "uz": {
+   "n": "Trenajyorda yotib T-grifni tortish",
+   "s": [
+    "Og'irlikni yuklang va balandlikni yuqori ko'krak yostiq chetida bo'ladigan qilib sozlang.",
+    "Yostiqqa yuzingiz bilan yoting va dastaklarni kerakli ushlashda oling.",
+    "Nafas chiqarib, kuraklarni yig'ib dastaklarni yuqoriga torting.",
+    "Nafas olib, og'irlikni sekin tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга Т-грифа лёжа в тренажёре",
+   "s": [
+    "Навесьте вес и настройте высоту так, чтобы верх груди был у края подушки.",
+    "Лягте лицом вниз и возьмите рукояти нужным хватом.",
+    "На выдохе, сводя лопатки, потяните рукояти вверх.",
+    "На вдохе медленно опустите вес."
+   ]
+  },
+  "a": [
+   "т-гриф с упором",
+   "t-grif s uporom",
+   "chest supported row",
+   "lying t bar"
+  ]
+ },
+ "Inverted_Row": {
+  "uz": {
+   "n": "Gorizontal tortilish (avstraliyacha)",
+   "s": [
+    "Grifni stoykada bel balandligiga o'rnating.",
+    "Grifni yelkadan kengroq ushlab, uning ostida osiling; tana to'g'ri, tovonlar polda.",
+    "Kuraklarni yig'ib, ko'krakni grifga torting va bir lahza to'xtang.",
+    "Nazorat bilan to'liq to'g'ri qo'llarga tushing."
+   ]
+  },
+  "ru": {
+   "n": "Австралийские подтягивания",
+   "s": [
+    "Установите гриф в стойке на уровне пояса.",
+    "Возьмитесь хватом шире плеч и повисните под грифом; тело прямое, пятки на полу.",
+    "Сводя лопатки, подтяните грудь к грифу и задержитесь.",
+    "Подконтрольно опуститесь на прямые руки."
+   ]
+  },
+  "a": [
+   "австралийские подтягивания",
+   "avstraliyskie podtyagivaniya",
+   "inverted row",
+   "avstraliyacha tortilish"
+  ]
+ },
+ "Leverage_High_Row": {
+  "uz": {
+   "n": "Richagli trenajyorda yuqoridan tortish",
+   "s": [
+    "Og'irlikni yuklang, o'rindiqni dastaklarga zo'rg'a yetadigan qilib sozlang; tizza tayanchini mahkamlang.",
+    "Dastaklarni kaftlar oldinga qaragan holda ushlang.",
+    "Kuraklarni yig'ib, dastaklarni tanaga torting va pastda to'xtang.",
+    "Taranglikni saqlab, dastaklarni sekin qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга сверху в рычажном тренажёре",
+   "s": [
+    "Навесьте вес, настройте сиденье так, чтобы едва доставать до рукоятей, зафиксируйте колени.",
+    "Возьмитесь за рукояти прямым хватом.",
+    "Сводя лопатки, потяните рукояти к корпусу и задержитесь внизу.",
+    "Медленно верните рукояти, сохраняя натяжение."
+   ]
+  },
+  "a": [
+   "рычажная тяга",
+   "rychazhnaya tyaga",
+   "high row",
+   "hammer high row"
+  ]
+ },
+ "Leverage_Iso_Row": {
+  "uz": {
+   "n": "Richagli trenajyorda o'tirib tortish",
+   "s": [
+    "Og'irlikni yuklang, o'rindiqni dastaklar ko'krak sathida bo'ladigan qilib sozlang.",
+    "Dastaklarni neytral yoki to'g'ri ushlashda oling.",
+    "Kuraklarni yig'ib, dastaklarni tanaga torting va bir lahza to'xtang.",
+    "Dastaklarni sekin qaytaring, og'irlikni oxirigacha tushirmang."
+   ]
+  },
+  "ru": {
+   "n": "Горизонтальная тяга в рычажном тренажёре",
+   "s": [
+    "Навесьте вес и настройте сиденье: рукояти на уровне груди.",
+    "Возьмитесь нейтральным или прямым хватом.",
+    "Сводя лопатки, потяните рукояти к корпусу и задержитесь.",
+    "Медленно верните рукояти, не опуская вес до упора."
+   ]
+  },
+  "a": [
+   "рычажная тяга",
+   "rychazhnaya tyaga",
+   "iso row",
+   "hammer row",
+   "machine row"
+  ]
+ },
+ "Seated_One-arm_Cable_Pulley_Rows": {
+  "uz": {
+   "n": "Pastki blokni bir qo'l bilan o'tirib tortish",
+   "s": [
+    "Trenajyorga o'tirib, oyoqlarni tayanchga qo'ying; tizzalar biroz bukilgan.",
+    "Bitta dastani bir qo'l bilan ushlab, orqani to'g'ri, ko'krakni chiqarib tik o'tiring.",
+    "Tanani qimirlatmay, dastani beliga torting va kurakni yig'ing.",
+    "Dastani sekin qaytaring va qo'lni almashtiring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга нижнего блока одной рукой сидя",
+   "s": [
+    "Сядьте в тренажёр, стопы на упоре, колени слегка согнуты.",
+    "Возьмите одиночную рукоять одной рукой, сядьте ровно, грудь вперёд.",
+    "Не раскачивая корпус, потяните рукоять к поясу, сводя лопатку.",
+    "Медленно верните рукоять и смените руку."
+   ]
+  },
+  "a": [
+   "тяга блока одной рукой",
+   "tyaga bloka odnoy rukoy",
+   "single arm cable row",
+   "bir qo'l blok tortish"
+  ]
+ },
+ "Elevated_Cable_Rows": {
+  "uz": {
+   "n": "Ko'tarilgan o'rindiqda pastki blokni tortish",
+   "s": [
+    "Blok trenajyori o'rindig'iga past platforma qo'yib, ustiga o'tiring.",
+    "Oyoqlarni tayanchga qo'ying, tizzalarni biroz buking va V-dastani ushlang.",
+    "Orqani to'g'ri saqlab, dastani qoringa torting va kuraklarni yig'ing.",
+    "Dastani sekin oldinga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга нижнего блока сидя на возвышении",
+   "s": [
+    "Положите на сиденье блочного тренажёра невысокую платформу и сядьте на неё.",
+    "Стопы на упоре, колени слегка согнуты, возьмите V-рукоять.",
+    "С прямой спиной потяните рукоять к животу, сводя лопатки.",
+    "Плавно верните рукоять вперёд."
+   ]
+  },
+  "a": [
+   "тяга нижнего блока",
+   "tyaga nizhnego bloka",
+   "elevated row",
+   "cable row"
+  ]
+ },
+ "Face_Pull": {
+  "uz": {
+   "n": "Arqonni yuzga tortish (feys pull)",
+   "s": [
+    "Yuqori blokka arqon yoki ikki dasta o'rnatib, unga yuzlanib turing.",
+    "Yelkalarni pol bilan parallel tuting.",
+    "Qo'llarni ikki tomonga ajratib, og'irlikni to'g'ri yuzingizga torting.",
+    "Nazorat bilan sekin qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга каната к лицу",
+   "s": [
+    "Встаньте лицом к верхнему блоку с канатом или двумя рукоятями.",
+    "Держите плечи параллельно полу.",
+    "Разводя руки в стороны, потяните вес прямо к лицу.",
+    "Плавно верните вес назад."
+   ]
+  },
+  "a": [
+   "фейс пул",
+   "feys pul",
+   "face pull",
+   "тяга к лицу",
+   "tyaga k litsu"
+  ]
+ },
+ "Barbell_Deadlift": {
+  "uz": {
+   "n": "Shtanga bilan stanovaya tyaga",
+   "s": [
+    "Shtanga oldida turing, orqani to'g'ri saqlab tizzalarni buking va grifni yelka kengligida ushlang.",
+    "Nafas chiqarib, oyoqlar bilan poldan itarib, tanani tik holatga ko'taring.",
+    "Tepada kuraklarni orqaga torting.",
+    "Tos va tizzalarni bukib, orqani yumaloqlamay shtangani polga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Становая тяга",
+   "s": [
+    "Встаньте перед штангой, с прямой спиной согните колени и возьмите гриф на ширине плеч.",
+    "На выдохе оттолкнитесь ногами от пола и выпрямите корпус.",
+    "Вверху сведите лопатки.",
+    "Сгибая таз и колени, опустите штангу на пол, не округляя спину."
+   ]
+  },
+  "a": [
+   "становая",
+   "stanovaya",
+   "становая тяга",
+   "deadlift",
+   "dl",
+   "stanovoy"
+  ]
+ },
+ "Sumo_Deadlift": {
+  "uz": {
+   "n": "Sumo stanovaya tyaga",
+   "s": [
+    "Oyoqlarni juda keng qo'yib, grif oyoq o'rtasi ustida bo'lsin.",
+    "Tosdan bukilib, grifni oyoqlar orasidan, qo'llar yelka ostida ushlang.",
+    "Nafas olib, tosni tushiring, ko'krakni ko'taring va oldinga qarang.",
+    "Poldan itarib, tizzalarni yonga ochib ko'tariling; orqani to'g'ri saqlang."
+   ]
+  },
+  "ru": {
+   "n": "Становая тяга сумо",
+   "s": [
+    "Поставьте стопы очень широко, гриф над серединой стоп.",
+    "Наклонитесь от таза и возьмите гриф внутри ног, руки под плечами.",
+    "Сделайте вдох, опустите таз, грудь вверх, взгляд вперёд.",
+    "Оттолкнитесь от пола, разводя колени, и встаньте с прямой спиной."
+   ]
+  },
+  "a": [
+   "сумо",
+   "sumo",
+   "становая сумо",
+   "stanovaya sumo",
+   "sumo deadlift"
+  ]
+ },
+ "Trap_Bar_Deadlift": {
+  "uz": {
+   "n": "Trap-grif bilan stanovaya tyaga",
+   "s": [
+    "Trap (olti burchakli) grifga og'irlik yuklang va uning o'rtasida turing.",
+    "Ikkala dastani ushlab, tosni tushiring, ko'krakni ko'taring.",
+    "Tovonlar bilan itarib, tos va tizzalarni to'g'rilab turing; orqani yumaloqlamang.",
+    "Og'irlikni nazorat bilan polga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Становая тяга с трэп-грифом",
+   "s": [
+    "Нагрузите трэп-гриф (шестигранный) и встаньте в его центр.",
+    "Возьмитесь за обе рукояти, опустите таз, грудь вверх.",
+    "Толкаясь пятками, разогните таз и колени, не округляя спину.",
+    "Подконтрольно опустите вес на пол."
+   ]
+  },
+  "a": [
+   "трэп гриф",
+   "trep grif",
+   "хекс",
+   "hex bar",
+   "trap bar"
+  ]
+ },
+ "Romanian_Deadlift": {
+  "uz": {
+   "n": "Rumincha stanovaya tyaga",
+   "s": [
+    "Grifni kaftlar pastga qaragan holda yelkadan sal kengroq ushlang.",
+    "Tizzalarni biroz buking, boldirlarni tik, orqani to'g'ri saqlang.",
+    "Tosni orqaga olib, grifni son bo'ylab pastga tushiring, son orqasida cho'zilish sezilguncha.",
+    "Tosni oldinga surib, tik holatga qayting."
+   ]
+  },
+  "ru": {
+   "n": "Румынская тяга",
+   "s": [
+    "Возьмите гриф прямым хватом чуть шире плеч.",
+    "Слегка согните колени, голени вертикально, спина прямая.",
+    "Отводя таз назад, опустите гриф вдоль бёдер до растяжения задней поверхности.",
+    "Подавая таз вперёд, вернитесь в вертикальное положение."
+   ]
+  },
+  "a": [
+   "румынская",
+   "rumynskaya",
+   "румынка",
+   "rdl",
+   "rumincha"
+  ]
+ },
+ "Stiff-Legged_Barbell_Deadlift": {
+  "uz": {
+   "n": "To'g'ri oyoqlarda shtanga bilan stanovaya tyaga",
+   "s": [
+    "Grifni kaftlar pastga qaragan holda ushlab, oyoqlarni yelka kengligida qo'ying; tizzalar biroz bukilgan.",
+    "Tizzalarni qimirlatmay, orqani to'g'ri saqlab tosdan engashing.",
+    "Son orqasida cho'zilish sezilguncha grifni oyoq ustiga tushiring.",
+    "Tosni to'g'rilab, tik holatga qayting."
+   ]
+  },
+  "ru": {
+   "n": "Становая тяга на прямых ногах со штангой",
+   "s": [
+    "Возьмите гриф прямым хватом, стопы на ширине плеч, колени слегка согнуты.",
+    "Не меняя угла в коленях, с прямой спиной наклонитесь от таза.",
+    "Опускайте гриф к стопам до растяжения задней поверхности бедра.",
+    "Разогните таз и вернитесь в исходное положение."
+   ]
+  },
+  "a": [
+   "мёртвая тяга",
+   "myortvaya tyaga",
+   "тяга на прямых",
+   "stiff leg deadlift",
+   "sldl"
+  ]
+ },
+ "Stiff-Legged_Dumbbell_Deadlift": {
+  "uz": {
+   "n": "To'g'ri oyoqlarda gantel bilan stanovaya tyaga",
+   "s": [
+    "Gantellarni yon tomonda ushlab tik turing; tizzalar biroz bukilgan.",
+    "Tizzalarni qimirlatmay, orqani to'g'ri saqlab engashing.",
+    "Son orqasida cho'zilish sezilguncha gantellarni oyoq ustiga tushiring.",
+    "Nafas chiqarib, tosni to'g'rilab tik holatga qayting."
+   ]
+  },
+  "ru": {
+   "n": "Становая тяга на прямых ногах с гантелями",
+   "s": [
+    "Встаньте прямо с гантелями по бокам, колени слегка согнуты.",
+    "Не меняя угла в коленях, с прямой спиной наклонитесь вперёд.",
+    "Опускайте гантели к стопам до растяжения задней поверхности бедра.",
+    "На выдохе разогните таз и выпрямитесь."
+   ]
+  },
+  "a": [
+   "мёртвая тяга с гантелями",
+   "myortvaya tyaga s gantelyami",
+   "db rdl",
+   "db stiff leg",
+   "gantel stanovaya"
+  ]
+ },
+ "Rack_Pulls": {
+  "uz": {
+   "n": "Stoykadan stanovaya tyaga (rek-pull)",
+   "s": [
+    "Shtangani stoyka tayanchlariga tizza atrofidagi balandlikda qo'ying.",
+    "Oyoqlar tos ostida, ushlash yelka kengligida, orqa to'g'ri, tos orqada bo'lsin.",
+    "Oldinga qarab, tos va tizzalarni to'g'rilab, shtangani ko'taring.",
+    "Shtangani nazorat bilan tayanchlarga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга с плинтов (рэк-пулл)",
+   "s": [
+    "Положите штангу на упоры силовой рамы на уровне коленей.",
+    "Стопы под тазом, хват на ширине плеч, спина прямая, таз отведён назад.",
+    "Глядя вперёд, разогните таз и колени, поднимая штангу.",
+    "Подконтрольно верните штангу на упоры."
+   ]
+  },
+  "a": [
+   "тяга с плинтов",
+   "tyaga s plintov",
+   "rack pull",
+   "rek pull",
+   "частичная становая"
+  ]
+ },
+ "Good_Morning": {
+  "uz": {
+   "n": "Shtanga bilan gud-morning",
+   "s": [
+    "Shtangani yelkalar orqasiga, o'tirib-turishdagidek qo'yib stoykadan chiqing.",
+    "Orqani taranglab, kuraklarni yig'ing, tizzalarni biroz buking.",
+    "Tosni orqaga olib, tana pol bilan deyarli parallel bo'lguncha engashing; orqani to'g'ri saqlang.",
+    "Dumba va son orqasi kuchi bilan tik holatga qayting."
+   ]
+  },
+  "ru": {
+   "n": "Гуд монинг со штангой",
+   "s": [
+    "Положите штангу на заднюю часть плеч, как при приседе, и снимите со стоек.",
+    "Напрягите спину, сведите лопатки, слегка согните колени.",
+    "Отводя таз назад, наклонитесь почти до параллели, сохраняя спину прямой.",
+    "Усилием ягодиц и задней поверхности бедра вернитесь вверх."
+   ]
+  },
+  "a": [
+   "гуд монинг",
+   "gud moning",
+   "good morning",
+   "наклоны со штангой",
+   "naklony so shtangoy"
+  ]
+ },
+ "Hyperextensions_Back_Extensions": {
+  "uz": {
+   "n": "Giperekstenziya (bel uchun)",
+   "s": [
+    "Giperekstenziya trenajyoriga yuzingiz bilan pastga yoting, to'piqlaringizni yostiqchalar ostiga mahkamlang.",
+    "Yuqori yostiqni sonlaringiz tagiga to'g'rilang, belda bemalol egilish uchun joy qoldiring.",
+    "Qo'llaringizni ko'kragingizda chalishtiring, tanani to'g'ri chiziqda tuting.",
+    "Belni dumaloq qilmasdan, sekin oldinga pastga egiling.",
+    "Tanangizni yana to'g'ri chiziqqacha ko'taring, yuqorida orqaga haddan tashqari bukilmang."
+   ]
+  },
+  "ru": {
+   "n": "Гиперэкстензия",
+   "s": [
+    "Лягте лицом вниз на тренажёр для гиперэкстензии, зафиксируйте голени под валиками.",
+    "Отрегулируйте верхнюю подушку под бёдра так, чтобы свободно сгибаться в поясе.",
+    "Скрестите руки на груди и выпрямите корпус в одну линию.",
+    "Медленно наклонитесь вперёд, не округляя поясницу.",
+    "Поднимитесь обратно до прямой линии, не прогибаясь чрезмерно назад."
+   ]
+  },
+  "a": [
+   "гиперэкстензия",
+   "giperekstenziya",
+   "гипер",
+   "giper",
+   "back extension",
+   "hyperextension",
+   "bel"
+  ]
+ },
+ "Barbell_Shrug": {
+  "uz": {
+   "n": "Shtanga bilan yelka ko'tarish (shrag)",
+   "s": [
+    "Oyoqlarni yelka kengligida qo'yib, shtangani old tomonda, kaftlar sonlarga qaragan holda ushlang.",
+    "Qo'llarni to'g'ri tutib, yelkalarni iloji boricha yuqoriga ko'taring.",
+    "Yuqorida bir soniya to'xtab, trapetsiyani qisib turing.",
+    "Yelkalarni nazorat bilan pastga tushiring; qo'llarni bukib tortmang."
+   ]
+  },
+  "ru": {
+   "n": "Шраги со штангой",
+   "s": [
+    "Встаньте, ноги на ширине плеч, держите штангу перед собой хватом сверху.",
+    "Не сгибая рук, поднимите плечи как можно выше.",
+    "Задержитесь на секунду вверху, сжимая трапеции.",
+    "Плавно опустите плечи; не помогайте себе руками."
+   ]
+  },
+  "a": [
+   "шраги",
+   "shragi",
+   "shrag",
+   "шраг",
+   "shrug",
+   "trapetsiya",
+   "трапеция"
+  ]
+ },
+ "Dumbbell_Shrug": {
+  "uz": {
+   "n": "Gantel bilan yelka ko'tarish (shrag)",
+   "s": [
+    "Har qo'lda gantel, kaftlar tanaga qaragan, qo'llar yon tomonda to'g'ri.",
+    "Faqat yelkalarni iloji boricha yuqoriga ko'taring.",
+    "Yuqorida bir soniya ushlab turing.",
+    "Gantellarni sekin pastga tushiring; tirsaklarni bukmang."
+   ]
+  },
+  "ru": {
+   "n": "Шраги с гантелями",
+   "s": [
+    "Встаньте прямо с гантелями в опущенных руках, ладони к корпусу.",
+    "Поднимите плечи максимально вверх, руки остаются прямыми.",
+    "Задержитесь на секунду в верхней точке.",
+    "Медленно опустите плечи, не сгибая локти."
+   ]
+  },
+  "a": [
+   "шраги с гантелями",
+   "shragi gantel",
+   "shrag",
+   "шраг",
+   "db shrug",
+   "trapetsiya"
+  ]
+ },
+ "Barbell_Shoulder_Press": {
+  "uz": {
+   "n": "O'tirib shtanga jimi (yelka uchun)",
+   "s": [
+    "Suyanchiqli o'rindiqqa ramada o'tiring, shtangani boshdan sal yuqori balandlikka qo'ying.",
+    "Shtangani kaftlar oldinga qaragan holda ushlab, ramadan chiqaring.",
+    "Shtangani nazorat bilan yelka darajasigacha tushiring.",
+    "Qo'llarni to'liq cho'zguncha yuqoriga itaring; belni o'rindiqdan uzmang."
+   ]
+  },
+  "ru": {
+   "n": "Жим штанги сидя",
+   "s": [
+    "Сядьте на скамью со спинкой в стойке, штанга чуть выше головы.",
+    "Возьмите штангу хватом сверху и снимите её со стоек.",
+    "Подконтрольно опустите штангу до уровня плеч.",
+    "Выжмите вверх до выпрямления рук, не отрывая спину от спинки."
+   ]
+  },
+  "a": [
+   "жим сидя",
+   "jim sidya",
+   "армейский жим",
+   "ohp",
+   "shoulder press",
+   "yelka jimi",
+   "жим на плечи"
+  ]
+ },
+ "Standing_Military_Press": {
+  "uz": {
+   "n": "Tik turib shtanga jimi (armiya jimi)",
+   "s": [
+    "Shtangani ko'krak balandligidagi ramaga qo'ying va yelkadan sal kengroq ushlang.",
+    "Shtangani o'mrov suyagiga qo'yib, ramadan chiqing, oyoqlar yelka kengligida.",
+    "Shtangani bosh ustiga qo'llar to'liq cho'zilguncha itaring.",
+    "Nazorat bilan o'mrovgacha tushiring; qorin va dumbani tarang tuting, belni bukmang."
+   ]
+  },
+  "ru": {
+   "n": "Армейский жим стоя",
+   "s": [
+    "Установите штангу на стойки на уровне груди, возьмите хватом чуть шире плеч.",
+    "Положите гриф на ключицы, снимите и отойдите, ноги на ширине плеч.",
+    "Выжмите штангу над головой до прямых рук.",
+    "Подконтрольно опустите к ключицам; держите пресс и ягодицы напряжёнными, не прогибайте поясницу."
+   ]
+  },
+  "a": [
+   "армейский жим",
+   "armeyskiy jim",
+   "жим стоя",
+   "jim stoya",
+   "ohp",
+   "military press",
+   "harbiy jim"
+  ]
+ },
+ "Seated_Barbell_Military_Press": {
+  "uz": {
+   "n": "O'tirib armiya jimi (shtanga bilan)",
+   "s": [
+    "Armiya jimi o'rindig'iga o'tiring, shtangani yelkadan kengroq ushlang (sherikdan olish qulayroq).",
+    "Shtangani boshingiz ustida qo'llar cho'zilgan holatda ushlang.",
+    "Nazorat bilan iyak darajasigacha oldingi tomonga tushiring.",
+    "Qo'llarni cho'zib yuqoriga qayta itaring; tirsaklarni keskin qulflamang."
+   ]
+  },
+  "ru": {
+   "n": "Армейский жим сидя со штангой",
+   "s": [
+    "Сядьте на скамью для армейского жима, возьмите штангу шире плеч (лучше с помощью партнёра).",
+    "Удерживайте штангу над головой на прямых руках.",
+    "Подконтрольно опустите перед собой примерно до уровня подбородка.",
+    "Выжмите обратно вверх, не ударяя локти в замок."
+   ]
+  },
+  "a": [
+   "армейский жим сидя",
+   "armeyskiy jim sidya",
+   "жим сидя",
+   "ohp",
+   "seated military press",
+   "yelka jimi"
+  ]
+ },
+ "Dumbbell_Shoulder_Press": {
+  "uz": {
+   "n": "Gantel bilan yelka jimi",
+   "s": [
+    "Suyanchiqli o'rindiqqa o'tiring, gantellarni sonlaringizga tik qo'ying.",
+    "Sonlar yordamida gantellarni birma-bir yelka balandligiga chiqaring, kaftlar oldinga.",
+    "Gantellarni yuqoriga, deyarli bir-biriga tekkuncha itaring.",
+    "Sekin yelka darajasiga tushiring; belni suyanchiqqa bosib turing."
+   ]
+  },
+  "ru": {
+   "n": "Жим гантелей на плечи",
+   "s": [
+    "Сядьте на скамью со спинкой, поставьте гантели вертикально на бёдра.",
+    "По одной поднимите гантели к плечам, ладони вперёд.",
+    "Выжмите гантели вверх, почти сведя их над головой.",
+    "Медленно опустите к плечам, прижимая спину к спинке."
+   ]
+  },
+  "a": [
+   "жим гантелей",
+   "jim ganteley",
+   "жим на плечи",
+   "db press",
+   "shoulder press",
+   "yelka jimi",
+   "gantel jim"
+  ]
+ },
+ "Seated_Dumbbell_Press": {
+  "uz": {
+   "n": "O'tirib gantel jimi (yelka)",
+   "s": [
+    "Gantellarni olib, suyanchiqli o'rindiqqa o'tiring va ularni sonlarga tik qo'ying.",
+    "Gantellarni yelka yoniga chiqaring, kaftlarni oldinga burang.",
+    "Nafas chiqarib, gantellarni yuqoriga itaring.",
+    "Nazorat bilan yelka darajasiga qaytaring; gavdani tebratmang."
+   ]
+  },
+  "ru": {
+   "n": "Жим гантелей сидя",
+   "s": [
+    "Возьмите гантели и сядьте на скамью со спинкой, поставив их на бёдра.",
+    "Поднимите гантели к плечам и разверните ладони вперёд.",
+    "На выдохе выжмите гантели вверх.",
+    "Подконтрольно верните к плечам, не раскачивая корпус."
+   ]
+  },
+  "a": [
+   "жим гантелей сидя",
+   "jim ganteley sidya",
+   "жим сидя",
+   "seated db press",
+   "yelka jimi",
+   "gantel jim"
+  ]
+ },
+ "Arnold_Dumbbell_Press": {
+  "uz": {
+   "n": "Arnold jimi",
+   "s": [
+    "Suyanchiqli o'rindiqda o'tiring, gantellarni ko'krak oldida kaftlar o'zingizga qaragan holda ushlang.",
+    "Gantellarni ko'tarar ekansiz, kaftlarni asta oldinga burang.",
+    "Qo'llar cho'zilguncha yuqoriga itaring.",
+    "Teskari harakat bilan, kaftlarni o'zingizga burab, boshlang'ich holatga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Жим Арнольда",
+   "s": [
+    "Сядьте на скамью со спинкой, держите гантели у груди ладонями к себе.",
+    "Поднимая гантели, плавно разворачивайте ладони вперёд.",
+    "Выжмите до выпрямления рук над головой.",
+    "Опуститесь обратным движением, разворачивая ладони к себе."
+   ]
+  },
+  "a": [
+   "арнольд",
+   "arnold",
+   "жим арнольда",
+   "jim arnolda",
+   "arnold press",
+   "arnold jim"
+  ]
+ },
+ "Machine_Shoulder_Military_Press": {
+  "uz": {
+   "n": "Trenajyorda yelka jimi",
+   "s": [
+    "Trenajyorga o'tirib, vaznni tanlang va tutqichlarni yelka yonida ushlang.",
+    "Nafas chiqarib, qo'llarni to'liq cho'zguncha tutqichlarni yuqoriga itaring.",
+    "Yuqorida bir soniya to'xtang.",
+    "Tutqichlarni sekin boshlang'ich holatga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Жим в тренажёре на плечи",
+   "s": [
+    "Сядьте в тренажёр, выберите вес и возьмитесь за рукояти у плеч.",
+    "На выдохе выжмите рукояти вверх до выпрямления рук.",
+    "Задержитесь на секунду в верхней точке.",
+    "Медленно верните рукояти в исходное положение."
+   ]
+  },
+  "a": [
+   "жим в тренажёре",
+   "jim v trenajere",
+   "жим на плечи",
+   "machine press",
+   "shoulder press",
+   "yelka jimi"
+  ]
+ },
+ "Smith_Machine_Overhead_Shoulder_Press": {
+  "uz": {
+   "n": "Smit trenajyorida yelka jimi",
+   "s": [
+    "Smit trenajyori ostiga suyanchiqli o'rindiq qo'ying, grifni o'tirganda qo'l deyarli cho'zilib yetadigan balandlikka sozlang.",
+    "Grifni kaftlar oldinga qaragan holda yelkadan sal kengroq ushlab, qulfdan chiqaring.",
+    "Grifni nazorat bilan iyak darajasigacha tushiring.",
+    "Qo'llarni cho'zib yuqoriga itaring, oyoqlarni yerga mahkam qo'ying."
+   ]
+  },
+  "ru": {
+   "n": "Жим в Смите сидя",
+   "s": [
+    "Поставьте скамью со спинкой в тренажёр Смита, гриф на уровне почти прямых рук сидя.",
+    "Возьмите гриф хватом сверху чуть шире плеч и снимите с упоров.",
+    "Подконтрольно опустите гриф примерно до подбородка.",
+    "Выжмите вверх до прямых рук, ноги твёрдо на полу."
+   ]
+  },
+  "a": [
+   "смит",
+   "smit",
+   "жим в смите",
+   "jim v smite",
+   "smith press",
+   "yelka jimi"
+  ]
+ },
+ "Side_Lateral_Raise": {
+  "uz": {
+   "n": "Gantellarni yonga ko'tarish (mahlar)",
+   "s": [
+    "Tik turing, gantellar yon tomonda, kaftlar o'zingizga qaragan.",
+    "Tirsakni sal bukib, gantellarni yonga yelka darajasigacha ko'taring.",
+    "Yuqorida qo'lni sal oldinga engashtiring, xuddi stakandan suv quygandek.",
+    "Sekin pastga tushiring; gavdani tebratmang."
+   ]
+  },
+  "ru": {
+   "n": "Махи гантелями в стороны",
+   "s": [
+    "Встаньте прямо, гантели у бёдер, ладони к себе.",
+    "Со слегка согнутыми локтями поднимите гантели в стороны до уровня плеч.",
+    "Вверху слегка наклоните кисти вперёд, как будто наливаете воду.",
+    "Медленно опустите, не раскачивая корпус."
+   ]
+  },
+  "a": [
+   "махи",
+   "mahi",
+   "махи в стороны",
+   "mahi v storony",
+   "lateral raise",
+   "mahlar",
+   "разводка"
+  ]
+ },
+ "Seated_Side_Lateral_Raise": {
+  "uz": {
+   "n": "O'tirib gantellarni yonga ko'tarish",
+   "s": [
+    "O'rindiq chetiga o'tiring, oyoqlar yerga mahkam, gantellar yon tomonda.",
+    "Tirsakni sal bukib, gantellarni yonga yelka darajasigacha ko'taring.",
+    "Yuqorida qisqa to'xtang.",
+    "Nazorat bilan pastga tushiring, gavdani qimirlatmang."
+   ]
+  },
+  "ru": {
+   "n": "Махи гантелями в стороны сидя",
+   "s": [
+    "Сядьте на край скамьи, стопы на полу, гантели по бокам.",
+    "Слегка согнув локти, поднимите гантели в стороны до уровня плеч.",
+    "Задержитесь на мгновение вверху.",
+    "Подконтрольно опустите, корпус неподвижен."
+   ]
+  },
+  "a": [
+   "махи сидя",
+   "mahi sidya",
+   "махи",
+   "mahi",
+   "seated lateral raise",
+   "mahlar"
+  ]
+ },
+ "Cable_Seated_Lateral_Raise": {
+  "uz": {
+   "n": "Blokda o'tirib qo'llarni yonga ko'tarish",
+   "s": [
+    "Ikki pastki blok o'rtasidagi o'rindiq chetiga o'tiring, gavdani sonlarga engashtiring, bel tekis.",
+    "Qarama-qarshi tutqichlarni ushlang: chap blokni o'ng qo'l bilan, o'ng blokni chap qo'l bilan.",
+    "Tirsakni sal bukib, qo'llarni yonga yelka darajasigacha ko'taring.",
+    "Sekin boshlang'ich holatga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Махи в стороны в кроссовере сидя",
+   "s": [
+    "Сядьте на край скамьи между двумя нижними блоками, наклонитесь к бёдрам с ровной спиной.",
+    "Возьмите рукояти накрест: левый блок правой рукой, правый блок левой.",
+    "Слегка согнув локти, разведите руки в стороны до уровня плеч.",
+    "Медленно вернитесь в исходное положение."
+   ]
+  },
+  "a": [
+   "махи в кроссовере",
+   "mahi v krossovere",
+   "кроссовер",
+   "krossover",
+   "cable lateral",
+   "mahlar"
+  ]
+ },
+ "Front_Dumbbell_Raise": {
+  "uz": {
+   "n": "Gantellarni oldinga ko'tarish",
+   "s": [
+    "Tik turing, gantellar sonlar oldida, kaftlar sonlarga qaragan.",
+    "Tirsakni sal bukib, bir gantelni oldinga yelka darajasidan sal yuqoriga ko'taring.",
+    "Sekin tushiring va ikkinchi qo'l bilan takrorlang.",
+    "Gavdani tebratmang, siltamasdan ko'taring."
+   ]
+  },
+  "ru": {
+   "n": "Подъём гантелей перед собой",
+   "s": [
+    "Встаньте прямо, гантели перед бёдрами, ладони к бёдрам.",
+    "Слегка согнув локоть, поднимите одну гантель вперёд чуть выше уровня плеч.",
+    "Медленно опустите и повторите другой рукой.",
+    "Не раскачивайте корпус и не используйте рывок."
+   ]
+  },
+  "a": [
+   "подъём перед собой",
+   "podyom pered soboy",
+   "фронтальные махи",
+   "махи вперёд",
+   "front raise",
+   "oldinga ko'tarish"
+  ]
+ },
+ "Front_Plate_Raise": {
+  "uz": {
+   "n": "Disk bilan oldinga ko'tarish",
+   "s": [
+    "Tik turing, diskni ikki qo'l bilan yon chetlaridan ushlab, bel oldida tuting.",
+    "Tirsaklarni sal bukilgan holatda qotiring.",
+    "Diskni yelka darajasidan sal yuqoriga sekin ko'taring.",
+    "Nazorat bilan pastga tushiring, gavdani orqaga tashlamang."
+   ]
+  },
+  "ru": {
+   "n": "Подъём блина перед собой",
+   "s": [
+    "Встаньте прямо, держите блин двумя руками по бокам перед поясом.",
+    "Зафиксируйте слегка согнутые локти.",
+    "Медленно поднимите блин чуть выше уровня плеч.",
+    "Подконтрольно опустите, не отклоняя корпус назад."
+   ]
+  },
+  "a": [
+   "подъём блина",
+   "podyom blina",
+   "блин",
+   "blin",
+   "plate raise",
+   "disk"
+  ]
+ },
+ "Reverse_Flyes": {
+  "uz": {
+   "n": "Qiya o'rindiqda yotib gantellarni yonga yoyish (orqa delta)",
+   "s": [
+    "Qiya o'rindiqqa ko'krak bilan yoting, gantellar qo'lda, kaftlar bir-biriga qaragan.",
+    "Qo'llarni pastga cho'zing, tirsaklarni sal bukilgan holda saqlang.",
+    "Gantellarni yonga va yuqoriga yelka chizig'igacha yoying, kuraklarni qising.",
+    "Sekin boshlang'ich holatga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Обратные разведения гантелей лёжа на наклонной",
+   "s": [
+    "Лягте грудью на наклонную скамью, гантели в руках, ладони друг к другу.",
+    "Опустите руки вниз, сохраняя небольшой сгиб в локтях.",
+    "Разведите гантели в стороны до линии плеч, сводя лопатки.",
+    "Медленно вернитесь в исходное положение."
+   ]
+  },
+  "a": [
+   "обратные разведения",
+   "obratnye razvedeniya",
+   "задняя дельта",
+   "zadnyaya delta",
+   "reverse fly",
+   "orqa delta"
+  ]
+ },
+ "Reverse_Machine_Flyes": {
+  "uz": {
+   "n": "Trenajyorda orqa delta uchun yoyish (pek-dek)",
+   "s": [
+    "Tutqichlarni orqa holatga sozlang, o'rindiqni tutqichlar yelka balandligida bo'ladigan qilib to'g'rilang.",
+    "Trenajyorga yuzlanib o'tiring, tutqichlarni kaftlar ichkariga qaragan holda ushlang.",
+    "Qo'llarni sal bukilgan holda yarim doira bo'ylab yonga va orqaga torting.",
+    "Sekin qaytaring; harakat faqat yelka bo'g'imida bo'lsin."
+   ]
+  },
+  "ru": {
+   "n": "Обратная бабочка в тренажёре",
+   "s": [
+    "Отведите рукояти назад и настройте сиденье так, чтобы рукояти были на уровне плеч.",
+    "Сядьте лицом к тренажёру, возьмитесь за рукояти ладонями внутрь.",
+    "По полукругу разведите руки в стороны и назад, руки слегка согнуты.",
+    "Плавно верните; движение только в плечевом суставе."
+   ]
+  },
+  "a": [
+   "обратная бабочка",
+   "obratnaya babochka",
+   "пек дек",
+   "pek dek",
+   "rear delt machine",
+   "reverse pec deck",
+   "orqa delta"
+  ]
+ },
+ "Cable_Rear_Delt_Fly": {
+  "uz": {
+   "n": "Krossoverda orqa delta uchun yoyish",
+   "s": [
+    "Bloklarni bosh balandligidan yuqoriga qo'ying va vaznni tanlang.",
+    "Chap tutqichni o'ng qo'l bilan, o'ng tutqichni chap qo'l bilan, oldingizda chalishtirib ushlang.",
+    "Qo'llarni to'g'ri tutib, ularni orqaga va yonga yoying.",
+    "Oxirida qisqa to'xtab, sekin qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Разведения на заднюю дельту в кроссовере",
+   "s": [
+    "Установите блоки выше головы и выберите вес.",
+    "Возьмите левую рукоять правой рукой, правую — левой, скрестив руки перед собой.",
+    "Прямыми руками разведите их назад и в стороны.",
+    "Задержитесь в конце и плавно вернитесь."
+   ]
+  },
+  "a": [
+   "задняя дельта",
+   "zadnyaya delta",
+   "кроссовер",
+   "krossover",
+   "cable rear delt",
+   "orqa delta"
+  ]
+ },
+ "Seated_Bent-Over_Rear_Delt_Raise": {
+  "uz": {
+   "n": "O'tirib engashgan holda gantellarni yonga ko'tarish",
+   "s": [
+    "O'rindiq chetiga o'tiring, gantellar boldiringiz orqasida yerda.",
+    "Belni tekis tutib oldinga engashing va gantellarni kaftlar bir-biriga qaragan holda oling.",
+    "Gavdani qimirlatmay, tirsaklarni sal bukib, gantellarni yonga yelka darajasigacha ko'taring.",
+    "Sekin pastga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Махи в наклоне сидя (задняя дельта)",
+   "s": [
+    "Сядьте на край скамьи, гантели на полу за икрами.",
+    "С ровной спиной наклонитесь и возьмите гантели ладонями друг к другу.",
+    "Не поднимая корпус, слегка согнутыми руками разведите гантели в стороны до уровня плеч.",
+    "Медленно опустите."
+   ]
+  },
+  "a": [
+   "махи в наклоне",
+   "mahi v naklone",
+   "задняя дельта",
+   "zadnyaya delta",
+   "rear delt raise",
+   "orqa delta"
+  ]
+ },
+ "Upright_Barbell_Row": {
+  "uz": {
+   "n": "Shtangani iyakka tortish",
+   "s": [
+    "Shtangani ustdan, yelkadan sal torroq ushlang, u sonlaringizda tursin, bel to'g'ri.",
+    "Tirsaklarni yuqori va yonga olib chiqib, shtangani tanaga yaqin holda iyak tomon torting.",
+    "Tirsaklar bilaklardan yuqorida bo'lsin, yuqorida qisqa to'xtang.",
+    "Shtangani nazorat bilan pastga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Тяга штанги к подбородку",
+   "s": [
+    "Возьмите штангу хватом сверху чуть уже плеч, гриф у бёдер, спина прямая.",
+    "Ведя локти вверх и в стороны, тяните штангу вдоль тела к подбородку.",
+    "Локти выше кистей, задержитесь вверху.",
+    "Подконтрольно опустите штангу."
+   ]
+  },
+  "a": [
+   "тяга к подбородку",
+   "tyaga k podborodku",
+   "протяжка",
+   "protyajka",
+   "upright row",
+   "iyakka tortish"
+  ]
+ },
+ "Standing_Dumbbell_Upright_Row": {
+  "uz": {
+   "n": "Gantellarni iyakka tortish",
+   "s": [
+    "Gantellarni ustdan ushlang, ular sonlaringiz oldida tursin, bel to'g'ri.",
+    "Tirsaklar bilan yetaklab, gantellarni tanaga yaqin holda iyak tomon ko'taring.",
+    "Yuqorida qisqa to'xtang.",
+    "Sekin pastga tushiring; gavdani siltamang."
+   ]
+  },
+  "ru": {
+   "n": "Тяга гантелей к подбородку",
+   "s": [
+    "Возьмите гантели хватом сверху, они у передней поверхности бёдер, спина прямая.",
+    "Ведя движение локтями, поднимите гантели вдоль тела к подбородку.",
+    "Задержитесь в верхней точке.",
+    "Медленно опустите, не раскачиваясь."
+   ]
+  },
+  "a": [
+   "тяга гантелей к подбородку",
+   "tyaga ganteley k podborodku",
+   "протяжка",
+   "protyajka",
+   "db upright row",
+   "iyakka tortish"
+  ]
+ },
+ "External_Rotation_with_Cable": {
+  "uz": {
+   "n": "Blokda yelkani tashqariga burish",
+   "s": [
+    "Blokni tirsak balandligiga qo'ying va unga chap yoningiz bilan turing.",
+    "Tutqichni o'ng qo'l bilan ushlang, tirsakni yonboshga mahkam bosing (orasiga sochiq qo'yish mumkin).",
+    "Tirsakni 90 darajada bukib, qo'lni tanadan tashqariga burang.",
+    "Sekin qaytaring; tirsak yonboshdan uzilmasin. Keyin tomonni almashtiring."
+   ]
+  },
+  "ru": {
+   "n": "Наружная ротация плеча на блоке",
+   "s": [
+    "Установите блок на высоту локтя и встаньте к нему левым боком.",
+    "Возьмите рукоять правой рукой, прижмите локоть к боку (можно зажать полотенце).",
+    "Согнув локоть под 90 градусов, разверните предплечье наружу от корпуса.",
+    "Медленно верните; локоть не отрывается от бока. Затем смените сторону."
+   ]
+  },
+  "a": [
+   "ротация плеча",
+   "rotaciya plecha",
+   "ротаторы",
+   "rotatory",
+   "external rotation",
+   "rotator cuff",
+   "yelka burish"
+  ]
+ },
+ "Band_Pull_Apart": {
+  "uz": {
+   "n": "Rezinani yonga cho'zish",
+   "s": [
+    "Rezinani ikki qo'l bilan ushlab, qo'llarni oldinga to'g'ri cho'zing.",
+    "Tirsaklarni bukmasdan, qo'llarni yonga yoyib rezinani ko'krakkacha cho'zing.",
+    "Yelkalarni orqaga tortib, kuraklarni qising.",
+    "Oxirida qisqa to'xtab, nazorat bilan qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Разведение резинки перед собой",
+   "s": [
+    "Возьмите резинку двумя руками, вытяните прямые руки перед собой.",
+    "Не сгибая локтей, разведите руки в стороны, растягивая резинку к груди.",
+    "Держите плечи отведёнными назад, сводите лопатки.",
+    "Задержитесь в конце и подконтрольно вернитесь."
+   ]
+  },
+  "a": [
+   "резинка",
+   "rezinka",
+   "разведение резинки",
+   "razvedenie rezinki",
+   "band pull apart",
+   "rezina"
+  ]
+ },
+ "Barbell_Curl": {
+  "uz": {
+   "n": "Shtanga bilan bisepsga bukish",
+   "s": [
+    "Tik turing, shtangani yelka kengligida, kaftlar oldinga qaragan holda ushlang, tirsaklar tanaga yaqin.",
+    "Yelkani qimirlatmay, faqat bilakni bukib shtangani yelka darajasigacha ko'taring.",
+    "Yuqorida bisepsni qisib, qisqa to'xtang.",
+    "Shtangani sekin pastga tushiring; gavdani tebratmang."
+   ]
+  },
+  "ru": {
+   "n": "Подъём штанги на бицепс",
+   "s": [
+    "Встаньте прямо, возьмите штангу хватом снизу на ширине плеч, локти у корпуса.",
+    "Не двигая плечами, согните руки и поднимите штангу к плечам.",
+    "Задержитесь вверху, напрягая бицепс.",
+    "Медленно опустите штангу, не раскачивая корпус."
+   ]
+  },
+  "a": [
+   "бицепс",
+   "biceps",
+   "bisseps",
+   "подъём на бицепс",
+   "podyom na biceps",
+   "curl",
+   "barbell curl",
+   "sgibaniya"
+  ]
+ },
+ "EZ-Bar_Curl": {
+  "uz": {
+   "n": "EZ-grif bilan bisepsga bukish",
+   "s": [
+    "Tik turing, EZ-grifni keng tashqi tutqichidan ushlang, tirsaklar tanaga yaqin.",
+    "Yelkalarni qimirlatmay, grifni bisepsni qisib yuqoriga ko'taring.",
+    "Yuqorida qisqa to'xtang.",
+    "Nazorat bilan pastga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Подъём EZ-штанги на бицепс",
+   "s": [
+    "Встаньте прямо, возьмите EZ-гриф за широкий изгиб, локти у корпуса.",
+    "Не двигая плечами, согните руки, поднимая гриф к плечам.",
+    "Задержитесь на мгновение вверху.",
+    "Подконтрольно опустите."
+   ]
+  },
+  "a": [
+   "ez гриф",
+   "ez grif",
+   "изогнутый гриф",
+   "бицепс",
+   "bisseps",
+   "ez curl"
+  ]
+ },
+ "Dumbbell_Bicep_Curl": {
+  "uz": {
+   "n": "Gantel bilan bisepsga bukish",
+   "s": [
+    "Har qo'lda gantel bilan tik turing, kaftlar oldinga, tirsaklar tanaga yaqin.",
+    "Yelkalarni qimirlatmay, gantellarni yelka darajasigacha bukib ko'taring.",
+    "Yuqorida bisepsni qisib qisqa to'xtang.",
+    "Sekin pastga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Сгибания рук с гантелями на бицепс",
+   "s": [
+    "Встаньте прямо с гантелями в руках, ладони вперёд, локти у корпуса.",
+    "Не двигая плечами, согните руки и поднимите гантели к плечам.",
+    "Задержитесь вверху, сжимая бицепс.",
+    "Медленно опустите гантели."
+   ]
+  },
+  "a": [
+   "бицепс с гантелями",
+   "biceps s gantelyami",
+   "bisseps",
+   "gantel bisseps",
+   "db curl",
+   "curl"
+  ]
+ },
+ "Dumbbell_Alternate_Bicep_Curl": {
+  "uz": {
+   "n": "Gantellarni navbat bilan bisepsga bukish",
+   "s": [
+    "Har qo'lda gantel, kaftlar sonlarga qaragan, tirsaklar tanaga yaqin.",
+    "Bir qo'lni bukib ko'taring va harakatda kaftni yuqoriga burang.",
+    "Yuqorida qisqa to'xtab, gantelni sekin tushiring.",
+    "Ikkinchi qo'l bilan takrorlang; gavdani tebratmang."
+   ]
+  },
+  "ru": {
+   "n": "Попеременные сгибания с гантелями",
+   "s": [
+    "Гантели в руках, ладони к бёдрам, локти у корпуса.",
+    "Согните одну руку, по ходу разворачивая ладонь вверх.",
+    "Задержитесь вверху и медленно опустите.",
+    "Повторите другой рукой, не раскачиваясь."
+   ]
+  },
+  "a": [
+   "попеременные сгибания",
+   "poperemennye sgibaniya",
+   "бицепс",
+   "bisseps",
+   "alternate curl",
+   "navbat bilan"
+  ]
+ },
+ "Hammer_Curls": {
+  "uz": {
+   "n": "Bolg'a bukish (hammer)",
+   "s": [
+    "Har qo'lda gantel, kaftlar tanaga qaragan, tirsaklar yonda.",
+    "Kaft holatini o'zgartirmay, gantellarni yelka darajasigacha bukib ko'taring.",
+    "Yuqorida qisqa to'xtang.",
+    "Sekin pastga tushiring; yelka qimirlamasin."
+   ]
+  },
+  "ru": {
+   "n": "Молотковые сгибания (молотки)",
+   "s": [
+    "Гантели в руках, ладони смотрят к корпусу, локти у боков.",
+    "Не меняя положения кистей, поднимите гантели к плечам.",
+    "Задержитесь вверху.",
+    "Медленно опустите; плечи неподвижны."
+   ]
+  },
+  "a": [
+   "молотки",
+   "molotki",
+   "молот",
+   "hammer",
+   "hammer curl",
+   "bolg'a"
+  ]
+ },
+ "Alternate_Hammer_Curl": {
+  "uz": {
+   "n": "Navbat bilan bolg'a bukish",
+   "s": [
+    "Har qo'lda gantel, kaftlar tanaga qaragan, tirsaklar yonda.",
+    "Bir qo'lni kaft holatini o'zgartirmay yelka darajasigacha bukib ko'taring.",
+    "Sekin tushiring va ikkinchi qo'l bilan takrorlang.",
+    "Yelka va gavdani qimirlatmang."
+   ]
+  },
+  "ru": {
+   "n": "Попеременные молотки",
+   "s": [
+    "Гантели в руках, ладони к корпусу, локти у боков.",
+    "Поднимите одну гантель к плечу, не разворачивая кисть.",
+    "Медленно опустите и повторите другой рукой.",
+    "Плечи и корпус неподвижны."
+   ]
+  },
+  "a": [
+   "молотки попеременно",
+   "molotki poperemenno",
+   "молотки",
+   "molotki",
+   "alternate hammer",
+   "bolg'a"
+  ]
+ },
+ "Incline_Dumbbell_Curl": {
+  "uz": {
+   "n": "Qiya o'rindiqda gantel bilan bisepsga bukish",
+   "s": [
+    "Qiya o'rindiqqa suyanib o'tiring, gantellar pastga osilgan, kaftlar oldinga.",
+    "Yelkalarni qimirlatmay, gantellarni yelka darajasigacha bukib ko'taring.",
+    "Yuqorida bisepsni qisib qisqa to'xtang.",
+    "To'liq cho'zilguncha sekin tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Сгибания с гантелями на наклонной скамье",
+   "s": [
+    "Сядьте на наклонную скамью, гантели свисают вниз, ладони вперёд.",
+    "Не двигая плечами, поднимите гантели к плечам.",
+    "Задержитесь вверху, сжимая бицепс.",
+    "Медленно опустите до полного выпрямления."
+   ]
+  },
+  "a": [
+   "бицепс на наклонной",
+   "biceps na naklonnoy",
+   "наклонная",
+   "naklonnaya",
+   "incline curl",
+   "bisseps"
+  ]
+ },
+ "Concentration_Curls": {
+  "uz": {
+   "n": "Konsentratsiyalangan bukish",
+   "s": [
+    "O'rindiqqa oyoqlarni keng qo'yib o'tiring, gantelni bir qo'l bilan oling.",
+    "Yelkaning orqa qismini sonning ichki tomoniga tirang, kaft oldinga.",
+    "Faqat bilakni bukib, gantelni yelka tomon ko'taring.",
+    "Yuqorida qisqa to'xtab, sekin tushiring; keyin qo'lni almashtiring."
+   ]
+  },
+  "ru": {
+   "n": "Концентрированные сгибания",
+   "s": [
+    "Сядьте на скамью, широко расставив ноги, возьмите гантель одной рукой.",
+    "Упритесь задней частью плеча во внутреннюю сторону бедра, ладонь вперёд.",
+    "Сгибая только локоть, поднимите гантель к плечу.",
+    "Задержитесь вверху и медленно опустите; затем смените руку."
+   ]
+  },
+  "a": [
+   "концентрированный",
+   "koncentrirovanniy",
+   "концентрированные сгибания",
+   "concentration curl",
+   "bisseps"
+  ]
+ },
+ "Preacher_Curl": {
+  "uz": {
+   "n": "Skott o'rindig'ida bisepsga bukish",
+   "s": [
+    "Skott o'rindig'iga o'tiring, EZ-grifni ichki tutqichdan ushlang.",
+    "Yelkalaringizni yostiqqa, ko'krakni uning chetiga tirang.",
+    "Grifni yelka darajasigacha bukib ko'taring.",
+    "Qo'llar deyarli cho'zilguncha sekin tushiring; pastda siltamang."
+   ]
+  },
+  "ru": {
+   "n": "Сгибания на скамье Скотта",
+   "s": [
+    "Сядьте на скамью Скотта и возьмите EZ-гриф за узкий хват.",
+    "Положите плечи на подушку, грудь упирается в её край.",
+    "Согните руки, поднимая гриф к плечам.",
+    "Медленно опустите почти до выпрямления, без рывков внизу."
+   ]
+  },
+  "a": [
+   "скотт",
+   "skott",
+   "скамья скотта",
+   "skamya skotta",
+   "preacher",
+   "preacher curl",
+   "bisseps"
+  ]
+ },
+ "Machine_Preacher_Curls": {
+  "uz": {
+   "n": "Trenajyorda bisepsga bukish (Skott)",
+   "s": [
+    "Trenajyorga o'tirib, vaznni tanlang va yelkalaringizni yostiqqa qo'ying.",
+    "Tutqichlarni pastdan, kaftlar yuqoriga qaragan holda ushlang, tirsaklar ichkarida.",
+    "Nafas chiqarib, tutqichlarni bisepsni qisib yuqoriga torting.",
+    "Yuqorida qisqa to'xtab, sekin qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Сгибания на бицепс в тренажёре Скотта",
+   "s": [
+    "Сядьте в тренажёр, выберите вес и положите плечи на подушку.",
+    "Возьмите рукояти хватом снизу, локти сведены.",
+    "На выдохе согните руки, напрягая бицепс.",
+    "Задержитесь вверху и медленно вернитесь."
+   ]
+  },
+  "a": [
+   "скотт тренажёр",
+   "skott trenajer",
+   "бицепс в тренажёре",
+   "biceps v trenajere",
+   "machine curl",
+   "bisseps"
+  ]
+ },
+ "Standing_Biceps_Cable_Curl": {
+  "uz": {
+   "n": "Pastki blokda bisepsga bukish",
+   "s": [
+    "Pastki blokka ulangan grifni kaftlar yuqoriga qaragan holda yelka kengligida ushlang.",
+    "Tik turing, tirsaklar tanaga yaqin.",
+    "Yelkani qimirlatmay, grifni yelka darajasigacha bukib ko'taring.",
+    "Sekin pastga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Сгибания на бицепс на нижнем блоке",
+   "s": [
+    "Возьмите гриф нижнего блока хватом снизу на ширине плеч.",
+    "Встаньте прямо, локти прижаты к корпусу.",
+    "Не двигая плечами, согните руки до уровня плеч.",
+    "Медленно вернитесь вниз."
+   ]
+  },
+  "a": [
+   "бицепс на блоке",
+   "biceps na bloke",
+   "нижний блок",
+   "nijniy blok",
+   "cable curl",
+   "bisseps"
+  ]
+ },
+ "Cable_Hammer_Curls_-_Rope_Attachment": {
+  "uz": {
+   "n": "Blokda arqon bilan bolg'a bukish",
+   "s": [
+    "Pastki blokka arqon ulang va unga yuzlanib turing.",
+    "Arqonni kaftlar bir-biriga qaragan holda ushlang, tirsaklarni yonboshga bosing.",
+    "Faqat bilakni bukib, arqonni yelka tomon torting.",
+    "Sekin qaytaring; yelkalar qimirlamasin."
+   ]
+  },
+  "ru": {
+   "n": "Молотки на нижнем блоке с канатом",
+   "s": [
+    "Прикрепите канат к нижнему блоку и встаньте лицом к нему.",
+    "Возьмите канат нейтральным хватом, прижмите локти к бокам.",
+    "Сгибая только локти, подтяните канат к плечам.",
+    "Медленно вернитесь; плечи неподвижны."
+   ]
+  },
+  "a": [
+   "молотки на блоке",
+   "molotki na bloke",
+   "канат",
+   "kanat",
+   "rope hammer curl",
+   "bolg'a"
+  ]
+ },
+ "Spider_Curl": {
+  "uz": {
+   "n": "O'rgimchak bukish (spider curl)",
+   "s": [
+    "Skott o'rindig'ining old (qiya) tomoniga ko'krak bilan yoting, oyoqlar yerga mahkam.",
+    "EZ-grifni kaftlar yuqoriga qaragan holda ushlang, qo'llar pastga osilgan.",
+    "Yelkani qimirlatmay, grifni bisepsni qisib yuqoriga ko'taring.",
+    "Sekin pastga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Паучьи сгибания (спайдер)",
+   "s": [
+    "Лягте грудью на переднюю наклонную сторону скамьи Скотта, носки упираются в пол.",
+    "Возьмите EZ-гриф хватом снизу, руки свисают вертикально.",
+    "Не двигая плечами, согните руки, напрягая бицепс.",
+    "Медленно опустите."
+   ]
+  },
+  "a": [
+   "паучьи сгибания",
+   "pauchi sgibaniya",
+   "спайдер",
+   "spayder",
+   "spider curl",
+   "bisseps"
+  ]
+ },
+ "Reverse_Barbell_Curl": {
+  "uz": {
+   "n": "Teskari ushlab shtangani bukish",
+   "s": [
+    "Tik turing, shtangani ustdan (kaftlar pastga) yelka kengligida ushlang.",
+    "Tirsaklarni tanaga yaqin tutib, shtangani yelka darajasigacha bukib ko'taring.",
+    "Yuqorida qisqa to'xtang.",
+    "Sekin pastga tushiring; bilaklarni bukmang."
+   ]
+  },
+  "ru": {
+   "n": "Сгибания штанги обратным хватом",
+   "s": [
+    "Встаньте прямо, возьмите штангу хватом сверху на ширине плеч.",
+    "Держа локти у корпуса, согните руки до уровня плеч.",
+    "Задержитесь вверху.",
+    "Медленно опустите, запястья ровные."
+   ]
+  },
+  "a": [
+   "обратный хват",
+   "obratniy hvat",
+   "обратные сгибания",
+   "reverse curl",
+   "bilak",
+   "предплечье"
+  ]
+ },
+ "Zottman_Curl": {
+  "uz": {
+   "n": "Zottman bukish",
+   "s": [
+    "Har qo'lda gantel, kaftlar bir-biriga qaragan, tirsaklar yonda.",
+    "Gantellarni ko'tarar ekansiz, kaftlarni yuqoriga burab bisepsni qising.",
+    "Yuqorida kaftlarni pastga burang.",
+    "Shu ustdan ushlash bilan gantellarni sekin tushiring, pastda yana kaftlarni burang."
+   ]
+  },
+  "ru": {
+   "n": "Сгибания Зоттмана",
+   "s": [
+    "Гантели в руках, ладони друг к другу, локти у корпуса.",
+    "Поднимая гантели, разверните ладони вверх и напрягите бицепс.",
+    "Вверху разверните ладони вниз.",
+    "Медленно опустите гантели хватом сверху, внизу снова разверните кисти."
+   ]
+  },
+  "a": [
+   "зоттман",
+   "zottman",
+   "сгибания зоттмана",
+   "zottman curl",
+   "bisseps",
+   "bilak"
+  ]
+ },
+ "Triceps_Pushdown": {
+  "uz": {
+   "n": "Yuqori blokda tritsepsga bosish",
+   "s": [
+    "Yuqori blokka to'g'ri yoki egilgan grif ulang, ustdan yelka kengligida ushlang.",
+    "Tik turing, gavdani sal oldinga engashtiring, tirsaklarni yonboshga bosing.",
+    "Faqat bilakni harakatlantirib, grifni qo'llar cho'zilguncha pastga bosing.",
+    "Sekin yuqoriga qaytaring; tirsaklar oldinga chiqmasin."
+   ]
+  },
+  "ru": {
+   "n": "Разгибания рук на верхнем блоке",
+   "s": [
+    "Прикрепите прямую или изогнутую рукоять к верхнему блоку, возьмите хватом сверху на ширине плеч.",
+    "Встаньте прямо с лёгким наклоном вперёд, прижмите локти к бокам.",
+    "Двигая только предплечьями, выпрямите руки, опуская рукоять вниз.",
+    "Медленно вернитесь вверх; локти не уходят вперёд."
+   ]
+  },
+  "a": [
+   "трицепс на блоке",
+   "triceps na bloke",
+   "разгибания",
+   "razgibaniya",
+   "pushdown",
+   "tritseps",
+   "tritsepts"
+  ]
+ },
+ "Triceps_Pushdown_-_Rope_Attachment": {
+  "uz": {
+   "n": "Yuqori blokda arqon bilan tritsepsga bosish",
+   "s": [
+    "Yuqori blokka arqon ulang, kaftlar bir-biriga qaragan holda ushlang.",
+    "Tirsaklarni yonboshga bosing, gavda sal oldinga.",
+    "Arqonni pastga bosib, oxirida uchlarini yonga ajrating.",
+    "Sekin yuqoriga qaytaring, yelka qimirlamasin."
+   ]
+  },
+  "ru": {
+   "n": "Разгибания рук на блоке с канатом",
+   "s": [
+    "Прикрепите канат к верхнему блоку, возьмите нейтральным хватом.",
+    "Прижмите локти к бокам, корпус слегка наклонён.",
+    "Опустите канат вниз, в конце разводя его концы в стороны.",
+    "Медленно вернитесь вверх, плечи неподвижны."
+   ]
+  },
+  "a": [
+   "канат трицепс",
+   "kanat triceps",
+   "разгибания с канатом",
+   "razgibaniya s kanatom",
+   "rope pushdown",
+   "tritseps"
+  ]
+ },
+ "Triceps_Pushdown_-_V-Bar_Attachment": {
+  "uz": {
+   "n": "Yuqori blokda V-tutqich bilan tritsepsga bosish",
+   "s": [
+    "Yuqori blokka V-tutqich ulang va ustdan ushlang.",
+    "Tik turing, tirsaklarni yonboshga bosing, gavda sal oldinga.",
+    "Tutqichni qo'llar to'liq cho'zilguncha pastga bosing.",
+    "Nazorat bilan yuqoriga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Разгибания рук на блоке с V-рукоятью",
+   "s": [
+    "Прикрепите V-рукоять к верхнему блоку и возьмитесь хватом сверху.",
+    "Встаньте прямо, локти прижаты к бокам, лёгкий наклон вперёд.",
+    "Опустите рукоять вниз до полного выпрямления рук.",
+    "Подконтрольно вернитесь вверх."
+   ]
+  },
+  "a": [
+   "v рукоять",
+   "v rukoyat",
+   "трицепс на блоке",
+   "triceps na bloke",
+   "v-bar pushdown",
+   "tritseps"
+  ]
+ },
+ "Reverse_Grip_Triceps_Pushdown": {
+  "uz": {
+   "n": "Teskari ushlab blokda tritsepsga bosish",
+   "s": [
+    "Yuqori blokka grif ulang va uni pastdan (kaftlar yuqoriga) yelka kengligida ushlang.",
+    "Tirsaklarni yonboshga bosib, qo'llar cho'zilgan holatdan boshlang.",
+    "Grifni bilaklar yelkaga yaqinlashguncha sekin ko'taring.",
+    "Tritseps bilan grifni yana pastga bosing; tirsaklar joyida qolsin."
+   ]
+  },
+  "ru": {
+   "n": "Разгибания на блоке обратным хватом",
+   "s": [
+    "Прикрепите гриф к верхнему блоку и возьмите его хватом снизу на ширине плеч.",
+    "Прижмите локти к бокам, начните с выпрямленных рук.",
+    "Медленно поднимите гриф, сгибая руки в локтях.",
+    "Усилием трицепса верните гриф вниз; локти неподвижны."
+   ]
+  },
+  "a": [
+   "обратный хват трицепс",
+   "obratniy hvat triceps",
+   "разгибания обратным хватом",
+   "reverse pushdown",
+   "tritseps"
+  ]
+ },
+ "EZ-Bar_Skullcrusher": {
+  "uz": {
+   "n": "EZ-grif bilan fransuz jimi",
+   "s": [
+    "O'rindiqqa yoting, EZ-grifni tor ushlab, qo'llarni ko'krak ustida tik cho'zing.",
+    "Yelkalarni qimirlatmay, tirsaklarni bukib grifni peshona tomon tushiring.",
+    "Pastda qisqa to'xtang.",
+    "Tirsaklarni cho'zib grifni yuqoriga qaytaring; tirsaklar yonga yoyilmasin."
+   ]
+  },
+  "ru": {
+   "n": "Французский жим с EZ-грифом",
+   "s": [
+    "Лягте на скамью, возьмите EZ-гриф узким хватом, руки вертикально над грудью.",
+    "Не двигая плечами, согните локти и опустите гриф к лбу.",
+    "Сделайте короткую паузу внизу.",
+    "Разогните руки, возвращая гриф вверх; локти не разводите."
+   ]
+  },
+  "a": [
+   "французский жим",
+   "francuzskiy jim",
+   "француз",
+   "frantsuz",
+   "skullcrusher",
+   "fransuz jimi"
+  ]
+ },
+ "Lying_Triceps_Press": {
+  "uz": {
+   "n": "Yotib tritseps jimi (fransuz jimi)",
+   "s": [
+    "O'rindiqqa yoting, grifni ustdan o'rtacha ushlab, qo'llarni tik ko'taring.",
+    "Tirsaklarni ichkariga tutib, grifni sekin peshonaga yaqin tushiring.",
+    "Yelkani qimirlatmang, faqat tirsak bukiladi.",
+    "Tritseps bilan grifni yuqoriga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Французский жим лёжа",
+   "s": [
+    "Лягте на скамью, возьмите гриф средним хватом сверху и поднимите руки вертикально.",
+    "Держа локти сведёнными, медленно опустите гриф к лбу.",
+    "Плечи неподвижны, работает только локтевой сустав.",
+    "Усилием трицепса верните гриф вверх."
+   ]
+  },
+  "a": [
+   "французский жим лёжа",
+   "francuzskiy jim lyoja",
+   "француз",
+   "frantsuz",
+   "lying triceps",
+   "skullcrusher",
+   "fransuz jimi"
+  ]
+ },
+ "Triceps_Overhead_Extension_with_Rope": {
+  "uz": {
+   "n": "Arqon bilan bosh ortidan tritseps cho'zish",
+   "s": [
+    "Pastki blokka arqon ulang, uni ikki qo'l bilan ushlab blokka orqa o'girib turing.",
+    "Qo'llarni bosh ortiga olib boring, tirsaklar yuqoriga qaragan; barqarorlik uchun bir oyoqni oldinga qo'ying.",
+    "Yelkalarni qimirlatmay, qo'llarni bosh ustida cho'zing.",
+    "Sekin boshlang'ich holatga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Разгибания из-за головы с канатом",
+   "s": [
+    "Прикрепите канат к нижнему блоку, возьмите его двумя руками и встаньте спиной к тренажёру.",
+    "Заведите руки за голову, локти смотрят вверх; для устойчивости шагните одной ногой вперёд.",
+    "Не двигая плечами, выпрямите руки над головой.",
+    "Медленно вернитесь в исходное положение."
+   ]
+  },
+  "a": [
+   "разгибания из-за головы",
+   "razgibaniya iz-za golovy",
+   "канат",
+   "kanat",
+   "overhead extension",
+   "tritseps"
+  ]
+ },
+ "Standing_Dumbbell_Triceps_Extension": {
+  "uz": {
+   "n": "Tik turib gantel bilan bosh ortidan tritseps",
+   "s": [
+    "Tik turing, gantelni ikki qo'l bilan ushlab bosh ustiga cho'zing.",
+    "Yelkalarni boshga yaqin tutib, gantelni bosh ortiga sekin tushiring.",
+    "Tirsaklar oldinga qaragan holda qolsin.",
+    "Tritseps bilan gantelni yuqoriga qaytaring; belni bukmang."
+   ]
+  },
+  "ru": {
+   "n": "Французский жим гантели стоя",
+   "s": [
+    "Встаньте прямо, возьмите гантель двумя руками и выпрямите руки над головой.",
+    "Держа плечи у головы, медленно опустите гантель за голову.",
+    "Локти смотрят вперёд и не расходятся.",
+    "Усилием трицепса верните гантель вверх, не прогибая поясницу."
+   ]
+  },
+  "a": [
+   "французский жим стоя",
+   "francuzskiy jim stoya",
+   "из-за головы",
+   "iz-za golovy",
+   "overhead db extension",
+   "tritseps"
+  ]
+ },
+ "Seated_Triceps_Press": {
+  "uz": {
+   "n": "O'tirib gantel bilan bosh ortidan tritseps",
+   "s": [
+    "Suyanchiqli o'rindiqqa o'tiring, gantelni ikki qo'l bilan bosh ustida ushlang.",
+    "Tirsaklarni ichkariga tutib, gantelni bosh ortiga sekin tushiring.",
+    "Yelkalar qimirlamasin.",
+    "Qo'llarni cho'zib gantelni yuqoriga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Французский жим гантели сидя",
+   "s": [
+    "Сядьте на скамью со спинкой, удерживайте гантель двумя руками над головой.",
+    "Держа локти сведёнными, медленно опустите гантель за голову.",
+    "Плечи остаются неподвижными.",
+    "Разогните руки, возвращая гантель вверх."
+   ]
+  },
+  "a": [
+   "французский жим сидя",
+   "francuzskiy jim sidya",
+   "из-за головы",
+   "iz-za golovy",
+   "seated triceps press",
+   "tritseps"
+  ]
+ },
+ "Tricep_Dumbbell_Kickback": {
+  "uz": {
+   "n": "Gantel bilan orqaga cho'zish (kikbek)",
+   "s": [
+    "Har qo'lda gantel, tizzalarni sal bukib, belni tekis tutib oldinga engashing.",
+    "Yelkalarni tanaga yaqin va polga parallel tuting, bilaklar pastga.",
+    "Faqat bilakni harakatlantirib, qo'lni orqaga to'liq cho'zing.",
+    "Sekin boshlang'ich holatga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Разгибание руки с гантелью в наклоне (кикбэк)",
+   "s": [
+    "С гантелями в руках слегка согните колени и наклонитесь вперёд с ровной спиной.",
+    "Плечи прижаты к корпусу и параллельны полу, предплечья вниз.",
+    "Двигая только предплечьем, полностью разогните руку назад.",
+    "Медленно вернитесь в исходное положение."
+   ]
+  },
+  "a": [
+   "кикбэк",
+   "kikbek",
+   "разгибание в наклоне",
+   "razgibanie v naklone",
+   "kickback",
+   "tritseps"
+  ]
+ },
+ "Machine_Triceps_Extension": {
+  "uz": {
+   "n": "Trenajyorda tritseps cho'zish",
+   "s": [
+    "O'rindiqni sozlab, vaznni tanlang, yelkalaringizni yostiqqa qo'yib tutqichlarni ushlang.",
+    "Tirsakni cho'zib, tutqichlarni pastga/oldinga bosing.",
+    "Oxirida qisqa to'xtang.",
+    "Sekin qaytaring; vaznni to'xtatgichlarga tashlamang."
+   ]
+  },
+  "ru": {
+   "n": "Разгибания рук в тренажёре",
+   "s": [
+    "Настройте сиденье и вес, положите плечи на подушки и возьмитесь за рукояти.",
+    "Разгибая локти, отведите рукояти от себя.",
+    "Задержитесь в конечной точке.",
+    "Медленно вернитесь, не опуская вес на ограничители."
+   ]
+  },
+  "a": [
+   "трицепс в тренажёре",
+   "triceps v trenajere",
+   "разгибания",
+   "razgibaniya",
+   "machine extension",
+   "tritseps"
+  ]
+ },
+ "Close-Grip_EZ-Bar_Press": {
+  "uz": {
+   "n": "EZ-grifni tor ushlab jim",
+   "s": [
+    "O'rindiqqa yoting, EZ-grifni tor ushlab ko'krak ustida tik ko'taring.",
+    "Tirsaklarni tanaga yaqin tutib, grifni ko'krakning pastki qismiga tushiring.",
+    "Tritseps bilan grifni yuqoriga itaring.",
+    "Tirsaklar yonga yoyilmasin, harakatni nazorat qiling."
+   ]
+  },
+  "ru": {
+   "n": "Жим EZ-грифа узким хватом лёжа",
+   "s": [
+    "Лягте на скамью, возьмите EZ-гриф узким хватом и поднимите над грудью.",
+    "Держа локти у корпуса, опустите гриф к нижней части груди.",
+    "Усилием трицепса выжмите гриф вверх.",
+    "Не разводите локти, контролируйте движение."
+   ]
+  },
+  "a": [
+   "узкий хват",
+   "uzkiy hvat",
+   "жим узким",
+   "jim uzkim",
+   "close grip",
+   "tor jim"
+  ]
+ },
+ "Palms-Up_Barbell_Wrist_Curl_Over_A_Bench": {
+  "uz": {
+   "n": "O'rindiq ustida shtanga bilan bilak bukish (kaftlar yuqoriga)",
+   "s": [
+    "O'rindiq oldida tizzalab turing, shtangani kaftlar yuqoriga qaragan holda ushlang.",
+    "Bilaklarni o'rindiqqa qo'ying, kaftlar chetdan osilib tursin.",
+    "Faqat kaftni bukib, shtangani yuqoriga ko'taring.",
+    "Sekin pastga tushiring; bilaklar o'rindiqdan uzilmasin."
+   ]
+  },
+  "ru": {
+   "n": "Сгибания запястий со штангой хватом снизу на скамье",
+   "s": [
+    "Встаньте на колени перед скамьёй, возьмите штангу хватом снизу.",
+    "Положите предплечья на скамью, кисти свисают за край.",
+    "Сгибая только запястья, поднимите штангу вверх.",
+    "Медленно опустите; предплечья не отрываются от скамьи."
+   ]
+  },
+  "a": [
+   "запястья",
+   "zapyastya",
+   "сгибания запястий",
+   "sgibaniya zapyastiy",
+   "wrist curl",
+   "bilak",
+   "предплечье"
+  ]
+ },
+ "Wrist_Roller": {
+  "uz": {
+   "n": "Bilak roligi (yuk o'rash)",
+   "s": [
+    "Tik turing, rolikni ustdan ushlab, qo'llarni oldinga polga parallel cho'zing.",
+    "Bilaklarni navbat bilan burab, arqonni rolikka o'rang va yukni ko'taring.",
+    "Yuk tepaga chiqqach, teskari burab uni sekin tushiring.",
+    "Qo'llar va gavdani qimirlatmang, faqat bilaklar ishlasin."
+   ]
+  },
+  "ru": {
+   "n": "Ролик для запястий (накручивание груза)",
+   "s": [
+    "Встаньте прямо, возьмите ролик хватом сверху, вытяните руки вперёд параллельно полу.",
+    "Поочерёдно вращая кисти, наматывайте верёвку и поднимайте груз.",
+    "Подняв груз, медленно опустите его обратным вращением.",
+    "Руки и корпус неподвижны, работают только запястья."
+   ]
+  },
+  "a": [
+   "ролик",
+   "rolik",
+   "накручивание",
+   "nakruchivanie",
+   "wrist roller",
+   "bilak",
+   "предплечье"
+  ]
+ },
+ "Barbell_Squat": {
+  "uz": {
+   "n": "Shtanga bilan o'tirib-turish (prisedaniye)",
+   "s": [
+    "Shtangani ramada yelkadan sal pastga qo'ying, ostiga kirib uni bo'yin ostidagi yelka qismiga joylang.",
+    "Oyoqlar bilan itarib shtangani ramadan oling, orqaga qadam tashlab, oyoqlarni yelka kengligida qo'ying.",
+    "Belni tekis, ko'krakni ochiq tutib, tizza va son bilan sonlar polga parallel bo'lguncha o'tiring.",
+    "Tovonlar bilan itarib, tik holatga qayting; tizzalar oyoq uchi yo'nalishida bo'lsin."
+   ]
+  },
+  "ru": {
+   "n": "Приседания со штангой",
+   "s": [
+    "Установите штангу на стойки чуть ниже плеч, подлезьте и положите гриф на верх спины под шеей.",
+    "Снимите штангу усилием ног, отойдите назад и поставьте ноги на ширине плеч.",
+    "Держа спину ровной и грудь раскрытой, присядьте до параллели бёдер с полом.",
+    "Встаньте, отталкиваясь пятками; колени направлены по линии носков."
+   ]
+  },
+  "a": [
+   "присед",
+   "prised",
+   "приседания",
+   "prisedaniya",
+   "squat",
+   "back squat",
+   "o'tirib-turish"
+  ]
+ },
+ "Barbell_Full_Squat": {
+  "uz": {
+   "n": "Shtanga bilan chuqur o'tirib-turish",
+   "s": [
+    "Shtangani ramada yelkadan sal yuqoriga qo'ying va uni yuqori orqaga joylang.",
+    "Shtangani ramadan olib, orqaga chiqing, oyoqlar yelka kengligida, uchlari sal tashqariga.",
+    "Belni tekis tutib, sonlar boldirga yaqinlashguncha chuqur o'tiring.",
+    "Tovonlar bilan itarib turing; pastda belni dumaloq qilmang."
+   ]
+  },
+  "ru": {
+   "n": "Глубокие приседания со штангой",
+   "s": [
+    "Установите штангу на стойки чуть выше плеч и положите её на верх спины.",
+    "Снимите штангу, отойдите, ноги на ширине плеч, носки слегка врозь.",
+    "С ровной спиной опуститесь глубоко, пока бёдра не приблизятся к икрам.",
+    "Встаньте, отталкиваясь пятками; не округляйте поясницу внизу."
+   ]
+  },
+  "a": [
+   "глубокий присед",
+   "glubokiy prised",
+   "присед",
+   "prised",
+   "full squat",
+   "atg",
+   "o'tirib-turish"
+  ]
+ },
+ "Front_Barbell_Squat": {
+  "uz": {
+   "n": "Shtanga bilan old o'tirib-turish (front prised)",
+   "s": [
+    "Shtangani ramada yelka balandligiga qo'ying va uni old deltalar hamda o'mrov ustiga oling, tirsaklarni oldinga ko'taring.",
+    "Oyoqlar bilan itarib shtangani ramadan oling va bir-ikki qadam orqaga chiqing.",
+    "Oyoqlarni yelka kengligida, uchlarini biroz tashqariga qarating; boshni tik, belni tekis tuting.",
+    "Tizzalarni bukib, son parallelga yaqinlashguncha nazorat bilan pastga tushing; tirsaklar tushib ketmasin.",
+    "Oyoq kafti o'rtasi bilan polni itarib, boshlang'ich holatga ko'tariling."
+   ]
+  },
+  "ru": {
+   "n": "Фронтальные приседания со штангой",
+   "s": [
+    "Установите штангу в раме на уровне плеч и положите её на передние дельты и ключицы, подняв локти вперёд.",
+    "Снимите штангу усилием ног и отойдите на шаг-два назад.",
+    "Поставьте стопы на ширине плеч, носки слегка наружу; голова прямо, спина ровная.",
+    "Подконтрольно присядьте до параллели бедра с полом, не опуская локти.",
+    "Оттолкнитесь серединой стопы и вернитесь в исходное положение."
+   ]
+  },
+  "a": [
+   "фронтальный присед",
+   "frontalnyy prised",
+   "front squat",
+   "front prised",
+   "присед со штангой на груди",
+   "prised"
+  ]
+ },
+ "Goblet_Squat": {
+  "uz": {
+   "n": "Gire bilan gobllet o'tirib-turish",
+   "s": [
+    "Girni shoxlaridan ushlab, ko'krakka yaqin tuting.",
+    "Ko'krak va boshni tik tutib, oyoqlar orasiga chuqur o'tiring.",
+    "Pastki nuqtada qisqa to'xtab, tirsaklar bilan tizzalarni tashqariga yoying.",
+    "Belni tekis saqlab, tovonlar bilan itarib tik turing."
+   ]
+  },
+  "ru": {
+   "n": "Гоблет-приседания с гирей",
+   "s": [
+    "Возьмите гирю за рожки и держите её у груди.",
+    "Держа грудь и голову прямо, глубоко присядьте между ног.",
+    "Внизу сделайте короткую паузу и локтями разведите колени наружу.",
+    "Сохраняя ровную спину, встаньте, отталкиваясь пятками."
+   ]
+  },
+  "a": [
+   "гоблет",
+   "goblet",
+   "goblet squat",
+   "kubok prised",
+   "присед с гирей",
+   "prised giri"
+  ]
+ },
+ "Dumbbell_Squat": {
+  "uz": {
+   "n": "Gantel bilan o'tirib-turish",
+   "s": [
+    "Har qo'lda gantel ushlab, qo'llarni yon tomonda erkin tushiring.",
+    "Oyoqlarni yelka kengligida, uchlarini biroz tashqariga qo'ying; nigoh oldinga, bel tekis.",
+    "Tizzalarni bukib, son pol bilan parallel bo'lguncha sekin tushing.",
+    "Tovonlar bilan itarib, nafas chiqarib tik turing."
+   ]
+  },
+  "ru": {
+   "n": "Приседания с гантелями",
+   "s": [
+    "Возьмите по гантели в каждую руку, руки опущены вдоль тела.",
+    "Стопы на ширине плеч, носки чуть наружу; взгляд вперёд, спина ровная.",
+    "Сгибая колени, медленно опуститесь до параллели бёдер с полом.",
+    "Отталкиваясь пятками, на выдохе поднимитесь."
+   ]
+  },
+  "a": [
+   "присед с гантелями",
+   "prised s gantelyami",
+   "dumbbell squat",
+   "gantel prised",
+   "prised"
+  ]
+ },
+ "Bodyweight_Squat": {
+  "uz": {
+   "n": "O'z vazn bilan o'tirib-turish",
+   "s": [
+    "Oyoqlarni yelka kengligida qo'ying, qo'llarni boshingiz orqasiga yoki oldinga oling.",
+    "Tos va tizzalarni bukib, tosni orqaga surib o'tiring.",
+    "Imkon qadar chuqur tushing; ko'krakni tik tuting, tizzalarni tashqariga yo'naltiring.",
+    "Harakatni teskari tomonga burib, boshlang'ich holatga qayting."
+   ]
+  },
+  "ru": {
+   "n": "Приседания без веса",
+   "s": [
+    "Поставьте стопы на ширине плеч, руки за голову или вперёд.",
+    "Сгибая колени и таз, отведите таз назад и присядьте.",
+    "Опуститесь как можно глубже, держа грудь прямо и разводя колени наружу.",
+    "Разверните движение и вернитесь в исходное положение."
+   ]
+  },
+  "a": [
+   "приседания",
+   "prisedaniya",
+   "air squat",
+   "prised",
+   "o'tirib turish",
+   "присед без веса"
+  ]
+ },
+ "Box_Squat": {
+  "uz": {
+   "n": "Shtanga bilan qutiga o'tirib-turish (box squat)",
+   "s": [
+    "Ramada orqangizga kerakli balandlikdagi quti qo'ying va shtangani yelkaning orqa qismiga oling.",
+    "Kurak suyaklarini qisib, korpusni tarang qilib, shtangani ramadan chiqaring.",
+    "Tizza va tosni tashqariga surib, tosni orqaga olib qutiga o'tiring; boldir tik tursin.",
+    "Qisqa to'xtab, tovonlar va tizzalarni tashqariga itarib, quti ustidan kuch bilan ko'tariling.",
+    "Butun harakat davomida bel va korpusni qattiq ushlab turing."
+   ]
+  },
+  "ru": {
+   "n": "Приседания на ящик со штангой",
+   "s": [
+    "Поставьте в раме ящик нужной высоты позади себя и положите штангу на заднюю часть плеч.",
+    "Сведите лопатки, напрягите корпус и снимите штангу.",
+    "Отводя таз назад и разводя колени, сядьте на ящик; голени вертикальны.",
+    "После короткой паузы мощно встаньте, упираясь пятками и разводя колени.",
+    "Держите спину и корпус напряжёнными на протяжении всего движения."
+   ]
+  },
+  "a": [
+   "бокс присед",
+   "boks prised",
+   "box squat",
+   "присед на ящик",
+   "prised na yashchik",
+   "присед на скамью"
+  ]
+ },
+ "Hack_Squat": {
+  "uz": {
+   "n": "Gakk-mashinada o'tirib-turish",
+   "s": [
+    "Orqangizni mashina yostig'iga qo'ying, yelkalarni yostiqlar ostiga joylashtiring.",
+    "Oyoqlarni platformaga yelka kengligida, uchlarini biroz tashqariga qo'ying.",
+    "Tutqichlarni ushlab, xavfsizlik tirgaklarini oching va oyoqlarni tizzani qulflamay to'g'rilang.",
+    "Belni yostiqdan uzmay, son parallelga yaqinlashguncha sekin tushing.",
+    "Tovonlar bilan itarib, nafas chiqarib yuqoriga qayting."
+   ]
+  },
+  "ru": {
+   "n": "Гакк-приседания в тренажёре",
+   "s": [
+    "Прижмитесь спиной к спинке тренажёра, плечи под упорами.",
+    "Поставьте стопы на платформу на ширине плеч, носки слегка наружу.",
+    "Возьмитесь за рукояти, снимите стопоры и выпрямите ноги, не блокируя колени.",
+    "Не отрывая спину от спинки, медленно опуститесь почти до параллели.",
+    "Отталкиваясь пятками, на выдохе вернитесь вверх."
+   ]
+  },
+  "a": [
+   "гакк",
+   "gakk",
+   "гак присед",
+   "hack squat",
+   "gakk prised",
+   "гакк-машина"
+  ]
+ },
+ "Barbell_Hack_Squat": {
+  "uz": {
+   "n": "Shtanga bilan orqadan gakk o'tirib-turish",
+   "s": [
+    "Shtangani orqangizda, to'g'ri qo'llarda yelka kengligida ushlab tik turing.",
+    "Boshni tik, belni tekis tutib, son parallel bo'lguncha nafas olib sekin o'tiring.",
+    "Asosan tovonlar bilan itarib, nafas chiqarib tik turing.",
+    "Shtangani butun harakat davomida oyoqlarga yaqin olib boring."
+   ]
+  },
+  "ru": {
+   "n": "Гакк-приседания со штангой сзади",
+   "s": [
+    "Встаньте прямо, держа штангу за спиной в прямых руках хватом на ширине плеч.",
+    "Держа голову прямо и спину ровной, на вдохе присядьте до параллели.",
+    "Отталкиваясь пятками, на выдохе поднимитесь.",
+    "Ведите штангу близко к ногам на протяжении всего движения."
+   ]
+  },
+  "a": [
+   "гакк со штангой",
+   "gakk so shtangoy",
+   "barbell hack squat",
+   "присед со штангой сзади",
+   "gakk prised"
+  ]
+ },
+ "Smith_Machine_Squat": {
+  "uz": {
+   "n": "Smit mashinasida o'tirib-turish",
+   "s": [
+    "Grifni bo'yingizga mos balandlikka o'rnating va uni yelkaning orqa qismiga, bo'yindan pastroqqa qo'ying.",
+    "Grifni ushlab, qulfdan chiqaring va oyoqlar bilan itarib ko'taring.",
+    "Oyoqlarni yelka kengligida qo'yib, belni tekis, boshni tik tuting.",
+    "Tizzalarni bukib, son parallelga yaqinlashguncha nazorat bilan tushing.",
+    "Tovonlar bilan itarib yuqoriga qayting va oxirida grifni qulflang."
+   ]
+  },
+  "ru": {
+   "n": "Приседания в тренажёре Смита",
+   "s": [
+    "Установите гриф по росту и положите его на заднюю часть плеч чуть ниже шеи.",
+    "Возьмитесь за гриф, снимите его с фиксаторов усилием ног.",
+    "Стопы на ширине плеч, спина ровная, голова прямо.",
+    "Подконтрольно опуститесь почти до параллели бедра с полом.",
+    "Отталкиваясь пятками, вернитесь вверх и в конце зафиксируйте гриф."
+   ]
+  },
+  "a": [
+   "смит",
+   "smit",
+   "присед в смите",
+   "prised v smite",
+   "smith squat",
+   "smit prised"
+  ]
+ },
+ "Leg_Press": {
+  "uz": {
+   "n": "Oyoq bilan platforma itarish (jim nogami)",
+   "s": [
+    "Trenajyorga o'tirib, oyoqlarni platformaga yelka kengligida qo'ying.",
+    "Xavfsizlik tirgaklarini oching va platformani tizzani qulflamay yuqoriga itaring.",
+    "Nafas olib, tizzalar taxminan to'g'ri burchak hosil qilguncha platformani sekin tushiring.",
+    "Tovonlar bilan itarib, nafas chiqarib yuqoriga qayting.",
+    "Tugatgach, tirgaklarni albatta yoping."
+   ]
+  },
+  "ru": {
+   "n": "Жим ногами",
+   "s": [
+    "Сядьте в тренажёр и поставьте стопы на платформу на ширине плеч.",
+    "Снимите стопоры и выжмите платформу вверх, не блокируя колени.",
+    "На вдохе медленно опустите платформу примерно до прямого угла в коленях.",
+    "Отталкиваясь пятками, на выдохе вернитесь вверх.",
+    "После подхода обязательно закройте стопоры."
+   ]
+  },
+  "a": [
+   "жим ногами",
+   "zhim nogami",
+   "leg press",
+   "platforma",
+   "жим платформы",
+   "oyoq jimi"
+  ]
+ },
+ "Narrow_Stance_Leg_Press": {
+  "uz": {
+   "n": "Tor qo'yilgan oyoqlar bilan platforma itarish",
+   "s": [
+    "Trenajyorga o'tirib, oyoqlarni platformaga yelkadan torroq, uchlarini biroz tashqariga qo'ying.",
+    "Tirgaklarni oching va platformani tizzani qulflamay yuqoriga itaring.",
+    "Nafas olib, platformani tizzalar to'g'ri burchak hosil qilguncha sekin tushiring.",
+    "Tovonlar bilan itarib yuqoriga qayting; tugatgach tirgaklarni yoping."
+   ]
+  },
+  "ru": {
+   "n": "Жим ногами узкой постановкой",
+   "s": [
+    "Сядьте в тренажёр, поставьте стопы на платформу уже ширины плеч, носки слегка наружу.",
+    "Снимите стопоры и выжмите платформу, не блокируя колени.",
+    "На вдохе медленно опустите платформу до прямого угла в коленях.",
+    "Отталкиваясь пятками, вернитесь вверх; после подхода закройте стопоры."
+   ]
+  },
+  "a": [
+   "жим ногами узко",
+   "zhim nogami uzko",
+   "narrow leg press",
+   "uzkaya postanovka",
+   "tor platforma"
+  ]
+ },
+ "Leg_Extensions": {
+  "uz": {
+   "n": "O'tirib oyoq yozish (razgibaniye)",
+   "s": [
+    "Trenajyorga o'tirib, oyoqlarni yostiq ostiga qo'ying va yon tutqichlarni ushlang.",
+    "Son old muskullari bilan oyoqlarni to'liq yozing, gavdani o'rindiqdan qimirlatmang.",
+    "Yuqorida bir soniya qisib turing.",
+    "Og'irlikni nazorat bilan boshlang'ich holatga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Разгибание ног в тренажёре",
+   "s": [
+    "Сядьте в тренажёр, заведите голени под валик и возьмитесь за рукояти.",
+    "Усилием квадрицепсов полностью разогните ноги, не отрываясь от сиденья.",
+    "Задержитесь на секунду в верхней точке.",
+    "Подконтрольно опустите вес в исходное положение."
+   ]
+  },
+  "a": [
+   "разгибания",
+   "razgibaniya",
+   "leg extension",
+   "разгибание ног",
+   "razgibaniye",
+   "kvadriseps"
+  ]
+ },
+ "Lying_Leg_Curls": {
+  "uz": {
+   "n": "Yotib oyoq bukish",
+   "s": [
+    "Trenajyorni bo'yingizga moslab, yuzingiz bilan pastga yoting; valik boldir pastida tursin.",
+    "Gavdani skameykaga bosib, tutqichlarni ushlang va oyoqlarni to'liq cho'zing.",
+    "Sonni yostiqdan uzmay, oyoqlarni imkon qadar yuqoriga buking va bir soniya ushlang.",
+    "Nafas olib, oyoqlarni nazorat bilan boshlang'ich holatga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Сгибание ног лёжа",
+   "s": [
+    "Настройте тренажёр по росту и лягте лицом вниз, валик чуть выше пяток.",
+    "Прижмите корпус к скамье, возьмитесь за рукояти и выпрямите ноги.",
+    "Не отрывая бёдра, согните ноги как можно выше и задержитесь на секунду.",
+    "На вдохе подконтрольно верните ноги в исходное положение."
+   ]
+  },
+  "a": [
+   "сгибания лёжа",
+   "sgibaniya lezha",
+   "leg curl",
+   "бицепс бедра",
+   "sgibaniye nog",
+   "biseps bedra"
+  ]
+ },
+ "Seated_Leg_Curl": {
+  "uz": {
+   "n": "O'tirib oyoq bukish",
+   "s": [
+    "Trenajyorni sozlab, orqani suyanchiqqa qo'yib o'tiring.",
+    "Boldirni valik ustiga qo'ying, son yostig'ini tizzadan biroz yuqoriga mahkamlang va tutqichlarni ushlang.",
+    "Gavdani qimirlatmay, tizzalarni bukib valikni orqaga torting va bir soniya ushlang.",
+    "Nafas olib, sekin boshlang'ich holatga qayting."
+   ]
+  },
+  "ru": {
+   "n": "Сгибание ног сидя",
+   "s": [
+    "Настройте тренажёр и сядьте, прижав спину к спинке.",
+    "Положите голени на валик, зафиксируйте бёдра верхним упором и возьмитесь за рукояти.",
+    "Не двигая корпусом, согните колени, отводя валик назад, и задержитесь на секунду.",
+    "На вдохе медленно вернитесь в исходное положение."
+   ]
+  },
+  "a": [
+   "сгибания сидя",
+   "sgibaniya sidya",
+   "seated leg curl",
+   "бицепс бедра сидя",
+   "biseps bedra"
+  ]
+ },
+ "Standing_Leg_Curl": {
+  "uz": {
+   "n": "Tik turib bir oyoqni bukish",
+   "s": [
+    "Trenajyorni sozlab, gavdani biroz oldinga egib, valikni bir oyoq boldiri orqasiga qo'ying.",
+    "Tutqichlarni ushlab, ishlovchi oyoqni to'liq cho'zing.",
+    "Sonni yostiqdan uzmay, oyoqni imkon qadar yuqoriga buking va bir soniya ushlang.",
+    "Oyoqni sekin tushiring; seriyani tugatib, ikkinchi oyoqqa o'ting."
+   ]
+  },
+  "ru": {
+   "n": "Сгибание ноги стоя",
+   "s": [
+    "Настройте тренажёр, слегка наклоните корпус вперёд и поставьте валик за голень одной ноги.",
+    "Возьмитесь за рукояти и полностью выпрямите рабочую ногу.",
+    "Не отрывая бедро, согните ногу как можно выше и задержитесь на секунду.",
+    "Медленно опустите ногу; после подхода смените ногу."
+   ]
+  },
+  "a": [
+   "сгибание стоя",
+   "sgibaniye stoya",
+   "standing leg curl",
+   "бицепс бедра стоя",
+   "biseps bedra"
+  ]
+ },
+ "Barbell_Lunge": {
+  "uz": {
+   "n": "Shtanga bilan hamla (vipad)",
+   "s": [
+    "Ramada shtangani yelkaning orqa qismiga oling va ramadan chiqing.",
+    "O'ng oyoq bilan oldinga qadam tashlab, gavdani tik tutib pastga tushing.",
+    "Old tizza oyoq uchidan juda oldinga chiqib ketmasin, muvozanatni saqlang.",
+    "Old oyoq tovoni bilan itarib boshlang'ich holatga qayting.",
+    "Seriyani tugatib, chap oyoq bilan takrorlang."
+   ]
+  },
+  "ru": {
+   "n": "Выпады со штангой",
+   "s": [
+    "Положите штангу в раме на заднюю часть плеч и отойдите от стоек.",
+    "Сделайте шаг вперёд правой ногой и опуститесь, держа корпус прямо.",
+    "Следите, чтобы переднее колено не уходило сильно за носок; сохраняйте равновесие.",
+    "Оттолкнитесь пяткой передней ноги и вернитесь в исходное положение.",
+    "Выполните подход и смените ногу."
+   ]
+  },
+  "a": [
+   "выпады",
+   "vypady",
+   "lunge",
+   "vipad",
+   "hamla",
+   "выпады со штангой"
+  ]
+ },
+ "Dumbbell_Lunges": {
+  "uz": {
+   "n": "Gantel bilan hamla (vipad)",
+   "s": [
+    "Har qo'lda gantel ushlab, gavdani tik tuting.",
+    "Bir oyoq bilan oldinga keng qadam tashlab, gavdani tik saqlab pastga tushing.",
+    "Old oyoq tovoni bilan itarib boshlang'ich holatga qayting.",
+    "Seriyani tugatib, ikkinchi oyoq bilan bajaring."
+   ]
+  },
+  "ru": {
+   "n": "Выпады с гантелями",
+   "s": [
+    "Возьмите по гантели в руки, корпус прямо.",
+    "Сделайте широкий шаг вперёд и опуститесь, сохраняя корпус вертикальным.",
+    "Оттолкнитесь пяткой передней ноги и вернитесь назад.",
+    "Выполните подход и смените ногу."
+   ]
+  },
+  "a": [
+   "выпады с гантелями",
+   "vypady s gantelyami",
+   "dumbbell lunge",
+   "vipad",
+   "hamla"
+  ]
+ },
+ "Barbell_Walking_Lunge": {
+  "uz": {
+   "n": "Shtanga bilan yurib hamla qilish",
+   "s": [
+    "Shtangani yelkaning yuqori-orqa qismiga qo'yib, oyoqlarni yelka kengligida turing.",
+    "Bir oyoq bilan oldinga qadam tashlab, orqa tizza polga deyarli tekkuncha tushing.",
+    "Gavdani tik, old tizzani oyoq kafti ustida tuting.",
+    "Old oyoq tovoni bilan itarib ko'tariling va orqa oyoqni oldinga olib, keyingi hamlani bajaring."
+   ]
+  },
+  "ru": {
+   "n": "Выпады со штангой в ходьбе",
+   "s": [
+    "Положите штангу на верх спины, стопы на ширине плеч.",
+    "Шагните вперёд и опуститесь, пока заднее колено почти не коснётся пола.",
+    "Держите корпус прямо, переднее колено над стопой.",
+    "Оттолкнитесь пяткой передней ноги, поднимитесь и шагните задней ногой вперёд в следующий выпад."
+   ]
+  },
+  "a": [
+   "выпады в ходьбе",
+   "vypady v khodbe",
+   "walking lunge",
+   "шагающие выпады",
+   "yurib vipad"
+  ]
+ },
+ "Bodyweight_Walking_Lunge": {
+  "uz": {
+   "n": "O'z vazn bilan yurib hamla qilish",
+   "s": [
+    "Oyoqlarni yelka kengligida qo'yib, qo'llarni belga qo'ying.",
+    "Bir oyoq bilan oldinga qadam tashlab, orqa tizza polga deyarli tekkuncha tushing.",
+    "Gavdani tik, old tizzani oyoq kafti ustida saqlang.",
+    "Old oyoq bilan itarib ko'tariling va orqa oyoq bilan oldinga qadam tashlab takrorlang."
+   ]
+  },
+  "ru": {
+   "n": "Выпады в ходьбе без веса",
+   "s": [
+    "Встаньте, стопы на ширине плеч, руки на поясе.",
+    "Шагните вперёд и опуститесь, пока заднее колено почти не коснётся пола.",
+    "Корпус вертикально, переднее колено над стопой.",
+    "Оттолкнитесь передней ногой и шагните задней вперёд в следующий выпад."
+   ]
+  },
+  "a": [
+   "выпады в ходьбе",
+   "vypady v khodbe",
+   "walking lunge",
+   "yurib vipad",
+   "выпады без веса"
+  ]
+ },
+ "Dumbbell_Rear_Lunge": {
+  "uz": {
+   "n": "Gantel bilan orqaga hamla",
+   "s": [
+    "Har qo'lda gantel ushlab, tik turing.",
+    "Bir oyoq bilan orqaga qadam tashlab, gavdani tik saqlab pastga tushing.",
+    "Old oyoq bilan itarib boshlang'ich holatga qayting; dumbaga urg'u uchun tovon bilan itaring.",
+    "Oyoqni almashtirib takrorlang."
+   ]
+  },
+  "ru": {
+   "n": "Обратные выпады с гантелями",
+   "s": [
+    "Встаньте прямо с гантелями в руках.",
+    "Сделайте шаг назад одной ногой и опуститесь, держа корпус прямо.",
+    "Оттолкнитесь передней ногой и вернитесь; для акцента на ягодицы давите пяткой.",
+    "Смените ногу и повторите."
+   ]
+  },
+  "a": [
+   "обратные выпады",
+   "obratnye vypady",
+   "reverse lunge",
+   "выпады назад",
+   "orqaga vipad"
+  ]
+ },
+ "Split_Squat_with_Dumbbells": {
+  "uz": {
+   "n": "Gantel bilan bolgarcha o'tirib-turish",
+   "s": [
+    "Orqa oyoqni skameykaga qo'yib, old oyoqni oldinga chiqaring.",
+    "Har qo'lda gantel ushlab, qo'llarni yon tomonda tushiring.",
+    "Old tizza va tosni bukib, gavdani tik tutib pastga tushing; tizza oyoq yo'nalishida bo'lsin.",
+    "Old oyoq tovoni bilan itarib yuqoriga qayting."
+   ]
+  },
+  "ru": {
+   "n": "Болгарские приседания с гантелями",
+   "s": [
+    "Поставьте заднюю ногу на скамью, переднюю вынесите вперёд.",
+    "Возьмите по гантели, руки опущены вдоль тела.",
+    "Сгибая переднее колено и таз, опуститесь, держа корпус прямо и колено по линии стопы.",
+    "Оттолкнитесь пяткой передней ноги и вернитесь вверх."
+   ]
+  },
+  "a": [
+   "болгарские",
+   "bolgarskie",
+   "bulgarian split squat",
+   "сплит присед",
+   "split squat",
+   "bolgarcha prised"
+  ]
+ },
+ "Dumbbell_Step_Ups": {
+  "uz": {
+   "n": "Gantel bilan platformaga chiqish",
+   "s": [
+    "Har qo'lda gantel ushlab, platforma oldida tik turing.",
+    "O'ng oyoqni platformaga qo'yib, asosan tovon bilan itarib chiqing va chap oyoqni yoniga qo'ying.",
+    "Chap oyoq bilan, so'ng o'ng oyoq bilan nazorat ostida pastga tushing.",
+    "Seriyani tugatib, ikkinchi oyoq bilan bajaring."
+   ]
+  },
+  "ru": {
+   "n": "Зашагивания на платформу с гантелями",
+   "s": [
+    "Встаньте перед платформой с гантелями в руках.",
+    "Поставьте правую ногу на платформу, оттолкнитесь пяткой и поднимитесь, приставив левую.",
+    "Подконтрольно сойдите вниз сначала левой, затем правой ногой.",
+    "Выполните подход и смените рабочую ногу."
+   ]
+  },
+  "a": [
+   "зашагивания",
+   "zashagivaniya",
+   "step up",
+   "степ ап",
+   "step-up",
+   "platformaga chiqish"
+  ]
+ },
+ "Barbell_Hip_Thrust": {
+  "uz": {
+   "n": "Shtanga bilan tos ko'tarish (hip thrust)",
+   "s": [
+    "Polga o'tirib, orqangizni skameykaga qo'ying va shtangani oyoqlar ustiga oling; grifga yumshoq qoplama qo'ying.",
+    "Shtangani tos ustiga dumalatib keltiring, kurak suyaklarini skameyka chetiga tiring.",
+    "Oyoqlar bilan itarib, tosni shtanga bilan birga yuqoriga ko'taring; tayanch kuraklar va oyoqlarda.",
+    "Yuqorida dumbani qisib, nazorat bilan pastga tushing."
+   ]
+  },
+  "ru": {
+   "n": "Ягодичный мост со штангой у скамьи (хип-траст)",
+   "s": [
+    "Сядьте на пол спиной к скамье, штанга на ногах; используйте мягкую накладку на гриф.",
+    "Подкатите штангу к тазу и обопритесь лопатками о край скамьи.",
+    "Упираясь стопами, поднимите таз со штангой вверх; опора на лопатки и стопы.",
+    "Вверху сожмите ягодицы и подконтрольно опуститесь."
+   ]
+  },
+  "a": [
+   "хип траст",
+   "khip trast",
+   "hip thrust",
+   "ягодичный мост",
+   "yagodichnyy most",
+   "dumba"
+  ]
+ },
+ "Barbell_Glute_Bridge": {
+  "uz": {
+   "n": "Shtanga bilan dumba ko'prigi",
+   "s": [
+    "Polga yotib, shtangani tos ustiga qo'ying; grifga yumshoq qoplama qo'ying.",
+    "Tizzalarni bukib, oyoqlarni polga qo'ying.",
+    "Tovonlar bilan itarib, tosni yuqoriga ko'taring; tayanch yelka va tovonlarda.",
+    "Yuqorida dumbani qisib, sekin pastga tushing."
+   ]
+  },
+  "ru": {
+   "n": "Ягодичный мост со штангой",
+   "s": [
+    "Лягте на пол, положите штангу на таз, используя мягкую накладку.",
+    "Согните колени и поставьте стопы на пол.",
+    "Упираясь пятками, поднимите таз вверх; опора на верх спины и пятки.",
+    "Вверху сожмите ягодицы и медленно опуститесь."
+   ]
+  },
+  "a": [
+   "ягодичный мост",
+   "yagodichnyy most",
+   "glute bridge",
+   "мостик со штангой",
+   "dumba ko'prigi"
+  ]
+ },
+ "Single_Leg_Glute_Bridge": {
+  "uz": {
+   "n": "Bir oyoqda dumba ko'prigi",
+   "s": [
+    "Chalqancha yotib, tizzalarni bukib, oyoqlarni polga qo'ying.",
+    "Bir oyoqni ko'tarib, tizzani ko'krakka torting.",
+    "Tayanch oyoq tovoni bilan itarib, tosni yuqoriga ko'taring.",
+    "Yuqorida to'xtab, nazorat bilan pastga tushing; oyoqni almashtiring."
+   ]
+  },
+  "ru": {
+   "n": "Ягодичный мост на одной ноге",
+   "s": [
+    "Лягте на спину, согните колени, стопы на полу.",
+    "Поднимите одну ногу, подтянув колено к груди.",
+    "Упираясь пяткой опорной ноги, поднимите таз вверх.",
+    "Задержитесь вверху и подконтрольно опуститесь; смените ногу."
+   ]
+  },
+  "a": [
+   "мост на одной ноге",
+   "most na odnoy noge",
+   "single leg bridge",
+   "ягодичный мост",
+   "dumba ko'prigi"
+  ]
+ },
+ "Glute_Kickback": {
+  "uz": {
+   "n": "To'rt oyoqlab oyoqni orqaga siltash",
+   "s": [
+    "Polga tizzalab, qo'llarni yelka kengligida tirab, to'rt oyoqlab turing.",
+    "Tizzani bukilgan holda saqlab, bir oyoqni son orqa bilan bir chiziqqa kelguncha ko'taring.",
+    "Yuqorida dumbani bir soniya qisib turing.",
+    "Oyoqni sekin tushirib, ikkinchi oyoq bilan almashtiring; belni bukmang."
+   ]
+  },
+  "ru": {
+   "n": "Отведение ноги назад на четвереньках",
+   "s": [
+    "Встаньте на четвереньки, руки на ширине плеч.",
+    "Сохраняя угол в колене, поднимите ногу, пока бедро не окажется на одной линии со спиной.",
+    "Сожмите ягодицу в верхней точке на секунду.",
+    "Медленно опустите ногу и смените сторону; не прогибайте поясницу."
+   ]
+  },
+  "a": [
+   "махи ногой назад",
+   "makhi nogoy nazad",
+   "kickback",
+   "отведение ноги",
+   "glute kickback",
+   "dumba"
+  ]
+ },
+ "Thigh_Abductor": {
+  "uz": {
+   "n": "Trenajyorda oyoqlarni tashqariga yoyish",
+   "s": [
+    "Abduktor trenajyoriga o'tirib, mos og'irlik tanlang va tutqichlarni ushlang.",
+    "Gavdani qimirlatmay, oyoqlar bilan yostiqlarni tashqariga iting.",
+    "Bir soniya qisib turib, oyoqlarni sekin qaytaring.",
+    "Keskin silkinishlarsiz, nazorat bilan bajaring."
+   ]
+  },
+  "ru": {
+   "n": "Разведение ног в тренажёре",
+   "s": [
+    "Сядьте в тренажёр для отведения бедра, выберите вес и возьмитесь за рукояти.",
+    "Не двигая корпусом, разведите ноги в стороны.",
+    "Задержитесь на секунду и медленно сведите ноги обратно.",
+    "Работайте подконтрольно, без рывков."
+   ]
+  },
+  "a": [
+   "разведение ног",
+   "razvedeniye nog",
+   "abductor",
+   "абдуктор",
+   "abduktor",
+   "отведение бедра"
+  ]
+ },
+ "Thigh_Adductor": {
+  "uz": {
+   "n": "Trenajyorda oyoqlarni ichkariga yig'ish",
+   "s": [
+    "Adduktor trenajyoriga o'tirib, oyoqlarni yostiqlarga qo'ying va tutqichlarni ushlang.",
+    "Gavdani qimirlatmay, oyoqlarni bir-biriga qarab yig'ing.",
+    "Bir soniya qisib turib, oyoqlarni sekin qaytaring.",
+    "Keskin silkinishlarsiz, nazorat bilan bajaring."
+   ]
+  },
+  "ru": {
+   "n": "Сведение ног в тренажёре",
+   "s": [
+    "Сядьте в тренажёр для приведения бедра, поставьте ноги на упоры и возьмитесь за рукояти.",
+    "Не двигая корпусом, сведите ноги вместе.",
+    "Задержитесь на секунду и медленно разведите ноги обратно.",
+    "Работайте подконтрольно, без рывков."
+   ]
+  },
+  "a": [
+   "сведение ног",
+   "svedeniye nog",
+   "adductor",
+   "аддуктор",
+   "adduktor",
+   "приведение бедра"
+  ]
+ },
+ "Glute_Ham_Raise": {
+  "uz": {
+   "n": "Glyut-hem raiz (son orqasi uchun ko'tarilish)",
+   "s": [
+    "Trenajyorni sozlab, yuzingiz bilan pastga yoting; oyoqlar plita va valiklar orasida, tizzalar yostiq ortida.",
+    "Pastki holatdan boshlab, gavdani tekis saqlab, tizzalarni bukib yuqoriga ko'tariling.",
+    "Oyoq uchlarini plitaga iting va gavda tik bo'lguncha davom eting.",
+    "Pastga tushishni sekin va nazorat bilan bajaring."
+   ]
+  },
+  "ru": {
+   "n": "Глют-хэм рейз",
+   "s": [
+    "Настройте тренажёр и лягте лицом вниз: стопы между валиками у платформы, колени сразу за подушкой.",
+    "Из нижней точки, держа корпус ровным, поднимитесь за счёт сгибания коленей.",
+    "Упирайтесь носками в платформу и поднимайтесь до вертикали корпуса.",
+    "Опускайтесь медленно и подконтрольно."
+   ]
+  },
+  "a": [
+   "глют хэм",
+   "glyut khem",
+   "ghr",
+   "glute ham raise",
+   "бицепс бедра"
+  ]
+ },
+ "Standing_Calf_Raises": {
+  "uz": {
+   "n": "Tik turib boldir ko'tarish (trenajyorda)",
+   "s": [
+    "Trenajyor yostiqlarini bo'yingizga moslab, yelkalarni ularning ostiga qo'ying.",
+    "Oyoq uchlarini platforma chetiga qo'ying, tovonlar pastda erkin tursin.",
+    "Tizzalarni bukmay, tovonlarni imkon qadar yuqori ko'tarib, bir soniya ushlang.",
+    "Tovonlarni boldir cho'zilguncha sekin pastga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Подъёмы на носки стоя в тренажёре",
+   "s": [
+    "Настройте упоры по росту и встаньте под них плечами.",
+    "Поставьте носки на край платформы, пятки свободно внизу.",
+    "Не сгибая колени, поднимитесь на носки как можно выше и задержитесь.",
+    "Медленно опустите пятки до растяжения икр."
+   ]
+  },
+  "a": [
+   "икры",
+   "ikry",
+   "calf raise",
+   "подъём на носки",
+   "boldir",
+   "икры стоя"
+  ]
+ },
+ "Seated_Calf_Raise": {
+  "uz": {
+   "n": "O'tirib boldir ko'tarish",
+   "s": [
+    "Trenajyorga o'tirib, oyoq uchlarini platformaga qo'ying, tovonlar chetdan chiqib tursin.",
+    "Son pastki qismini yostiq ostiga joylashtirib, qo'llarni yostiq ustiga qo'ying.",
+    "Tovonlarni biroz ko'tarib, xavfsizlik tutqichini oching.",
+    "Tovonlarni boldir cho'zilguncha sekin tushiring, so'ng imkon qadar yuqori ko'tarib qisib turing."
+   ]
+  },
+  "ru": {
+   "n": "Подъёмы на носки сидя",
+   "s": [
+    "Сядьте в тренажёр, поставьте носки на платформу, пятки свисают.",
+    "Подведите нижнюю часть бёдер под валик и положите на него руки.",
+    "Слегка приподнимите пятки и снимите стопор.",
+    "Медленно опустите пятки до растяжения, затем поднимитесь как можно выше и задержитесь."
+   ]
+  },
+  "a": [
+   "икры сидя",
+   "ikry sidya",
+   "seated calf",
+   "камбаловидная",
+   "boldir"
+  ]
+ },
+ "Standing_Barbell_Calf_Raise": {
+  "uz": {
+   "n": "Shtanga bilan tik turib boldir ko'tarish",
+   "s": [
+    "Ramada shtangani yelkaning orqa qismiga olib, ramadan chiqing.",
+    "Oyoqlarni yelka kengligida qo'yib, belni tekis, boshni tik tuting.",
+    "Tizzalarni bukmay, tovonlarni imkon qadar yuqori ko'tarib, bir soniya ushlang.",
+    "Tovonlarni sekin pastga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Подъёмы на носки со штангой стоя",
+   "s": [
+    "Положите штангу в раме на заднюю часть плеч и отойдите от стоек.",
+    "Стопы на ширине плеч, спина ровная, голова прямо.",
+    "Не сгибая колени, поднимитесь на носки как можно выше и задержитесь.",
+    "Медленно опустите пятки."
+   ]
+  },
+  "a": [
+   "икры со штангой",
+   "ikry so shtangoy",
+   "barbell calf raise",
+   "подъём на носки",
+   "boldir"
+  ]
+ },
+ "Calf_Press_On_The_Leg_Press_Machine": {
+  "uz": {
+   "n": "Platforma trenajyorida boldir itarish",
+   "s": [
+    "Oyoq platformasi trenajyoriga o'tirib, oyoq uchlarini platformaning pastki chetiga qo'ying.",
+    "Tirgaklarni oching va platformani tizzani qulflamay yuqoriga itaring.",
+    "Tizzalarni qimirlatmay, oyoq uchlari bilan platformani imkon qadar uzoq iting.",
+    "Tovonlarni boldir cho'zilguncha sekin qaytaring; tugatgach tirgaklarni yoping."
+   ]
+  },
+  "ru": {
+   "n": "Икры в тренажёре для жима ногами",
+   "s": [
+    "Сядьте в тренажёр для жима ногами, поставьте носки на нижний край платформы.",
+    "Снимите стопоры и выжмите платформу, не блокируя колени.",
+    "Не сгибая колени, выжмите платформу носками как можно дальше.",
+    "Медленно вернитесь до растяжения икр; после подхода закройте стопоры."
+   ]
+  },
+  "a": [
+   "икры в жиме ногами",
+   "ikry v zhime nogami",
+   "calf press",
+   "жим носками",
+   "boldir"
+  ]
+ },
+ "Donkey_Calf_Raises": {
+  "uz": {
+   "n": "\"Eshak\" boldir ko'tarish",
+   "s": [
+    "Trenajyorda belning pastki qismi va tosni yostiq ostiga joylashtiring.",
+    "Tutqichlarni ushlab, oyoq uchlarini blokka qo'ying, tovonlar chetdan chiqib tursin.",
+    "Tizzalarni bukmay, tovonlarni imkon qadar yuqoriga ko'tarib, bir soniya ushlang.",
+    "Tovonlarni boldir cho'zilguncha sekin pastga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Подъёмы на носки «ослик»",
+   "s": [
+    "Расположите поясницу и таз под валиком тренажёра.",
+    "Возьмитесь за рукояти, поставьте носки на блок, пятки свисают.",
+    "Не сгибая колени, поднимитесь на носки как можно выше и задержитесь.",
+    "Медленно опустите пятки до растяжения икр."
+   ]
+  },
+  "a": [
+   "ослик",
+   "oslik",
+   "donkey calf",
+   "икры ослик",
+   "boldir"
+  ]
+ },
+ "Kettlebell_Pistol_Squat": {
+  "uz": {
+   "n": "Gire bilan bir oyoqda o'tirib-turish (pistolet)",
+   "s": [
+    "Girni ikki qo'llab shoxlaridan ushlab, oldingizda tuting.",
+    "Bir oyoqni poldan uzib oldinga chiqaring.",
+    "Tayanch oyoqda tosni orqaga surib, imkon qadar chuqur o'tiring.",
+    "Pastda qisqa to'xtab, ko'krakni tik tutib tovon bilan itarib ko'tariling."
+   ]
+  },
+  "ru": {
+   "n": "Пистолетик с гирей",
+   "s": [
+    "Возьмите гирю двумя руками за рожки и держите перед собой.",
+    "Оторвите одну ногу от пола и вытяните вперёд.",
+    "На опорной ноге, отводя таз назад, присядьте как можно глубже.",
+    "Задержитесь внизу и встаньте, отталкиваясь пяткой и держа грудь прямо."
+   ]
+  },
+  "a": [
+   "пистолетик",
+   "pistoletik",
+   "pistol squat",
+   "пистолет",
+   "pistolet",
+   "bir oyoqda prised"
+  ]
+ },
+ "Plie_Dumbbell_Squat": {
+  "uz": {
+   "n": "Gantel bilan plie o'tirib-turish (sumo)",
+   "s": [
+    "Bitta gantelni ikki qo'llab ushlab, oldingizda tik tushiring.",
+    "Oyoqlarni yelkadan kengroq qo'ying, uchlarini tashqariga qarating.",
+    "Qo'llarni qimirlatmay, son parallel bo'lguncha sekin o'tiring.",
+    "Tovonlar bilan itarib, nafas chiqarib tik turing."
+   ]
+  },
+  "ru": {
+   "n": "Приседания плие с гантелью",
+   "s": [
+    "Держите одну гантель двумя руками перед собой.",
+    "Поставьте стопы шире плеч, носки развернуты наружу.",
+    "Не двигая руками, медленно присядьте до параллели бёдер с полом.",
+    "Отталкиваясь пятками, на выдохе встаньте."
+   ]
+  },
+  "a": [
+   "плие",
+   "plie",
+   "сумо присед",
+   "sumo prised",
+   "sumo squat",
+   "plie squat"
+  ]
+ },
+ "Plank": {
+  "uz": {
+   "n": "Planka",
+   "s": [
+    "Bilaklar va oyoq uchlariga tayanib, yuzingiz bilan pastga qarab turing; tirsaklar yelka ostida.",
+    "Tanani boshdan tovongacha bir chiziqda tuting, tosni tushirmang va ko'tarmang.",
+    "Qorin va dumba muskullarini tarang qilib, holatni ushlab turing.",
+    "Qiyinlashtirish uchun bir qo'l yoki oyoqni ko'taring."
+   ]
+  },
+  "ru": {
+   "n": "Планка",
+   "s": [
+    "Примите упор на предплечья и носки, локти под плечами.",
+    "Держите тело одной линией от головы до пяток, не провисая и не поднимая таз.",
+    "Напрягите пресс и ягодицы и удерживайте положение.",
+    "Для усложнения поднимите одну руку или ногу."
+   ]
+  },
+  "a": [
+   "планка",
+   "plank",
+   "planka",
+   "статика пресс",
+   "press"
+  ]
+ },
+ "Side_Bridge": {
+  "uz": {
+   "n": "Yon planka",
+   "s": [
+    "Yonboshlab yoting, tirsakni yelka ostiga qo'yib, oyoqlarni ustma-ust qo'ying.",
+    "Tosni ko'tarib, tanani boshdan oyoqqacha bir chiziqqa keltiring.",
+    "Qorin yon muskullarini tarang qilib, tosni tushirmay holatni ushlab turing.",
+    "Sekin tushib, ikkinchi tomonga o'ting."
+   ]
+  },
+  "ru": {
+   "n": "Боковая планка",
+   "s": [
+    "Лягте на бок, поставьте локоть под плечо, ноги одна на другой.",
+    "Поднимите таз, выстроив тело в одну линию от головы до стоп.",
+    "Напрягите косые мышцы и удерживайте положение, не опуская таз.",
+    "Медленно опуститесь и смените сторону."
+   ]
+  },
+  "a": [
+   "боковая планка",
+   "bokovaya planka",
+   "side plank",
+   "yon planka",
+   "косые"
+  ]
+ },
+ "Crunches": {
+  "uz": {
+   "n": "Qorin uchun skruchivaniye (krunch)",
+   "s": [
+    "Chalqancha yotib, tizzalarni bukib, oyoqlarni polga qo'ying.",
+    "Qo'llarni boshning ikki yoniga yengil qo'ying, barmoqlarni bosh orqasida qulflamang.",
+    "Belning pastki qismini polga bosib, yelkalarni poldan biroz uzing va qorinni qising.",
+    "Qisqa to'xtab, sekin pastga tushing; bo'yinni qo'llar bilan tortmang."
+   ]
+  },
+  "ru": {
+   "n": "Скручивания на пресс",
+   "s": [
+    "Лягте на спину, согните колени, стопы на полу.",
+    "Слегка положите руки по бокам головы, не сцепляя пальцы за затылком.",
+    "Прижимая поясницу к полу, оторвите плечи и сократите пресс.",
+    "Задержитесь и медленно опуститесь; не тяните голову руками."
+   ]
+  },
+  "a": [
+   "скручивания",
+   "skruchivaniya",
+   "crunch",
+   "пресс",
+   "press",
+   "krunch"
+  ]
+ },
+ "Cable_Crunch": {
+  "uz": {
+   "n": "Blokda tizzalab skruchivaniye (\"molitva\")",
+   "s": [
+    "Yuqori blok ostida tizzalab, arqon tutqichni ushlang va qo'llarni yuz yoniga keltiring.",
+    "Tosni biroz bukib, boshlang'ich holatni oling.",
+    "Tosni qimirlatmay, qorin bilan gavdani bukib, tirsaklarni sonlar o'rtasiga olib boring.",
+    "Bir soniya qisib turib, nazorat bilan qayting; og'irlikni bel ko'tarmaydigan qilib tanlang."
+   ]
+  },
+  "ru": {
+   "n": "Скручивания на блоке стоя на коленях («молитва»)",
+   "s": [
+    "Встаньте на колени под верхним блоком, возьмите канат и поднесите руки к лицу.",
+    "Слегка согнитесь в тазу — это исходное положение.",
+    "Не двигая тазом, скрутите корпус прессом, направляя локти к середине бёдер.",
+    "Задержитесь и подконтрольно вернитесь; вес не должен перегружать поясницу."
+   ]
+  },
+  "a": [
+   "молитва",
+   "molitva",
+   "cable crunch",
+   "скручивания на блоке",
+   "skruchivaniya na bloke",
+   "press"
+  ]
+ },
+ "Hanging_Leg_Raise": {
+  "uz": {
+   "n": "Turnikda osilib oyoq ko'tarish",
+   "s": [
+    "Turnikda to'g'ri qo'llarda osilib turing, oyoqlar pastga tushgan.",
+    "Tebranmasdan, oyoqlarni gavda bilan to'g'ri burchak hosil qilguncha ko'taring.",
+    "Yuqorida qisqa to'xtang.",
+    "Oyoqlarni sekin va nazorat bilan pastga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Подъём ног в висе на турнике",
+   "s": [
+    "Повисните на турнике на прямых руках, ноги опущены.",
+    "Без раскачки поднимите ноги до прямого угла с корпусом.",
+    "Задержитесь в верхней точке.",
+    "Медленно и подконтрольно опустите ноги."
+   ]
+  },
+  "a": [
+   "подъём ног в висе",
+   "podyom nog v vise",
+   "hanging leg raise",
+   "turnikda oyoq",
+   "пресс на турнике",
+   "turnik press"
+  ]
+ },
+ "Flat_Bench_Lying_Leg_Raise": {
+  "uz": {
+   "n": "Skameykada yotib oyoq ko'tarish",
+   "s": [
+    "Skameykaga chalqancha yotib, oyoqlarni uning chetidan tashqariga cho'zing.",
+    "Qo'llarni dumba ostiga qo'ying yoki skameyka chetidan ushlang.",
+    "Oyoqlarni deyarli to'g'ri tutib, ular pol bilan to'g'ri burchak hosil qilguncha ko'taring.",
+    "Nafas olib, oyoqlarni sekin pastga tushiring; belni skameykaga bosib turing."
+   ]
+  },
+  "ru": {
+   "n": "Подъём ног лёжа на скамье",
+   "s": [
+    "Лягте на скамью на спину, ноги вытянуты за её край.",
+    "Положите руки под ягодицы или держитесь за края скамьи.",
+    "Почти прямыми ногами поднимите их до прямого угла с полом.",
+    "На вдохе медленно опустите ноги, прижимая поясницу к скамье."
+   ]
+  },
+  "a": [
+   "подъём ног лёжа",
+   "podyom nog lezha",
+   "lying leg raise",
+   "нижний пресс",
+   "nizhniy press",
+   "oyoq ko'tarish"
+  ]
+ },
+ "Reverse_Crunch": {
+  "uz": {
+   "n": "Teskari skruchivaniye",
+   "s": [
+    "Chalqancha yotib, qo'llarni kaftlar bilan polga qo'ying.",
+    "Oyoqlarni sonlar polga tik bo'lguncha ko'tarib, boldirlarni polga parallel tuting.",
+    "Tosni poldan uzib, tizzalarni ko'krakka torting.",
+    "Qisqa to'xtab, oyoqlarni nazorat bilan boshlang'ich holatga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Обратные скручивания",
+   "s": [
+    "Лягте на спину, ладони на полу вдоль туловища.",
+    "Поднимите ноги так, чтобы бёдра были вертикальны, а голени параллельны полу.",
+    "Подкручивая таз, оторвите его от пола и подтяните колени к груди.",
+    "Задержитесь и подконтрольно верните ноги."
+   ]
+  },
+  "a": [
+   "обратные скручивания",
+   "obratnye skruchivaniya",
+   "reverse crunch",
+   "нижний пресс",
+   "teskari krunch"
+  ]
+ },
+ "Russian_Twist": {
+  "uz": {
+   "n": "Rus burilishi (russian twist)",
+   "s": [
+    "Polga o'tirib, tizzalarni bukib, oyoqlarni biror narsa ostiga qisting.",
+    "Gavdani orqaga biroz og'dirib, sonlar bilan V shaklini hosil qiling; qo'llarni oldinga cho'zib birlashtiring.",
+    "Gavdani o'ngga burab, qisqa to'xtang.",
+    "Markazga qaytib, chap tomonga buring va navbatma-navbat davom eting."
+   ]
+  },
+  "ru": {
+   "n": "Русские скручивания",
+   "s": [
+    "Сядьте на пол, согните колени и зафиксируйте стопы.",
+    "Отклоните корпус назад, образуя с бёдрами букву V; руки вытянуты вперёд и сцеплены.",
+    "Поверните корпус вправо и задержитесь.",
+    "Вернитесь в центр, повернитесь влево и чередуйте стороны."
+   ]
+  },
+  "a": [
+   "русский твист",
+   "russkiy tvist",
+   "russian twist",
+   "твист",
+   "косые",
+   "rus burilishi"
+  ]
+ },
+ "Ab_Roller": {
+  "uz": {
+   "n": "Press g'ildiragi bilan dumalatish",
+   "s": [
+    "G'ildirakni ikki qo'llab ushlab, polga tizzalab turing.",
+    "G'ildirakni oldingizga qo'yib, qo'l va tizzalarga tayaning.",
+    "G'ildirakni sekin oldinga dumalatib, tanani poldan uzmay iloji boricha cho'zing.",
+    "Qisqa to'xtab, qorinni tarang tutib boshlang'ich holatga qayting; belni egmang."
+   ]
+  },
+  "ru": {
+   "n": "Ролик для пресса",
+   "s": [
+    "Возьмите ролик двумя руками и встаньте на колени.",
+    "Поставьте ролик на пол перед собой, опора на руки и колени.",
+    "Медленно выкатите ролик вперёд, вытягивая тело, не касаясь пола.",
+    "После паузы вернитесь назад, держа пресс напряжённым и не прогибая поясницу."
+   ]
+  },
+  "a": [
+   "ролик",
+   "rolik",
+   "ab wheel",
+   "колесо для пресса",
+   "g'ildirak",
+   "rollout"
+  ]
+ },
+ "Barbell_Ab_Rollout_-_On_Knees": {
+  "uz": {
+   "n": "Shtangani tizzalab dumalatish (press)",
+   "s": [
+    "Kichik disklar taqilgan shtanga oldida polga tizzalab turing.",
+    "Grifni ushlab, qo'l va tizzalarga tayaning.",
+    "Shtangani sekin oldinga dumalatib, tanani poldan uzmay cho'zing.",
+    "Qisqa to'xtab, qorinni tarang tutib orqaga qayting."
+   ]
+  },
+  "ru": {
+   "n": "Выкатывание штанги с колен",
+   "s": [
+    "Встаньте на колени перед штангой с лёгкими блинами.",
+    "Возьмитесь за гриф, опора на руки и колени.",
+    "Медленно выкатите штангу вперёд, вытягивая тело, не касаясь пола.",
+    "После паузы вернитесь назад, сохраняя пресс напряжённым."
+   ]
+  },
+  "a": [
+   "выкатывание штанги",
+   "vykatyvaniye shtangi",
+   "barbell rollout",
+   "ролик штангой",
+   "rollout"
+  ]
+ },
+ "Dead_Bug": {
+  "uz": {
+   "n": "\"O'lik qo'ng'iz\" (dead bug)",
+   "s": [
+    "Chalqancha yotib, qo'llarni shiftga qarab cho'zing.",
+    "Tos, tizza va oyoqlarni to'g'ri burchakka ko'taring.",
+    "Nafas chiqarib qovurg'alarni tushiring va belni polga bosing; bu holatni butun mashq davomida saqlang.",
+    "Bir oyoqni poldan biroz yuqorida to'g'rilab cho'zing, belni ko'tarmang.",
+    "Oyoqni qaytarib, ikkinchi tomon bilan navbatma-navbat bajaring."
+   ]
+  },
+  "ru": {
+   "n": "Мёртвый жук",
+   "s": [
+    "Лягте на спину, руки вытянуты вверх к потолку.",
+    "Поднимите бёдра, колени и стопы под прямым углом.",
+    "На выдохе опустите рёбра и прижмите поясницу к полу; сохраняйте это положение всё упражнение.",
+    "Выпрямите одну ногу чуть над полом, не прогибая поясницу.",
+    "Верните ногу и чередуйте стороны."
+   ]
+  },
+  "a": [
+   "мёртвый жук",
+   "myortvyy zhuk",
+   "dead bug",
+   "жук",
+   "o'lik qo'ng'iz"
+  ]
+ },
+ "Mountain_Climbers": {
+  "uz": {
+   "n": "Alpinist (mountain climber)",
+   "s": [
+    "Qo'llar va oyoq uchlariga tayanib, otjimaniye holatini oling.",
+    "Bir tizzani tos ostiga qadar oldinga torting.",
+    "Oyoqlarni tez almashtiring: bukilgan oyoqni orqaga cho'zib, ikkinchisini oldinga torting.",
+    "Tosni ko'tarmay va tushirmay, ritmni saqlab davom eting."
+   ]
+  },
+  "ru": {
+   "n": "Скалолаз",
+   "s": [
+    "Примите упор лёжа на руках и носках.",
+    "Подтяните одно колено под таз.",
+    "Быстро смените ноги: согнутую выпрямите назад, другую подтяните вперёд.",
+    "Продолжайте в ритме, не поднимая и не опуская таз."
+   ]
+  },
+  "a": [
+   "скалолаз",
+   "skalolaz",
+   "mountain climber",
+   "альпинист",
+   "alpinist",
+   "bego v upore"
+  ]
+ },
+ "Sit-Up": {
+  "uz": {
+   "n": "Gavda ko'tarish (press)",
+   "s": [
+    "Chalqancha yotib, tizzalarni bukib, oyoqlarni biror narsa ostiga qisting.",
+    "Qo'llarni bosh orqasiga qo'ying.",
+    "Nafas chiqarib, gavdani sonlar bilan V shaklini hosil qilguncha ko'taring.",
+    "Qisqa to'xtab, nafas olib sekin pastga tushing; boshni qo'llar bilan tortmang."
+   ]
+  },
+  "ru": {
+   "n": "Подъёмы корпуса",
+   "s": [
+    "Лягте на спину, согните колени и зафиксируйте стопы.",
+    "Положите руки за голову.",
+    "На выдохе поднимите корпус, образуя с бёдрами букву V.",
+    "Задержитесь и на вдохе медленно опуститесь; не тяните голову руками."
+   ]
+  },
+  "a": [
+   "подъём корпуса",
+   "podyom korpusa",
+   "sit up",
+   "пресс",
+   "press",
+   "situp"
+  ]
+ },
+ "Decline_Crunch": {
+  "uz": {
+   "n": "Qiya skameykada skruchivaniye",
+   "s": [
+    "Oyoqlarni qiya skameyka uchiga mahkamlab, chalqancha yoting.",
+    "Qo'llarni boshning ikki yoniga yengil qo'ying.",
+    "Belni skameykaga bosib, yelkalarni biroz ko'tarib qorinni qising.",
+    "Qisqa to'xtab, sekin pastga tushing."
+   ]
+  },
+  "ru": {
+   "n": "Скручивания на наклонной скамье",
+   "s": [
+    "Зафиксируйте ноги на конце наклонной скамьи и лягте.",
+    "Слегка положите руки по бокам головы.",
+    "Прижимая поясницу к скамье, оторвите плечи и сократите пресс.",
+    "Задержитесь и медленно опуститесь."
+   ]
+  },
+  "a": [
+   "скручивания на наклонной",
+   "skruchivaniya na naklonnoy",
+   "decline crunch",
+   "пресс на скамье",
+   "press"
+  ]
+ },
+ "Oblique_Crunches_-_On_The_Floor": {
+  "uz": {
+   "n": "Polda yonlama skruchivaniye",
+   "s": [
+    "O'ng yoningiz bilan yotib, oyoqlarni ustma-ust qo'ying, tizzalarni biroz buking.",
+    "Chap qo'lni bosh orqasiga qo'ying.",
+    "Chap tirsakni yuqoriga ko'tarib, qorin yon muskullari bilan qisqarish qiling.",
+    "Bir soniya ushlab, sekin tushing; tomonni almashtiring."
+   ]
+  },
+  "ru": {
+   "n": "Косые скручивания на полу",
+   "s": [
+    "Лягте на правый бок, ноги одна на другой, колени слегка согнуты.",
+    "Положите левую руку за голову.",
+    "Поднимите левый локоть вверх, скручиваясь за счёт косых мышц.",
+    "Задержитесь на секунду, медленно опуститесь и смените сторону."
+   ]
+  },
+  "a": [
+   "косые скручивания",
+   "kosye skruchivaniya",
+   "oblique crunch",
+   "косые",
+   "kosye",
+   "yon press"
+  ]
+ },
+ "Pallof_Press": {
+  "uz": {
+   "n": "Pallof jimi",
+   "s": [
+    "Blokka tutqich ulab, kabelni yelka balandligiga qo'ying.",
+    "Blokka yonlab turib, tutqichni ikki qo'llab ushlang va qo'l uzunligida chetga chiqing.",
+    "Oyoqlar tos kengligida, tizzalar biroz bukilgan; tutqichni ko'krak o'rtasiga keltiring.",
+    "Korpusni burilishga qarshi tarang tutib, qo'llarni oldinga to'liq cho'zing va bir necha soniya ushlang.",
+    "Qaytib, seriyadan keyin ikkinchi tomonga buriling."
+   ]
+  },
+  "ru": {
+   "n": "Жим Паллофа",
+   "s": [
+    "Закрепите рукоять на блоке примерно на высоте плеч.",
+    "Встаньте боком к блоку, возьмите рукоять двумя руками и отойдите на длину руки.",
+    "Стопы на ширине таза, колени слегка согнуты; рукоять у середины груди.",
+    "Сопротивляясь повороту корпуса, выжмите рукоять вперёд и задержитесь на несколько секунд.",
+    "Вернитесь, а после подхода развернитесь другой стороной."
+   ]
+  },
+  "a": [
+   "паллоф",
+   "pallof",
+   "pallof press",
+   "антиротация",
+   "antirotatsiya"
+  ]
+ },
+ "Standing_Cable_Wood_Chop": {
+  "uz": {
+   "n": "Blokda \"o'tin chopish\"",
+   "s": [
+    "Tutqichni eng yuqori blokka ulang va unga yonlab turing.",
+    "Tutqichni ikki qo'llab ushlab, qo'l uzunligida chetga chiqing; oyoqlar yelka kengligida.",
+    "Qo'llarni to'g'ri tutib, gavdani burab tutqichni pastga va old tizzaga qarab diagonal torting.",
+    "Orqa oyoqni burib, tizzalarni biroz buking; korpus tarang bo'lsin.",
+    "Sekin va nazorat bilan qayting; so'ng ikkinchi tomonga o'ting."
+   ]
+  },
+  "ru": {
+   "n": "Дровосек на блоке",
+   "s": [
+    "Закрепите рукоять на верхнем блоке и встаньте к нему боком.",
+    "Возьмите рукоять двумя руками и отойдите на длину руки; стопы на ширине плеч.",
+    "Прямыми руками протяните рукоять по диагонали вниз к переднему колену, поворачивая корпус.",
+    "Разворачивайте заднюю стопу и слегка сгибайте колени; корпус напряжён.",
+    "Медленно вернитесь и затем смените сторону."
+   ]
+  },
+  "a": [
+   "дровосек",
+   "drovosek",
+   "wood chop",
+   "woodchopper",
+   "косые на блоке",
+   "o'tin chopish"
+  ]
+ },
+ "Ab_Crunch_Machine": {
+  "uz": {
+   "n": "Trenajyorda press skruchivaniye",
+   "s": [
+    "Yengil og'irlik tanlab, trenajyorga o'tiring; oyoqlarni yostiqlar ostiga qo'yib, tutqichlarni ushlang.",
+    "Bir vaqtda oyoqlarni ko'tarib, gavdani oldinga buking va qorinni qising.",
+    "Harakatni qo'llar bilan emas, qorin bilan, sekin bajaring.",
+    "Qisqa to'xtab, nafas olib sekin qayting."
+   ]
+  },
+  "ru": {
+   "n": "Скручивания в тренажёре на пресс",
+   "s": [
+    "Выберите лёгкий вес, сядьте в тренажёр, заведите стопы под валики и возьмитесь за рукояти.",
+    "Одновременно поднимите ноги и скрутите корпус, сокращая пресс.",
+    "Двигайтесь медленно, работая прессом, а не руками.",
+    "После паузы на вдохе медленно вернитесь."
+   ]
+  },
+  "a": [
+   "пресс тренажёр",
+   "press trenazhyor",
+   "ab machine",
+   "скручивания в тренажёре",
+   "press"
+  ]
+ },
+ "Knee_Hip_Raise_On_Parallel_Bars": {
+  "uz": {
+   "n": "Brusyada tirsakka tayanib oyoq ko'tarish",
+   "s": [
+    "Tirsaklarni yostiqlarga qo'yib, tutqichlarni ushlang; bel suyanchiqqa tegib tursin.",
+    "Gavdani tik, oyoqlarni pastga tushirib turing.",
+    "Tebranmasdan, oyoqlarni pol bilan parallel bo'lguncha ko'taring va qisqa to'xtang.",
+    "Oyoqlarni sekin pastga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Подъём ног в упоре на локтях",
+   "s": [
+    "Обопритесь предплечьями о подушки и возьмитесь за рукояти; поясница прижата к спинке.",
+    "Корпус прямой, ноги опущены вниз.",
+    "Без раскачки поднимите ноги до параллели с полом и задержитесь.",
+    "Медленно опустите ноги."
+   ]
+  },
+  "a": [
+   "подъём ног на брусьях",
+   "podyom nog na brusyakh",
+   "captain's chair",
+   "капитанский стул",
+   "brusya press",
+   "нижний пресс"
+  ]
+ },
+ "Air_Bike": {
+  "uz": {
+   "n": "Velosiped (press uchun)",
+   "s": [
+    "Chalqancha yotib, belni polga bosing va qo'llarni bosh yoniga qo'ying; bo'yinni tortmang.",
+    "Yelkalarni biroz ko'tarib, tizzalarni sonlar polga tik bo'lguncha keltiring.",
+    "O'ng oyoqni cho'zib, chap tizzani torting va o'ng tirsakni chap tizzaga yaqinlashtiring.",
+    "Tomonni almashtirib, pedal aylantirgandek navbatma-navbat davom eting."
+   ]
+  },
+  "ru": {
+   "n": "Велосипед на пресс",
+   "s": [
+    "Лягте на спину, прижмите поясницу, руки у головы; не тяните шею.",
+    "Слегка оторвите плечи и поднимите колени так, чтобы бёдра были вертикальны.",
+    "Выпрямляя правую ногу, подтяните левое колено и приблизьте к нему правый локоть.",
+    "Смените сторону и продолжайте, как будто крутите педали."
+   ]
+  },
+  "a": [
+   "велосипед",
+   "velosiped",
+   "bicycle crunch",
+   "air bike",
+   "косые",
+   "press"
+  ]
+ },
+ "One-Arm_Kettlebell_Swings": {
+  "uz": {
+   "n": "Bir qo'l bilan gire siltash (svin)",
+   "s": [
+    "Oyoqlarni yelkadan biroz kengroq qo'yib, girni bir qo'l bilan ushlang.",
+    "Belni tekis saqlab, tosni orqaga surib girni oyoqlar orasiga olib boring.",
+    "Tosni kuch bilan oldinga itarib, girni ko'krak balandligiga silting; qo'l faqat yo'naltiradi.",
+    "Girni yana oyoqlar orasiga nazorat bilan qaytaring; seriyadan keyin qo'lni almashtiring."
+   ]
+  },
+  "ru": {
+   "n": "Махи гирей одной рукой",
+   "s": [
+    "Поставьте стопы чуть шире плеч и возьмите гирю одной рукой.",
+    "Сохраняя ровную спину, отведите таз назад и заведите гирю между ног.",
+    "Мощным движением таза вперёд выбросьте гирю до уровня груди; рука лишь направляет.",
+    "Подконтрольно верните гирю между ног; после подхода смените руку."
+   ]
+  },
+  "a": [
+   "махи гирей",
+   "makhi girey",
+   "kettlebell swing",
+   "свинг",
+   "sving",
+   "giri silkish"
+  ]
+ },
+ "Kettlebell_Turkish_Get-Up_Squat_style": {
+  "uz": {
+   "n": "Gire bilan turkcha turish (o'tirib-turish uslubida)",
+   "s": [
+    "Chalqancha yotib, girni bir qo'lda tepaga to'g'ri ko'taring; shu tomondagi tizzani buking.",
+    "Girni doim to'g'ri qo'lda qulflangan holda saqlab, bo'sh qo'lga tayanib qarama-qarshi tomonga buriling.",
+    "Bo'sh qo'l bilan itarib o'tiring, so'ng oyoqqa chiqib o'tirgan holatdan tik turing.",
+    "Nigohni girdan uzmay, harakatni teskari tartibda bajarib yotgan holatga qayting."
+   ]
+  },
+  "ru": {
+   "n": "Турецкий подъём с гирей (через присед)",
+   "s": [
+    "Лягте на спину и выжмите гирю одной рукой вверх; согните колено с той же стороны.",
+    "Держа гирю на прямой руке, повернитесь на противоположный бок, опираясь на свободную руку.",
+    "Оттолкнитесь свободной рукой в положение сидя, затем через присед встаньте.",
+    "Глядя на гирю, выполните движение в обратном порядке до положения лёжа."
+   ]
+  },
+  "a": [
+   "турецкий подъём",
+   "turetskiy podyom",
+   "turkish get up",
+   "tgu",
+   "turkcha turish"
+  ]
+ },
+ "Power_Clean": {
+  "uz": {
+   "n": "Shtangani ko'krakka olish (power clean)",
+   "s": [
+    "Oyoqlarni yelkadan biroz kengroq qo'yib, shtangani tizzalardan tashqarida to'g'ri ushlang; bel tekis, ko'krak oldinga.",
+    "Tos va tizzalarni yozib, shtangani poldan uzing va boldirga yaqin olib boring.",
+    "Shtanga tizzadan o'tgach, tos, tizza va to'piqlarni keskin yozib, yelkalarni silkiting.",
+    "Shtanga ostiga tez kirib, tirsaklarni oldinga burang va uni yelkaning old qismiga yarim o'tirgan holda qabul qiling.",
+    "Tik turib, shtangani sonlar orqali nazorat bilan polga tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Взятие штанги на грудь (силовое)",
+   "s": [
+    "Поставьте стопы чуть шире плеч, возьмите штангу хватом снаружи коленей; спина ровная, грудь вперёд.",
+    "Разгибая таз и колени, оторвите штангу от пола и ведите её вдоль голеней.",
+    "После прохождения коленей резко разогните таз, колени и голеностопы и сделайте шраг.",
+    "Быстро подсядьте под штангу, проверните локти вперёд и примите её на передние дельты в полуприседе.",
+    "Встаньте и подконтрольно опустите штангу через бёдра на пол."
+   ]
+  },
+  "a": [
+   "взятие на грудь",
+   "vzyatiye na grud",
+   "power clean",
+   "клин",
+   "klin",
+   "pauer klin"
+  ]
+ },
+ "Clean_and_Press": {
+  "uz": {
+   "n": "Ko'krakka olib, tepaga jim",
+   "s": [
+    "Oyoqlarni yelka kengligida qo'yib, belni tekis saqlab shtangani to'g'ri qo'llarda ushlang.",
+    "Tizzalarni yozib shtangani ko'taring, uni tanaga yaqin olib boring.",
+    "Tizzadan o'tgach, sakrashga o'xshab tos va tizzalarni keskin yozing va shtanga ostiga kiring.",
+    "Tirsaklarni burab, shtangani yelkaning old qismiga qabul qiling va tik turing.",
+    "Oyoqlarni qimirlatmay, shtangani boshdan yuqoriga iting va nazorat bilan tushiring."
+   ]
+  },
+  "ru": {
+   "n": "Взятие на грудь и жим",
+   "s": [
+    "Поставьте стопы на ширине плеч и с ровной спиной возьмите штангу прямыми руками.",
+    "Разгибая колени, поднимите штангу, ведя её близко к телу.",
+    "После коленей резко разогнитесь, как в прыжке, и подсядьте под штангу.",
+    "Проверните локти, примите штангу на грудь и встаньте.",
+    "Не сдвигая стоп, выжмите штангу над головой и подконтрольно опустите."
+   ]
+  },
+  "a": [
+   "взятие и жим",
+   "vzyatiye i zhim",
+   "clean and press",
+   "клин и жим",
+   "klin zhim"
+  ]
+ },
+ "Kettlebell_Thruster": {
+  "uz": {
+   "n": "Gire bilan traster (thruster)",
+   "s": [
+    "Ikki girni yelkalarga olib keling, bilaklarni burab.",
+    "Belni tik saqlab, tosni oyoqlar orasiga tushirib imkon qadar chuqur o'tiring.",
+    "Tovonlar bilan itarib ko'tarilayotganda, harakat kuchidan foydalanib girlarni tepaga iting.",
+    "Keyingi takror uchun girlarni yelkalarga qaytaring."
+   ]
+  },
+  "ru": {
+   "n": "Трастеры с гирями",
+   "s": [
+    "Возьмите две гири на грудь, проворачивая кисти.",
+    "Держа спину прямой, опустите таз между ног и присядьте как можно глубже.",
+    "Вставая через пятки, используйте инерцию и выжмите гири над головой.",
+    "Перед следующим повтором верните гири к плечам."
+   ]
+  },
+  "a": [
+   "трастер",
+   "traster",
+   "thruster",
+   "трастеры с гирями",
+   "присед с жимом"
+  ]
+ },
+ "Battling_Ropes": {
+  "uz": {
+   "n": "Jang arqonlari (battle rope)",
+   "s": [
+    "Mahkamlangan og'ir arqonning ikki uchini ushlab, qo'llarni yon tomonda tushirib turing.",
+    "Tizzalarni biroz bukib, korpusni tarang tuting.",
+    "Bir qo'lni yelka balandligiga tez ko'taring.",
+    "Uni tushirayotganda ikkinchi qo'lni ko'taring va navbatma-navbat tez to'lqin hosil qiling."
+   ]
+  },
+  "ru": {
+   "n": "Канаты (battle rope)",
+   "s": [
+    "Возьмите концы закреплённого тяжёлого каната, руки опущены по бокам.",
+    "Слегка согните колени и напрягите корпус.",
+    "Быстро поднимите одну руку до уровня плеч.",
+    "Опуская её, поднимайте другую и чередуйте руки, создавая быстрые волны."
+   ]
+  },
+  "a": [
+   "канаты",
+   "kanaty",
+   "battle rope",
+   "батл роуп",
+   "arqon",
+   "battling ropes"
+  ]
+ },
+ "Rope_Jumping": {
+  "uz": {
+   "n": "Arg'amchi sakrash",
+   "s": [
+    "Arg'amchining ikki uchini ushlab, uni orqangizdagi polga qo'ying.",
+    "Bilaklar bilan arg'amchini bosh ustidan oldinga aylantiring.",
+    "Arg'amchi polga yetganda, oyoq uchlarida yengil sakrab o'ting.",
+    "Qulay ritmni topib, tizzalarni biroz bukik holda davom eting."
+   ]
+  },
+  "ru": {
+   "n": "Прыжки на скакалке",
+   "s": [
+    "Возьмите ручки скакалки, расположив её позади себя на полу.",
+    "Вращая кистями, перекиньте скакалку через голову вперёд.",
+    "Когда скакалка коснётся пола, перепрыгните её на носках.",
+    "Найдите удобный ритм и продолжайте, держа колени слегка согнутыми."
+   ]
+  },
+  "a": [
+   "скакалка",
+   "skakalka",
+   "jump rope",
+   "arg'amchi",
+   "skipping"
+  ]
+ },
+ "Running_Treadmill": {
+  "uz": {
+   "n": "Yugurish yo'lakchasida yugurish",
+   "s": [
+    "Yo'lakchaga chiqib, menyudan qo'lda rejim yoki dasturni tanlang.",
+    "Sekin yurishdan boshlab, tezlikni asta-sekin oshiring.",
+    "Gavdani tik, yelkalarni bo'sh tuting va qo'llarni tabiiy harakatlantiring.",
+    "Tugatishdan oldin tezlikni pasaytirib, yurib sovuting."
+   ]
+  },
+  "ru": {
+   "n": "Бег на беговой дорожке",
+   "s": [
+    "Встаньте на дорожку и выберите ручной режим или программу.",
+    "Начните с ходьбы и постепенно увеличивайте скорость.",
+    "Держите корпус прямо, плечи расслаблены, руки работают естественно.",
+    "В конце снизьте скорость и походите для заминки."
+   ]
+  },
+  "a": [
+   "беговая дорожка",
+   "begovaya dorozhka",
+   "treadmill",
+   "бег",
+   "beg",
+   "yugurish"
+  ]
+ },
+ "Walking_Treadmill": {
+  "uz": {
+   "n": "Yugurish yo'lakchasida yurish",
+   "s": [
+    "Yo'lakchaga chiqib, menyudan qo'lda rejim yoki dasturni tanlang.",
+    "O'rtacha yoki tez sur'atda yuring, sayr qilgandek sekin emas.",
+    "Gavdani tik tuting va tutqichlarga suyanib qolmang.",
+    "Qiyinlashtirish uchun yo'lakcha qiyaligini oshiring."
+   ]
+  },
+  "ru": {
+   "n": "Ходьба на беговой дорожке",
+   "s": [
+    "Встаньте на дорожку и выберите ручной режим или программу.",
+    "Идите в умеренном или быстром темпе, а не прогулочном.",
+    "Держите корпус прямо и не опирайтесь на поручни.",
+    "Для усложнения увеличьте наклон дорожки."
+   ]
+  },
+  "a": [
+   "ходьба",
+   "khodba",
+   "treadmill walk",
+   "беговая дорожка",
+   "yurish",
+   "incline walk"
+  ]
+ },
+ "Bicycling_Stationary": {
+  "uz": {
+   "n": "Velotrenajyor",
+   "s": [
+    "Velotrenajyorga o'tirib, o'rindiqni bo'yingizga moslang.",
+    "Pedal aylantirib trenajyorni yoqing va qo'lda rejim yoki dasturni tanlang.",
+    "Gavdani tik tutib, bir tekis ritmda pedal aylantiring.",
+    "Qarshilikni asta-sekin oshiring va oxirida sekinlashib tugating."
+   ]
+  },
+  "ru": {
+   "n": "Велотренажёр",
+   "s": [
+    "Сядьте на велотренажёр и отрегулируйте сиденье по росту.",
+    "Начните крутить педали, чтобы включить тренажёр, и выберите режим или программу.",
+    "Держите корпус ровно и крутите педали в равномерном ритме.",
+    "Постепенно повышайте сопротивление и в конце снизьте темп."
+   ]
+  },
+  "a": [
+   "велотренажёр",
+   "velotrenazhyor",
+   "bike",
+   "велик",
+   "velosiped",
+   "cycling"
+  ]
+ },
+ "Rowing_Stationary": {
+  "uz": {
+   "n": "Eshkak eshish trenajyori",
+   "s": [
+    "Trenajyorga o'tirib, oyoqlarni pedallarga qo'ying va kamarlarni mahkamlang.",
+    "Tizzalarni bukib, gavdani biroz oldinga egib, to'g'ri qo'llarda tutqichni ushlang.",
+    "Avval oyoqlar bilan itaring, so'ng gavdani biroz orqaga og'dirib, tutqichni qoringa torting.",
+    "Qo'llarni yozib, tizzalarni bukib, oldinga qayting; belni tekis saqlang."
+   ]
+  },
+  "ru": {
+   "n": "Гребной тренажёр",
+   "s": [
+    "Сядьте на тренажёр, поставьте стопы на упоры и затяните ремни.",
+    "Согните колени, слегка наклоните корпус вперёд и возьмите рукоять прямыми руками.",
+    "Сначала оттолкнитесь ногами, затем отклоните корпус и подтяните рукоять к животу.",
+    "Выпрямите руки, согните колени и вернитесь вперёд, сохраняя ровную спину."
+   ]
+  },
+  "a": [
+   "гребля",
+   "greblya",
+   "rower",
+   "гребной",
+   "rowing",
+   "eshkak"
+  ]
+ },
+ "Elliptical_Trainer": {
+  "uz": {
+   "n": "Ellips trenajyori",
+   "s": [
+    "Ellips trenajyoriga chiqib, menyudan rejim yoki dasturni tanlang.",
+    "Pedallarni bir tekis ritmda harakatlantiring, qo'llar bilan tutqichlarni ham itaring-torting.",
+    "Gavdani tik tuting, oyoqlarni pedallardan uzmang.",
+    "Qarshilik yoki tezlikni asta-sekin oshiring."
+   ]
+  },
+  "ru": {
+   "n": "Эллиптический тренажёр",
+   "s": [
+    "Встаньте на эллипс и выберите режим или программу.",
+    "Двигайте педали в равномерном ритме, работая и рукоятями.",
+    "Держите корпус прямо, не отрывайте стопы от педалей.",
+    "Постепенно повышайте сопротивление или темп."
+   ]
+  },
+  "a": [
+   "эллипс",
+   "ellips",
+   "elliptical",
+   "орбитрек",
+   "orbitrek"
+  ]
+ },
+ "Stairmaster": {
+  "uz": {
+   "n": "Zinapoya trenajyori (steper)",
+   "s": [
+    "Trenajyorga chiqib, menyudan rejim yoki dasturni tanlang.",
+    "Oyoqlarni ritm bilan navbatma-navbat bosing, pedallarni polgacha tushirmang.",
+    "Muvozanat uchun tutqichlarni yengil ushlang, lekin ularga suyanib qolmang.",
+    "Gavdani tik saqlab, sur'atni asta-sekin oshiring."
+   ]
+  },
+  "ru": {
+   "n": "Степпер / лестница",
+   "s": [
+    "Встаньте на тренажёр и выберите режим или программу.",
+    "Ритмично поочерёдно нажимайте на педали, не опуская их до упора.",
+    "Для равновесия слегка держитесь за поручни, но не висните на них.",
+    "Держите корпус прямо и постепенно повышайте темп."
+   ]
+  },
+  "a": [
+   "степпер",
+   "stepper",
+   "stairmaster",
+   "лестница",
+   "lestnitsa",
+   "zinapoya"
+  ]
+ },
+ "Freehand_Jump_Squat": {
+  "uz": {
+   "n": "Sakrab o'tirib-turish",
+   "s": [
+    "Qo'llarni ko'krakda chalishtirib, oyoqlarni yelka kengligida qo'ying.",
+    "Belni tekis, ko'krakni tik tutib, son parallel bo'lguncha o'tiring.",
+    "Oyoq uchlari bilan itarib, imkon qadar baland sakrang.",
+    "Yumshoq, tizzalarni bukib qo'ning va darhol keyingi o'tirishga o'ting."
+   ]
+  },
+  "ru": {
+   "n": "Приседания с выпрыгиванием",
+   "s": [
+    "Скрестите руки на груди, стопы на ширине плеч.",
+    "С ровной спиной и поднятой грудью присядьте до параллели.",
+    "Оттолкнитесь носками и выпрыгните как можно выше.",
+    "Мягко приземлитесь на согнутые колени и сразу переходите к следующему приседу."
+   ]
+  },
+  "a": [
+   "выпрыгивания",
+   "vyprygivaniya",
+   "jump squat",
+   "присед с прыжком",
+   "sakrab prised"
+  ]
+ },
+ "Front_Box_Jump": {
+  "uz": {
+   "n": "Qutiga sakrash",
+   "s": [
+    "Mos balandlikdagi qutining oldida oyoqlarni yelka kengligida qo'yib turing.",
+    "Qisqa o'tirib, qo'llarni orqaga silting.",
+    "Tos, tizza va to'piqlarni keskin yozib, qo'llarni oldinga silkib yuqoriga sakrang.",
+    "Qutiga tizzalarni bukib yumshoq qo'ning; pastga bir oyoqdan tushing."
+   ]
+  },
+  "ru": {
+   "n": "Запрыгивания на тумбу",
+   "s": [
+    "Встаньте перед тумбой подходящей высоты, стопы на ширине плеч.",
+    "Сделайте короткий подсед, отводя руки назад.",
+    "Резко разогните таз, колени и голеностопы и выпрыгните, взмахнув руками вперёд.",
+    "Мягко приземлитесь на тумбу на согнутые ноги; спускайтесь шагом по одной ноге."
+   ]
+  },
+  "a": [
+   "запрыгивания",
+   "zaprygivaniya",
+   "box jump",
+   "прыжки на тумбу",
+   "tumba",
+   "qutiga sakrash"
+  ]
+ },
+ "Muscle_Up": {
+  "uz": {
+   "n": "Halqalarda chiqish (muscle-up)",
+   "s": [
+    "Halqalarni \"soxta\" ushlash bilan ushlang: kaft asosi halqa ustida.",
+    "Tirsaklarni yon tomonga tushirib, kuchli tortilishni boshlang.",
+    "Yuqorida halqalarni qo'ltiqqa torting va yelkalarni oldinga o'tkazib, tirsaklarni orqaga oling.",
+    "Tirsaklarni yozib, halqalar ustida to'g'ri qo'llarda chiqing.",
+    "Pastga ehtiyotkorlik bilan, nazorat ostida tushing."
+   ]
+  },
+  "ru": {
+   "n": "Выход силой на кольцах",
+   "s": [
+    "Возьмитесь за кольца «ложным» хватом: основание ладони сверху на кольце.",
+    "Начните мощное подтягивание, опуская локти к бокам.",
+    "Вверху подтяните кольца к подмышкам, переведите плечи вперёд, а локти назад.",
+    "Разогните локти и выйдите в упор на прямых руках.",
+    "Опускайтесь аккуратно и подконтрольно."
+   ]
+  },
+  "a": [
+   "выход силой",
+   "vykhod siloy",
+   "muscle up",
+   "масл ап",
+   "chiqish",
+   "выход на кольцах"
+  ]
+ }
+}
