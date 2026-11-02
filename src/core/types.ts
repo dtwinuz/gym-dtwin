@@ -1,3 +1,5 @@
+import type { Why } from './progression'
+
 export type Unit = 'kg' | 'lb'
 export type Mode = 'reps' | 'time' | 'cardio'
 export type Policy = 'off' | 'linear' | 'greyskull' | 'double' | 'triple' | 'time'
@@ -65,6 +67,8 @@ export interface SetRow {
   done: boolean
   warmup?: boolean
   failure?: boolean
+  /** A rest-pause mini-set: the rest before it is the short one. */
+  rp?: boolean
   rir?: number
   rpe?: number
   drops?: Drop[]
@@ -85,6 +89,7 @@ export interface Rx {
   reps: number
   weight: number
   sec?: number
+  why?: Why
 }
 
 export interface Entry {
@@ -119,6 +124,21 @@ export interface Workout {
   updatedAt: Ms
 }
 
+/** Rest countdown as an absolute end time, so a reload continues it. */
+export interface RestTimer {
+  endsAt: Ms
+  total: number
+  /** Seconds left while paused. */
+  pausedLeft?: number
+}
+
+/** Countdown of a timed set; it completes the set when it runs out. */
+export interface WorkTimer {
+  ei: number
+  si: number
+  endsAt: Ms
+}
+
 export interface ActiveSession {
   id: string
   date: ISODate
@@ -130,6 +150,10 @@ export interface ActiveSession {
   note?: string
   /** Set when editing an already saved workout. */
   editingId?: string
+  rest?: RestTimer
+  work?: WorkTimer
+  /** Last ticked set: a forgotten session ends here, not days later. */
+  lastAt?: Ms
 }
 
 export interface WeighIn {

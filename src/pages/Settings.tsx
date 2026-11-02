@@ -11,6 +11,7 @@ import { resolveTheme, useSystemLight } from '../app/theme'
 import { toast } from '../app/toast'
 import { fmtNum } from '../app/format'
 import SafetyNotice from '../app/SafetyNotice'
+import { BarWeights, OwnedPlates } from './PlatesSettings'
 
 const LANG_NAME: Record<Lang, string> = { uz: 'O\'zbekcha', ru: 'Русский', en: 'English' }
 
@@ -24,12 +25,22 @@ function Seg<T extends string | number>({ value, options, onPick, label }: { val
   )
 }
 
-function Toggle({ k, label }: { k: 'sound' | 'vibrate' | 'keepAwake' | 'ramadanMode' | 'heatTips'; label: string }) {
+function Toggle({ k, label }: { k: 'sound' | 'vibrate' | 'keepAwake' | 'timerFlash' | 'collapseCompleted' | 'volumeWarmups' | 'ramadanMode' | 'heatTips'; label: string }) {
   const s = useSettings()
   return <input type="checkbox" className="switch" checked={s[k]} onChange={e => updateSettings({ [k]: e.target.checked } as Partial<S>)} aria-label={label} />
 }
 
 interface Item { key: Key; hint?: ReactNode; control: ReactNode; wide?: boolean }
+
+function RestField({ k, label, fallback }: { k: 'restSec' | 'restPauseSec' | 'warmupRestSec'; label: string; fallback?: number }) {
+  const s = useSettings()
+  return (
+    <input
+      className="input num" type="number" inputMode="numeric" min={0} max={900} step={15} value={s[k] ?? fallback ?? 0} aria-label={label}
+      onChange={e => updateSettings({ [k]: Math.max(0, Math.min(900, Math.round(Number(e.target.value) || 0))) } as Partial<S>)}
+    />
+  )
+}
 
 export default function Settings() {
   const s = useSettings()
@@ -72,20 +83,23 @@ export default function Settings() {
       { key: 'weightUnit', hint: L('unitHint'), control: <Seg label={L('weightUnit')} value={s.unit} onPick={setUnit} options={[['kg', 'kg'], ['lb', 'lb']]} /> },
     ]],
     ['secTraining', [
-      {
-        key: 'restSec',
-        control: (
-          <input
-            className="input num" type="number" inputMode="numeric" min={0} max={900} step={15} value={s.restSec} aria-label={L('restSec')}
-            onChange={e => updateSettings({ restSec: Math.max(0, Math.min(900, Math.round(Number(e.target.value) || 0))) })}
-          />
-        ),
-      },
+      { key: 'restSec', control: <RestField k="restSec" label={L('restSec')} /> },
+      { key: 'restPauseSec', control: <RestField k="restPauseSec" label={L('restPauseSec')} /> },
+      { key: 'warmupRestSec', control: <RestField k="warmupRestSec" label={L('warmupRestSec')} fallback={Math.min(60, s.restSec)} /> },
+      { key: 'startFrom', control: <Seg label={L('startFrom')} value={s.startFrom} onPick={startFrom => updateSettings({ startFrom })} options={[['plan', L('startPlan')], ['last', L('startLast')]]} /> },
+      { key: 'logRef', control: <Seg label={L('logRef')} value={s.logRef} onPick={logRef => updateSettings({ logRef })} options={[['last', L('refLast')], ['best', L('refBest')]]} /> },
       { key: 'effort', control: <Seg label={L('effort')} value={s.effort} onPick={effort => updateSettings({ effort })} options={[['none', L('effortNone')], ['rir', 'RIR'], ['rpe', 'RPE']]} />, hint: s.effort === 'rir' ? L('effortRir') : s.effort === 'rpe' ? L('effortRpe') : undefined },
       { key: 'workoutView', control: <Seg label={L('workoutView')} value={s.workoutView} onPick={workoutView => updateSettings({ workoutView })} options={[['cards', L('viewCards')], ['list', L('viewList')]]} /> },
       { key: 'sound', control: <Toggle k="sound" label={L('sound')} /> },
       { key: 'vibrate', control: <Toggle k="vibrate" label={L('vibrate')} /> },
+      { key: 'timerFlash', control: <Toggle k="timerFlash" label={L('timerFlash')} /> },
       { key: 'keepAwake', control: <Toggle k="keepAwake" label={L('keepAwake')} /> },
+      { key: 'collapseCompleted', control: <Toggle k="collapseCompleted" label={L('collapseCompleted')} /> },
+      { key: 'volumeWarmups', control: <Toggle k="volumeWarmups" label={L('volumeWarmups')} /> },
+    ]],
+    ['secPlates', [
+      { key: 'ownedPlates', wide: true, control: <OwnedPlates /> },
+      { key: 'barWeights', wide: true, control: <BarWeights /> },
     ]],
     ['secCalendar', [
       { key: 'weekStart', control: <Seg<0 | 1> label={L('weekStart')} value={s.weekStart} onPick={weekStart => updateSettings({ weekStart })} options={[[1, L('monday')], [0, L('sunday')]]} /> },

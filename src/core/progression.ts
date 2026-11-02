@@ -23,6 +23,7 @@ export type Why =
   | 'set' // top of the range: one more set
   | 'time' // hold made: more seconds
   | 'deload' // stalled: lighter and build back
+  | 'effort' // all reps made but all-out: same again before adding load
 
 export const modeOf = (slot: Pick<Slot, 'mode' | 'min' | 'speed' | 'sec'>): Mode =>
   slot.mode ?? (slot.min != null || slot.speed != null ? 'cardio' : slot.sec != null ? 'time' : 'reps')
@@ -45,6 +46,21 @@ export const repsBottom = (slot: Slot) => Math.max(1, Math.min(slot.repsMin ?? s
 
 const workSets = (e: Entry) => e.sets.filter(s => !s.warmup && s.done)
 
+/** Reps in reserve a set was logged at: failure and RPE 10 are 0, unrated is undefined. */
+export const setRir = (s: SetRow) => (s.failure ? 0 : s.rir ?? (s.rpe != null ? 10 - s.rpe : undefined))
+
+export const ALL_OUT_RIR = 0.5
+export const EASY_RIR = 4
+
+/** 'hard' = every set near failure on average, 'easy' = plenty left in every set; needs all sets rated. */
+function readEffort(sets: SetRow[]): 'hard' | 'easy' | null {
+  const rated = sets.map(setRir)
+  if (!rated.length || rated.some(r => r == null)) return null
+  const rs = rated as number[]
+  if (rs.reduce((a, b) => a + b, 0) / rs.length <= ALL_OUT_RIR) return 'hard'
+  return Math.min(...rs) >= EASY_RIR ? 'easy' : null
+}
+
 export interface SessionRead {
   /** Every planned work set reached its goal. */
   ok: boolean
@@ -53,6 +69,7 @@ export interface SessionRead {
   amrap: number
   sec: number
   setsDone: number
+  effort: 'hard' | 'easy' | null
 }
 
 /** Judge one logged session against what it asked for. Warm-ups never count. */
@@ -73,6 +90,7 @@ export function readSession(e: Entry): SessionRead | null {
     amrap: reps(judged[judged.length - 1]),
     sec: Math.min(...judged.map(s => s.sec ?? 0)),
     setsDone: judged.length,
+    effort: readEffort(judged),
   }
 }
 
@@ -131,7 +149,8 @@ export function nextPrescription({ slot, history, policy, inc }: ProgressionInpu
 
   const stalls = stallCount(usable, slot)
   const sign = slot.assisted ? -1 : 1
-  const up = (w: number) => clean(Math.max(0, w + sign * inc))
+  // sets with plenty left move two steps at once
+  const up = (w: number) => clean(Math.max(0, w + sign * inc * (read.effort === 'easy' ? 2 : 1)))
 
   if (policy === 'time') {
     const sec = prevRx.sec ?? slot.sec ?? 30
@@ -154,6 +173,12 @@ export function nextPrescription({ slot, history, policy, inc }: ProgressionInpu
   if (!read.ok) {
     if (stalls >= STALL_LIMIT[policy]) return { ...held, weight: deload(read, slot, inc), reps: policy === 'double' || policy === 'triple' ? repsBottom(slot) : held.reps, why: 'deload' }
     return held
+  }
+
+  // an all-out success repeats once at this weight before the load goes up
+  if (read.effort === 'hard' && policy !== 'greyskull') {
+    const before = usable.length > 1 ? readSession(usable[usable.length - 2]) : null
+    if (before?.weight !== read.weight) return { ...held, why: 'effort' }
   }
 
   switch (policy) {
