@@ -16,3 +16,7 @@ if (import.meta.env.VITE_SYNC_ENABLED === 'true') {
 } else {
   render()
 }
+
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+  void import('./pwa/boot').then(m => m.startPwa()).catch(() => undefined)
+}
