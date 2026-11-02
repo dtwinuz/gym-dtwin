@@ -115,7 +115,7 @@ Bu ro'yxat gym tomonidan qo'yiladigan talablar. Tayyori: S256 PKCE, refresh rota
 6. **Servis tokeni.** `DTWIN_SERVICE_TOKEN` VPS'dagi `.env` da, repoga kirmaydi.
 7. **Edge Caddy.** `gym.dtwin.uz` da `/api/*` ni `gym-dtwin-api:8080` ga, qolgani `gym-dtwin:80` da. `/auth/callback` statik konteynerda: `deploy/Caddyfile` allaqachon `index.html` ga qaytaradi. CSP bo'lsa `connect-src` ga `dtwin.uz` qo'shilsin.
 8. **Konteyner.** `deploy/api/docker-compose.example.yml` asosida `/opt/gym-dtwin/api`, tarmoq `dtwin-prod_default`, volume `./data` (uid 1000 ga yozish huquqi), `TRUST_PROXY=1`.
-9. **Backup.** dtwin backup skriptiga SQLite qo'shilsin (`VACUUM INTO` yoki `sqlite3 .backup`, WAL fayllarini oddiy nusxalash yaroqsiz). Tiklash sinovi bilan.
+9. **Backup.** Gym tomoni tayyor: `deploy/api/backup.sh` (`VACUUM INTO`, nusxa ochilib `integrity_check` va har hujjat JSON tekshiriladi, oxirgi 14 tasi qoladi). dtwin tomonidan kerak: shu skriptni kunlik backup jadvaliga qo'shish va `./backups` ni offsite nusxaga olish.
 10. **Notifier (#60).** `POST /internal/notify {userId, text}`, servis tokeni, bot bog'lanmagan foydalanuvchi uchun aniq javob kodi. Foydalanuvchi Telegram'ga bog'langanmi degan ma'lumot ham shu tomonda.
 11. **Kundalik (#61).** `POST /internal/diary {userId, id, date, name, minutes, volume}` va o'chirish uchun `DELETE /internal/diary/{id}`, `id` bo'yicha idempotent.
 12. **Akkaunt o'chirilishi.** dtwin foydalanuvchini o'chirganda gym'ga xabar (`DELETE` hodisasi), aks holda SQLite'da qator qoladi.
@@ -131,6 +131,13 @@ Bu ro'yxat gym tomonidan qo'yiladigan talablar. Tayyori: S256 PKCE, refresh rota
 5. 1 hafta log va SQLite hajmi kuzatiladi, keyin ochiq e'lon.
 
 Build o'zgaruvchilari `deploy/deploy.sh` da yo'q: yoqish uchun deploy qiluvchi shell'da eksport qiladi. Bu ataylab, keyingi oddiy deploy flag'ni tasodifan yoqmaydi.
+
+## Server: o'rnatish, backup, tiklash
+
+- O'rnatish: `bash deploy/api/install.sh dtwin` kodni `/opt/gym-dtwin/api` ga ko'chiradi va image yig'adi. Konteyner faqat `--start` bilan ishga tushadi. `.env` faqat serverda (600), repoda yo'q.
+- Backup: serverda `/opt/gym-dtwin/api/backup.sh`. WAL rejimidagi bazani `cp` bilan nusxalash yaroqsiz, shuning uchun `VACUUM INTO`.
+- Tiklash: `docker compose stop gym-dtwin-api`, `data/gym.sqlite*` ni chetga olish, backup faylini `data/gym.sqlite` qilib nusxalash (egasi uid 1000), `docker compose up -d`. Qurilmalardagi yangi yozuvlar `409` va merge orqali qaytadi.
+- Tiklash sinovi: `server/test/backup.test.js` (WAL'dagi yozuvlar nusxada bor, tiklangan bazaga yozish ishlaydi, buzuq fayl rad etiladi) va serverdagi image bilan vaqtinchalik papkada 500 profil: backup, tiklash, o'qish, yozish o'tdi.
 
 ## Orqaga qaytarish
 
