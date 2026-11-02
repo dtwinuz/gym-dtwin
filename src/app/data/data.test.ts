@@ -13,6 +13,12 @@ import strongCsv from './fixtures/strong.csv?raw'
 import hevyCsv from './fixtures/hevy.csv?raw'
 import fitnotesCsv from './fixtures/fitnotes.csv?raw'
 import genericCsv from './fixtures/generic.csv?raw'
+import strong2018Csv from './fixtures/real/strong-2018.csv?raw'
+import strong2019Csv from './fixtures/real/strong-2019.csv?raw'
+import strong2025Csv from './fixtures/real/strong-2025.csv?raw'
+import hevyUsCsv from './fixtures/real/hevy-us.csv?raw'
+import hevyPlainCsv from './fixtures/real/hevy-plain.csv?raw'
+import fitnotesRealCsv from './fixtures/real/fitnotes-real.csv?raw'
 
 const makeIds = () => {
   let n = 0
@@ -241,6 +247,85 @@ describe('fitnotes', () => {
     const { file, built } = await run(text)
     expect(file.needsUnit).toBe(false)
     expect(built.workouts[0].entries[0].sets[0].w).toBe(10)
+  })
+})
+
+describe('formats seen in real exports', () => {
+  it('strong 2018: rows wrapped in quotes, lbs and mi. as column names', async () => {
+    const { file, built } = await run(strong2018Csv)
+    expect(file.format).toBe('strong')
+    expect(file.needsUnit).toBe(false)
+    expect(file.rows).toHaveLength(5)
+    const [a, b] = built.workouts
+    expect(a.name).toBe('A')
+    expect(entryOf(a, 'Barbell_Squat').sets.map(s => s.w)).toEqual([43, 47.75])
+    expect(entryOf(a, 'Pullups').sets).toEqual([{ r: 6, done: true }])
+    expect(entryOf(a, 'Running_Treadmill').sets[0]).toMatchObject({ min: 10, km: 2.41 })
+    expect(b.note).toBe('Short one')
+    expect(entryOf(b, 'Dumbbell_Bench_Press').note).toBe('Slow')
+  })
+  it('strong 2019: semicolons, unit columns and "mi."', async () => {
+    const { file, built } = await run(strong2019Csv)
+    expect(file.needsUnit).toBe(false)
+    const [bike, lift] = built.workouts
+    expect(entryOf(bike, 'Bicycling_Stationary').sets[0]).toMatchObject({ min: 30, km: 9.66 })
+    expect(entryOf(lift, 'Barbell_Deadlift').sets.map(s => s.w)).toEqual([84, 93])
+  })
+  it('strong 2025: rest timers, reps as 10.0, a timer left running for days', async () => {
+    const { file, built } = await run(strong2025Csv, undefined, { unit: 'kg' })
+    expect(file.skipped).toBe(2)
+    const [evening, morning] = built.workouts
+    expect(evening.end - evening.start).toBe(0)
+    expect(entryOf(evening, 'Incline_Dumbbell_Press').sets.map(s => s.r)).toEqual([10, 8])
+    expect(morning.end - morning.start).toBe(58 * 60_000)
+    expect(entryOf(morning, 'Butterfly').sets[0].rpe).toBe(8)
+    expect(entryOf(morning, 'Standing_Military_Press').sets).toHaveLength(1)
+  })
+  it('hevy US locale: 12-hour times, lbs and miles, start equal to end', async () => {
+    const { file, matches, built } = await run(hevyUsCsv)
+    expect(file.needsUnit).toBe(false)
+    expect(matches.every(m => m.confidence === 'high')).toBe(true)
+    const [evening, late] = built.workouts
+    expect(evening.name).toBe('Evening workout \u{1F3CB}\u{FE0F}')
+    expect(evening.end - evening.start).toBe(88 * 60_000)
+    expect(new Date(evening.start).getHours()).toBe(20)
+    expect(entryOf(evening, 'Bodyweight_Squat').sets).toEqual([{ r: 15, done: true }])
+    expect(entryOf(evening, 'Leverage_Chest_Press').sets[0]).toMatchObject({ w: 40.75, r: 12, rpe: 8.5 })
+    expect(entryOf(evening, 'Seated_Cable_Rows').sg).toBe('0')
+    expect(entryOf(evening, 'Elliptical_Trainer').sets[0]).toMatchObject({ min: 5, km: 1.61 })
+    expect(new Date(late.start).getHours()).toBe(0)
+    expect(late.end).toBe(late.start)
+    expect(late.entries[0].exId).toBe('Preacher_Curl')
+  })
+  it('hevy unquoted: dropset, a weighted lunge over a distance, a timed hang', async () => {
+    const { built } = await run(hevyPlainCsv)
+    const [w] = built.workouts
+    expect(w.name).toBe('Legs & Back')
+    expect(entryOf(w, 'Hammer_Curls').sets).toEqual([
+      { w: 10, r: 16, done: true, warmup: true },
+      { w: 15, r: 12, done: true, failure: true, drops: [{ w: 10, r: 8 }] },
+    ])
+    const lunge = w.entries[1]
+    expect(lunge.sets).toEqual([{ w: 12, r: 0, done: true }])
+    expect(lunge.note).toBe('0.02 km')
+    expect(w.entries[2].sets).toEqual([{ sec: 45, done: true }])
+  })
+  it('fitnotes: unquoted comment with commas, default names, 0.0 kgs, a non-Latin name', async () => {
+    const { file, matches, built } = await run(fitnotesRealCsv)
+    expect(file.format).toBe('fitnotes')
+    expect(file.bad).toBe(0)
+    const [mon, wed] = built.workouts
+    const bench = entryOf(mon, 'Barbell_Bench_Press_-_Medium_Grip')
+    expect(bench.sets.map(s => s.w)).toEqual([60, 62.5])
+    expect(bench.note).toBe('Felt ok, 7,5/10')
+    expect(entryOf(mon, 'Incline_Dumbbell_Press').sets).toHaveLength(1)
+    expect(entryOf(mon, 'Dumbbell_Bicep_Curl').sets).toHaveLength(1)
+    expect(entryOf(mon, 'Plank').sets).toEqual([{ sec: 60, done: true }])
+    expect(entryOf(wed, 'Pushups').sets).toEqual([{ r: 15, done: true }])
+    expect(entryOf(wed, 'Running_Treadmill').sets[0]).toMatchObject({ min: 20, km: 3.22 })
+    const hebrew = '\u05dc\u05d7\u05d9\u05e6\u05d4'
+    expect(matches.find(m => m.name === hebrew)?.confidence).toBe('none')
+    expect(built.customEx.map(c => c.name)).toEqual([hebrew])
   })
 })
 
