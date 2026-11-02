@@ -1,7 +1,7 @@
 /// <reference types="node" />
 import { describe, expect, it } from 'vitest'
 import { existsSync, readFileSync } from 'node:fs'
-import { CATALOGUE, exerciseById, exerciseName, exerciseSteps, isExdb, similarExercises, type CatalogueExercise } from './index'
+import { CATALOGUE, exerciseById, exerciseName, exerciseSteps, hasOtherGroup, inGroup, isExdb, similarExercises, type CatalogueExercise } from './index'
 import { buildIndex, distance, normalize, search } from './search'
 import { MUSCLE_REGIONS, exerciseLevels } from './BodyMap'
 import { MUSCLE_NAME, EQUIPMENT_NAME, GROUP_NAME, CATEGORY_NAME } from './labels'
@@ -182,5 +182,34 @@ describe('exercises-dataset text', () => {
     expect(search(docs, 'тяга пендлея')[0]?.id).toBe('exdb_3017')
     expect(search(docs, 'girya siltash')[0]?.id).toBe('exdb_0549')
     expect(search(docs, 'cardio').some(e => isExdb(e.id) && e.g === 'other')).toBe(true)
+  })
+})
+
+describe('group chips', () => {
+  it('has a cardio chip that covers every cardio entry, wherever its group', () => {
+    const cardio = CATALOGUE.filter(e => inGroup(e, 'cardio'))
+    expect(cardio.length).toBeGreaterThanOrEqual(25)
+    expect(cardio.every(e => e.c === 'cardio')).toBe(true)
+    expect(CATALOGUE.filter(e => e.g === 'other').every(e => inGroup(e, 'cardio'))).toBe(true)
+    expect(cardio.some(e => e.g !== 'other')).toBe(true)
+  })
+
+  it('shows the other chip only for non-cardio leftovers', () => {
+    expect(hasOtherGroup(CATALOGUE)).toBe(false)
+    const odd = { ...CATALOGUE[0], id: 'x', g: 'other', c: 'strength' } as CatalogueExercise
+    expect(hasOtherGroup([...CATALOGUE, odd])).toBe(true)
+    expect(inGroup(odd, 'other')).toBe(true)
+    expect(inGroup(odd, 'cardio')).toBe(false)
+  })
+
+  it('finds cardio entries by search inside the chip', () => {
+    const hits = search(docs, 'run').filter(e => inGroup(e, 'cardio'))
+    expect(hits.length).toBeGreaterThan(0)
+  })
+
+  it('keeps body groups as before', () => {
+    for (const g of ['chest', 'back', 'legs']) {
+      expect(CATALOGUE.filter(e => inGroup(e, g)).length).toBe(CATALOGUE.filter(e => e.g === g).length)
+    }
   })
 })

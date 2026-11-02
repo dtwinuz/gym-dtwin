@@ -68,21 +68,49 @@ export function nameTokens(name) {
   return out.filter(w => !drop.has(w))
 }
 export const nameKey = name => [...new Set(nameTokens(name))].sort().join(' ')
-const coreKey = name => [...new Set(nameTokens(name).filter(w => !EQUIP_WORDS.has(w)))].sort().join(' ')
 const baseName = name => name.replace(SUFFIX, '')
+
+const LOOSE = new Set(['machine', 'other'])
+const STRICT = new Set(['smith', 'weighted'])
+const RAW_KIND = { 'smith machine': 'smith', 'leverage machine': 'lever', 'sled machine': 'sled' }
+
+export function equipKind(name, eq, raw = '') {
+  const s = name.toLowerCase()
+  const r = String(raw).toLowerCase()
+  if (/\bsmith\b/.test(s) || r === 'smith machine') return 'smith'
+  if (/\blever(age)?\b/.test(s) || r === 'leverage machine') return 'lever'
+  if (eq === 'machine') return RAW_KIND[r] ?? (/\bsled\b/.test(s) ? 'sled' : r && r !== 'assisted' ? r : 'machine')
+  if (eq === 'other' || eq === 'bodyweight') return /\bweighted\b/.test(s) || r === 'weighted' ? 'weighted' : eq === 'other' ? r || 'other' : eq
+  return eq
+}
+
+export const sameEquipment = (a, b) => a === b || !STRICT.has(a) && !STRICT.has(b) && (LOOSE.has(a) || LOOSE.has(b))
+
+const coreKey = name => [...new Set(nameTokens(name).filter(w => !EQUIP_WORDS.has(w)))].sort().join(' ')
 
 export function dedupeIndex(existing) {
   const byKey = new Map()
   const byCore = new Map()
-  const byCoreEq = new Map()
   for (const e of existing) {
     for (const n of new Set([e.n, baseName(e.n)])) {
       byKey.set(nameKey(n), e.id)
-      byCore.set(`${coreKey(n)}|${e.eq}|${e.p[0] ?? ''}`, e.id)
-      if (coreKey(n).includes(' ')) byCoreEq.set(`${coreKey(n)}|${e.eq}`, e.id)
+      const k = `${coreKey(n)}|${e.eq}`
+      if (!byCore.has(k)) byCore.set(k, [])
+      byCore.get(k).push({ id: e.id, kind: equipKind(n, e.eq), p0: e.p[0] ?? '' })
     }
   }
-  return (n, eq, p0) => byKey.get(nameKey(n)) ?? byCore.get(`${coreKey(n)}|${eq}|${p0 ?? ''}`) ?? byCoreEq.get(`${coreKey(n)}|${eq}`)
+  return (n, eq, p0, raw = '') => {
+    const named = byKey.get(nameKey(n))
+    if (named) return named
+    const core = coreKey(n)
+    if (!core) return undefined
+    const kind = equipKind(n, eq, raw)
+    let hit
+    for (const c of byCore.get(`${core}|${eq}`) ?? []) {
+      if (sameEquipment(kind, c.kind) && (core.includes(' ') || c.p0 === (p0 ?? ''))) hit = c.id
+    }
+    return hit
+  }
 }
 
 const mapMuscles = list => [...new Set(list.map(m => MUSCLE[String(m).toLowerCase().trim()]).filter(Boolean))]
@@ -106,7 +134,7 @@ export function convert(upstream, existing, i18n) {
     const p = mapMuscles([x.target].filter(Boolean))
     const s = mapMuscles(Array.isArray(x.secondary_muscles) ? x.secondary_muscles : []).filter(m => !p.includes(m))
     const n = title(String(x.name ?? id).replace(/в°/g, '°'))
-    const dup = dupOf(n, eq, p[0])
+    const dup = dupOf(n, eq, p[0], x.equipment)
     if (dup) { dropped.push([n, dup]); continue }
     const own = `${nameKey(n)}|${eq}`
     if (seen.has(own)) { twins.push([n, seen.get(own)]); continue }
@@ -133,6 +161,7 @@ async function main() {
   const existing = JSON.parse(readFileSync('src/catalogue/data/exercises.json', 'utf8'))
   const i18n = JSON.parse(readFileSync('content/exdb-i18n.json', 'utf8'))
   const { meta, en, ru, dropped, twins } = convert(upstream, existing, i18n)
+  if (process.env.EXDB_REPORT) writeFileSync(process.env.EXDB_REPORT, JSON.stringify({ dropped, twins }, null, 1))
   const known = new Set(upstream.map(x => x.id))
   const unknown = Object.keys(i18n).filter(id => !known.has(id))
   const droppedTr = Object.keys(i18n).filter(id => !meta.some(m => m.id === `exdb_${id}`))
@@ -144,7 +173,6 @@ async function main() {
   writeFileSync(join(out, 'exdb.json'), JSON.stringify(meta))
   writeFileSync(join(out, 'exdb.steps.en.json'), JSON.stringify(en))
   writeFileSync(join(out, 'exdb.steps.ru.json'), JSON.stringify(ru))
-  if (process.env.EXDB_REPORT) writeFileSync(process.env.EXDB_REPORT, JSON.stringify({ dropped, twins }, null, 1))
   console.log(`exercises-dataset@${SHA.slice(0, 7)}: ${upstream.length} upstream, ${dropped.length} duplicates of free-exercise-db dropped, ${twins.length} view/sex variants merged, ` +
     `${meta.length} added, ${meta.filter(m => m.uz).length} with uz/ru names, steps en ${Object.keys(en).length}, ru ${Object.keys(ru).length}`)
 }

@@ -5,7 +5,7 @@ Mashg'ulot kundaligi MVP — https://gym.dtwin.uz
 Struktura g'oyasi [openGym](https://github.com/DuarteSantos8/openGym) dan olingan (reja → mashg'ulot → progress), kod esa o'zimizniki (openGym AGPL-3.0, uning kodi va media'si ko'chirilmagan).
 
 ## Imkoniyatlar
-- **Mashqlar** - 1816 mashqli kutubxona (free-exercise-db 876 + exercises-dataset matni 940, rasmsiz), 341 tasi uz/ru nomli; sinonim va xatoga chidamli qidiruv, filtrlar, jihozlar profili, tana xaritasi (MuscleMap), sevimlilar, o'z mashqlarim
+- **Mashqlar** - 1827 mashqli kutubxona (free-exercise-db 876 + exercises-dataset matni 951, rasmsiz), 341 tasi uz/ru nomli; sinonim va xatoga chidamli qidiruv, filtrlar, jihozlar profili, tana xaritasi (MuscleMap), sevimlilar, o'z mashqlarim
 - **Reja** - hafta va rotatsiya jadvali, routine editor (superset, slot sozlamalari, progression), 8 ta starter reja, onboarding, reja fayli, chop etish, Ramazon va issiq kunlar rejimi
 - **Mashg'ulot** - reps/time/cardio setlari, rest timer, warm-up, drop, rest-pause, pyramid, per-side, RIR/RPE, disk kalkulyatori, swap va zaxira, klaviatura, yakuniy hisobot, keyingi safar retsepti, rasm ulashish
 - **Progress** - statistika, 12 oylik heatmap, mushak xaritasi 3 rejimda, 1RM grafigi, structural balance, tarixni tahrirlash, tana vazni va o'lchamlar, progress foto (faqat qurilmada)
