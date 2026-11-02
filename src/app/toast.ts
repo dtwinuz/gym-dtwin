@@ -20,7 +20,7 @@ export function toast(text: string, action?: Toast['action'], ms = 6000) {
   const t: Toast = { id: ++seq, text, action }
   toasts = [...toasts.slice(-2), t]
   emit()
-  setTimeout(() => dismissToast(t.id), ms)
+  if (ms > 0) setTimeout(() => dismissToast(t.id), ms)
   return t.id
 }
 

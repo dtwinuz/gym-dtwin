@@ -232,10 +232,11 @@ export default function Exercises() {
 }
 
 export function Thumb({ e }: { e: CatalogueExercise }) {
-  if (!e.i) return <span className={`thumb ph g-${e.g}`}><EquipIcon e={e} /></span>
+  const [broken, setBroken] = useState<string | null>(null)
+  if (!e.i || broken === e.id) return <span className={`thumb ph g-${e.g}`}><EquipIcon e={e} /></span>
   return (
     <span className="thumb">
-      <img src={imageUrl(e.id, 0)} alt="" loading="lazy" decoding="async" width={64} height={64} />
+      <img src={imageUrl(e.id, 0)} alt="" loading="lazy" decoding="async" width={64} height={64} onError={() => setBroken(e.id)} />
       {e.i > 1 && <img className="alt" src={imageUrl(e.id, 1)} alt="" loading="lazy" decoding="async" width={64} height={64} />}
     </span>
   )

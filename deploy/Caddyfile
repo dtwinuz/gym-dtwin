@@ -11,10 +11,18 @@
 	header @assets Cache-Control "public, max-age=31536000, immutable"
 	@page not path /assets/*
 	header @page Cache-Control "no-cache"
+	header /manifest.webmanifest Content-Type "application/manifest+json"
 	redir /overview /overview/ 308
 	redir /overview/ru /overview/ru/ 308
 	redir /overview/en /overview/en/ 308
-	# /overview/ katalog indeksi, qolgan hamma yo'l (/, /app) — SPA
-	try_files {path} {path}/index.html /index.html
-	file_server
+	# /overview/ katalog indeksi, qolgan hamma yo'l (/, /app) — SPA.
+	# /assets, /ex, /icons'da yo'q fayl 404 bo'ladi: aks holda service worker index.html'ni JS yoki rasm deb keshlaydi.
+	@static path /assets/* /ex/* /icons/*
+	handle @static {
+		file_server
+	}
+	handle {
+		try_files {path} {path}/index.html /index.html
+		file_server
+	}
 }

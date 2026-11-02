@@ -27,6 +27,7 @@ export default function ExerciseDetail({ id, onClose, onOpen, onEdit, url }: Pro
   const e = exerciseById(id)
   const [steps, setSteps] = useState<{ lang: Lang; steps: string[] } | null>(null)
   const [frame, setFrame] = useState(0)
+  const [broken, setBroken] = useState<string | null>(null)
 
   useEffect(() => {
     let live = true
@@ -66,10 +67,10 @@ export default function ExerciseDetail({ id, onClose, onOpen, onEdit, url }: Pro
 
         <div className="detail-grid">
           <div>
-            {e.i > 0 ? (
+            {e.i > 0 && broken !== e.id ? (
               <div className="photo">
                 {Array.from({ length: e.i }, (_, n) => (
-                  <img key={n} src={imageUrl(e.id, n)} alt="" className={n === frame ? 'on' : ''} />
+                  <img key={n} src={imageUrl(e.id, n)} alt="" className={n === frame ? 'on' : ''} onError={() => setBroken(e.id)} />
                 ))}
               </div>
             ) : (

@@ -220,6 +220,8 @@ reminderNoTelegram: { uz: 'dtwin akkauntingizga Telegram ulanmagan, shuning uchu
   exDeleted: { uz: 'Mashq o\'chirildi', ru: 'Упражнение удалено', en: 'Exercise deleted' },
   undo: { uz: 'Qaytarish', ru: 'Вернуть', en: 'Undo' },
   dismiss: { uz: 'Yopish', ru: 'Скрыть', en: 'Dismiss' },
+  updateReady: { uz: 'Yangi versiya tayyor.', ru: 'Доступна новая версия.', en: 'A new version is ready.' },
+  updateReload: { uz: 'Yangilash', ru: 'Обновить', en: 'Reload' },
   done: { uz: 'Bajarildi', ru: 'Выполнено', en: 'Done' },
   setsShort: { uz: 'set', ru: 'подх.', en: 'sets' },
   overviewLink: { uz: 'Umumiy ko\'rinish', ru: 'Обзор', en: 'Overview' },
