@@ -1,6 +1,7 @@
 import { createServer } from 'node:http'
 import { createHandler, jsonLog } from './app.js'
 import { openStore } from './store.js'
+import { TICK_MS, dtwinBridge, tick } from './bridge.js'
 import { cachedVerifier, introspectionVerifier, userinfoVerifier } from './verifier.js'
 
 /** @param {string} name */
@@ -40,7 +41,25 @@ server.keepAliveTimeout = 5_000
 const port = Number(process.env.PORT ?? 8080)
 server.listen(port, () => jsonLog({ level: 'info', msg: 'listening', port }))
 
+const bridgeUrl = process.env.DTWIN_BRIDGE_URL
+let ticking = false
+const runTick = async () => {
+  if (ticking || !bridgeUrl) return
+  ticking = true
+  try {
+    const stats = await tick({ store, bridge: dtwinBridge({ baseUrl: bridgeUrl, serviceToken: need('DTWIN_SERVICE_TOKEN') }), log: jsonLog })
+    if (stats.reminders || stats.weekly || stats.diary || stats.errors) jsonLog({ level: 'info', msg: 'bridge', ...stats })
+  } catch (e) {
+    jsonLog({ level: 'error', msg: 'bridge tick', err: e instanceof Error ? e.name : 'unknown' })
+  } finally {
+    ticking = false
+  }
+}
+const timers = bridgeUrl ? [setTimeout(runTick, 30_000), setInterval(runTick, TICK_MS)] : []
+if (bridgeUrl) jsonLog({ level: 'info', msg: 'bridge on', everyMs: TICK_MS })
+
 function shutdown() {
+  for (const t of timers) clearTimeout(t)
   server.close(() => {
     store.close()
     process.exit(0)

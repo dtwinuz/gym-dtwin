@@ -239,6 +239,8 @@ export interface NotifyPrefs {
   tz: string
   /** Consent to send a short summary of finished sessions to the dtwin diary. */
   diary: boolean
+  /** Sunday evening summary; on unless turned off. */
+  weekly?: boolean
 }
 
 export type OneRmFormula = 'epley' | 'brzycki' | 'lombardi' | 'oconner' | 'mayhew' | 'wathan' | 'lander'

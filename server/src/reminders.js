@@ -1,6 +1,6 @@
 /**
- * Who gets a Telegram reminder now, and what a diary entry holds. Pure logic plus one tick
- * around a Notifier: main.js does not run it until dtwin provides the channel (docs/W8-SYNC.md).
+ * Who gets a Telegram reminder now, and what a diary entry holds. Pure logic; bridge.js
+ * sends the result through dtwin.
  *
  * @typedef {{ enabled?: boolean, time?: string, days?: number[], quietFrom?: string, quietTo?: string, tz?: string, diary?: boolean }} Prefs
  * @typedef {{ userId: string, notify?: Prefs, lang?: string, workouts?: { date?: string }[], active?: { date?: string } | null, lastRemindedOn?: string | null }} ReminderUser

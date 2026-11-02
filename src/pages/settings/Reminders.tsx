@@ -2,6 +2,7 @@ import { t, type Key } from '../../i18n'
 import type { NotifyPrefs } from '../../core/types'
 import { weekdayName } from '../../app/format'
 import { updateProfile, useProfile } from '../../app/store'
+import { useSyncState } from '../../app/syncBoot'
 
 const WEEK = [1, 2, 3, 4, 5, 6, 0]
 
@@ -19,6 +20,8 @@ const defaults = (): NotifyPrefs => ({
 
 export default function Reminders() {
   const { notify, settings: { lang } } = useProfile()
+  const { status, telegram } = useSyncState()
+  const signedOut = status === 'guest' || status === 'auth'
   const L = (k: Key) => t(lang, k)
   const n = { ...defaults(), ...notify }
   const set = (patch: Partial<NotifyPrefs>) => updateProfile(p => ({ ...p, notify: { ...defaults(), ...p.notify, ...patch } }))
@@ -26,6 +29,8 @@ export default function Reminders() {
 
   return (
     <div className="data-ctl">
+      {signedOut && <p className="muted" data-reminder-account>{L('reminderNeedsAccount')}</p>}
+      {!signedOut && n.enabled && telegram === false && <p className="muted" data-reminder-telegram>{L('reminderNoTelegram')}</p>}
       <label className="reminder-switch">
         <span>{L('reminderOn')}</span>
         <input type="checkbox" className="switch" data-reminder-on checked={n.enabled} onChange={e => set({ enabled: e.target.checked })} />
@@ -44,6 +49,10 @@ export default function Reminders() {
               </button>
             ))}
           </div>
+          <label className="reminder-switch">
+            <span>{L('reminderWeekly')}</span>
+            <input type="checkbox" className="switch" data-reminder-weekly checked={n.weekly !== false} onChange={e => set({ weekly: e.target.checked })} />
+          </label>
         </>
       )}
       <label className="reminder-switch">

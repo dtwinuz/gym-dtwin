@@ -70,8 +70,10 @@ const bearer = (/** @type {Req} */ req) => /^Bearer ([^\s]+)$/.exec(req.headers.
 const ownerOf = (/** @type {string} */ userId) => createHash('sha256').update(userId).digest('hex').slice(0, 16)
 
 /** The stored document is sent as stored, without parsing it again. */
-const docBody = (/** @type {{ rev: number, doc: string, updatedAt: number }} */ row, /** @type {string} */ owner) =>
-  `{"kind":${JSON.stringify(PROFILE_KIND)},"rev":${row.rev},"updatedAt":${row.updatedAt},"owner":"${owner}","profile":${row.doc}}`
+/** @typedef {{ owner: string, telegram?: boolean }} Who */
+
+const docBody = (/** @type {{ rev: number, doc: string, updatedAt: number }} */ row, /** @type {Who} */ who) =>
+  `{"kind":${JSON.stringify(PROFILE_KIND)},"rev":${row.rev},"updatedAt":${row.updatedAt},${JSON.stringify(who).slice(1, -1)},"profile":${row.doc}}`
 
 /**
  * The HTTP handler, with everything from outside passed in.
@@ -98,12 +100,12 @@ export function createHandler({ store, verifier, log = jsonLog, now = Date.now, 
     return (trustProxy && forwarded) || req.socket.remoteAddress || 'unknown'
   }
 
-  /** @param {Req} req @param {Res} res @param {string} owner @param {string} userId */
-  async function data(req, res, owner, userId) {
+  /** @param {Req} req @param {Res} res @param {Who} who @param {string} userId */
+  async function data(req, res, who, userId) {
     if (req.method === 'GET') {
       const row = store.get(userId)
-      if (!row) return send(res, 404, JSON.stringify({ error: 'not_found', owner }))
-      return send(res, 200, docBody(row, owner))
+      if (!row) return send(res, 404, JSON.stringify({ error: 'not_found', ...who }))
+      return send(res, 200, docBody(row, who))
     }
     if (req.method === 'DELETE') {
       store.remove(userId)
@@ -122,8 +124,8 @@ export function createHandler({ store, verifier, log = jsonLog, now = Date.now, 
     const put = readPut(parsed)
     if (!put) return fail(res, 400, 'bad_shape')
     const result = store.put(userId, put.baseRev, put.doc)
-    if (result.ok) return send(res, 200, JSON.stringify({ rev: result.rev, updatedAt: result.updatedAt, owner }))
-    return send(res, 409, result.current ? docBody(result.current, owner) : JSON.stringify({ kind: PROFILE_KIND, rev: 0, profile: null, owner }))
+    if (result.ok) return send(res, 200, JSON.stringify({ rev: result.rev, updatedAt: result.updatedAt, ...who }))
+    return send(res, 409, result.current ? docBody(result.current, who) : JSON.stringify({ kind: PROFILE_KIND, rev: 0, profile: null, ...who }))
   }
 
   const serviceDigest = serviceToken ? createHash('sha256').update(serviceToken).digest() : null
@@ -150,7 +152,7 @@ export function createHandler({ store, verifier, log = jsonLog, now = Date.now, 
     }
     if (!userId || userId.length > 200) return fail(res, 400, 'bad_user')
     seen(ownerOf(userId))
-    store.remove(userId)
+    store.forget(userId)
     verifier.forget?.(userId)
     return send(res, 204, null)
   }
@@ -188,7 +190,7 @@ export function createHandler({ store, verifier, log = jsonLog, now = Date.now, 
     seen(owner)
     const wait = users.take(identity.userId)
     if (wait) return fail(res, 429, 'rate_limited', { 'Retry-After': String(wait) })
-    return data(req, res, owner, identity.userId)
+    return data(req, res, typeof identity.telegram === 'boolean' ? { owner, telegram: identity.telegram } : { owner }, identity.userId)
   }
 
   return async (req, res) => {

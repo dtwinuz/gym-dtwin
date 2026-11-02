@@ -103,6 +103,7 @@ Progress fotolar serverga bormaydi: ular alohida IndexedDB'da, sync kodi u yerga
 | `DTWIN_INTROSPECT_URL`, `DTWIN_SERVICE_TOKEN` | introspection uchun, sir |
 | `DTWIN_USERINFO_URL` | `userinfo` rejimi uchun |
 | `DTWIN_REQUIRED_SCOPE`, `DTWIN_CLIENT_ID` | standart `gym`, `gym-dtwin` |
+| `DTWIN_BRIDGE_URL` | dtwin ichki manzili (docker tarmog'i), berilmasa eslatma va kundalik o'chiq |
 
 ## dtwin'dan kerak bo'lgan qadamlar
 
@@ -121,7 +122,7 @@ Bu ro'yxat gym tomonidan qo'yiladigan talablar. Tayyori: S256 PKCE, refresh rota
 11. **Kundalik (#61).** `POST /internal/diary {userId, id, date, name, minutes, volume}` va o'chirish uchun `DELETE /internal/diary/{id}`, `id` bo'yicha idempotent.
 12. **Akkaunt o'chirilishi.** dtwin foydalanuvchini o'chirganda gym'ga xabar (`DELETE` hodisasi), aks holda SQLite'da qator qoladi.
 
-#60 uchun bu tomonda qolgani: `main.js` da 15 daqiqalik cron, `Notifier` ning HTTP implementatsiyasi, yuborilganlar jadvali, haftalik hisobot. #61: `diaryEntry` ni yakunlangan sessiyaga ulash.
+Eslatma va kundalik (`server/src/bridge.js`): `DTWIN_BRIDGE_URL` berilsa server har 5 daqiqada profillarni ko'rib chiqadi. Eslatma kuniga bir marta (`dueReminders`), yakshanba 20:00 da haftalik hisobot (`dueWeekly`, sozlamada o'chiriladi), kundalikka faqat rozilik bilan oxirgi 30 kunning yakunlangan mashg'ulotlari: sana, nom, daqiqa, hajm. Mashg'ulot o'chirilsa yoki rozilik qaytarilsa yozuv dtwin'dan o'chiriladi. Yuborilganlar `sent` va `diary` jadvallarida, akkaunt o'chirilganda ular ham tozalanadi. Telegram ulanmagan bo'lsa server `telegram:false` qaytaradi va sozlamada ogohlantirish chiqadi.
 
 ## Rollout
 

@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto'
 
 /**
- * @typedef {{ userId: string }} Identity
+ * @typedef {{ userId: string, telegram?: boolean }} Identity
  * @typedef {{ verify(token: string): Promise<Identity | null>, forget?(userId: string): void }} Verifier
  *   null = the token is not valid; a throw = the check itself failed (answered as 503).
  *   forget drops cached answers for a deleted account.
@@ -56,12 +56,12 @@ export function introspectionVerifier({ url, serviceToken, scope, clientId, fetc
         signal: AbortSignal.timeout(TIMEOUT_MS),
       })
       if (!res.ok) throw new Error(`introspection ${res.status}`)
-      const body = /** @type {{ active?: boolean, sub?: unknown, scope?: unknown, client_id?: unknown }} */ (await res.json())
+      const body = /** @type {{ active?: boolean, sub?: unknown, scope?: unknown, client_id?: unknown, telegram?: unknown }} */ (await res.json())
       const sub = typeof body.sub === 'number' ? String(body.sub) : body.sub
       if (body.active !== true || typeof sub !== 'string' || !sub) return null
       if (body.client_id !== clientId) return null
       if (!String(body.scope ?? '').split(' ').includes(scope)) return null
-      return { userId: sub }
+      return typeof body.telegram === 'boolean' ? { userId: sub, telegram: body.telegram } : { userId: sub }
     },
   }
 }
