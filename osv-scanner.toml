@@ -1,0 +1,7 @@
+# Known vulnerabilities that do not affect gym-dtwin, read by osv-scanner and OpenSSF Scorecard.
+# Every entry needs a reason and an end date; review them when the date passes.
+
+[[IgnoredVulns]]
+id = "GHSA-gcqx-w48m-w2h4"
+ignoreUntil = 2027-05-13
+reason = "deepmerge 4.3.1 has no fixed release. It is a build-time dependency of @rollup/plugin-node-resolve (vite-plugin-pwa -> workbox-build) and only merges our own build config, never user input; nothing of it ships to the browser."
