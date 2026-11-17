@@ -8,7 +8,11 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "build:demo": "node scripts/build-demo.mjs",
+    "preview:demo": "vite preview --mode demo --outDir dist-demo --port 4173",
+    "site:screenshots": "node scripts/site-screenshots.mjs",
+    "test:demo": "playwright test -c playwright.demo.config.ts"
   },
   "dependencies": {
     "lucide-react": "^1.64.0",
@@ -19,6 +23,7 @@
     "zustand": "^5.0.16"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.1",
     "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",

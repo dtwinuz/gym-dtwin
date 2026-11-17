@@ -11,12 +11,14 @@ function render() {
   )
 }
 
-if (import.meta.env.VITE_SYNC_ENABLED === 'true') {
+if (import.meta.env.MODE === 'demo') {
+  void import('./demo/boot').then(m => m.startDemo()).catch(() => undefined).finally(render)
+} else if (import.meta.env.VITE_SYNC_ENABLED === 'true') {
   void import('./app/syncBoot').then(m => m.startSync()).catch(() => undefined).finally(render)
 } else {
   render()
 }
 
-if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+if (import.meta.env.PROD && import.meta.env.MODE !== 'demo' && 'serviceWorker' in navigator) {
   void import('./pwa/boot').then(m => m.startPwa()).catch(() => undefined)
 }

@@ -38,7 +38,7 @@ export function exerciseName(e: CatalogueExercise | undefined, lang: Lang) {
   return (lang === 'uz' ? e.uz : lang === 'ru' ? e.ru : undefined) ?? e.n
 }
 
-export const imageUrl = (id: string, n: number) => `/ex/${id}/${n}.webp`
+export const imageUrl = (id: string, n: number) => `${import.meta.env.BASE_URL}ex/${id}/${n}.webp`
 
 type Steps = Record<string, string[]>
 type Source = 'base' | 'exdb'

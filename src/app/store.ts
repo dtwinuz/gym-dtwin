@@ -17,7 +17,8 @@ export function browserStorage(): Storage | null {
   }
 }
 
-const storage = (): KV | null => browserStorage()
+// The static demo keeps its sample profile in memory only: a reload brings it back.
+const storage = (): KV | null => (import.meta.env.MODE === 'demo' ? null : browserStorage())
 
 /** v2 if present, else a one-time migration of v1, else a fresh profile. Never throws. */
 export function loadProfile(kv: KV | null, now: Ms = Date.now()): Profile {

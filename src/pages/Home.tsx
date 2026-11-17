@@ -13,6 +13,7 @@ import { weekTally } from '../core/schedule'
 import type { Profile, Routine } from '../core/types'
 import Onboarding from './Onboarding'
 import ProgramsSheet from './plan/ProgramsSheet'
+import { SITE } from '../app/site'
 
 const STATUS_KEY: Record<DayStatus, Key> = { done: 'stDone', planned: 'stPlanned', missed: 'stMissed', rest: 'stRest' }
 
@@ -191,9 +192,9 @@ export default function Home() {
       </div>
 
       <div className="home-links">
-        <a href={lang === 'uz' ? '/overview/' : `/overview/${lang}/`}>{L('overviewLink')}</a>
-        <a href="/deck/tadqiqot.html" target="_blank" rel="noopener">{L('deckResearch')}</a>
-        <a href="/deck/konsept.html" target="_blank" rel="noopener">{L('deckConcept')}</a>
+        <a href={lang === 'uz' ? `${SITE}/overview/` : `${SITE}/overview/${lang}/`}>{L('overviewLink')}</a>
+        <a href={`${SITE}/deck/tadqiqot.html`} target="_blank" rel="noopener">{L('deckResearch')}</a>
+        <a href={`${SITE}/deck/konsept.html`} target="_blank" rel="noopener">{L('deckConcept')}</a>
       </div>
 
       {onboarding && <Onboarding onClose={() => setOnboarding(false)} />}

@@ -1,60 +1,82 @@
 # gym.dtwin
 
-Mashg'ulot kundaligi MVP — https://gym.dtwin.uz
+Brauzerda ishlaydigan mashg'ulot kundaligi: reja, set yozish, dam olish taymeri, rekordlar va progress, akkauntsiz.
 
-Struktura g'oyasi [openGym](https://github.com/DuarteSantos8/openGym) dan olingan (reja → mashg'ulot → progress), kod esa o'zimizniki (openGym AGPL-3.0, uning kodi va media'si ko'chirilmagan).
+[![CI](https://github.com/dtwinuz/gym-dtwin/actions/workflows/ci.yml/badge.svg)](https://github.com/dtwinuz/gym-dtwin/actions/workflows/ci.yml)
+![React 19](https://img.shields.io/badge/React-19-61dafb)
+![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6)
+![uz · ru · en](https://img.shields.io/badge/til-uz%20%C2%B7%20ru%20%C2%B7%20en-c6f432)
 
-## Imkoniyatlar
-- **Mashqlar** - 1827 mashqli kutubxona (free-exercise-db 876 + exercises-dataset matni 951, rasmsiz), 341 tasi uz/ru nomli; sinonim va xatoga chidamli qidiruv, filtrlar, jihozlar profili, tana xaritasi (MuscleMap), sevimlilar, o'z mashqlarim
-- **Reja** - hafta va rotatsiya jadvali, routine editor (superset, slot sozlamalari, progression), 8 ta starter reja, onboarding, reja fayli, chop etish, Ramazon va issiq kunlar rejimi
-- **Mashg'ulot** - reps/time/cardio setlari, rest timer, warm-up, drop, rest-pause, pyramid, per-side, RIR/RPE, disk kalkulyatori, swap va zaxira, klaviatura, yakuniy hisobot, keyingi safar retsepti, rasm ulashish
-- **Progress** - statistika, 12 oylik heatmap, mushak xaritasi 3 rejimda, 1RM grafigi, structural balance, tarixni tahrirlash, tana vazni va o'lchamlar, progress foto (faqat qurilmada)
-- **Ma'lumot** - JSON backup va restore, CSV eksport, Strong/Hevy/FitNotes/umumiy CSV import
-- uz / ru / en, tema va accent, qidiruvli sozlamalar; ma'lumot brauzerda (local-first), akkaunt shart emas. Sinxron (W8) dtwin bilan kelishuvdan keyin yoqiladi
+**[Sayt](https://gym.dtwin.uz) · [Jonli demo](https://wonmor.io/demo/gym/) · [Overview](https://gym.dtwin.uz/overview/) · [Reja](docs/PLAN.md)**
 
-Reja va holat: [docs/PLAN.md](docs/PLAN.md), [gym-dtwin project](https://github.com/orgs/dtwinuz/projects/10).
+![Bosh sahifa: bugungi mashg'ulot, hafta va tana vazni](docs/screenshots/home.jpg)
 
-## Sahifalar
-- `/` — landing (3D shtanga + puls chizig'i, uz/ru/en, yorug'/qorong'i); ilova `#/home`, `#/plan`, `#/workout`, `#/exercises`, `#/progress`
-- `/overview/` (+ `ru/`, `en/`) — Stories uslubidagi tanishuv; manba `scripts/build-overview.mjs` + `scripts/overview/` (engine, scenes, css, gsap), natija `public/overview/`. Qayta yig'ish qo'lda: `node scripts/build-overview.mjs` (`npm run build` uni chaqirmaydi)
-- `/deck/tadqiqot.html`, `/deck/konsept.html` — prezentatsiyalar
+## Nima qiladi
 
-## Katalog ma'lumotlari
-Generatsiya qilinadi, qo'lda tahrir qilinmaydi (`src/catalogue/data/`):
+- **Mashqlar** — 1827 mashqli kutubxona (876 tasi rasmli), uz/ru nomlar, xatoga chidamli qidiruv, filtrlar, tana xaritasi, sevimlilar va o'z mashqlaringiz.
+- **Reja** — hafta yoki rotatsiya jadvali, 8 ta tayyor reja, routine editor (superset, drop set, rest-pause, progression), chop etish, Ramazon va issiq kun rejimi.
+- **Mashg'ulot** — reps / vaqt / kardio setlari, warm-up, RIR/RPE, dam olish taymeri, disk kalkulyatori, almashtirish, yakuniy hisobot.
+- **Progress** — statistika, 12 oylik faollik xaritasi, mushak yuklamasi, e1RM grafigi, tarixni tahrirlash, tana vazni, o'lchamlar va progress foto.
+- **Ma'lumot sizda** — hammasi brauzerda (local-first); JSON backup, CSV eksport, Strong / Hevy / FitNotes import.
+
+## Skrinshotlar
+
+Hammasi [jonli demo](https://wonmor.io/demo/gym/)dan: fiktiv sportchining 36 haftalik kundaligi, 140+ mashg'ulot.
+
+| | |
+|---|---|
+| ![Haftalik reja](docs/screenshots/plan.jpg) | ![Rejalar ro'yxati](docs/screenshots/routines.jpg) |
+| Haftalik jadval: qaysi kun qaysi routine, dam olish va ko'chirilgan kunlar. | Upper/Lower dasturi va qo'shimcha "Qo'l + kardio" kuni. |
+| ![Routine editor](docs/screenshots/routine-editor.jpg) | ![Mashg'ulot yozish](docs/screenshots/workout.jpg) |
+| Routine editor: setlar, takrorlar, progression va dam olish vaqti. | Mashg'ulot: warm-up, RIR, taymer va disk hisobi. |
+| ![Mashqlar kutubxonasi](docs/screenshots/exercises.jpg) | ![Mashq kartasi](docs/screenshots/exercise-detail.jpg) |
+| 1827 mashq: qidiruv, filtr, sevimlilar. | Mashq kartasi: rasm, mushaklar, bajarish tartibi va shaxsiy natija. |
+| ![Statistika](docs/screenshots/stats.jpg) | ![Mushaklar](docs/screenshots/muscles.jpg) |
+| Statistika: sessiyalar, hajm, faollik xaritasi, setlar og'irligi. | Mushak yuklamasi haftalik setlar bo'yicha. |
+| ![Kuch](docs/screenshots/strength.jpg) | ![Tarix](docs/screenshots/history.jpg) |
+| Kuch: har mashq uchun e1RM grafigi va rekordlar. | Tarix: oylar bo'yicha mashg'ulotlar, rekord belgisi, izohlar. |
+| ![Mashg'ulot tafsiloti](docs/screenshots/workout-detail.jpg) | ![Tana](docs/screenshots/body.jpg) |
+| Bitta mashg'ulot: setlar, hajm, davomiyligi. | Tana vazni trendi va maqsad chizig'i. |
+| ![Sozlamalar](docs/screenshots/settings.jpg) | ![Telefon](docs/screenshots/phone.jpg) |
+| Sozlamalar: til, tema, birliklar, disklar, backup. | Telefonda: pastki navigatsiya, bir qo'lda ishlatish. |
+
+## Tez boshlash
+
 ```bash
-node scripts/build-catalogue.mjs <free-exercise-db checkout>   # exercises.json + steps.{en,uz,ru}.json
-python -I scripts/build-images.py <free-exercise-db checkout> public/ex   # 480px webp
-node scripts/build-musclemap.mjs <MuscleMap checkout>          # body.json
-node scripts/build-exdb.mjs [exercises.json]                   # exdb.json + exdb.steps.{en,ru}.json (pinned SHA dan yuklaydi)
+npm install && npm run dev
 ```
-uz/ru nom, ko'rsatma va sinonimlar — o'zimiz yozgan `content/exercises-i18n.json` va `content/exdb-i18n.json`. Manbalar va litsenziyalar: [NOTICE](NOTICE) (free-exercise-db — Unlicense, MuscleMap — MIT, exercises-dataset — MIT, faqat matn). openGym katalogi, tarjimalari va Gym Visual media ishlatilmaydi.
 
-## Stek
-Vite + React 19 + TypeScript, lucide-react, three.js (faqat landing, lazy). Router — hash (`#/plan`).
+Yoki hech narsa o'rnatmasdan: [gym.dtwin.uz](https://gym.dtwin.uz) yoki [jonli demo](https://wonmor.io/demo/gym/).
 
-## Ishga tushirish
+## Jonli demo
+
+Demo — o'sha ilova, alohida rejimda yig'ilgan (`vite build --mode demo`, base `/demo/gym/`). Ma'lumot `src/demo/seed.ts` da: fiktiv sportchining 36 haftasi haqiqiy session engine orqali "o'ynaladi", shuning uchun progression, rekordlar va statistika odamdagidek chiqadi. Sanalar `Date.now()` ga nisbatan, o'zgarishlar faqat xotirada, qayta yuklanganda tiklanadi. Demo kodi faqat `--mode demo` da dinamik import qilinadi, oddiy build o'zgarmaydi.
+
 ```bash
-npm install
-npm run dev
-npm run build     # tsc -b && vite build → dist/
+npm run build:demo        # dist-demo/
+npm run test:demo         # Playwright: har sahifa ochiladi, konsolda xato yo'q
+npm run site:screenshots  # docs/screenshots/*.jpg ni qayta yaratadi
+```
+
+## Hujjatlar
+
+- [docs/PLAN.md](docs/PLAN.md) — reja va holat, [project](https://github.com/orgs/dtwinuz/projects/10)
+- [docs/W8-SYNC.md](docs/W8-SYNC.md) — sinxron va dtwin SSO (`server/` tayyor, `VITE_SYNC_ENABLED` hozircha o'chiq)
+- [NOTICE](NOTICE) — katalog manbalari va litsenziyalar (free-exercise-db — Unlicense, MuscleMap — MIT, exercises-dataset — MIT). Struktura g'oyasi [openGym](https://github.com/DuarteSantos8/openGym) dan, kod va media ko'chirilmagan.
+
+Sahifalar: `/` landing (3D shtanga), ilova `#/home`, `#/plan`, `#/workout`, `#/exercises`, `#/progress`; `/overview/` (+ `ru/`, `en/`), `/deck/tadqiqot.html`, `/deck/konsept.html`.
+
+## Ishlab chiqish
+
+```bash
+npm run dev       # Vite dev server
+npm test          # vitest
 npm run lint      # oxlint
-npm run preview   # dist/ ni lokal ko'rsatish
+npm run build     # tsc -b && vite build -> dist/
 ```
 
-## CI
-`.github/workflows/ci.yml`: har PR va `main`ga push'da `npm ci`, `npm run lint`, `npm run build` (Node 24; faqat `*.md` o'zgarsa ishlamaydi). Merge'ni bloklamaydi — natijani PR'da tekshiring. Dependabot oylik: npm va GitHub Actions, 7 kunlik cooldown bilan (`.github/dependabot.yml`).
+Katalog generatsiya qilinadi (`src/catalogue/data/`), qo'lda tahrir qilinmaydi: `scripts/build-catalogue.mjs`, `build-images.py`, `build-musclemap.mjs`, `build-exdb.mjs`. uz/ru matnlar — `content/*.json`.
 
-## Deploy
-```bash
-bash deploy/deploy.sh   # build → ssh dtwin → /opt/gym-dtwin (caddy konteyner, dtwin-prod_default)
-```
-Deploy qo'lda: skript lokal `npm run build` qiladi va `dist/` ni VPS'ga ko'chiradi (GHCR image va Release yo'q). Birinchi argument — ssh host (standart `dtwin`); oldingi versiya VPS'da `dist.prev/` da qoladi. TLS va domen dtwin edge Caddy'da (`gym.dtwin.uz → gym-dtwin:80`). Ishlab turgan versiya: https://gym.dtwin.uz/REVISION.
+Stek: Vite, React 19, TypeScript, lucide-react, three.js (faqat landing, lazy), hash router. CI: lint, test, build (`.github/workflows/ci.yml`). Deploy qo'lda: `bash deploy/deploy.sh`.
 
-## Sinxron (deploy qilinmagan)
-`server/` (API) va akkaunt bo'limi tayyor, lekin `VITE_SYNC_ENABLED` o'chiq: sayt hozircha faqat brauzerda ishlaydi. Arxitektura, dtwin'dan kerak bo'lgan qadamlar va rollout: [docs/W8-SYNC.md](docs/W8-SYNC.md).
-
-## Hissa qo'shish
-Qoidalar `dtwinuz` org bo'yicha umumiy: [CONTRIBUTING](https://github.com/dtwinuz/.github/blob/main/CONTRIBUTING.md), [SECURITY](https://github.com/dtwinuz/.github/blob/main/SECURITY.md), [CODE_OF_CONDUCT](https://github.com/dtwinuz/.github/blob/main/CODE_OF_CONDUCT.md). Reviewer — `@dtwinuz/core` (`.github/CODEOWNERS`; GitHub Free'da private repoda CODEOWNERS review'ni avtomatik so'ramaydi — reviewer'ni PR'ga qo'lda qo'shing).
-
-## Keyingi qadamlar
-Sinxron va dtwin SSO (W8), PWA va offline, mobil ilova, AI coach, MCP - [project](https://github.com/orgs/dtwinuz/projects/10).
+Hissa qo'shish: [CONTRIBUTING](https://github.com/dtwinuz/.github/blob/main/CONTRIBUTING.md) · [SECURITY](https://github.com/dtwinuz/.github/blob/main/SECURITY.md) · [CODE_OF_CONDUCT](https://github.com/dtwinuz/.github/blob/main/CODE_OF_CONDUCT.md).
