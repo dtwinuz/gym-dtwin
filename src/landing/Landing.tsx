@@ -10,6 +10,7 @@ import { updateSettings, useProfile } from '../app/store'
 import { L, MUSCLE_T } from './text'
 import type { SceneHandle } from './scene'
 import './Landing.css'
+import { SITE } from '../app/site'
 
 type Theme = 'dark' | 'light'
 const THEME_KEY = 'gym-dtwin:theme'
@@ -446,7 +447,7 @@ export default function Landing() {
 
   const setLang = (l: Lang) => updateSettings({ lang: l })
   const hasData = workouts.length > 0
-  const ov = lang === 'uz' ? '/overview/' : `/overview/${lang}/`
+  const ov = lang === 'uz' ? `${SITE}/overview/` : `${SITE}/overview/${lang}/`
 
   return (
     <div ref={root} className={`ld${ready ? ' ready' : ''}`} data-theme={theme}>
@@ -509,8 +510,8 @@ export default function Landing() {
             <div className="ld-sub">{L.decksK[lang]} · {L.decksH[lang]}</div>
             <div className="ld-deck-row">
               <a href={ov} className="ld-deck hot"><Play size={16} fill="currentColor" /><span>{L.deckOverview[lang]}</span><ArrowUpRight size={15} /></a>
-              <a href="/deck/tadqiqot.html" target="_blank" rel="noopener" className="ld-deck"><Presentation size={16} /><span>{L.deckResearch[lang]}</span><ArrowUpRight size={15} /></a>
-              <a href="/deck/konsept.html" target="_blank" rel="noopener" className="ld-deck"><Presentation size={16} /><span>{L.deckConcept[lang]}</span><ArrowUpRight size={15} /></a>
+              <a href={`${SITE}/deck/tadqiqot.html`} target="_blank" rel="noopener" className="ld-deck"><Presentation size={16} /><span>{L.deckResearch[lang]}</span><ArrowUpRight size={15} /></a>
+              <a href={`${SITE}/deck/konsept.html`} target="_blank" rel="noopener" className="ld-deck"><Presentation size={16} /><span>{L.deckConcept[lang]}</span><ArrowUpRight size={15} /></a>
             </div>
           </div>
         </Wide>

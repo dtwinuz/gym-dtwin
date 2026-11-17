@@ -26,3 +26,7 @@ dist-ssr
 # local API data
 *.sqlite
 *.sqlite-*
+dist-demo
+test-results/
+playwright-report/
+!docs/screenshots/

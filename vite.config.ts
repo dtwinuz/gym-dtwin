@@ -1,10 +1,22 @@
 import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import { IMAGE_CACHE, NAV_DENYLIST, PRECACHE_IGNORE, isApi, isExerciseImage, isFontCss, isFontFile } from './src/pwa/routes.ts'
 
+/** The static demo: no service worker, no support widget, served under /demo/gym/. */
+const demoHtml = (): Plugin => ({
+  name: 'gym-demo-html',
+  transformIndexHtml: html => html.replace(/\s*<script src="https:\/\/dtwin\.uz\/support\/widget\.js"[^>]*><\/script>/, ''),
+})
+
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => mode === 'demo'
+  ? {
+      base: '/demo/gym/',
+      plugins: [react(), demoHtml()],
+      build: { outDir: 'dist-demo', chunkSizeWarningLimit: 800, sourcemap: false },
+    }
+  : {
   plugins: [
     react(),
     VitePWA({
